@@ -34,9 +34,11 @@ body{
   .footer {
     flex: 0 0 auto;
   }
-  .center-block{
-    max-width: 1800px;
+  .center_block{
+    max-width: 1486px;
     width: 100%;
+    padding-left: 23px;
+    padding-right: 23px;
     margin-left: auto;
     margin-right: auto;
   }

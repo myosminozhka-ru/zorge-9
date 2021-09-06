@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>gulp-scss-starter</title>
+        <title>Главная</title>
         <meta name="theme-color" content="#fff">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -23,10 +23,70 @@
         <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
         <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
         <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-        <link rel="stylesheet" href="styles/main.min.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="https://api-maps.yandex.ru/2.1?apikey=ваш API-ключ&load=package.full&lang=ru_RU"></script>
     </head>
     <body>
         
+        <div class="main_reds">
+    <div class="main_red">
+        <div class="main_red__info center_block">
+            <div class="main_red__info--title">мой дом — мой актив</div>
+            <div class="main_red__info--text">Отделка камнем, пятиметровые потолки, двухметровые зеркала с подсветкой.А что, если выбор идеального варианта для жизни одновременно является прекрасной инвестицией? Приумножайте заработанное, вложившись в место, где есть все – транспортная доступность, экология, сложившаяся инфраструктура исторически престижного района, понимание ваших потребностей и умение им соответствовать.</div>
+        </div>
+        <div class="main_red__img"><img src="./img/img4.png" alt="мой дом — мой актив"></div>
+    </div>
+    <div class="main_red">
+        <div class="main_red__info center_block">
+            <div class="main_red__info--title">известный район в центре столицы</div>
+            <div class="main_red__info--text">Ходынка. С VIII века Ходынка была местом, где самые влиятельные москвичи строили свои дачи – созданные по императорским каталогам и окруженные цветущими садами. Они сформировали два бульвара вокруг нынешнего шоссе, предвосхитив его сегодняшний трехчастный вид.</div>
+        </div>
+        <div class="main_red__img"><img src="./img/img5.png" alt="известный район в центре столицы"></div>
+    </div>
+</div>
+        <div class="main_rmap">
+    <div class="main_rmap__info center_block">
+        <div class="main_rmap__info--title">Престижный адрес</div>
+        <div class="main_rmap__info--blocks">
+            <div class="main_rmap__info--block">
+                <div class="main_rmap__info--tit">21</div>
+                <div class="main_rmap__info--txt">этаж</div>
+            </div>
+            <div class="main_rmap__info--block">
+                <div class="main_rmap__info--tit">1.3 гектара</div>
+                <div class="main_rmap__info--txt">территория квартала</div>
+            </div>
+            <div class="main_rmap__info--block">
+                <div class="main_rmap__info--tit">415</div>
+                <div class="main_rmap__info--txt">машиномест на паркинге</div>
+            </div>
+            <div class="main_rmap__info--block">
+                <div class="main_rmap__info--tit">28-81 м<sup>2</sup></div>
+                <div class="main_rmap__info--txt">площадь апартаментов</div>
+            </div>
+            <div class="main_rmap__info--block">
+                <div class="main_rmap__info--tit">до 3.5 м</div>
+                <div class="main_rmap__info--txt">высота потолков</div>
+            </div>
+            <div class="main_rmap__info--block">
+                <div class="main_rmap__info--tit">600 м</div>
+                <div class="main_rmap__info--txt">до метро «Полежаевская»</div>
+            </div>
+        </div>
+    </div>
+    <div class="main_rmap__map">
+        </script>
+        <script type="text/javascript">
+          ymaps.ready(function () {
+            var myMap = new ymaps.Map("YMapsID2", {
+              center: [55.76, 37.64],
+              zoom: 10
+            });
+          });
+        </script>
+        <div id="YMapsID2" style="width: 100%; height: 764px;"></div>
+    </div>
+</div>
         <div class="main_blocks">
     <div class="main_blocks__block">
         <div class="main_blocks__block--info">
@@ -36,7 +96,7 @@
                 <a href="#" class="main_blocks__block--btn">выбрать апартаменты</a>
             </div>
         </div>
-        <div class="main_blocks__block--img"><img src="../img/s1.png" alt=""></div>
+        <div class="main_blocks__block--img"><img src="./img/s1.png" alt=""></div>
     </div>
     <div class="main_blocks__block">
         <div class="main_blocks__block--info">
@@ -47,7 +107,7 @@
                 <a href="#" class="main_blocks__block--btn">выбрать кладовую</a>
             </div>
         </div>
-        <div class="main_blocks__block--img"><img src="../img/s2.png" alt=""></div>
+        <div class="main_blocks__block--img"><img src="./img/s2.png" alt=""></div>
     </div>
     <div class="main_blocks__block">
         <div class="main_blocks__block--info">
@@ -58,7 +118,7 @@
                 <a href="#" class="main_blocks__block--btn">Смотреть новости комплекса</a>
             </div>
         </div>
-        <div class="main_blocks__block--img"><img src="../img/s3.png" alt=""></div>
+        <div class="main_blocks__block--img"><img src="./img/s3.png" alt=""></div>
     </div>
     <div class="main_blocks__block">
         <div class="main_blocks__block--info">
@@ -68,14 +128,14 @@
                 <a href="" class="main_blocks__block--btn">просмотреть галерею</a>
             </div>
         </div>
-        <div class="main_blocks__block--img"><img src="../img/s4.png" alt=""></div>
+        <div class="main_blocks__block--img"><img src="./img/s4.png" alt=""></div>
     </div>
     <div class="main_blocks__block">
         <div class="main_blocks__block--info">
             <div class="main_blocks__block--title">УСПЕТЬ ВСЕ, НЕ ПОКИДАЯ ТЕРРИТОРИЮ КОМПЛЕКСА</div>
             <div class="main_blocks__block--text">Квартал “Зорге 9” продуман с учетом потребностей современного делового человека - занимайтесь бизнесом с комфортом. Мы предоставим все необходимое и для облегчения вашего быта: химчистка, магазин, аптека, бытовые услуги - все это есть на территории комплекса.</div>
         </div>
-        <div class="main_blocks__block--img"><img src="../img/s5.png" alt=""></div>
+        <div class="main_blocks__block--img"><img src="./img/s5.png" alt=""></div>
     </div>
     <div class="main_blocks__block">
         <div class="main_blocks__block--info">
@@ -85,7 +145,7 @@
                 <a href="#" class="main_blocks__block--btn">ознакомиться с условиями покупки</a>
             </div>
         </div>
-        <div class="main_blocks__block--img"><img src="../img/s6.png" alt=""></div>
+        <div class="main_blocks__block--img"><img src="./img/s6.png" alt=""></div>
     </div>
     <div class="main_blocks__block">
         <div class="main_blocks__block--info">
@@ -94,7 +154,7 @@
                 из здания, в лобби, лифтах и лифтовых холлах, на всех этажах, во дворе 
                 и в паркинге. Система контроля доступа полностью автоматизирована. Попасть в здание и на этаж можно только по приложению или при помощи системы распознавания лиц.</div>
         </div>
-        <div class="main_blocks__block--img"><img src="../img/s7.png" alt=""></div>
+        <div class="main_blocks__block--img"><img src="./img/s7.png" alt=""></div>
     </div>
     <div class="main_blocks__block">
         <div class="main_blocks__block--info">
@@ -106,7 +166,7 @@
                 <a href="#" class="main_blocks__block--btn">Посмотреть панораму района</a>
             </div>
         </div>
-        <div class="main_blocks__block--img"><img src="../img/s8.png" alt=""></div>
+        <div class="main_blocks__block--img"><img src="./img/s8.png" alt=""></div>
     </div>
     <div class="main_blocks__block">
         <div class="main_blocks__block--info">
@@ -116,14 +176,14 @@
                 <a href="#" class="main_blocks__block--btn">смотреть динамику строительства</a>
             </div>
         </div>
-        <div class="main_blocks__block--img"><img src="../img/s9.png" alt=""></div>
+        <div class="main_blocks__block--img"><img src="./img/s9.png" alt=""></div>
     </div>
     <div class="main_blocks__block">
         <div class="main_blocks__block--info">
             <div class="main_blocks__block--title">Умный дом</div>
             <div class="main_blocks__block--text">Эта система позволяет контролировать и настраивать под себя все внутренние системы апартамента. Например, если сработает датчик протечки стиральной машины или утюг останется не выключенным, система сразу оповестит об этом владельца. <br><br>Температура воздуха чуть отклонилась от нормы? Энергия или вода в здании расходуются не оптимально? Кто-то пытается пройти на территорию дома без пропуска? “Умный дом” сам контролирует и по мере необходимости корректирует работу всех своих систем. </div>
         </div>
-        <div class="main_blocks__block--img"><img src="../img/s10.png" alt=""></div>
+        <div class="main_blocks__block--img"><img src="./img/s10.png" alt=""></div>
     </div>
     <div class="main_blocks__block">
         <div class="main_blocks__block--info">
@@ -131,7 +191,7 @@
             <div class="main_blocks__block--text">Не важно, какую роль в вашей жизни занимает спорт - на территории «Зорге 9» найдется активность, соответствующая любому уровню подготовки. Серьезно тренируетесь? К вашим услугам фитнес-центр и workout площадки. Ищете баланс физической и умственной активности? Вас ждет студия йоги и 25-метровый бассейн. Любите размяться в свободное время? 
                 Пробежка в парке станет замечательным окончанием рабочего дня!</div>
         </div>
-        <div class="main_blocks__block--img"><img src="../img/s11.png" alt=""></div>
+        <div class="main_blocks__block--img"><img src="./img/s11.png" alt=""></div>
     </div>
     <div class="main_blocks__block">
         <div class="main_blocks__block--info">
@@ -141,27 +201,36 @@
                 <a href="#" class="main_blocks__block--btn">ознакомиться с девелопером и командой</a>
             </div>
         </div>
-        <div class="main_blocks__block--img"><img src="../img/s12.png" alt=""></div>
+        <div class="main_blocks__block--img"><img src="./img/s12.png" alt=""></div>
     </div>
 </div>
-        <div class="main_pref">
-    <div class="main_pref__title">ПРЕИМУЩЕСТВА КВАРТАЛА «ЗОРГЕ 9»</div>
-    <div class="main_pref__list">
-        <div class="main_pref__block">ПАНОРАМНЫЕ АЛЮМИНИЕВЫЕ ОКНА И ВЫСОКИЕ ПОТОЛКИ</div>
-        <div class="main_pref__block">ИПОТЕКА ОТ 5,4%, БЕСПРОЦЕНТНАЯ РАССРОЧКА И ТРЕЙД-ИН</div>
-        <div class="main_pref__block">РОСКОШНЫЕ ЛОББИ И ПОДЗЕМНЫЙ ПАРКИНГ</div>
-        <div class="main_pref__block">ПРЕСТИЖНЫЙ РАЙОН В ОКРУЖЕНИИ ПАРКОВ</div>
-        <div class="main_pref__block">4 СТАНЦИИ МЕТРО В ПЕШЕЙ ДОСТУПНОСТИ</div>
-        <div class="main_pref__block">ДВОР БЕЗ МАШИН И СОБСТВЕННЫЙ ПАРК</div>
+        <div class="main_red">
+    <div class="main_red__info center_block">
+        <div class="main_red__info--title">мы строим — вы наслаждаетесь</div>
+        <div class="main_red__info--text">Жилой комплекс бизнес-класса Зорге 9 предлагает капитализировать денежные средства и ваш потенциал в объекте с уникальной концепцией. Вы получаете наслаждение обладанием и ростом стоимости владения, спокойствие и уверенность, потому что в свои апартаменты вы вложили не только деньги, но и часть своей личности. Вы искали, демонстрировали предприимчивость, активность и предусмотрительность. В Зорге 9 не только ваши деньги, здесь ваша часть.</div>
     </div>
+    <div class="main_red__img"><img src="./img/img3.png" alt="мы строим — вы наслаждаетесь"></div>
+</div>
+        <div class="main_pref">
+    <div class="main_pref__title center_block">ПРЕИМУЩЕСТВА КВАРТАЛА «ЗОРГЕ 9»</div>
+    <div class="main_pref__list center_block">
+        <div class="main_pref__block">ПАНОРАМНЫЕ АЛЮМИНИЕВЫЕ <br> ОКНА И ВЫСОКИЕ ПОТОЛКИ</div>
+        <div class="main_pref__block">ИПОТЕКА ОТ 5,4%, БЕСПРОЦЕНТНАЯ <br> РАССРОЧКА И ТРЕЙД-ИН</div>
+        <div class="main_pref__block">РОСКОШНЫЕ ЛОББИ <br> И ПОДЗЕМНЫЙ ПАРКИНГ</div>
+        <div class="main_pref__block">ПРЕСТИЖНЫЙ РАЙОН <br> В ОКРУЖЕНИИ ПАРКОВ</div>
+        <div class="main_pref__block">4 СТАНЦИИ МЕТРО <br> В ПЕШЕЙ ДОСТУПНОСТИ</div>
+        <div class="main_pref__block">ДВОР БЕЗ МАШИН <br> И СОБСТВЕННЫЙ ПАРК</div>
+    </div>
+</div>
+        <div class="main_first" style="background: url(./img/img2.png) 50% / cover no-repeat;">
+    <div class="main_first__title">воскресные прогулки <br> на «Ходынском поле» станут вашей новой традицией</div>
+    <a href="#" class="main_first__btn">панорама района</a>
 </div>
         <div class="main_contacts">
     <div class="main_contacts__title">Контакты</div>
     <div class="main_contacts__blocks">
         <div class="main_contacts__blocks--l">
             <div class="main_contacts__blocks--map">
-                <script src="https://api-maps.yandex.ru/2.1?apikey=ваш API-ключ&load=package.full&lang=ru_RU">
-                </script>
                 <script type="text/javascript">
                   ymaps.ready(function () {
                     var myMap = new ymaps.Map("YMapsID", {
@@ -204,7 +273,7 @@
         </nav>
     </div>
 </div>
-        <script src="js/main.min.js"></script>
-        <script src="js/vendor.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/vendor.js"></script>
     </body>
 </html>
