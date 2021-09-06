@@ -1,0 +1,34 @@
+<div class="main_contacts">
+    <div class="main_contacts__title">Контакты</div>
+    <div class="main_contacts__blocks">
+        <div class="main_contacts__blocks--l">
+            <div class="main_contacts__blocks--map">
+                <script src="https://api-maps.yandex.ru/2.1?apikey=ваш API-ключ&load=package.full&lang=ru_RU">
+                </script>
+                <script type="text/javascript">
+                  ymaps.ready(function () {
+                    var myMap = new ymaps.Map("YMapsID", {
+                      center: [55.76, 37.64],
+                      zoom: 10
+                    });
+                  });
+                </script>
+                <div id="YMapsID" style="width: 100%; height: 600px;"></div>
+            </div>
+            <div class="main_contacts__blocks--info">
+                <div class="main_contacts__blocks--title">Офис продаж</div>
+                <div class="main_contacts__blocks--tel"><span>Телефон:</span> <a href="tel:74951724589">+7 (495) 172-45-89</a></div>
+                <div class="main_contacts__blocks--address"><span>Адрес: </span><div>г. Москва, ул. Зорге, д.2 <br>г. Москва, ул. Зорге, д.9</div></div>
+                <div class="main_contacts__blocks--btn">Заказать звонок</div>
+            </div>
+        </div>
+        <div class="main_contacts__blocks--r">
+            <div class="main_contacts__blocks--img"><img src="./img/img1.png" alt="Объект"></div>
+            <div class="main_contacts__blocks--info">
+                <div class="main_contacts__blocks--title">Объект</div>
+                <div class="main_contacts__blocks--address"><span>Адрес: </span> <div> г. Москва, ул. Зорге, д. 9</div></div>
+                <div class="main_contacts__blocks--btn">запланировать визит</div>
+            </div>
+        </div>
+    </div>
+</div>
