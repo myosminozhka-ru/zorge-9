@@ -60,7 +60,9 @@
     }
     &__map {
         div {
-            height: 400px !important;  
+            @media all and (max-width: 1366px) {
+                height: 400px !important;  
+            }
             @media all and (max-width: 680px) {
                 height: 375px !important;
             }

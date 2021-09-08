@@ -1,0 +1,89 @@
+.main_slider {
+    &__top {
+        &--block {
+            padding: 120px 80px;
+            @media all and (max-width: 1024px) {
+                padding-top: 80px;
+                padding-bottom: 40px;
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+        }
+        &--title {
+            margin-bottom: 20px;
+            font-family: 'gm', serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 56px;
+            text-transform: uppercase;
+            color: #957B61;
+            @media all and (max-width: 680px) {
+                margin-bottom: 4px;
+                font-size: 24px;
+            }
+        }
+        &--text {
+            display: flex;
+            @media all and (max-width: 1024px) {
+                flex-direction: column;
+            }
+            & > div {
+                @media all and (max-width: 1024px) {
+                    width: 100%;
+                }
+                width: calc(50% - 5px);
+            }
+        }
+        &--l {
+            font-family: 'gm', serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 26px;
+            color: #FFFFFF;
+            @media all and (max-width: 680px) {
+                font-size: 14px;
+                line-height: 22px;
+                margin-bottom: 20px;
+            }
+        }
+        &--r {
+            font-family: 'gm', serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 26px;
+            color: #FFFFFF;
+            max-width: 650px;
+            width: 100%;
+            @media all and (max-width: 1024px) {
+                max-width: 100%;
+            }
+            @media all and (max-width: 680px) {
+                font-size: 14px;
+                line-height: 22px;
+            }
+            span {
+                text-transform: uppercase;
+                display: block;
+                margin-top: 40px;
+                @media all and (max-width: 680px) {
+                    margin-top: 60px;
+                }
+            }
+        }
+    }
+    &__bottom {
+        font-size: 0;
+        &--img {
+            min-height: 320px;
+            img {
+                @media all and (max-width: 1024px) {
+                    width: auto;
+                    max-width: unset;
+                    max-height: 320px;
+                }
+            }
+        }
+    }
+}

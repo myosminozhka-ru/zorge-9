@@ -6,11 +6,11 @@
         &:nth-child(even) {
             flex-direction: row-reverse;
             @media all and (max-width: 1050px) {
-                flex-direction: column-reverse;
+                flex-direction: column;
             }
         }
         @media all and (max-width: 1050px) {
-            flex-direction: column-reverse;
+            flex-direction: column;
         }
         &--img {
             width: 50%;
