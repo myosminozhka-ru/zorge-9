@@ -24,4 +24,15 @@ $(function(){
     
     $('.burger-wrap').removeClass('opened');
   });
+  let tfix = $('.fix_block_js'),
+    tfixOffset = tfix.offset();
+  $(window).scroll(function(){
+    if (($(window).scrollTop() > tfixOffset.top)) {
+      if (($(window).scrollTop() > tfixOffset.top)) {
+        tfix.addClass('fixed'); 
+      };
+    } else {
+      tfix.removeClass('fixed');
+    };
+  }); 
 });

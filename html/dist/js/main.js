@@ -241,6 +241,21 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.burger-btn').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.burger-body').length) return;
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.burger-wrap').removeClass('opened');
   });
+  var tfix = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fix_block_js'),
+      tfixOffset = tfix.offset();
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(function () {
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() > tfixOffset.top) {
+      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() > tfixOffset.top) {
+        tfix.addClass('fixed');
+      }
+
+      ;
+    } else {
+      tfix.removeClass('fixed');
+    }
+
+    ;
+  });
 });
 
 /***/ }),

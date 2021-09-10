@@ -123,6 +123,16 @@
             text-transform: uppercase;
             color: #957B61;
             cursor: pointer;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 1px;
+            transition: background-size .3s;
+            padding-bottom: 3px;
+            display: inline-block;
+            &:hover {
+                background-size: 100% 1px;
+            }
             @media all and (max-width: 680px) {
                 margin-top: 40px;
                 text-align: center;
