@@ -1476,6 +1476,16 @@ img {
   }
 }
 
+@media all and (max-width: 1400px) {
+  .main_head__top--tel {
+    display: none;
+  }
+
+  .main_head__top--btn {
+    display: none;
+  }
+}
+
 @media all and (max-width: 1366px) {
   .main_rmap__map div {
     height: 400px !important;
