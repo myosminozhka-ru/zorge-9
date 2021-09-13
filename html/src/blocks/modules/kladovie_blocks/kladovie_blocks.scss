@@ -1,0 +1,69 @@
+.kladovie_blocks {
+    padding: 120px 62px;
+    @media all and (max-width: 680px) {
+        padding: 80px 24px;
+    }
+    &__block {
+        padding: 0 18px;
+        @media all and (max-width: 680px) {
+            padding: 0;
+        }
+        &--img {
+            margin-bottom: 60px;
+            @media all and (max-width: 680px) {
+                margin-bottom: 40px;
+            }
+        }
+        &--title {
+            font-family: 'gm', serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 48px;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+            @media all and (max-width: 680px) {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+        }
+        &--text {
+            font-family: 'gm', serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 26px;
+            color: #FFFFFF;
+            @media all and (max-width: 680px) {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
+    .pagingInfo {
+        display: none;
+        @media all and (max-width: 921px) {
+            display: block;
+            font-family: 'gmm', serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 36px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+            span {
+                display: inline-block;
+                margin-left: 10px;
+                padding-top: 6px;
+                border-top: 2px solid #fff;
+                font-size: 24px;
+                line-height: 20px;
+            }
+        }
+    }
+    .slick-next, .slick-prev {
+        display: none !important;
+    }
+}

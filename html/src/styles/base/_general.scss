@@ -10,6 +10,7 @@ h1, h2, h3, h4, h5, h6, ul {
     @include xl(max-width, rem(1110));
 }
 body{
+  overflow-x: hidden;
   box-sizing: border-box;
   background: #000;
 }
@@ -56,4 +57,24 @@ img {
   &:active {
     background: #75604B;
   }
+}
+// scroll
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #957B61;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #957B61;
 }

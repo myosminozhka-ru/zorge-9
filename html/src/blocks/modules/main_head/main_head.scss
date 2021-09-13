@@ -89,7 +89,7 @@
             width: 55%;
             margin-top: 38px;
             @media all and (max-width: 680px) {
-                margin-top: 27px;
+                margin-top: 24px;
                 width: 56%; 
             }
             @media all and (max-width: 375px) {
@@ -153,10 +153,16 @@
                 padding: 20px 0px;
             }
             .site-panel-wrap .burger-wrap.opened .burger-body {
-                transform: translate(calc(-100% + 60px), -40px);
+                transform: translate(calc(-100% + 120px), -60px);
+                @media all and (max-width: 680px) {
+                    transform: translate(calc(-100% + 60px), -40px);
+                }
             }
             .site-panel-wrap .burger-wrap .burger-body {
-                transform: translate(150%, -40px);
+                transform: translate(150%, -60px);
+                @media all and (max-width: 680px) {
+                    transform: translate(150%, -40px);
+                }
             }
         }
     }

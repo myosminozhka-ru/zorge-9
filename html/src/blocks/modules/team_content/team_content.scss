@@ -1,0 +1,68 @@
+.team_content {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 120px;
+    @media all and (max-width: 1024px) {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 60px;
+    }
+    &__h1 {
+        font-family: 'gml';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 56px;
+        margin: 0;
+        margin-bottom: 80px;
+        text-transform: uppercase;
+        color: #957B61;
+        br {
+            display: none;
+            @media all and (max-width: 680px) {
+                display: block;
+            }
+        }
+        @media all and (max-width: 1024px) {
+            margin-bottom: 40px;
+        }
+        @media all and (max-width: 680px) {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+    &__text {
+        font-family: 'gm';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 26px;
+        color: #FFFFFF;
+        columns: 2;
+        column-gap: 40px;
+        @media all and (max-width: 1024px) {
+            columns: unset;
+        }
+        @media all and (max-width: 680px) {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+    &__btn {
+        max-width: 225px;
+        width: 100%;
+        text-transform: uppercase;
+        display: block;
+        margin-top: 60px;
+        font-family: 'gmm';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        color: #957B61;
+        text-decoration: none;
+        display: none;
+        @media all and (max-width: 960px) {
+            display: block;
+        }
+    }
+}
