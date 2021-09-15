@@ -51,6 +51,7 @@ img {
 }
 .buttons_btn {
   transition: all .3s ease-out;
+  cursor: pointer;
   &:hover {
     background: #B69B80;
   }

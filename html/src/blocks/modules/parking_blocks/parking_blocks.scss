@@ -1,0 +1,75 @@
+.kladovie_blocks {
+    &__title {
+        font-family: 'gm', serif;
+        text-align: center;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        color: #957B61;
+        margin-bottom: 60px;
+        @media all and (max-width: 768px) {
+            display: none;
+        }
+    }
+    &__block {
+        &--txt {
+            margin-bottom: 120px;
+            text-transform: uppercase;
+            @media all and (max-width: 960px) {
+                margin-bottom: 80px;
+            }
+            @media all and (max-width: 680px) {
+                text-transform: unset;
+            }
+            div {
+                margin-bottom: 60px;
+                font-family: 'gm', serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 26px;
+                text-align: center;
+                color: #FFFFFF;
+                @media all and (max-width: 960px) {
+                    font-size: 14px;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+        &--btn {
+            margin-top: 13px;
+            display: inline-block;
+            margin-right: 100px;
+            text-decoration: none;
+            font-family: 'gmm', serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #957B61;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 1px;
+            transition: background-size .3s;
+            padding-bottom: 3px;
+            &:hover {
+                background-size: 100% 1px;
+            }
+            @media all and (max-width: 680px) {
+                font-size: 14px;
+            }
+        }
+    }
+    &.parking_blocks {
+        .kladovie_blocks__block {
+            padding: 0 41px;
+            @media all and (max-width: 960px) {
+                padding: 0 18px;
+            }
+            @media all and (max-width: 680px) {
+                padding: 0;
+            }
+        }
+    }
+}
