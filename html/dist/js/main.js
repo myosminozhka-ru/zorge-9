@@ -185,6 +185,22 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       width: 'auto',
       opacity: 'show'
     }, 'slow');
+
+    function setEqualHeight(columns) {
+      var tallestcolumn = 0;
+      columns.each(function () {
+        var currentHeight = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).height();
+
+        if (currentHeight > tallestcolumn) {
+          tallestcolumn = currentHeight;
+        }
+      });
+      columns.height(tallestcolumn);
+    }
+
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+      setEqualHeight(jquery__WEBPACK_IMPORTED_MODULE_0___default()(".box__block--title"));
+    });
   });
 
   Array.max = function (array) {

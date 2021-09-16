@@ -26,7 +26,7 @@
         <link rel="stylesheet" href="styles/main.css">
         <script src="https://api-maps.yandex.ru/2.1?apikey=ваш API-ключ&load=package.full&lang=ru_RU"></script>
     </head>
-    <body>
+    <body class="page_act">
         <div class="header">
     <div class="header__in">
         <div class="main_head__top fix_block_js">
@@ -83,24 +83,132 @@
     </div>
 </div>
         <div class="buy_tabs">
+    <div class="buy_tabs__title">Условия покупки</div>
     <div class="section vertical">
         <ul class="tabs">
-            <li class="current"><span>Mobile</span></li>
-            <li><span>Social and Web</span></li>
-            <li><span>Cloud</span></li>
+            <li class="current"><span>Ипотека</span></li>
+            <li class="rast"><span>рассрочка</span></li>
+            <li><span>trade-in</span></li>
+            <li><span>Акции</span></li>
         </ul>
         <div class="box-wrap">
-        <div class="box visible">
-        ---1
+            <div class="box visible">
+                <input type="number" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+            </div>
+            <div class="box rast">
+                <div class="razs">
+                    <div class="box__title">Рассрочка</div>
+                    <div class="razs__subtitle">Покупателям доступна беспроцентная рассрочка на срок до окончания строительства.</div>
+                    <div class="razs__blocks">
+                        <div class="razs__block">
+                            <div>
+                                <div class="razs__block--title">Размер <br>
+                                    первого взноса</div>
+                                <ul>
+                                    <li>15%</li>
+                                    <li>30%</li>
+                                    <li>40%</li>
+                                    <li>40%</li>
+                                    <li>50%</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="razs__block">
+                            <div>
+                                <div class="razs__block--title">Срок <br>
+                                    рассрочки</div>
+                                <ul>
+                                    <li>3 месяца</li>
+                                    <li>12 месяцев</li>
+                                    <li>до 31 марта 2022 года</li>
+                                    <li>до 31 марта 2022 года</li>
+                                    <li>6 месяцев</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="razs__block">
+                            <div>
+                                <div class="razs__block--title">Выплаты</div>
+                                <ul>
+                                    <li>В конце срока рассрочки</li>
+                                    <li>Ежемесячные выплаты по рассрочке </li>
+                                    <li>Ежемесячные выплаты по рассрочке </li>
+                                    <li>Ежемесячные выплаты по рассрочке </li>
+                                    <li>Любыми платежами. Возможно 
+                                        погашение в конце срока рассрочки</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="razs__block">
+                            <div>
+                                <div class="razs__block--title">Корпус, на который действуют <br>
+                                    условия рассрочки</div>
+                                <ul>
+                                    <li>Корпус 1 — Madison</li>
+                                    <li>Корпус 2 — manhatten <br>
+                                        Корпус 3 — soho</li>
+                                    <li>Корпус 1 — Madison</li>
+                                    <li>Корпус 2 — manhatten <br>
+                                        Корпус 3 — soho</li>
+                                    <li>Корпус 1 — Madison</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="block_redf">
+                    <div class="block_redf__l">
+                        <div class="box__title">Trade-in</div>
+                        <div class="block_redf__l--subtitle">Trade-in в «Зорге 9» за 10 дней</div>
+                        <div class="block_redf__l--text">
+                            <p>Девелопер St Michael и онлайн-сервис UpHome представляют программу trade-in. Это возможность обменять старую квартиру на новые апартаменты в «Зорге 9», не прибегая к услугам агентов недвижимости.</p>
+                            <p>Эксперты UpHome оценивают квартиру по 300 критериям и предлагают привлекательную цену. Вы подписываете договор бронирования на новые апартаменты, предварительный договор купли-продажи. Далее сервис переводит средства за вашу квартиру в счет нового жилья. Сделка занимает всего 10 дней.</p>
+                        </div>
+                    </div>
+                    <div class="block_redf__r">
+                        <img src="./img/img22.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box__title">Акции и предложения</div>
+                <div class="box__blocks">
+                    <a href="/act_page.html" class="box__block">
+                        <div class="box__block--img"><img src="./img/img21.png" alt=""></div>
+                        <div class="box__block--info">
+                            <div class="box__block--title">Очень длинное название акции, <br> на целых две строки</div>
+                            <div class="box__block--btns">
+                                <div class="box__block--date">Акция действует до 30 июня 2021 г.</div>
+                                <div class="box__block--more">Подробнее</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/act_page.html" class="box__block">
+                        <div class="box__block--img"><img src="./img/img21.png" alt=""></div>
+                        <div class="box__block--info">
+                            <div class="box__block--title">Название акции</div>
+                            <div class="box__block--btns">
+                                <div class="box__block--date">Акция действует до 30 июня 2021 г.</div>
+                                <div class="box__block--more">Подробнее</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/act_page.html" class="box__block">
+                        <div class="box__block--img"><img src="./img/img21.png" alt=""></div>
+                        <div class="box__block--info">
+                            <div class="box__block--title">Название акции</div>
+                            <div class="box__block--btns">
+                                <div class="box__block--date">Акция действует до 30 июня 2021 г.</div>
+                                <div class="box__block--more">Подробнее</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="box">
-        ---2
-        </div>
-        <div class="box">
-        ---3
-        </div>
-        </div>
-        </div>
+    </div>
 </div>
         <div class="footer">
     <div class="footer__in">

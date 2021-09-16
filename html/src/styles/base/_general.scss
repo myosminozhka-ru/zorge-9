@@ -79,3 +79,10 @@ img {
 ::-webkit-scrollbar-thumb:hover {
   background: #957B61;
 }
+@media all and (max-width: 768px) {
+  .page_act {
+    .footer { 
+      padding-top: 0;
+    }
+  }
+}
