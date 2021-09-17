@@ -9,7 +9,61 @@
         </ul>
         <div class="box-wrap">
             <div class="box visible">
-                <input type="number" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                <div class="calc">
+                    <div class="calc__l">
+                        <div class="box__title">Ипотечный калькулятор</div>
+                        <div class="calc__l--text">Совместно с ведущими банками России квартал апартаментов «Зорге 9» предлагает своим покупателям ряд уникальных ипотечных программ, позволяющих решить жилищный вопрос быстро и с минимальным вложением собственных средств.</div>
+                        <div class="calc__bank">
+                            <div class="option active" data-rate="4.48" data-min="30">ВТБ</div>
+                            <div class="option" data-rate="8.19" data-min="25">Альфабанк</div>
+                            <div class="option" data-rate="1.88" data-min="50">Сбербанк</div>
+                            <div class="option" data-rate="8.7" data-min="40">Открытие</div>
+                            <div class="option" data-rate="7.8" data-min="20">Газпромбанк</div>
+                            <div class="option" data-rate="6.98" data-min="20">Московский индустриальный банк</div>
+                            <div class="option" data-rate="7.89" data-min="20">Совкомбанк</div>
+                            <div class="option" data-rate="7.99" data-min="20">Уралсиб</div>
+                            <div class="option" data-rate="8.95" data-min="25">Райффайзенбанк</div>
+                            <div class="option" data-rate="7.9" data-min="20">МТС</div>
+                            <div class="option" data-rate="7.65" data-min="20">АБ Россия</div>
+                            <div class="option" data-rate="7.85" data-min="10">Московский кредитный банк</div>
+                            <div class="option" data-rate="9.15" data-min="20">АК Барс</div>
+                            <div class="option" data-rate="8.69" data-min="20">Зенит</div>
+                            <div class="option" data-rate="8.5" data-min="10">Металлинвест</div>
+                            <div class="option" data-rate="9.75" data-min="20">Абсолют</div>
+                            <div class="option" data-rate="8.7" data-min="10">Дом РФ</div>
+                            <div class="option" data-rate="8.88" data-min="15">СМП-Банк</div>
+                            <div class="option" data-rate="9.4" data-min="20">Росбанк</div>
+                            <div class="option" data-rate="9.64" data-min="20">ТрансКапиталБанк</div>
+                    </div>
+                    </div>
+                    <div class="calc__r">
+                        <div class="calc__row">
+                            <div class="calc__caption"><input class="_input _mask valid" type="text" name="cost" placeholder="Стоимость апартамента" maxlength="19" autocomplete="off"></div>
+                            <div class="calc__input"><input class="_input valid" type="num" name="period" value="1" min="1"></div>
+                            <label class="calc__label">Срок кредита, лет</label>
+                        </div>
+                        <div class="calc__row">
+                            <div class="calc__caption"><input class="_input _mask" type="text" name="cash" placeholder="Собственные средства" maxlength="19" autocomplete="off"></div>
+                            <div class="calc__input"><input class="input" name="part_price" type="text" value="0%" disabled="disabled"></div>
+                            <label class="calc__label">Первоначальный взнос, руб.</label>
+                        </div>
+                        <div class="calc__row">
+                            <div class="calc__caption"><input class="" type="text" name="sum" placeholder="Сумма кредита" disabled="disabled"></div>
+                            <div class="calc__input"><input type="text" name="part_price2" value="" disabled="disabled" class=""></div>
+                            <label class="calc__label">Сумма кредита, руб.</label>
+                        </div>
+                        <div class="calc__row">
+                            <div class="calc__caption"><input type="text" name="pay" placeholder="Ежемесячный платеж" disabled="disabled" class=""></div>
+                            <div class="calc__input"></div>
+                            <label class="calc__label">Платёж в месяц, руб.</label>
+                        </div>
+                        <div class="calc__row">
+                            <div class="calc__caption"><input class="valid" type="text" name="rate" placeholder="Процентная ставка" disabled="disabled"></div>
+                            <div class="calc__input"></div>
+                            <label class="calc__label">Кредитная ставка</label>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="box rast">
                 <div class="razs">

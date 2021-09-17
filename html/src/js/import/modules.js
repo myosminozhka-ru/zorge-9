@@ -23,4 +23,5 @@ import "%modules%/parking_blocks/parking_blocks";
 import "%modules%/parking_white/parking_white";
 import "%modules%/act_page_content/act_page_content";
 import "%modules%/buy_tabs/buy_tabs";
+import "%modules%/dinamic_main/dinamic_main";
 import "%modules%/footer/footer"

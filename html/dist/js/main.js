@@ -215,6 +215,26 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/dinamic_main/dinamic_main.js":
+/*!*********************************************************!*\
+  !*** ./src/blocks/modules/dinamic_main/dinamic_main.js ***!
+  \*********************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.switch').change(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dinamic_main__bottom').toggleClass('active');
+  });
+});
+
+/***/ }),
+
 /***/ "./src/blocks/modules/docs__content/docs__content.js":
 /*!***********************************************************!*\
   !*** ./src/blocks/modules/docs__content/docs__content.js ***!
@@ -707,8 +727,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_act_page_content_act_page_content__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! %modules%/act_page_content/act_page_content */ "./src/blocks/modules/act_page_content/act_page_content.js");
 /* harmony import */ var _modules_act_page_content_act_page_content__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_modules_act_page_content_act_page_content__WEBPACK_IMPORTED_MODULE_23__);
 /* harmony import */ var _modules_buy_tabs_buy_tabs__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! %modules%/buy_tabs/buy_tabs */ "./src/blocks/modules/buy_tabs/buy_tabs.js");
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_25__);
+/* harmony import */ var _modules_dinamic_main_dinamic_main__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! %modules%/dinamic_main/dinamic_main */ "./src/blocks/modules/dinamic_main/dinamic_main.js");
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_26__);
+
 
 
 

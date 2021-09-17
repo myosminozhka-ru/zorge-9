@@ -27,4 +27,4 @@ $(function() {
         return $(this).innerHeight();
     }).get();
 	$(".box-wrap").height(Array.max(heights));
-})
+});
