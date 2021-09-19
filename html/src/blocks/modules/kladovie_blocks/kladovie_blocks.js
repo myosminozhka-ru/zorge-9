@@ -14,6 +14,8 @@ $(function() {
         autoplay: true,
         dots: true,
         infinite: false,
+        autoplay: true,
+        autoplaySpeed: 2500,
         slidesToShow: 3,
         responsive: [
           {

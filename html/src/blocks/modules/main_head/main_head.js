@@ -8,10 +8,12 @@ $(function(){
     
     burgerBtn.on('click', function(){
       $(burgerWr).addClass('opened');
+      $('body').addClass('owf');
     });
     
     burgerCloseBtn.on('click', function(){
       $(burgerWr).removeClass('opened');
+      $('body').removeClass('owf');
     })
   }
   
@@ -23,16 +25,30 @@ $(function(){
     return
     
     $('.burger-wrap').removeClass('opened');
+    $('body').removeClass('owf');
   });
   let tfix = $('.fix_block_js'),
-    tfixOffset = tfix.offset();
+    tfixOffset = tfix.offset(),
+    hederHeight = $('.fix_block_js').height();
   $(window).scroll(function(){
     if (($(window).scrollTop() > tfixOffset.top)) {
       if (($(window).scrollTop() > tfixOffset.top)) {
+        $('.main_head').css({
+          'paddingTop': hederHeight+'px'
+       });
+       $('.header').css({
+         'paddingTop': hederHeight+'px'
+      });
         tfix.addClass('fixed'); 
       };
     } else {
       tfix.removeClass('fixed');
+      $('.main_head').css({
+        'paddingTop': 0
+       })
+       $('.header').css({
+        'paddingTop': 0
+      });
     };
   }); 
 });

@@ -6,6 +6,8 @@ $(function() {
         arrows: false,
         infinite: false,
         speed: 300,
+        autoplay: true,
+        autoplaySpeed: 2500,
         slidesToShow: 1,
         centerMode: false,
         variableWidth: true

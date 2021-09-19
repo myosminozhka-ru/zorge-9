@@ -37,6 +37,7 @@
             padding: 0;
             margin: 0;
             li {
+                cursor: pointer;
                 &:before {
                     content: '';
                     position: absolute;
@@ -45,7 +46,13 @@
                     top: 50%;
                     left: 0;
                     margin-top: -12px;
-                    background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23 1H1V23H23V1ZM0 0V24H24V0H0Z' fill='black'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.9999 8.42855L17.6476 7L10.8864 14.1426L6.35228 9.3527L5 10.7812L9.53411 15.5711L9.53392 15.5713L10.8862 16.9998L18.9999 8.42855Z' fill='%23957B61'/%3E%3C/svg%3E%0A") 50% no-repeat;
+                    border: 1px solid #000;
+                }
+                &.active {
+                    &:before {
+                        border: 1px solid transparent;
+                        background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23 1H1V23H23V1ZM0 0V24H24V0H0Z' fill='black'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.9999 8.42855L17.6476 7L10.8864 14.1426L6.35228 9.3527L5 10.7812L9.53411 15.5711L9.53392 15.5713L10.8862 16.9998L18.9999 8.42855Z' fill='%23957B61'/%3E%3C/svg%3E%0A") 50% no-repeat;
+                    }
                 }
                 position: relative;
                 padding-left: 34px;
@@ -95,8 +102,44 @@
         }
     }
     &__r {
+        margin-top: -135px;
+        svg {
+            width: 100%;
+            height: auto;
+        }
+        @media all and (max-width: 1065px) {
+            margin-top: 0;
+        }
         @media all and (max-width: 1024px) {
             margin-bottom: 40px;
         }
+    }
+}
+.plc1 {
+    transition: all .3s ease-out;
+    fill: #fff;
+    &.active {
+        fill: #FFF9C3;
+    }
+}
+.plc2 {
+    transition: all .3s ease-out;
+    fill: #fff;
+    &.active {
+        fill: #BECED6;
+    }
+}
+.plc3 {
+    transition: all .3s ease-out;
+    fill: #fff;
+    &.active {
+        fill: #F9E4E4;
+    }
+}
+.plc4 {
+    transition: all .3s ease-out;
+    fill: #fff;
+    &.active {
+        fill: #869988;
     }
 }

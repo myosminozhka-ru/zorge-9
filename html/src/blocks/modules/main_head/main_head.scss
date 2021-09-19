@@ -87,7 +87,7 @@
             display: flex;
             justify-content: space-between;
             width: 55%;
-            margin-top: 38px;
+            margin-top: 31px;
             @media all and (max-width: 680px) {
                 margin-top: 24px;
                 width: 56%; 
@@ -355,6 +355,7 @@
                     padding: 0;
                     margin: 0;
                     li {
+                        overflow: hidden;
                         a {
                             display: block;
                             margin-bottom: 30px;
@@ -368,7 +369,8 @@
                             transition: all .3s ease-out;
                             &:hover {
                                 color: #957B61;
-                                font-size: 20px;
+                                transform: scale(1.2) translate(24px, 0px);
+                                //font-size: 20px;
                             }
                             @media all and (max-width: 680px) {
                                 font-size: 14px;
@@ -437,4 +439,7 @@
             }
         }
     }
+}
+.owf {
+    overflow: hidden !important;
 }

@@ -58,6 +58,7 @@
         margin-right: auto;
         background: #957B61;
         transition: all .3s ease-out;
+        cursor: pointer;
         &:hover {
           background: #B69B80;
         }
@@ -73,4 +74,10 @@
     .main_head:after {
         display: none;
     }
+}
+.feedback2 {
+    margin-top: 20px;
+}
+.cntr {
+    text-align: center;
 }

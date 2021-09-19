@@ -6,6 +6,8 @@ $(function() {
         arrows: true,
         infinite: true,
         fade: true,
+        autoplay: true,
+        autoplaySpeed: 2500,
         slidesToShow: 1
     });
 })
