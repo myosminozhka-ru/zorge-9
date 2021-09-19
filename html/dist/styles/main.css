@@ -1491,6 +1491,10 @@ img {
   .page_act .footer {
     padding-top: 0; } }
 
+sup {
+  top: -16px;
+  font-size: 25px; }
+
 .header {
   position: relative;
   z-index: 20; }
@@ -1560,7 +1564,7 @@ img {
     top: 0; }
     @media all and (max-width: 680px) {
       .main_head__top {
-        padding: 0 40px; } }
+        padding: 0 25px; } }
     .main_head__top--brg {
       display: block; }
       @media all and (max-width: 680px) {
@@ -1634,7 +1638,7 @@ img {
         display: none; }
       .main_head__top.fixed .main_head__top--right {
         margin-top: 0;
-        padding: 20px 0px; }
+        padding: 24px 0px; }
       .main_head__top.fixed .site-panel-wrap .burger-wrap.opened .burger-body {
         transform: translate(calc(-100% + 120px), -60px); }
         @media all and (max-width: 680px) {
@@ -1678,7 +1682,9 @@ img {
           font-size: 14px;
           margin: 0;
           text-align: left;
-          margin-right: 10px; } }
+          margin-right: 10px; }
+          .main_head__center--btn:first-child {
+            width: 140px; } }
     .main_head__center--tel {
       font-family: 'gm', serif;
       font-style: normal;
@@ -2247,7 +2253,7 @@ img {
     font-weight: normal;
     font-size: 24px;
     text-align: center;
-    padding: 27px 49px;
+    padding: 27px 48px;
     text-transform: uppercase;
     color: #FFFFFF;
     background: #957B61;
@@ -2293,9 +2299,15 @@ img {
     display: block;
     margin-right: 40px;
     margin-left: 40px; }
+    @media all and (max-width: 1023px) {
+      .main_sl__btns a {
+        max-width: 490px;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px; } }
     @media all and (max-width: 768px) {
       .main_sl__btns a {
-        width: 100%;
+        max-width: 100%;
         font-size: 14px;
         padding: 15px;
         margin: 0; }
@@ -2338,6 +2350,9 @@ img {
           width: 100%; } }
     .main_contacts__blocks--info {
       padding: 60px 80px; }
+      @media all and (max-width: 1050px) {
+        .main_contacts__blocks--info {
+          padding: 60px 40px; } }
       @media all and (max-width: 680px) {
         .main_contacts__blocks--info {
           padding: 60px 23px; } }
@@ -4238,7 +4253,7 @@ input:checked + .slider:before {
       text-align: center;
       text-transform: uppercase;
       color: #000000;
-      width: 33%;
+      width: max-content;
       cursor: pointer;
       margin-bottom: 5px;
       transition: all .3s ease-out; }
@@ -4374,6 +4389,67 @@ input:checked + .slider:before {
         cursor: pointer; }
         .main_func__r .show3.active:hover, .main_func__r .show2.active:hover, .main_func__r .show1.active:hover {
           fill: #B69B80; }
+
+.floor_page .main_head:before {
+  backdrop-filter: blur(5px); }
+
+.floor_page .main_head__center {
+  padding: 80px;
+  margin: 0; }
+  .floor_page .main_head__center--tr {
+    display: flex;
+    align-items: center;
+    width: 100%; }
+  .floor_page .main_head__center--lr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 80px;
+    border-right: 1px solid #fff;
+    margin-right: 80px;
+    width: 50%; }
+  .floor_page .main_head__center--rr {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between; }
+  .floor_page .main_head__center--backr {
+    width: 20px;
+    height: 48px;
+    flex: 0 0 20px;
+    cursor: pointer;
+    background: url("data:image/svg+xml,%3Csvg width='20' height='48' viewBox='0 0 20 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20 0H16L0 24L16 48H20L4 24L20 0Z' fill='white'/%3E%3C/svg%3E%0A") 50% no-repeat;
+    margin-right: 130px; }
+  .floor_page .main_head__center--floor {
+    width: max-content; }
+    .floor_page .main_head__center--floor.fl {
+      max-width: 112px;
+      width: 100%; }
+      .floor_page .main_head__center--floor.fl .main_head__center--sl input[type="number"] {
+        max-width: 52px;
+        width: 100%;
+        background: none;
+        border: 0;
+        font-family: 'gm', serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 54px;
+        color: #FFFFFF; }
+  .floor_page .main_head__center--titr {
+    font-family: 'gm', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+    text-align: left; }
+  .floor_page .main_head__center--sl div {
+    font-family: 'gm', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 54px;
+    text-transform: uppercase;
+    color: #FFFFFF; }
 
 .footer {
   padding-top: 120px; }

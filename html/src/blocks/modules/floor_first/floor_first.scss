@@ -1,0 +1,80 @@
+.floor_page {
+    .main_head:before {
+        backdrop-filter: blur(5px);
+    }
+    .main_head__center {
+        padding: 80px;
+        margin: 0;
+        &--tr {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        &--lr {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 80px;
+            border-right: 1px solid #fff;
+            margin-right: 80px;
+            width: 50%;
+        }
+        &--rr {
+            display: flex;
+            width: 50%;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &--backr {
+            width: 20px;
+            height: 48px;
+            flex: 0 0 20px;
+            cursor: pointer;
+            background: url("data:image/svg+xml,%3Csvg width='20' height='48' viewBox='0 0 20 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20 0H16L0 24L16 48H20L4 24L20 0Z' fill='white'/%3E%3C/svg%3E%0A") 50% no-repeat; 
+            margin-right: 130px;
+        }
+        &--floor {
+            width: max-content;
+            &.fl {
+                max-width: 112px;
+                width: 100%;
+                .main_head__center--sl {
+                    input[type="number"] {
+                        max-width: 52px;
+                        width: 100%;
+                        background: none;
+                        border: 0;
+                        font-family: 'gm', serif;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 54px;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+        &--titr {
+            font-family: 'gm', serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+        &--sl {
+            div {
+                font-family: 'gm', serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 54px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+        }
+
+        &--br {
+
+        }
+    }
+}

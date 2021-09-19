@@ -25,4 +25,5 @@ import "%modules%/act_page_content/act_page_content";
 import "%modules%/buy_tabs/buy_tabs";
 import "%modules%/dinamic_main/dinamic_main";
 import "%modules%/main_func/main_func";
+import "%modules%/floor_first/floor_first";
 import "%modules%/footer/footer"

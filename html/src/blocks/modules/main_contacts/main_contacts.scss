@@ -36,6 +36,9 @@
         }
         &--info {
             padding: 60px 80px;
+            @media all and (max-width: 1050px) {
+                padding: 60px 40px;
+            }
             @media all and (max-width: 680px) {
                 padding: 60px 23px;
             }
