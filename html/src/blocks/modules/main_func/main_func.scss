@@ -21,9 +21,9 @@
                 text-align: center;
             }
         }
-        flex: 0 0 503px;
+        flex: 0 0 vw(503);
         background: #fff;
-        padding: 80px;
+        padding: vw(80);
         @media all and (max-width: 1800px) {
             flex: unset;
             width: 100%;

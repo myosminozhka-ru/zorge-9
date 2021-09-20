@@ -150,9 +150,11 @@ img {
               font-style: normal;
               font-weight: 300;
               font-size: 14px;
+              border-radius: 0 !important;
               text-transform: uppercase;
               color: #000000;
               text-transform: uppercase;
+              box-shadow: unset !important;
               width: 100%;
               &::placeholder {
                   opacity: 0.5;
@@ -177,6 +179,7 @@ img {
           font-family: 'gmm', serif;
           font-style: normal;
           font-weight: 500;
+          border-radius: 0 !important;
           font-size: 24px;
           text-align: center;
           text-transform: uppercase;
@@ -188,6 +191,7 @@ img {
           border: 0;
           transition: all .3s ease-out;
           cursor: pointer;
+          line-height: normal;
           &:hover {
             background: #B69B80;
           }
@@ -266,6 +270,7 @@ img {
               background: #4279cb;
               color: #fff;
               border-radius: 5px;
+              border-radius: 0 !important;
               font-weight: bold;
               font-size: 15px;
           }
@@ -352,6 +357,7 @@ img {
   }
   .form-wrapper__btns input[type="submit"], .form-wrapper .icon-close.btn, .form-wrapper__btns .main_btn {
     width: 100%;
+    border-radius: 0 !important;
     margin: 0;
     margin-bottom: 20px;
     font-size: 14px;
