@@ -1488,6 +1488,9 @@ sup {
   top: -16px;
   font-size: 25px; }
 
+input:focus {
+  border: 1px solid #957B61 !important; }
+
 .header {
   position: relative;
   z-index: 20; }
@@ -1554,7 +1557,7 @@ sup {
     align-items: flex-start;
     justify-content: space-between;
     padding: 0 80px;
-    position: sticky;
+    position: relative;
     top: 0; }
     @media all and (max-width: 680px) {
       .main_head__top {
@@ -1576,6 +1579,7 @@ sup {
       display: flex;
       justify-content: space-between;
       width: 55%;
+      position: relative;
       margin-top: 31px; }
       @media all and (max-width: 680px) {
         .main_head__top--right {
@@ -1681,7 +1685,7 @@ sup {
           text-align: left;
           margin-right: 10px; }
           .main_head__center--btn:first-child {
-            width: 140px; } }
+            width: 130px; } }
     .main_head__center--tel {
       font-family: 'gm', serif;
       font-style: normal;
@@ -1702,7 +1706,9 @@ sup {
           margin-left: 0; } }
 
 .site-panel-wrap {
-  z-index: 10; }
+  z-index: 10;
+  position: absolute;
+  right: 0; }
   .site-panel-wrap .burger-wrap {
     width: 40px;
     height: 40px; }
@@ -1840,6 +1846,7 @@ sup {
               .site-panel-wrap .burger-wrap .burger-body__nav ul li.has a {
                 margin-bottom: 14px; } }
           .site-panel-wrap .burger-wrap .burger-body__nav ul li .submenu {
+            margin-left: 15px;
             margin-bottom: 30px; }
             @media all and (max-width: 680px) {
               .site-panel-wrap .burger-wrap .burger-body__nav ul li .submenu {
@@ -2299,7 +2306,7 @@ sup {
     display: block;
     margin-right: 40px;
     margin-left: 40px; }
-    @media all and (max-width: 1023px) {
+    @media all and (max-width: 1050px) {
       .main_sl__btns a {
         max-width: 490px;
         width: 100%;
@@ -2329,6 +2336,10 @@ sup {
     font-size: 56px;
     text-transform: uppercase;
     color: #FFFFFF; }
+    @media all and (max-width: 1050px) {
+      .main_contacts__title {
+        padding-left: 40px;
+        padding-right: 40px; } }
     @media all and (max-width: 680px) {
       .main_contacts__title {
         padding-left: 23px;
@@ -2572,7 +2583,7 @@ sup {
   .notfound_page__r {
     width: 100%; }
     .notfound_page__r--title {
-      font-family: 'gmm';
+      font-family: 'gm';
       font-style: normal;
       font-weight: normal;
       font-size: 48px;
@@ -2679,7 +2690,7 @@ sup {
         margin-right: 0; } }
   .docs__content__block {
     width: calc(20% - 30px);
-    margin-bottom: 17px;
+    margin-bottom: 40px;
     display: block;
     text-decoration: none;
     text-align: center; }
@@ -3138,7 +3149,7 @@ sup {
         .kladovie_blocks__block--img {
           margin-bottom: 40px; } }
     .kladovie_blocks__block--title {
-      font-family: 'gm', serif;
+      font-family: 'gml', serif;
       font-style: normal;
       font-weight: normal;
       font-size: 48px;
@@ -3576,6 +3587,12 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%; }
 
+.dinamic_page {
+  display: flex;
+  flex-direction: column; }
+  .dinamic_page .footer {
+    margin-top: auto; }
+
 .buy_tabs {
   padding: 0 80px;
   margin-top: 120px; }
@@ -3847,6 +3864,8 @@ input:checked + .slider:before {
     margin-right: auto;
     max-width: 335px;
     width: 100%; }
+  .razs__block:first-child div {
+    margin-left: 0; }
   .razs__block:not(:last-child) {
     border-right: 1px solid #fff; }
   .razs__block--title {
@@ -3972,6 +3991,7 @@ input:checked + .slider:before {
             margin-bottom: 8px;
             font-size: 14px; } }
       .calc__r form > label input[type="number"] {
+        -moz-appearance: textfield;
         border: 1px solid #FFFFFF;
         text-align: center;
         min-height: 80px;
@@ -3982,6 +4002,7 @@ input:checked + .slider:before {
         font-size: 24px;
         color: #FFFFFF;
         width: 100%;
+        border-radius: 0;
         padding-left: 75px;
         padding-right: 75px; }
         .calc__r form > label input[type="number"]::placeholder {
@@ -3989,9 +4010,11 @@ input:checked + .slider:before {
           opacity: 0.5; }
         .calc__r form > label input[type="number"]::-webkit-inner-spin-button {
           display: none;
-          appearance: none; }
+          appearance: none;
+          -webkit-appearance: none; }
         .calc__r form > label input[type="number"]::-webkit-outer-spin-button {
           display: none;
+          -webkit-appearance: none;
           appearance: none; }
         @media all and (max-width: 860px) {
           .calc__r form > label input[type="number"] {
@@ -3999,7 +4022,8 @@ input:checked + .slider:before {
             font-size: 14px;
             padding-left: 35px;
             padding-right: 35px; } }
-      .calc__r form > label .number-minus {
+      .calc__r form > label .jq-number__spin.minus {
+        margin: 0;
         position: absolute;
         width: 24px;
         height: 24px;
@@ -4011,12 +4035,13 @@ input:checked + .slider:before {
         font-size: 0;
         cursor: pointer; }
         @media all and (max-width: 860px) {
-          .calc__r form > label .number-minus {
+          .calc__r form > label .jq-number__spin.minus {
             width: 12px;
             top: calc(50% + 18px);
             height: 12px;
             left: 17px; } }
-      .calc__r form > label .number-plus {
+      .calc__r form > label .jq-number__spin.plus {
+        margin: 0;
         position: absolute;
         width: 24px;
         height: 24px;
@@ -4028,7 +4053,7 @@ input:checked + .slider:before {
         border: 0;
         cursor: pointer; }
         @media all and (max-width: 860px) {
-          .calc__r form > label .number-plus {
+          .calc__r form > label .jq-number__spin.plus {
             width: 12px;
             height: 12px;
             top: calc(50% + 18px);
@@ -4064,6 +4089,7 @@ input:checked + .slider:before {
               margin-bottom: 8px;
               font-size: 14px; } }
         .calc__r form .sibl label input[type="number"] {
+          -moz-appearance: textfield;
           border: 1px solid #FFFFFF;
           text-align: center;
           min-height: 80px;
@@ -4082,10 +4108,12 @@ input:checked + .slider:before {
             opacity: 0.5; }
           .calc__r form .sibl label input[type="number"]::-webkit-inner-spin-button {
             display: none;
-            appearance: none; }
+            appearance: none;
+            -webkit-appearance: none; }
           .calc__r form .sibl label input[type="number"]::-webkit-outer-spin-button {
             display: none;
-            appearance: none; }
+            appearance: none;
+            -webkit-appearance: none; }
           @media all and (max-width: 860px) {
             .calc__r form .sibl label input[type="number"] {
               min-height: 46px;
@@ -4113,36 +4141,38 @@ input:checked + .slider:before {
             .calc__r form .sibl label input[type="text"] {
               min-height: 46px;
               font-size: 14px; } }
-        .calc__r form .sibl label .number-minus {
+        .calc__r form .sibl label .jq-number__spin.minus {
+          margin: 0;
           position: absolute;
           width: 24px;
           height: 24px;
           top: calc(50% + 16px);
-          margin-top: -12px;
+          margin-top: -18px;
           left: 40px;
-          background: url("data:image/svg+xml,%3Csvg width='24' height='2' viewBox='0 0 24 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='2' fill='white'/%3E%3C/svg%3E%0A") 50% no-repeat;
+          background: url("data:image/svg+xml,%3Csvg width='24' height='2' viewBox='0 0 24 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='2' fill='white'/%3E%3C/svg%3E%0A") 50%/100% no-repeat;
           border: 0;
           font-size: 0;
           cursor: pointer; }
           @media all and (max-width: 860px) {
-            .calc__r form .sibl label .number-minus {
+            .calc__r form .sibl label .jq-number__spin.minus {
               width: 12px;
               top: calc(50% + 18px);
               height: 12px;
               left: 17px; } }
-        .calc__r form .sibl label .number-plus {
+        .calc__r form .sibl label .jq-number__spin.plus {
+          margin: 0;
           position: absolute;
           width: 24px;
           height: 24px;
           top: calc(50% + 16px);
-          margin-top: -12px;
+          margin-top: -18px;
           right: 40px;
           font-size: 0;
-          background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13 11V0H11V11H0V13H11V24H13V13H24V11H13Z' fill='white'/%3E%3C/svg%3E%0A") 50% no-repeat;
+          background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13 11V0H11V11H0V13H11V24H13V13H24V11H13Z' fill='white'/%3E%3C/svg%3E%0A") 50%/100% no-repeat;
           border: 0;
           cursor: pointer; }
           @media all and (max-width: 860px) {
-            .calc__r form .sibl label .number-plus {
+            .calc__r form .sibl label .jq-number__spin.plus {
               width: 12px;
               height: 12px;
               top: calc(50% + 18px);
@@ -4257,6 +4287,9 @@ input:checked + .slider:before {
       cursor: pointer;
       margin-bottom: 5px;
       transition: all .3s ease-out; }
+      @media all and (max-width: 1800px) {
+        .main_func__l--block {
+          width: 33%; } }
       @media all and (max-width: 1023px) {
         .main_func__l--block {
           font-size: 14px;

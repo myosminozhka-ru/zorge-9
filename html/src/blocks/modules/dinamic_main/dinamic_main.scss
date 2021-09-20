@@ -189,3 +189,10 @@
   .slider.round:before {
     border-radius: 50%;
   }
+  .dinamic_page {
+      display: flex;
+      flex-direction: column;
+      .footer {
+          margin-top: auto;
+      }
+  }
