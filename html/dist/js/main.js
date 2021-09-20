@@ -671,35 +671,38 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   }, s.registered = !1;
 });
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.buy_tabs ul.tabs').delegate('li:not(.current)', 'click', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('current').siblings().removeClass('current').parents('div.section').find('div.box').hide().eq(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).index()).animate({
-      height: 'auto',
-      width: 'auto',
-      opacity: 'show'
-    }, 'slow');
+  if (document.querySelector('.page_act')) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.buy_tabs ul.tabs').delegate('li:not(.current)', 'click', function () {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('current').siblings().removeClass('current').parents('div.section').find('div.box').hide().eq(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).index()).animate({
+        height: 'auto',
+        width: 'auto',
+        opacity: 'show'
+      }, 'slow');
 
-    function setEqualHeight(columns) {
-      var tallestcolumn = 0;
-      columns.each(function () {
-        var currentHeight = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).height();
+      function setEqualHeight(columns) {
+        var tallestcolumn = 0;
+        columns.each(function () {
+          var currentHeight = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).height();
 
-        if (currentHeight > tallestcolumn) {
-          tallestcolumn = currentHeight;
-        }
+          if (currentHeight > tallestcolumn) {
+            tallestcolumn = currentHeight;
+          }
+        });
+        columns.height(tallestcolumn);
+      }
+
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+        setEqualHeight(jquery__WEBPACK_IMPORTED_MODULE_0___default()(".box__block--title"));
       });
-      columns.height(tallestcolumn);
-    }
-
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-      setEqualHeight(jquery__WEBPACK_IMPORTED_MODULE_0___default()(".box__block--title"));
     });
-  }); // Array.max = function(array) {
+  } // Array.max = function(array) {
   //     return Math.max.apply(Math,array);
   // };
   // var heights = $('.box-wrap div.box').map(function() {
   //     return $(this).innerHeight();
   // }).get();
   // $(".box-wrap").height(Array.max(heights));
+
 
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('input[type="number"]').styler();
 });
