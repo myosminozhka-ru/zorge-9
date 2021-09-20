@@ -1862,31 +1862,6 @@ input:focus {
   z-index: 1;
 }
 
-@keyframes move {
-  25% {
-    opacity: 1;
-  }
-
-  33% {
-    opacity: 1;
-  }
-
-  67% {
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateY(55px);
-    opacity: 0;
-  }
-}
-
-@keyframes pulse {
-  to {
-    opacity: 1;
-  }
-}
-
 .main_head:after {
   position: absolute;
   content: '';
