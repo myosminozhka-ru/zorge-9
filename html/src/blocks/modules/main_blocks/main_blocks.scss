@@ -1,5 +1,8 @@
 .main_blocks {
     font-size: 0;
+    @media all and (max-width: 768px) {
+        display: none;
+    }
     &__block {
         display: flex;
         align-items: center;
