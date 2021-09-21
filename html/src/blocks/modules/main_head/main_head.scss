@@ -250,7 +250,8 @@
 }
 .site-panel-wrap {
     z-index: 10;
-    position: absolute;
+    position: absolute;    top: 50%;
+    margin-top: -18px;
     right: 0;
 
     & .burger-wrap {

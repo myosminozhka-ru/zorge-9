@@ -2059,6 +2059,8 @@ input:focus {
 .site-panel-wrap {
   z-index: 10;
   position: absolute;
+  top: 50%;
+  margin-top: -18px;
   right: 0;
 }
 
@@ -4486,7 +4488,7 @@ input:checked + .slider:before {
   left: 0;
   line-height: 1em;
   z-index: 10;
-  font-size: 1.3em;
+  font-size: 0.9375vw;
   margin: -0.5em -5em;
   font-weight: 800;
   -webkit-transition: color .2s ease;
@@ -4504,8 +4506,8 @@ input:checked + .slider:before {
 
 .floor_center .main_floor {
   position: absolute;
-  top: 0;
-  left: 3px;
+  top: -2px;
+  left: 2px;
   right: 0;
   bottom: 0;
 }
@@ -4794,6 +4796,8 @@ input:checked + .slider:before {
   font-weight: 300;
   font-size: 48px;
   text-align: left;
+  padding-left: 50px;
+  padding-right: 50px;
   color: #FFFFFF;
 }
 
@@ -4839,7 +4843,7 @@ input:checked + .slider:before {
   transition: all .3s ease-out;
 }
 
-.room_blocks__block--title:hover {
+.room_blocks__block:hover .room_blocks__block--title {
   color: #957B61;
 }
 
@@ -5118,7 +5122,7 @@ input:checked + .slider:before {
   }
 
   .main_blocks__block--btns a {
-    font-size: 0.9375vw;
+    font-size: 18px;
   }
 }
 
@@ -5805,6 +5809,11 @@ input:checked + .slider:before {
 
   .room_page .buy_tabs {
     display: none;
+  }
+
+  .room_blocks__title {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .footer__tel {

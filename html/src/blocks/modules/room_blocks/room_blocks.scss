@@ -47,7 +47,13 @@
         font-weight: 300;
         font-size: 48px;
         text-align: left;
+        padding-left: 50px;
+        padding-right: 50px;
         color: #FFFFFF;
+        @media all and (max-width: 960px) {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
         @media all and (max-width: 680px) {
             margin-bottom: 40px;
             font-size: 24px;
@@ -108,14 +114,14 @@
             text-transform: uppercase;
             display: block;
             transition: all .3s ease-out;
-            &:hover {
-                color: #957B61;
-            }
             @media all and (max-width: 680px) {
                 padding-left: 0;
                 padding-right: 0;
                 font-size: 18px;
             }
+        }
+        &:hover .room_blocks__block--title {
+            color: #957B61;
         }
         &--opts {
             display: flex;
