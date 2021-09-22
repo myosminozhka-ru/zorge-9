@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     &__in {
-        overflow: hidden;
+        // overflow: hidden;
     }
     &:before {
         position: absolute;
@@ -253,6 +253,9 @@
     position: absolute;    top: 50%;
     margin-top: -18px;
     right: 0;
+    @media all and (max-width: 680px) {
+        margin-top: -8px;
+    }
 
     & .burger-wrap {
         width: 40px;
@@ -320,9 +323,9 @@
         
         &.opened {
         .burger-body {
-            -webkit-transform: translate(calc(-100% + 120px), -78px);
-                -ms-transform: translate(calc(-100% + 120px), -78px);
-                transform: translate(calc(-100% + 120px), -78px);
+            -webkit-transform: translate(calc(-100% + 120px), -66px);
+                -ms-transform: translate(calc(-100% + 120px), -66px);
+                transform: translate(calc(-100% + 120px), -66px);
                 @media all and (max-width: 680px) {
                     transform: translate(calc(-100% + 60px), -47px);
                 }

@@ -7,6 +7,10 @@
         margin-right: auto;
         width: 47%;
         justify-content: flex-end;
+        @media all and (max-width: 1400px) {
+            width: 100%;
+            justify-content: center;
+        }
     }
     .main_head__center {
         margin-top: auto;

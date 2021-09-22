@@ -1467,6 +1467,12 @@ body {
   overflow-x: hidden;
   box-sizing: border-box;
   background: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+body .footer {
+  margin-top: auto;
 }
 
 *,
@@ -1846,10 +1852,6 @@ input:focus {
   flex-direction: column;
 }
 
-.main_head__in {
-  overflow: hidden;
-}
-
 .main_head:before {
   position: absolute;
   content: '';
@@ -2118,9 +2120,9 @@ input:focus {
 }
 
 .site-panel-wrap .burger-wrap.opened .burger-body {
-  -webkit-transform: translate(calc(-100% + 120px), -78px);
-  -ms-transform: translate(calc(-100% + 120px), -78px);
-  transform: translate(calc(-100% + 120px), -78px);
+  -webkit-transform: translate(calc(-100% + 120px), -66px);
+  -ms-transform: translate(calc(-100% + 120px), -66px);
+  transform: translate(calc(-100% + 120px), -66px);
 }
 
 .site-panel-wrap .burger-wrap.opened:before {
@@ -2336,7 +2338,12 @@ input:focus {
 }
 
 .main_slider__bottom--img {
+  font-size: 0;
   min-height: 320px;
+}
+
+.main_slider__bottom--img img {
+  font-size: 0;
 }
 
 .main_blocks {
@@ -4194,6 +4201,11 @@ input:checked + .slider:before {
   margin-bottom: 20px;
 }
 
+.main_func__l--title sup {
+  top: -5px;
+  font-size: 11px;
+}
+
 .main_func__l--option {
   margin-bottom: 50px;
 }
@@ -4576,6 +4588,8 @@ input:checked + .slider:before {
 .room_page .main_head:before,
 .floor_page .main_head:before {
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  filter: blur(5px);
 }
 
 .room_page .main_head__center,
@@ -5252,6 +5266,11 @@ input:checked + .slider:before {
     display: none;
   }
 
+  .main_dop .main_head__top--logo {
+    width: 100%;
+    justify-content: center;
+  }
+
   .hover_bl {
     padding: 20px 40px;
   }
@@ -5800,6 +5819,8 @@ input:checked + .slider:before {
   .room_page .main_head:before,
   .floor_page .main_head:before {
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    filter: blur(12px);
   }
 
   .room_page .main_head__center,
@@ -6316,6 +6337,10 @@ input:checked + .slider:before {
     margin: 0;
     margin-left: 10px;
     text-align: left;
+  }
+
+  .site-panel-wrap {
+    margin-top: -8px;
   }
 
   .site-panel-wrap .burger-wrap {

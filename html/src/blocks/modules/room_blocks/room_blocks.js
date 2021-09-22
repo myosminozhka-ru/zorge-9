@@ -41,7 +41,6 @@ $(function() {
         ]
     });
     $('.rooms_tbs__block--title').on('click', function() {
-        $('.rooms_tbs__block.active').not(this).removeClass('active');
         $(this).parent().toggleClass('active');
     })
 })

@@ -1392,7 +1392,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     }]
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.rooms_tbs__block--title').on('click', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.rooms_tbs__block.active').not(this).removeClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().toggleClass('active');
   });
 });

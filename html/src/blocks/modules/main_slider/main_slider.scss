@@ -76,8 +76,10 @@
     &__bottom {
         font-size: 0;
         &--img {
+            font-size: 0;
             min-height: 320px;
             img {
+                font-size: 0;
                 @media all and (max-width: 1024px) {
                     width: auto;
                     max-width: unset;
