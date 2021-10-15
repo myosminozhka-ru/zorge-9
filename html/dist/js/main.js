@@ -761,6 +761,12 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hover_bl').removeClass('active');
   });
 });
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_head__center--sort').on('click', '.sort-js', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active').siblings().removeClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.main_head__center').find('.floor_center').removeClass('active').eq(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).index()).addClass('active');
+  });
+});
 
 /***/ }),
 

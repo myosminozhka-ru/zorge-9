@@ -179,9 +179,9 @@
                 }
             }
             &--more {
-                font-family: 'gm', serif;
+                font-family: 'gmm', serif;
                 font-style: normal;
-                font-weight: normal;
+                font-weight: 500;
                 font-size: 18px;
                 text-transform: uppercase;
                 color: #957B61;
@@ -305,6 +305,9 @@
         }
         &:first-child div {
             margin-left: 0;
+        }
+        &:first-child {
+            padding-left: 0;
         }
         &:not(:last-child) {
             border-right: 1px solid #fff;
