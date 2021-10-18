@@ -82,6 +82,22 @@
             }
         }
     }
+    .block_kompas {
+        position: absolute;
+        right: 80px;
+        bottom: 120px;
+        width: 186px;
+        height: 204px;
+        transition: all .3s ease-out;
+    }
+    @media all and (max-width: 1780px) {
+        .main_head__center {
+            padding-bottom: 230px;
+        }
+        .block_kompas {
+            bottom: 30px;
+        }
+    }
 }
 .floor_center {
     margin-top: 120px;
