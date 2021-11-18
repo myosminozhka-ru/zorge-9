@@ -1,0 +1,56 @@
+.gal_blocks {
+    @media all and (max-width: 1320px) {
+        margin-bottom: -20px;
+    }
+    .buy_tabs {
+        @media all and (max-width: 960px) {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &--block {
+            width: calc(50% - 20px);
+            margin-bottom: 80px;
+            display: block;
+            text-decoration: none;
+            @media all and (max-width: 1320px) {
+                margin-bottom: 40px;
+            }
+            @media all and (max-width: 680px) {
+                width: 100%;
+            }
+        }
+        &--img {
+            font-size: 0;
+            margin-bottom: 60px;
+            @media all and (max-width: 1320px) {
+                margin-bottom: 20px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &--title {
+            font-family: 'gm', serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 48px;
+            color: #FFFFFF;
+            @media all and (max-width: 1320px) {
+                font-size: 30px;
+            }
+            @media all and (max-width: 960px) {
+                font-size: 20px;
+            }
+            @media all and (max-width: 680px) {
+                font-size: 14px;
+            }
+        }
+    }
+}

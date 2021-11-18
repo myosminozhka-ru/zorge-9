@@ -28,4 +28,9 @@ import "%modules%/main_func/main_func";
 import "%modules%/floor_first/floor_first";
 import "%modules%/room_first/room_first";
 import "%modules%/room_blocks/room_blocks";
+import "%modules%/din_in_page/din_in_page";
+import "%modules%/din_page/din_page";
+import "%modules%/ap_first/ap_first";
+import "%modules%/gal_blocks/gal_blocks";
+import "%modules%/vid_blocks/vid_blocks";
 import "%modules%/footer/footer"

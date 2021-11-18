@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Аппартаменты</title>
+        <meta name="theme-color" content="#fff">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+        <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+        <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+        <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+        <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="https://api-maps.yandex.ru/2.1?apikey=ваш API-ключ&load=package.full&lang=ru_RU"></script>
+    </head>
+    <body class="room_page ap_page">
+        <div class="kladovie_first main_dop">
+    <div class="main_head__in">
+        <div class="main_head" style="background: url(./img/ss1.jpg) 50% / cover no-repeat;">
+            <div class="main_head__top fix_block_js">
+                <div class="main_head__top--right">
+                    <a href="/" class="main_head__top--logo"><img src="./img/logo2.png" alt=""></a>
+                    <a href="#" class="main_head__top--btn">выбрать апартаменты</a>
+                    <a href="tel:74951504010" class="main_head__top--tel">+7 495 150-40-10</a>
+                    <div class="site-panel-wrap">
+                        <div class="burger-wrap">
+                            <div class="burger-btn">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="burger-body">
+                                <div class="burger-close-btn"></div>
+                                <a href="/" class="burger-body__logo"><img src="./img/logo2.png" alt=""></a>
+                                <nav class="burger-body__nav">
+                                    <ul>
+                                        <li><a href="#">Расположение</a></li>
+                                        <li><a href="#">Окружение</a></li>
+                                        <li><a href="#">О проекте</a></li>
+                                        <li class="has">
+                                            <a href="#">Выбрать апартаменты</a>
+                                            <ul class="submenu">
+                                                <li><a href="#">Визуальный выбор</a></li>
+                                                <li><a href="#">Выбор по параметрам</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Парковочные места</a></li>
+                                        <li><a href="#">кладовые</a></li>
+                                        <li><a href="#">коммерческая недвижимость</a></li>
+                                        <li><a href="#">Панорама района</a></li>
+                                        <li><a href="#">медиацентр</a></li>
+                                        <li><a href="#">условия покупки</a></li>
+                                        <li><a href="#">ход строительства</a></li>
+                                        <li><a href="#">застройщик и команда</a></li>
+                                        <li><a href="#">документы</a></li>
+                                        <li><a href="#">контакты</a></li>
+                                    </ul>
+                                </nav>
+                                <div class="burger-body__info">
+                                    <a class="burger-body__info--tel" href="tel:74951724589">+7 (495) 172-45-89</a>
+                                    <div class="burger-body__info--soc">
+                                        <a href="#" target="_blank"><img src="./img/soc1.png" alt=""></a>
+                                        <a href="#" target="_blank"><img src="./img/soc2.png" alt=""></a>
+                                        <a href="#" target="_blank"><img src="./img/soc3.png" alt=""></a>
+                                        <a href="#" target="_blank"><img src="./img/soc4.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_head__center">
+                <div class="main_head__center--tr">
+                    <div class="main_head__center--lr">
+                        <a href="/" class="main_head__center--backr"></a>
+                        <div class="main_head__center--floor">
+                            <div class="main_head__center--titr">Этаж</div>
+                            <div class="main_head__center--sl">
+                                <div>12</div>
+                            </div>
+                        </div>
+                        <div class="main_head__center--floor room">
+                            <div class="main_head__center--titr">Комнат</div>
+                            <div class="main_head__center--sl">
+                                <div>1</div>
+                            </div>
+                        </div>
+                        <div class="main_head__center--floor wind">
+                            <div class="main_head__center--titr">Вид из окон</div>
+                            <div class="main_head__center--sl">
+                                <div>На парк</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_head__center--rr">
+                        <div class="main_head__center--floor corp">
+                            <div class="main_head__center--titr">Корпус</div>
+                            <div class="main_head__center--sl">
+                                <div>Manhatten</div>
+                            </div>
+                        </div>
+                        <div class="main_head__center--sort">
+                            <div class="main_head__center--sort1 sort-js">
+                                <svg class="desc" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="35.3553" y="0.707107" width="24" height="49" transform="rotate(45 35.3553 0.707107)" stroke="white"/>
+                                </svg>
+                                <svg class="mob" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="14.4785" y="0.707107" width="8.91506" height="18.8301" transform="rotate(45 14.4785 0.707107)" stroke="white"/>
+                                </svg>
+                            </div>
+                            <div class="main_head__center--sort2 sort-js active">
+                                <svg class="desc" width="26" height="50" viewBox="0 0 26 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.532959" y="0.5" width="24" height="49" fill="none" stroke="white"/>
+                                </svg>
+                                <svg class="mob" width="11" height="21" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.904297" y="0.69043" width="8.91506" height="18.8301" fill="none" stroke="white"/>
+                                </svg>
+                            </div>
+                            <div class="main_head__center--sort3 sort-js">
+                                <svg class="desc" width="26" height="50" viewBox="0 0 26 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.532959" y="0.5" width="24" height="49" stroke="white"/>
+                                </svg>
+                                <svg class="mob" width="11" height="21" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.734375" y="0.69043" width="8.91506" height="18.8301" stroke="white"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="room_center">
+                    <div class="room_center__l">
+                        <ul class="room_center__l--list">
+                            <li>
+                                <div class="room_center__l--tit">Общая площадь</div>
+                                <div class="room_center__l--txt">65.24 м<sup>2</sup></div>
+                            </li>
+                            <li>
+                                <div class="room_center__l--tit">Коридор</div>
+                                <div class="room_center__l--txt">9.18 м<sup>2</sup></div>
+                            </li>
+                            <li>
+                                <div class="room_center__l--tit">Номер апартамента</div>
+                                <div class="room_center__l--txt">130</div>
+                            </li>
+                            <li>
+                                <div class="room_center__l--tit">Цена без отделки</div>
+                                <div class="room_center__l--txt">21 792 000 ₽</div>
+                            </li>
+                            <li>
+                                <div class="room_center__l--tit">Вид из окон</div>
+                                <div class="room_center__l--txt">Березовая роща, Авиапарк</div>
+                            </li>
+                            <li>
+                                <div class="room_center__l--tit">Количество комнат</div>
+                                <div class="room_center__l--txt">3</div>
+                            </li>
+                        </ul>
+                        <div class="main_blocks__block--btns">
+                            <a href="#" class="main_blocks__block--btn">забронировать</a>
+                            <a href="#" class="main_blocks__block--btn">Скачать pdf</a>
+                            <a href="#" class="main_blocks__block--btn">3D Тур</a>
+                            <a href="#" class="main_blocks__block--btn">Панорама района</a>
+                        </div>
+                    </div>
+                    <div class="room_center__r slrs25">
+                        <img src="./img/img24.png" alt="">
+                        <img src="./img/img24.png" alt="">
+                        <img src="./img/img24.png" alt="">
+                        <img src="./img/img24.png" alt="">
+                        <img src="./img/img24.png" alt="">
+                        <img src="./img/img24.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ap_blocks">
+        <div class="ap_blocks__title">Ипотечные предложения</div>
+        <div class="ap_blocks__text">Совместно с ведущими банками России квартал апартаментов «Зорге 9» предлагает своим покупателям ряд уникальных ипотечных программ, позволяющих решить жилищный вопрос быстро и с минимальным вложением собственных средств.</div>
+        <div class="ap_blocks__list">
+            <div class="ap_blocks__list--block">
+                <div class="ap_blocks__list--title">Первоначальный взнос, руб</div>
+                <div class="ap_blocks__list--numb nb1"></div>
+                <input type="text" class="ap_blocks__list--range rg1" value="" />
+            </div>
+            <div class="ap_blocks__list--block">
+                <div class="ap_blocks__list--title">Срок кредита, лет</div>
+                <div class="ap_blocks__list--numb nb2"></div>
+                <input type="text" class="ap_blocks__list--range rg2" value="" />
+            </div>
+            <div class="ap_blocks__list--block">
+                <div class="ap_blocks__list--title">Процентная ставка, %</div>
+                <div class="ap_blocks__list--numb nb3"></div>
+                <input type="text" class="ap_blocks__list--range rg3" value="" />
+            </div>
+        </div>
+    </div>
+    <div class="ap_tabs">
+        <div class="ap_tabs__titles">
+            <div class="ap_tabs__titles--block">Банк</div>
+            <div class="ap_tabs__titles--block">Ставка</div>
+            <div class="ap_tabs__titles--block">Срок</div>
+            <div class="ap_tabs__titles--block">Ежемесячный платеж</div>
+            <div class="ap_tabs__titles--block">Минимальный взнос, %</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+    </div>
+    <div class="ap_tabs__button"><a href="#">оформить заявку</a></div>
+</div>
+<div class="form-wrapper fd1">
+    <div class="form-wrapper-inner">
+        <div class="icon-close">&nbsp;</div>
+        <div class="form-wrapper__title">Ипотечный калькулятор</div>
+        <div class="form-wrapper__subtitle">Для уточнения вопросов оформления ипотеки с Вами в ближайшее время свяжется наш сотрудник.</div>
+        <form action="" class="form-wrapper__form">
+            <label for="">
+                <div>Как нам к вам обращаться?</div>
+                <input type="text" placeholder="Иван иванов">
+            </label>
+            <label for="">
+                <div>Контактный телефон</div>
+                <input type="tel" placeholder="+7 (123) 123-45-67">
+            </label>
+            <div class="form-wrapper__btns">
+                <input type="submit" class="buttons_btn" value="Отправить">
+                <div class="icon-close btn buttons_btn">закрыть</div>
+            </div>
+        </form>
+    </div>
+</div>  
+        <div class="room_blocks">
+    <div class="room_blocks__title">Похожие апартаменты</div>
+    <div class="room_blocks__sl slk1">
+        <div class="room_blocks__block">
+            <a href="#" class="room_blocks__block--img"><img src="./img/img25.png" alt="однокомнатные апартаменты"></a>
+            <a href="#" class="room_blocks__block--title">однокомнатные апартаменты</a>
+            <div class="room_blocks__block--opts">
+                <div class="room_blocks__block--opt">
+                    <span>Корпус:</span><span>Manhattan</span>
+                </div>
+                <div class="room_blocks__block--opt">
+                    <span>Вид:</span><span>На парк</span>
+                </div>
+                <div class="room_blocks__block--opt">
+                    <span>Площадь:</span><span>64.3 м<sup>2</sup></span>
+                </div>
+                <div class="room_blocks__block--opt">
+                    <span>Этаж:</span><span>19</span>
+                </div>
+                <div class="room_blocks__block--opt">
+                    <span>Цена:</span><span>24 990 156 ₽</span>
+                </div>
+            </div>
+        </div>
+        <div class="room_blocks__block">
+            <a href="#" class="room_blocks__block--img"><img src="./img/img25.png" alt="однокомнатные апартаменты"></a>
+            <a href="#" class="room_blocks__block--title">однокомнатные апартаменты</a>
+            <div class="room_blocks__block--opts">
+                <div class="room_blocks__block--opt">
+                    <span>Корпус:</span><span>Manhattan</span>
+                </div>
+                <div class="room_blocks__block--opt">
+                    <span>Вид:</span><span>На парк</span>
+                </div>
+                <div class="room_blocks__block--opt">
+                    <span>Площадь:</span><span>64.3 м<sup>2</sup></span>
+                </div>
+                <div class="room_blocks__block--opt">
+                    <span>Этаж:</span><span>19</span>
+                </div>
+                <div class="room_blocks__block--opt">
+                    <span>Цена:</span><span>24 990 156 ₽</span>
+                </div>
+            </div>
+        </div>
+        <div class="room_blocks__block">
+            <a href="#" class="room_blocks__block--img"><img src="./img/img25.png" alt="однокомнатные апартаменты"></a>
+            <a href="#" class="room_blocks__block--title">однокомнатные апартаменты</a>
+            <div class="room_blocks__block--opts">
+                <div class="room_blocks__block--opt">
+                    <span>Корпус:</span><span>Manhattan</span>
+                </div>
+                <div class="room_blocks__block--opt">
+                    <span>Вид:</span><span>На парк</span>
+                </div>
+                <div class="room_blocks__block--opt">
+                    <span>Площадь:</span><span>64.3 м<sup>2</sup></span>
+                </div>
+                <div class="room_blocks__block--opt">
+                    <span>Этаж:</span><span>19</span>
+                </div>
+                <div class="room_blocks__block--opt">
+                    <span>Цена:</span><span>24 990 156 ₽</span>
+                </div>
+            </div>
+        </div>
+        <div class="room_blocks__block">
+            <a href="#" class="room_blocks__block--img"><img src="./img/img25.png" alt="однокомнатные апартаменты"></a>
+            <a href="#" class="room_blocks__block--title">однокомнатные апартаменты</a>
+            <div class="room_blocks__block--opts">
+                <div class="room_blocks__block--opt">
+                    <span>Корпус:</span><span>Manhattan</span>
+                </div>
+                <div class="room_blocks__block--opt">
+                    <span>Вид:</span><span>На парк</span>
+                </div>
+                <div class="room_blocks__block--opt">
+                    <span>Площадь:</span><span>64.3 м<sup>2</sup></span>
+                </div>
+                <div class="room_blocks__block--opt">
+                    <span>Этаж:</span><span>19</span>
+                </div>
+                <div class="room_blocks__block--opt">
+                    <span>Цена:</span><span>24 990 156 ₽</span>
+                </div>
+            </div>
+        </div>
+        <div class="room_blocks__block">
+            <a href="#" class="room_blocks__block--img"><img src="./img/img25.png" alt="однокомнатные апартаменты"></a>
+            <a href="#" class="room_blocks__block--title">однокомнатные апартаменты</a>
+            <div class="room_blocks__block--opts">
+                <div class="room_blocks__block--opt">
+                    <span>Корпус:</span><span>Manhattan</span>
+                </div>
+                <div class="room_blocks__block--opt">
+                    <span>Вид:</span><span>На парк</span>
+                </div>
+                <div class="room_blocks__block--opt">
+                    <span>Площадь:</span><span>64.3 м2</span>
+                </div>
+                <div class="room_blocks__block--opt">
+                    <span>Этаж:</span><span>19</span>
+                </div>
+                <div class="room_blocks__block--opt">
+                    <span>Цена:</span><span>24 990 156 ₽</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="room_blocks__link">Смотреть апартаменты</a>
+    <div class="pagingInfo"></div>
+    <div class="rooms_tbs">
+        <div class="rooms_tbs__block">
+            <div class="rooms_tbs__block--title">Условия ипотеки</div>
+            <div class="rooms_tbs__block--text">Совместно с ведущими банками России квартал апартаментов «Зорге 9» предлагает своим покупателям ряд уникальных ипотечных программ, позволяющих решить жилищный вопрос быстро и с минимальным вложением собственных средств.</div>
+            <a href="#" class="rooms_tbs__block--btn">Ипотечный калькулятор</a>
+        </div>
+        <div class="rooms_tbs__block">
+            <div class="rooms_tbs__block--title">trade-in</div>
+            <div class="rooms_tbs__block--text">Девелопер St Michael и онлайн-сервис UpHome представляют возможность обменять старую квартиру на новые апартаменты 
+                в «Зорге 9», не прибегая к услугам агентов недвижимости.</div>
+            <a href="#" class="rooms_tbs__block--btn">ознакомиться с условиями</a>
+        </div>
+        <div class="rooms_tbs__block">
+            <div class="rooms_tbs__block--title">беспроцентная рассрочка</div>
+            <div class="rooms_tbs__block--text">Покупателям доступна беспроцентная рассрочка на срок до окончания строительства. Условия рассрочки зависят от размера первого взноса.</div>
+            <a href="#" class="rooms_tbs__block--btn">Условия рассрочки.pdf</a>
+        </div>
+    </div>
+</div>
+        <div class="footer">
+    <div class="footer__in">
+        <a href="tel:74951724589" class="footer__tel">+7 (495) 172-45-89</a>  
+        <div class="footer__btn">Заказать звонок</div> 
+        <nav class="footer__menu">
+            <ul>
+                <li><a href="#">Ход строительства</a></li>
+                <li><a href="#">Медиацентр</a></li>
+                <li><a href="#">Документы</a></li>
+                <li><a href="#">Условия покупки</a></li>
+                <li><a href="#">Застройщик и команда</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+        <script src="js/main.js"></script>
+        <script src="js/vendor.js"></script>
+    </body>
+</html>
