@@ -33,4 +33,5 @@ import "%modules%/din_page/din_page";
 import "%modules%/ap_first/ap_first";
 import "%modules%/gal_blocks/gal_blocks";
 import "%modules%/vid_blocks/vid_blocks";
+import "%modules%/params_blocks/params_blocks";
 import "%modules%/footer/footer"
