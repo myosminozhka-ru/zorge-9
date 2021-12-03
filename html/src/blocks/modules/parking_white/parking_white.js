@@ -16,4 +16,48 @@ $(function() {
         $(this).toggleClass('active');
         $('.plc4').toggleClass('active')
     })
+    $('.plc2').on('click', function() {
+        $('.hover_bl').addClass('active');
+        if($('.plc2').hasClass('more')){
+            $('.plc2').removeClass('more')
+        } else {
+            $(this).addClass('more')
+        }
+        $(this).addClass('more')
+    })
+    $('.plc4').on('click', function() {
+        $('.hover_bl').addClass('active');
+        if($('.plc4').hasClass('more')){
+            $('.plc4').removeClass('more')
+        } else {
+            $(this).addClass('more')
+        }
+        $(this).addClass('more')
+    })
+    $(document).on('click', function(e){
+        if( $(e.target).closest('.hover_bl').length || $(e.target).closest('.plc2.active').length || $(e.target).closest('.plc4.active').length)
+        return
+        
+        $('.hover_bl').removeClass('active');
+        $('.plc2').removeClass('more')
+        $('.plc4').removeClass('more')
+    });
 })
+import Panzoom from '@panzoom/panzoom'
+
+if (window.matchMedia("(max-width: 1023px)").matches) {
+const elem = document.getElementById('panzoom-element')
+const panzoom = Panzoom(elem, {
+  maxScale: 5,
+  startScale: 1
+})
+panzoom.pan(10, 10)
+panzoom.zoom(1, { animate: true })
+
+// Panning and pinch zooming are bound automatically (unless disablePan is true).
+// There are several available methods for zooming
+// that can be bound on button clicks or mousewheel.
+var buttonIn = document.getElementById('zoomInButton');
+var buttonOut = document.getElementById('zoomOutButton');
+buttonIn.addEventListener('click', panzoom.zoomIn)
+buttonOut.addEventListener('click', panzoom.zoomOut)    }

@@ -892,10 +892,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('path.active').on('mouseenter', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_dop path.active').on('mouseenter', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hover_bl').addClass('active');
   });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('path.active').on('mouseleave', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_dop path.active').on('mouseleave', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hover_bl').removeClass('active');
   });
 });
@@ -1507,6 +1507,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _panzoom_panzoom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @panzoom/panzoom */ "./node_modules/@panzoom/panzoom/dist/panzoom.es.js");
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.place1').on('click', function () {
@@ -1525,7 +1526,66 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc4').toggleClass('active');
   });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc2').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hover_bl').addClass('active');
+
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc2').hasClass('more')) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc2').removeClass('more');
+    } else {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('more');
+    }
+
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('more');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc4').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hover_bl').addClass('active');
+
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc4').hasClass('more')) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc4').removeClass('more');
+    } else {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('more');
+    }
+
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('more');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', function (e) {
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.hover_bl').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.plc2.active').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.plc4.active').length) return;
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hover_bl').removeClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc2').removeClass('more');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc4').removeClass('more');
+  });
 });
+
+
+if (window.matchMedia("(max-width: 1023px)").matches) {
+  var elem = document.getElementById('panzoom-element');
+  var panzoom = Object(_panzoom_panzoom__WEBPACK_IMPORTED_MODULE_1__["default"])(elem, {
+    maxScale: 5,
+    startScale: 1
+  });
+  panzoom.pan(10, 10);
+  panzoom.zoom(1, {
+    animate: true
+  }); // Panning and pinch zooming are bound automatically (unless disablePan is true).
+  // There are several available methods for zooming
+  // that can be bound on button clicks or mousewheel.
+
+  var buttonIn = document.getElementById('zoomInButton');
+  var buttonOut = document.getElementById('zoomOutButton');
+  buttonIn.addEventListener('click', panzoom.zoomIn);
+  buttonOut.addEventListener('click', panzoom.zoomOut);
+}
+
+/***/ }),
+
+/***/ "./src/blocks/modules/parking_white2/parking_white2.js":
+/*!*************************************************************!*\
+  !*** ./src/blocks/modules/parking_white2/parking_white2.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
 
 /***/ }),
 
@@ -1691,8 +1751,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_vid_blocks_vid_blocks__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! %modules%/vid_blocks/vid_blocks */ "./src/blocks/modules/vid_blocks/vid_blocks.js");
 /* harmony import */ var _modules_vid_blocks_vid_blocks__WEBPACK_IMPORTED_MODULE_34___default = /*#__PURE__*/__webpack_require__.n(_modules_vid_blocks_vid_blocks__WEBPACK_IMPORTED_MODULE_34__);
 /* harmony import */ var _modules_params_blocks_params_blocks__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! %modules%/params_blocks/params_blocks */ "./src/blocks/modules/params_blocks/params_blocks.js");
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_36___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_36__);
+/* harmony import */ var _modules_parking_white2_parking_white2__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! %modules%/parking_white2/parking_white2 */ "./src/blocks/modules/parking_white2/parking_white2.js");
+/* harmony import */ var _modules_parking_white2_parking_white2__WEBPACK_IMPORTED_MODULE_36___default = /*#__PURE__*/__webpack_require__.n(_modules_parking_white2_parking_white2__WEBPACK_IMPORTED_MODULE_36__);
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_37___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_37__);
+
 
 
 

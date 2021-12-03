@@ -1,9 +1,9 @@
 import $ from "jquery";
 $(function() {
-    $('path.active').on('mouseenter', function() {
+    $('.main_dop path.active').on('mouseenter', function() {
         $('.hover_bl').addClass('active')
     })
-    $('path.active').on('mouseleave', function() {
+    $('.main_dop path.active').on('mouseleave', function() {
         $('.hover_bl').removeClass('active')
     })
 });
