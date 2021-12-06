@@ -6843,6 +6843,49 @@ input:checked + .slider:before {
   justify-content: flex-end;
 }
 
+.room_page.ap_page.page_act .new_tabs .tabs {
+  justify-content: center;
+}
+
+.room_page.ap_page.page_act .new_tabs .tabs li {
+  width: 50%;
+}
+
+.room_page.ap_page.page_act .new_tabs .rast {
+  display: block !important;
+}
+
+.room_page.ap_page.page_act .new_tabs .box {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.room_page.ap_page.page_act .new_tabs .box img {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.room_page.ap_page.page_act .new_tabs .box.visible {
+  display: block;
+}
+
+.room_page.ap_page.page_act .rooms_tbs {
+  display: none;
+}
+
+.room_page.ap_page.page_act .buy_tabs {
+  display: block !important;
+}
+
+.room_page.ap_page.page_act .pagingInfo {
+  margin-bottom: 80px;
+}
+
 .gal_blocks__list {
   display: flex;
   flex-wrap: wrap;
@@ -9215,6 +9258,10 @@ input:checked + .slider:before {
     margin-bottom: 30px;
   }
 
+  .room_page.ap_page.page_act .new_tabs .box {
+    margin-top: 60px;
+  }
+
   .room_page.ap_page.page_act .main_head {
     background: #000 !important;
   }
@@ -9481,6 +9528,28 @@ input:checked + .slider:before {
     margin-top: 80px;
     font-size: 14px;
     padding: 14px 10px;
+  }
+
+  .room_page.ap_page.page_act .hover_bl__block {
+    width: 50%;
+    margin-bottom: 20px;
+    border: 0;
+    text-align: left;
+    border-left: 1px solid #fff;
+    align-items: flex-start;
+    height: max-content;
+    padding-left: 20px;
+    justify-content: flex-start;
+    padding-right: 20px;
+  }
+
+  .room_page.ap_page.page_act .hover_bl__block--title {
+    font-size: 14px;
+  }
+
+  .room_page.ap_page.page_act .hover_bl {
+    flex-wrap: wrap;
+    padding: 0;
   }
 }
 
@@ -10551,6 +10620,12 @@ input:checked + .slider:before {
 
   .komc_in_white .block_info__moto2 {
     margin-bottom: 10px;
+  }
+}
+
+@media all and (max-width: 460px) {
+  .room_page.ap_page.page_act .hover_bl__block {
+    width: 100%;
   }
 }
 

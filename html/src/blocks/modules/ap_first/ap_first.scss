@@ -490,6 +490,45 @@
             justify-content: flex-end;
         }
     }
+    .new_tabs {
+        .tabs {
+            justify-content: center;
+            li {
+                width: 50%;
+            }
+        }
+        .rast {
+            display: block !important;
+        }
+        .box {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+            @media all and (max-width: 960px) {
+                margin-top: 60px;
+            }
+            img {
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &.visible {
+                display: block;
+            }
+        }
+    }
+    .rooms_tbs {
+        display: none;
+    }
+    .buy_tabs {
+        display: block !important;
+    }
+    .pagingInfo {
+        margin-bottom: 80px;
+    }
     @media all and (max-width: 1600px) {
         .slick-prev, .slick-next {
             display: none !important;
@@ -535,9 +574,35 @@
             background: #000 !important;
         }  
     }
+    @media all and (max-width: 860px) {
+        .hover_bl__block {
+            width: 50%;
+            margin-bottom: 20px;
+            border: 0;
+            text-align: left;
+            border-left: 1px solid #fff;
+            align-items: flex-start;
+            height: max-content;
+            padding-left: 20px;
+            justify-content: flex-start;
+            padding-right: 20px;
+        }
+        .hover_bl__block--title {
+            font-size: 14px;
+        }
+        .hover_bl {
+            flex-wrap: wrap;
+            padding: 0;
+        }
+    }
     @media all and (max-width: 768px) {
         .main_head__center--sort {
             width: 66px;
+        }
+    }
+    @media all and (max-width: 460px) {
+        .hover_bl__block {
+            width: 100%;
         }
     }
 }
