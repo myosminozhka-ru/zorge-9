@@ -69,20 +69,21 @@ $(function() {
     });
 })
 import Panzoom from '@panzoom/panzoom'
-
-if (window.matchMedia("(max-width: 1023px)").matches) {
-const elem = document.getElementById('panzoom-element')
-const panzoom = Panzoom(elem, {
-  maxScale: 5,
-  startScale: 1
-})
-panzoom.pan(10, 10)
-panzoom.zoom(1, { animate: true })
-
-// Panning and pinch zooming are bound automatically (unless disablePan is true).
-// There are several available methods for zooming
-// that can be bound on button clicks or mousewheel.
-var buttonIn = document.getElementById('zoomInButton');
-var buttonOut = document.getElementById('zoomOutButton');
-buttonIn.addEventListener('click', panzoom.zoomIn)
-buttonOut.addEventListener('click', panzoom.zoomOut)    }
+if (document.querySelector('#panzoom-element')) {
+    if (window.matchMedia("(max-width: 1023px)").matches) {
+    const elem = document.getElementById('panzoom-element')
+    const panzoom = Panzoom(elem, {
+      maxScale: 5,
+      startScale: 1
+    })
+    panzoom.pan(10, 10)
+    panzoom.zoom(1, { animate: true })
+    
+    // Panning and pinch zooming are bound automatically (unless disablePan is true).
+    // There are several available methods for zooming
+    // that can be bound on button clicks or mousewheel.
+    var buttonIn = document.getElementById('zoomInButton');
+    var buttonOut = document.getElementById('zoomOutButton');
+    buttonIn.addEventListener('click', panzoom.zoomIn)
+    buttonOut.addEventListener('click', panzoom.zoomOut)    }
+}
