@@ -41,8 +41,8 @@
             &:hover {
                 text-decoration: underline;
             }
+            display: none;
             @media all and (max-width: 1040px) {
-                display: none;
                 &.mob {
                     display: block !important;
                     font-size: 14px;

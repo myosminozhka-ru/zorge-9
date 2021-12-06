@@ -4349,7 +4349,7 @@ input:focus {
 }
 
 .parking_white__r {
-  margin-top: -135px;
+  margin-top: -85px;
 }
 
 .parking_white__r svg {
@@ -6337,6 +6337,7 @@ input:checked + .slider:before {
   text-transform: uppercase;
   color: #957B61;
   text-decoration: none;
+  display: none;
 }
 
 .din__item--link:hover {
@@ -6553,7 +6554,14 @@ input:checked + .slider:before {
 .ap_page .room_center__rl--li {
   display: flex;
   text-align: left;
+  text-decoration: none;
   align-items: center;
+  text-transform: uppercase;
+  font-family: 'gm', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #FFFFFF;
   margin-bottom: 30px;
 }
 
@@ -6884,6 +6892,14 @@ input:checked + .slider:before {
 
 .room_page.ap_page.page_act .pagingInfo {
   margin-bottom: 80px;
+}
+
+.params_blocks .irs--flat .irs-from,
+.params_blocks .irs--flat .irs-to {
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .gal_blocks__list {
@@ -8059,6 +8075,10 @@ input:checked + .slider:before {
     width: 50%;
   }
 
+  .ap_page .room_center__rl {
+    padding-left: 2%;
+  }
+
   .room_page.ap_page.page_act .slick-prev,
   .room_page.ap_page.page_act .slick-next {
     display: none !important;
@@ -8726,10 +8746,6 @@ input:checked + .slider:before {
 
   .din__item--title {
     font-size: 24px;
-  }
-
-  .din__item--link {
-    display: none;
   }
 
   .din__item--link.mob {

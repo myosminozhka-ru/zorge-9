@@ -136,10 +136,20 @@
             max-width: 33%;
             width: 100%;
             padding-left: 11%;
+            @media all and (max-width: 1600px) {
+                padding-left: 2%;
+            }
             &--li {
                 display: flex;
                 text-align: left;
+                text-decoration: none;
                 align-items: center;
+                text-transform: uppercase;
+                font-family: 'gm', serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                color: #FFFFFF;
                 margin-bottom: 30px;
             }
             &--img {
@@ -605,4 +615,10 @@
             width: 100%;
         }
     }
+}
+.params_blocks .irs--flat .irs-from, .params_blocks .irs--flat .irs-to {
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
