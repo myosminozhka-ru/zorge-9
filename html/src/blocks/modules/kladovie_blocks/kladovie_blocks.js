@@ -10,7 +10,7 @@ $(function() {
     });
 
     $slickElement.slick({
-        slide: '.kladovie_blocks__block',
+        // slide: '.kladovie_blocks__block',
         autoplay: true,
         dots: true,
         infinite: false,

@@ -10,7 +10,7 @@ $(function() {
     });
 
     $slickElement.slick({
-        slide: '.room_blocks__block',
+        // slide: '.room_blocks__block',
         dots: false,
         arrows: true,
         infinite: false,

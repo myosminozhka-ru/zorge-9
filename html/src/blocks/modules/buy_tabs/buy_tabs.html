@@ -9,74 +9,160 @@
         </ul>
         <div class="box-wrap">
             <div class="box visible">
-                <div class="box__title">Ипотечный калькулятор</div>
-                <div class="calc">
-                    <div class="calc__l">
-                        <div class="calc__l--text">Совместно с ведущими банками России квартал апартаментов «Зорге 9» предлагает своим покупателям ряд уникальных ипотечных программ, позволяющих решить жилищный вопрос быстро и с минимальным вложением собственных средств.</div>
-                        <div class="calc__list--in">
-                            <div class="calc__list">
-                                <div class="calc__list__block active">Банк 1</div>
-                                <div class="calc__list__block">Банк 2</div>
-                                <div class="calc__list__block">Банк 3</div>
-                                <div class="calc__list__block">Банк 4</div>
-                                <div class="calc__list__block">Банк 5</div>
-                                <div class="calc__list__block">Банк 1</div>
-                                <div class="calc__list__block">Банк 2</div>
-                                <div class="calc__list__block">Банк 3</div>
-                                <div class="calc__list__block">Банк 4</div>
-                                <div class="calc__list__block">Банк 5</div>
-                                <div class="calc__list__block">Банк 1</div>
-                                <div class="calc__list__block">Банк 2</div>
-                                <div class="calc__list__block">Банк 3</div>
-                                <div class="calc__list__block">Банк 4</div>
-                                <div class="calc__list__block">Банк 5</div>
-                                <div class="calc__list__block">Банк 1</div>
-                                <div class="calc__list__block">Банк 2</div>
-                                <div class="calc__list__block">Банк 3</div>
-                                <div class="calc__list__block">Банк 4</div>
-                                <div class="calc__list__block">Банк 5</div>
-                                <div class="calc__list__block">Банк 1</div>
-                                <div class="calc__list__block">Банк 2</div>
-                                <div class="calc__list__block">Банк 3</div>
-                                <div class="calc__list__block">Банк 4</div>
-                                <div class="calc__list__block">Банк 5</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="calc__r">
-                        <form action="">
-                            <label for="">
-                                <div>Стоимость апартамента</div>
-                                <div class="quantity-bloc">
-                                    <input type="number" class="quantity-num" name="" id="" placeholder="10 000 000 ₽">
-                                </div>
-                            </label>
-                            <div class="sibl">
-                                <label for="">
-                                    <div>Первоначальный взнос</div>
-                                    <input type="number" name="" id="" placeholder="1 000 000 ₽">
-                                </label>
-                                <label for="">
-                                    <div>Срок кредита</div>
-                                    <input type="number" name="" id="" placeholder="10 000 000 ₽">
-                                </label>
-                            </div>
-                            <div class="sibl text_frm">
-                                <label for="">
-                                    <div>Ежемесячный платеж</div>
-                                    <input type="text" name="" id="" placeholder="10 000 ₽">
-                                </label>
-                                <label for="">
-                                    <div>Процентная ставка</div>
-                                    <input type="text" name="" id="" placeholder="4% годовых">
-                                </label>
-                            </div>
-                            <div class="form_btn buttons_btn feedback">оформить заявку</div>
-                        </form>
-                    </div>
-                </div>
+                
+    <div class="ap_blocks">
+        <div class="ap_blocks__title">Ипотечные предложения</div>
+        <div class="ap_blocks__text">Совместно с ведущими банками России квартал апартаментов «Зорге 9» предлагает своим покупателям ряд уникальных ипотечных программ, позволяющих решить жилищный вопрос быстро и с минимальным вложением собственных средств.</div>
+        <div class="ap_blocks__list">
+            <div class="ap_blocks__list--block">
+                <div class="ap_blocks__list--title">Первоначальный взнос, руб</div>
+                <div class="ap_blocks__list--numb nb1"></div>
+                <input type="text" class="ap_blocks__list--range rg1" value="" />
             </div>
-            <div class="box rast">
+            <div class="ap_blocks__list--block">
+                <div class="ap_blocks__list--title">Срок кредита, лет</div>
+                <div class="ap_blocks__list--numb nb2"></div>
+                <input type="text" class="ap_blocks__list--range rg2" value="" />
+            </div>
+            <div class="ap_blocks__list--block">
+                <div class="ap_blocks__list--title">Процентная ставка, %</div>
+                <div class="ap_blocks__list--numb nb3"></div>
+                <input type="text" class="ap_blocks__list--range rg3" value="" />
+            </div>
+        </div>
+    </div>
+    <div class="ap_tabs">
+        <div class="ap_tabs__titles">
+            <div class="ap_tabs__titles--block">Банк</div>
+            <div class="ap_tabs__titles--block">Ставка</div>
+            <div class="ap_tabs__titles--block">Срок</div>
+            <div class="ap_tabs__titles--block">Ежемесячный платеж</div>
+            <div class="ap_tabs__titles--block">Минимальный взнос, %</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+        <div class="ap_tabs__blocks">
+            <div class="ap_tabs__blocks--block">
+                <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                <div class="ap_tabs__blocks--title">ВТБ</div>
+            </div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+            <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
+        </div>
+    </div>
+    <div class="ap_tabs__button"><a href="#">оформить заявку</a></div>
+            </div>
+            <div class="box rast ap_blocks">
                 <div class="razs">
                     <div class="box__title">Рассрочка</div>
                     <div class="razs__subtitle">Покупателям доступна беспроцентная рассрочка на срок до окончания строительства.</div>
@@ -139,7 +225,7 @@
                 </div>
             </div>
             <div class="box">
-                <div class="block_redf">
+                <div class="block_redf ap_blocks">
                     <div class="block_redf__l">
                         <div class="box__title">Trade-in</div>
                         <div class="block_redf__l--subtitle">Trade-in в «Зорге 9» за 10 дней</div>
@@ -154,38 +240,40 @@
                 </div>
             </div>
             <div class="box">
-                <div class="box__title">Акции и предложения</div>
-                <div class="box__blocks">
-                    <a href="/act_page.html" class="box__block">
-                        <div class="box__block--img"><img src="./img/img21.png" alt=""></div>
-                        <div class="box__block--info">
-                            <div class="box__block--title">Очень длинное название акции, <br> на целых две строки</div>
-                            <div class="box__block--btns">
-                                <div class="box__block--date">Акция действует до 30 июня 2021 г.</div>
-                                <div class="box__block--more">Подробнее</div>
+                <div class="ap_blocks">
+                    <div class="box__title">Акции и предложения</div>
+                    <div class="box__blocks">
+                        <a href="/act_page.html" class="box__block">
+                            <div class="box__block--img"><img src="./img/img21.png" alt=""></div>
+                            <div class="box__block--info">
+                                <div class="box__block--title">Очень длинное название акции, <br> на целых две строки</div>
+                                <div class="box__block--btns">
+                                    <div class="box__block--date">Акция действует до 30 июня 2021 г.</div>
+                                    <div class="box__block--more">Подробнее</div>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="/act_page.html" class="box__block">
-                        <div class="box__block--img"><img src="./img/img21.png" alt=""></div>
-                        <div class="box__block--info">
-                            <div class="box__block--title">Название акции</div>
-                            <div class="box__block--btns">
-                                <div class="box__block--date">Акция действует до 30 июня 2021 г.</div>
-                                <div class="box__block--more">Подробнее</div>
+                        </a>
+                        <a href="/act_page.html" class="box__block">
+                            <div class="box__block--img"><img src="./img/img21.png" alt=""></div>
+                            <div class="box__block--info">
+                                <div class="box__block--title">Название акции</div>
+                                <div class="box__block--btns">
+                                    <div class="box__block--date">Акция действует до 30 июня 2021 г.</div>
+                                    <div class="box__block--more">Подробнее</div>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="/act_page.html" class="box__block">
-                        <div class="box__block--img"><img src="./img/img21.png" alt=""></div>
-                        <div class="box__block--info">
-                            <div class="box__block--title">Название акции</div>
-                            <div class="box__block--btns">
-                                <div class="box__block--date">Акция действует до 30 июня 2021 г.</div>
-                                <div class="box__block--more">Подробнее</div>
+                        </a>
+                        <a href="/act_page.html" class="box__block">
+                            <div class="box__block--img"><img src="./img/img21.png" alt=""></div>
+                            <div class="box__block--info">
+                                <div class="box__block--title">Название акции</div>
+                                <div class="box__block--btns">
+                                    <div class="box__block--date">Акция действует до 30 июня 2021 г.</div>
+                                    <div class="box__block--more">Подробнее</div>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

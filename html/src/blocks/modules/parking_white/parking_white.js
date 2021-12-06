@@ -27,6 +27,8 @@ $(function() {
     })
     $('.plc4').on('click', function() {
         $('.hover_bl').addClass('active');
+        $('.komc_in_white .plc2').removeClass('more')
+        $('.komc_in_white .plc1').removeClass('more')
         if($('.plc4').hasClass('more')){
             $('.plc4').removeClass('more')
         } else {
@@ -34,11 +36,34 @@ $(function() {
         }
         $(this).addClass('more')
     })
+    $('.komc_in_white .plc2').on('click', function() {
+        $('.hover_bl').addClass('active');
+        $('.komc_in_white .plc1').removeClass('more')
+        $('.komc_in_white .plc4').removeClass('more')
+        if($('.komc_in_white .plc2').hasClass('more')){
+            $('.komc_in_white .plc2').removeClass('more')
+        } else {
+            $(this).addClass('more')
+        }
+        $(this).addClass('more')
+    })
+    $('.komc_in_white .plc1').on('click', function() {
+        $('.hover_bl').addClass('active');
+        $('.komc_in_white .plc2').removeClass('more')
+        $('.komc_in_white .plc2').removeClass('more')
+        if($('.komc_in_white .plc1').hasClass('more')){
+            $('.komc_in_white .plc1').removeClass('more')
+        } else {
+            $(this).addClass('more')
+        }
+        $(this).addClass('more')
+    })
     $(document).on('click', function(e){
-        if( $(e.target).closest('.hover_bl').length || $(e.target).closest('.plc2.active').length || $(e.target).closest('.plc4.active').length)
+        if( $(e.target).closest('.hover_bl').length || $(e.target).closest('.plc2.active').length || $(e.target).closest('.plc4.active').length || $(e.target).closest('.plc1.active').length)
         return
         
         $('.hover_bl').removeClass('active');
+        $('.plc1').removeClass('more')
         $('.plc2').removeClass('more')
         $('.plc4').removeClass('more')
     });

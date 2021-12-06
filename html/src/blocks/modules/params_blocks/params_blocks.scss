@@ -2,6 +2,9 @@
     .sls, .main_func__l--btn {
         max-width: 345px;
         width: 100%;
+        @media all and (max-width: 1140px) {
+            max-width: 100%;
+        }
     }
     .sls {
         margin-left: 14px;
@@ -9,6 +12,9 @@
         .main_func__l--title {
             text-align: center !important;
             margin-bottom: 0 !important;
+        }
+        @media all and (max-width: 1140px) {
+            max-width: 95%;
         }
     }
     .main_func__l--option {
@@ -51,6 +57,11 @@
             font-weight: normal;
             display: block;
             font-size: 18px;
+        }
+    }
+    .main_func__l--finds {
+        @media all and (max-width: 1140px) {
+            display: none;
         }
     }
     .main_func__l--title {
@@ -98,12 +109,25 @@
         margin-top: 120px;
         border-top: 1px solid #c4c4c4;
         padding-top: 40px;
+        @media all and (max-width: 1140px) {
+            flex-direction: column;
+        } 
     }
     &__l {
         max-width: 520px;
         margin-right: 80px;
         width: 100%;
         flex: none;
+        @media all and (max-width: 1660px) {
+            margin-right: 20px;
+            max-width: 400px;
+        }
+        @media all and (max-width: 1140px) {
+            margin: 0;
+            max-width: 100%;
+            padding-bottom: 60px;
+            border-bottom: 1px solid #C4C4C4;
+        }
     }
     &--title {
         font-family: 'gml', serif;
@@ -145,7 +169,7 @@
         color: #000000;
         width: max-content;
         cursor: pointer;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         transition: all .3s ease-out;
         @media all and (max-width: 1800px) {
             width: 33%;
@@ -269,11 +293,24 @@
     }
 }
 .table {
+    position: relative;
+    @media all and (max-width: 480px) {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
     &__title {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 40px;
+        @media all and (max-width: 1390px) {
+            min-height: 100px;
+            margin-bottom: 30px;
+            margin-top: 40px;
+        }
+        @media all and (max-width: 680px) {
+            margin-bottom: 0;
+        }
         &--block {
             width: 16.6%;
             text-align: center;
@@ -300,6 +337,15 @@
                     top: 50%;
                     right: 0;
                 }
+                @media all and (max-width: 1390px) {
+                    width: 40px;
+                    transform: rotate(270deg);
+                    font-size: 14px;
+                    white-space: nowrap;
+                    &:before {
+                        display: none;
+                    }
+                }
             }
             &.active {
                 color: #957B61;
@@ -316,6 +362,10 @@
         border: 1px solid #333;
         overflow: auto;
         height: 870px;
+        @media all and (max-width: 480px) {
+            overflow: unset;
+            height: auto;
+        }
         &--img {
             position: absolute;
             max-width: 400px;
@@ -330,7 +380,31 @@
             transition: all .3s ease-out;
             z-index: 20;
             top: 50%;
-            margin-top: -164px;
+            margin-top: -125px;
+            left: -420px;
+            padding: 50px;
+            &:before {
+                position: absolute;
+                content: '';
+                width: 30px;
+                height: 30px;
+                background: #58595B;
+                transform: rotate(45deg);
+                right: -15px;
+                top: 50%;
+                margin-top: -15px;
+            }
+            img {
+                max-width: 300px;
+                width: 100%;
+            }
+            &.active {
+                opacity: 1;
+                visibility: visible;
+            }
+            @media all and (max-width: 1140px) {
+                display: none;
+            }
         }
         &--item {
             display: flex;
@@ -344,28 +418,38 @@
             &:nth-child(odd) {
                 background: #1A1A18;
             }
-            &:hover {
-                background: #B69B80 !important;
-                .table__info--img {
-                    opacity: 1;
-                    visibility: visible;
+            @media all and (min-width: 1140px) {
+                &:hover {
+                    background: #B69B80 !important;
+                    .table__info--img {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    .table__info--block {
+                        border-color: transparent !important;
+                    }
                 }
-                .table__info--block {
-                    border-color: transparent !important;
+                &.action {
+                    position: relative;
+                    &:before {
+                        position: absolute;
+                        content: '';
+                        width: 30px;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        bottom: 0;
+                        background: url("data:image/svg+xml,%3Csvg width='30' height='80' viewBox='0 0 30 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H30V70L0 80V0Z' fill='%23F71D30'/%3E%3Cpath d='M19 61.4393L19 63.5533L9.144 59.3533L9.144 57.4213L19 53.2213L19 55.3633L16.732 56.3293L16.732 60.4733L19 61.4393ZM11.664 58.4013L15.066 59.8433L15.066 56.9733L11.664 58.4013ZM19 49.9099L19 51.9259L9.2 51.9259L9.2 49.9099L13.064 49.9099L9.2 46.2979L9.2 43.8339L13.694 47.9919L19 43.1199L19 45.6959L14.478 49.9099L19 49.9099ZM21.002 32.5491L21.002 34.4531L19 34.4531L19 42.0411L9.2 42.0411L9.2 40.0251L17.194 40.0251L17.194 35.9231L9.2 35.9231L9.2 33.9071L17.194 33.9071L17.194 32.5491L21.002 32.5491ZM19 29.3823L19 31.0763L9.2 31.0763L9.2 29.0603L15.584 29.0603L9.2 24.3143L9.2 22.5783L19 22.5783L19 24.5803L12.574 24.5803L19 29.3823ZM19 18.9282L19 21.2522L14.814 18.1862C14.618 18.8302 14.282 19.3342 13.806 19.6982C13.3207 20.0529 12.7513 20.2302 12.098 20.2302C11.2393 20.2302 10.544 19.9269 10.012 19.3202C9.47066 18.7229 9.2 17.9016 9.2 16.8562L9.2 12.3202L19 12.3202L19 14.3362L15.038 14.3362L15.038 16.0442L19 18.9282ZM13.344 16.7442L13.344 14.3362L10.964 14.3362L10.964 16.7442C10.964 17.2016 11.0713 17.5609 11.286 17.8222C11.4913 18.0742 11.7807 18.2002 12.154 18.2002C12.5367 18.2002 12.8307 18.0742 13.036 17.8222C13.2413 17.5609 13.344 17.2016 13.344 16.7442Z' fill='white'/%3E%3C/svg%3E%0A") 50% no-repeat;
+                    }
                 }
             }
-            &.action {
-                position: relative;
-                &:before {
-                    position: absolute;
-                    content: '';
-                    width: 30px;
-                    height: 100%;
-                    left: 0;
-                    top: 0;
-                    bottom: 0;
-                    background: url("data:image/svg+xml,%3Csvg width='30' height='80' viewBox='0 0 30 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H30V70L0 80V0Z' fill='%23F71D30'/%3E%3Cpath d='M19 61.4393L19 63.5533L9.144 59.3533L9.144 57.4213L19 53.2213L19 55.3633L16.732 56.3293L16.732 60.4733L19 61.4393ZM11.664 58.4013L15.066 59.8433L15.066 56.9733L11.664 58.4013ZM19 49.9099L19 51.9259L9.2 51.9259L9.2 49.9099L13.064 49.9099L9.2 46.2979L9.2 43.8339L13.694 47.9919L19 43.1199L19 45.6959L14.478 49.9099L19 49.9099ZM21.002 32.5491L21.002 34.4531L19 34.4531L19 42.0411L9.2 42.0411L9.2 40.0251L17.194 40.0251L17.194 35.9231L9.2 35.9231L9.2 33.9071L17.194 33.9071L17.194 32.5491L21.002 32.5491ZM19 29.3823L19 31.0763L9.2 31.0763L9.2 29.0603L15.584 29.0603L9.2 24.3143L9.2 22.5783L19 22.5783L19 24.5803L12.574 24.5803L19 29.3823ZM19 18.9282L19 21.2522L14.814 18.1862C14.618 18.8302 14.282 19.3342 13.806 19.6982C13.3207 20.0529 12.7513 20.2302 12.098 20.2302C11.2393 20.2302 10.544 19.9269 10.012 19.3202C9.47066 18.7229 9.2 17.9016 9.2 16.8562L9.2 12.3202L19 12.3202L19 14.3362L15.038 14.3362L15.038 16.0442L19 18.9282ZM13.344 16.7442L13.344 14.3362L10.964 14.3362L10.964 16.7442C10.964 17.2016 11.0713 17.5609 11.286 17.8222C11.4913 18.0742 11.7807 18.2002 12.154 18.2002C12.5367 18.2002 12.8307 18.0742 13.036 17.8222C13.2413 17.5609 13.344 17.2016 13.344 16.7442Z' fill='white'/%3E%3C/svg%3E%0A") 50% no-repeat;
+            @media all and (max-width: 680px) {
+                &:nth-child(n+9) {
+                    display: none;
                 }
+            }
+            &.active {
+                display: flex !important;
             }
         }
         &--block {
@@ -389,6 +473,60 @@
             &:not(:last-child) {
                 border-right: 1px solid #fff;
             }
+            @media all and (max-width: 1510px) {
+                &.bold span:first-child {
+                    display: none !important;
+                }
+            }
+            .numb {
+                display: none;
+                @media all and (max-width: 1510px) {
+                    display: block !important;
+                    font-weight: normal;
+                }
+            }
+            @media all and (max-width: 1390px) {
+                font-size: 14px;
+            }
+        }
+        &--more {
+            display: none;
+            @media all and (max-width: 680px) {
+                display: block;
+            }
+            text-align: center;
+            div {
+                margin-left: auto;
+                margin-right: auto;
+                font-family: 'gmm', serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                text-transform: uppercase;
+                color: #957B61;
+                margin-top: 40px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.params_blocks.sl {
+    @media all and (max-width: 1800px) {
+        .main_func__l--block {
+            width: auto !important;
+        }
+    }
+    @media all and (max-width: 1023px) {
+        .main_func__l--block {
+            width: 33% !important;
+            margin-right: 0;
+            justify-content: space-between !important;
+            align-items: center;
+        }
+    }
+    @media all and (max-width: 480px) {
+        .main_func__l--block {
+            width: 50% !important;
         }
     }
 }
