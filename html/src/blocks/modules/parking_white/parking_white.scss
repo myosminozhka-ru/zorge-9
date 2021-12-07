@@ -128,6 +128,9 @@
         fill: #E6E6E6;
         pointer-events: all;
     }
+    &:hover {
+        fill: #E6E6E6;
+    }
 }
 .plc2 {
     transition: all .3s ease-out;
@@ -141,6 +144,9 @@
     &.more {
         fill: #744F3C;
     }
+    &:hover {
+        fill: #744F3C;
+    }
 }
 .plc3 {
     transition: all .3s ease-out;
@@ -150,6 +156,9 @@
     &.active {
         fill: #F9E4E4;
         pointer-events: all;
+    }
+    &:hover {
+        fill: #F9E4E4;
     }
 }
 .plc4 {
@@ -162,6 +171,9 @@
         pointer-events: all;
     }
     &.more {
+        fill: #ffbf57;
+    }
+    &:hover {
         fill: #ffbf57;
     }
 }

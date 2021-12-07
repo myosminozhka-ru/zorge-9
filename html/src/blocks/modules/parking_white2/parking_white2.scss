@@ -142,6 +142,9 @@
         &.more {
             fill: #744F3C;
         }
+        &:hover {
+            fill: #744F3C;
+        }
     }
     .plc3 {
         transition: all .3s ease-out;
@@ -163,6 +166,9 @@
             pointer-events: all;
         }
         &.more {
+            fill: #744F3C;
+        }
+        &:hover {
             fill: #744F3C;
         }
     }

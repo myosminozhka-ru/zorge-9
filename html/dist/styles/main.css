@@ -4369,6 +4369,10 @@ input:focus {
   pointer-events: all;
 }
 
+.plc1:hover {
+  fill: #E6E6E6;
+}
+
 .plc2 {
   transition: all .3s ease-out;
   fill: #fff;
@@ -4385,6 +4389,10 @@ input:focus {
   fill: #744F3C;
 }
 
+.plc2:hover {
+  fill: #744F3C;
+}
+
 .plc3 {
   transition: all .3s ease-out;
   fill: #fff;
@@ -4395,6 +4403,10 @@ input:focus {
 .plc3.active {
   fill: #F9E4E4;
   pointer-events: all;
+}
+
+.plc3:hover {
+  fill: #F9E4E4;
 }
 
 .plc4 {
@@ -4410,6 +4422,10 @@ input:focus {
 }
 
 .plc4.more {
+  fill: #ffbf57;
+}
+
+.plc4:hover {
   fill: #ffbf57;
 }
 
@@ -7534,6 +7550,10 @@ input:checked + .slider:before {
   fill: #744F3C;
 }
 
+.parking_white2 .plc2:hover {
+  fill: #744F3C;
+}
+
 .parking_white2 .plc3 {
   transition: all .3s ease-out;
   fill: #fff;
@@ -7559,6 +7579,10 @@ input:checked + .slider:before {
 }
 
 .parking_white2 .plc4.more {
+  fill: #744F3C;
+}
+
+.parking_white2 .plc4:hover {
   fill: #744F3C;
 }
 
@@ -7747,6 +7771,17 @@ input:checked + .slider:before {
 .parking_white3 .dlc6.active,
 .parking_white3 .dlc7.active,
 .parking_white3 .dlc8.active {
+  fill: black;
+}
+
+.parking_white3 .dlc1:hover,
+.parking_white3 .dlc2:hover,
+.parking_white3 .dlc3:hover,
+.parking_white3 .dlc4:hover,
+.parking_white3 .dlc5:hover,
+.parking_white3 .dlc6:hover,
+.parking_white3 .dlc7:hover,
+.parking_white3 .dlc8:hover {
   fill: black;
 }
 
