@@ -5298,7 +5298,7 @@ input:checked + .slider:before {
 }
 
 .main_func__l--option {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .main_func__l--blocks {
@@ -5317,7 +5317,7 @@ input:checked + .slider:before {
   color: #000000;
   width: max-content;
   cursor: pointer;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   transition: all .3s ease-out;
 }
 
@@ -8991,7 +8991,7 @@ input:checked + .slider:before {
   }
 
   .main_func__l--option {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .main_func__l--block {
