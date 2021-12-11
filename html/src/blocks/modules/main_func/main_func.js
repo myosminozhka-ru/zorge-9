@@ -1,27 +1,10 @@
 import $ from "jquery";
 import ionRangeSlider from 'ion-rangeslider';
 $(function() {
-    $(".js-range-slider").ionRangeSlider({
-        type: "double",
-        min: 3,
-        max: 19
-    });
-    $(".js-range-slider2").ionRangeSlider({
-        type: "double",
-        min: 1,
-        max: 3
-    });
-    $(".js-range-slider3").ionRangeSlider({
-        type: "double",
-        min: 26,
-        max: 78
-    });
-    $(".js-range-slider4").ionRangeSlider({
-        type: "double",
-        min: 9.0,
-        step: 0.1,
-        max: 25.4
-    });
+    $('.js-range-slider').ionRangeSlider(ionSliderOptions);
+    $('.js-range-slider2').ionRangeSlider(ionSliderOptions2);
+    $('.js-range-slider3').ionRangeSlider(ionSliderOptions3);
+    $('.js-range-slider4').ionRangeSlider(ionSliderOptions4);
     $('#SvgjsPath1027').on('click', function() {
         $('.show2').toggleClass('active');
         $(document).on('click', function(e){

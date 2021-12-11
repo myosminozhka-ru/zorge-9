@@ -1179,27 +1179,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-range-slider").ionRangeSlider({
-    type: "double",
-    min: 3,
-    max: 19
-  });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-range-slider2").ionRangeSlider({
-    type: "double",
-    min: 1,
-    max: 3
-  });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-range-slider3").ionRangeSlider({
-    type: "double",
-    min: 26,
-    max: 78
-  });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-range-slider4").ionRangeSlider({
-    type: "double",
-    min: 9.0,
-    step: 0.1,
-    max: 25.4
-  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-range-slider').ionRangeSlider(ionSliderOptions);
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-range-slider2').ionRangeSlider(ionSliderOptions2);
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-range-slider3').ionRangeSlider(ionSliderOptions3);
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-range-slider4').ionRangeSlider(ionSliderOptions4);
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('#SvgjsPath1027').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.show2').toggleClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', function (e) {
