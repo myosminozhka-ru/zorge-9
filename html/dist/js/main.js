@@ -181,6 +181,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var ion_rangeslider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ion-rangeslider */ "./node_modules/ion-rangeslider/js/ion.rangeSlider.js");
 /* harmony import */ var ion_rangeslider__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(ion_rangeslider__WEBPACK_IMPORTED_MODULE_2__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -192,54 +198,39 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     autoplaySpeed: 2500,
     fade: true
   });
-  var $range = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".rg1");
-  var $input = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nb1");
-  var min = 1;
-  var max = 20000000;
-  $range.ionRangeSlider({
-    type: "single",
-    min: min,
-    max: max,
-    from: 8639435,
-    onStart: function onStart(data) {
-      $input.html(data.from.toLocaleString());
-    },
-    onChange: function onChange(data) {
-      $input.html(data.from.toLocaleString());
-    }
-  });
-  var $range2 = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".rg2");
-  var $input2 = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nb2");
-  var min2 = 1;
-  var max2 = 32;
-  $range2.ionRangeSlider({
-    type: "single",
-    min: min2,
-    max: max2,
-    from: 15,
-    onStart: function onStart(data) {
-      $input2.html(data.from);
-    },
-    onChange: function onChange(data) {
-      $input2.html(data.from);
-    }
-  });
-  var $range3 = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".rg3");
-  var $input3 = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nb3");
-  var min3 = 1;
-  var max3 = 10;
-  $range3.ionRangeSlider({
-    type: "single",
-    min: min3,
-    max: max3,
-    from: 8,
-    onStart: function onStart(data) {
-      $input3.html(data.from);
-    },
-    onChange: function onChange(data) {
-      $input3.html(data.from);
-    }
-  });
+
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.rg1').length && ionopt) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.rg1').ionRangeSlider(_objectSpread(_objectSpread({}, ionopt), {}, {
+      onStart: function onStart(data) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nb1").html(data.from.toLocaleString());
+      },
+      onChange: function onChange(data) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nb1").html(data.from.toLocaleString());
+      }
+    }));
+  }
+
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.rg2').length && ionopt2) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.rg2').ionRangeSlider(_objectSpread(_objectSpread({}, ionopt2), {}, {
+      onStart: function onStart(data) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nb2").html(data.from);
+      },
+      onChange: function onChange(data) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nb2").html(data.from);
+      }
+    }));
+  }
+
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.rg3').length && ionopt3) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.rg3').ionRangeSlider(_objectSpread(_objectSpread({}, ionopt3), {}, {
+      onStart: function onStart(data) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nb3").html(data.from);
+      },
+      onChange: function onChange(data) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nb3").html(data.from);
+      }
+    }));
+  }
 });
 
 /***/ }),
@@ -255,7 +246,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(module, jQuery) {/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 
 /* jQuery Form Styler v2.0.2 | (c) Dimox | https://github.com/Dimox/jQueryFormStyler */
@@ -1179,10 +1170,22 @@ __webpack_require__.r(__webpack_exports__);
 
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-range-slider').ionRangeSlider(ionSliderOptions);
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-range-slider2').ionRangeSlider(ionSliderOptions2);
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-range-slider3').ionRangeSlider(ionSliderOptions3);
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-range-slider4').ionRangeSlider(ionSliderOptions4);
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-range-slider').length && ionSliderOptions) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-range-slider').ionRangeSlider(ionSliderOptions);
+  }
+
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-range-slider2').length && ionSliderOptions2) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-range-slider2').ionRangeSlider(ionSliderOptions2);
+  }
+
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-range-slider3').length && ionSliderOptions3) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-range-slider3').ionRangeSlider(ionSliderOptions3);
+  }
+
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-range-slider4').length && ionSliderOptions4) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-range-slider4').ionRangeSlider(ionSliderOptions4);
+  }
+
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('#SvgjsPath1027').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.show2').toggleClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', function (e) {
