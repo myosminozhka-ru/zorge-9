@@ -1,4 +1,10 @@
 .main_func {
+    .svg_tree {
+        opacity: 0;
+        &.active {
+            opacity: 0.5;
+        }
+    }
     display: flex;
     @media all and (max-width: 1880px) {
         align-items: flex-end;

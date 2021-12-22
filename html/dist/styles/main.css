@@ -5269,6 +5269,14 @@ input:checked + .slider:before {
   display: flex;
 }
 
+.main_func .svg_tree {
+  opacity: 0;
+}
+
+.main_func .svg_tree.active {
+  opacity: 0.5;
+}
+
 .main_func__l {
   flex: 0 0 26.19792vw;
   background: #fff;
