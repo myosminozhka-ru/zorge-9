@@ -5274,7 +5274,7 @@ input:checked + .slider:before {
 }
 
 .main_func .svg_tree.active {
-  opacity: 0.5;
+  opacity: 0;
 }
 
 .main_func__l {
