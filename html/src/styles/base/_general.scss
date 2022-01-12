@@ -339,6 +339,11 @@ img {
     right: 24px;
     background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.45469 0L0.000155474 1.45453L6.54551 7.99988L0 14.5454L1.45453 15.9999L8.00004 9.45441L14.5455 15.9998L16 14.5453L9.45457 7.99988L15.9998 1.45461L14.5453 7.85144e-05L8.00004 6.54535L1.45469 0Z' fill='%23fff'/%3E%3C/svg%3E%0A") 50% no-repeat;
   }
+  .form-wrapper.new_form .icon-close {
+    right: 40px !important;
+    top: 40px !important;
+    background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.45469 0L0.000155474 1.45453L6.54551 7.99988L0 14.5454L1.45453 15.9999L8.00004 9.45441L14.5455 15.9998L16 14.5453L9.45457 7.99988L15.9998 1.45461L14.5453 7.85144e-05L8.00004 6.54535L1.45469 0Z' fill='%23957B61'/%3E%3C/svg%3E%0A") 50% no-repeat !important;
+  }
   .form-wrapper__title {
     margin-bottom: 20px;
     font-size: 24px;
