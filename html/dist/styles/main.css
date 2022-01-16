@@ -5740,6 +5740,29 @@ input:checked + .slider:before {
   color: #957B61;
 }
 
+.new_tabs .floor_center__svg {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.new_tabs .floor_center__svg svg g path {
+  pointer-events: none;
+}
+
+.new_tabs .floor_center__svg svg g path.active {
+  fill: #fff !important;
+  opacity: .5 !important;
+}
+
+.new_tabs .floor_center__svg img {
+  filter: contrast(0.5);
+}
+
+.new_tabs .floor_center__svg .main_floor {
+  top: 0;
+  left: 0;
+}
+
 .room_page .main_head:before,
 .floor_page .main_head:before {
   backdrop-filter: blur(5px);

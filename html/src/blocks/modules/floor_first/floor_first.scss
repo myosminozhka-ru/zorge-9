@@ -264,3 +264,27 @@
         }
     }
 }
+.new_tabs {
+    .floor_center__svg {
+        margin-top: 0;
+        margin-bottom: 0;
+        svg {
+            g {
+                path {
+                    pointer-events: none;
+                    &.active {
+                        fill: #fff !important;
+                        opacity: .5 !important;
+                    }
+                }
+            }
+        }
+        img {
+            filter: contrast(0.5);
+        }
+        .main_floor {
+            top: 0;
+            left: 0;
+        }
+    }
+}
