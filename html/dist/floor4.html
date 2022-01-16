@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Этаж</title>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="theme-color" content="#fff">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+        <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+        <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+        <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+        <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="https://api-maps.yandex.ru/2.1?apikey=ваш API-ключ&load=package.full&lang=ru_RU"></script>
+    </head>
+    <body class="floor_page">
+        <div class="kladovie_first main_dop">
+    <div class="main_head__in">
+        <div class="main_head" style="background: url(./img/ss1.jpg) 50% / cover no-repeat;">
+            <header class="main_head__top fix_block_js">
+                <div class="main_head__top--right">
+                    <a href="/" class="main_head__top--logo"><img src="./img/logo2.png" alt=""></a>
+                    <a href="#" class="main_head__top--btn">выбрать апартаменты</a>
+                    <a href="tel:74951504010" class="main_head__top--tel">+7 495 150-40-10</a>
+                    <div class="site-panel-wrap">
+                        <div class="burger-wrap">
+                            <div class="burger-btn">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="burger-body">
+                                <div class="burger-close-btn"></div>
+                                <a href="/" class="burger-body__logo"><img src="./img/logo2.png" alt=""></a>
+                                <nav class="burger-body__nav">
+                                    <ul>
+                                        <li><a href="#">Расположение</a></li>
+                                        <li><a href="#">Окружение</a></li>
+                                        <li><a href="#">О проекте</a></li>
+                                        <li class="has">
+                                            <a href="#">Выбрать апартаменты</a>
+                                            <ul class="submenu">
+                                                <li><a href="#">Визуальный выбор</a></li>
+                                                <li><a href="#">Выбор по параметрам</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Парковочные места</a></li>
+                                        <li><a href="#">кладовые</a></li>
+                                        <li><a href="#">коммерческая недвижимость</a></li>
+                                        <li><a href="#">Панорама района</a></li>
+                                        <li><a href="#">медиацентр</a></li>
+                                        <li><a href="#">условия покупки</a></li>
+                                        <li><a href="#">ход строительства</a></li>
+                                        <li><a href="#">застройщик и команда</a></li>
+                                        <li><a href="#">документы</a></li>
+                                        <li><a href="#">контакты</a></li>
+                                    </ul>
+                                </nav>
+                                <div class="burger-body__info">
+                                    <a class="burger-body__info--tel" href="tel:74951724589">+7 (495) 172-45-89</a>
+                                    <div class="burger-body__info--soc">
+                                        <a href="#" target="_blank"><img src="./img/soc1.png" alt=""></a>
+                                        <a href="#" target="_blank"><img src="./img/soc2.png" alt=""></a>
+                                        <a href="#" target="_blank"><img src="./img/soc3.png" alt=""></a>
+                                        <a href="#" target="_blank"><img src="./img/soc4.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="main_head__center">
+                <div class="main_head__center--tr">
+                    <div class="main_head__center--lr">
+                        <a href="/" class="main_head__center--backr"></a>
+                        <div class="main_head__center--floor">
+                            <div class="main_head__center--titr">Этаж</div>
+                            <div class="main_head__center--sl">
+                                <div class="prev"></div>
+                                <div>12</div>
+                                <div class="next"></div>
+                            </div>
+                        </div>
+                        <div class="main_head__center--floor room">
+                            <div class="main_head__center--titr">Комнат</div>
+                            <div class="main_head__center--sl">
+                                <div class="prev"></div>
+                                <div>1</div>
+                                <div class="next"></div>
+                            </div>
+                        </div>
+                        <div class="main_head__center--floor wind">
+                            <div class="main_head__center--titr">Вид из окон</div>
+                            <div class="main_head__center--sl">
+                                <div class="prev"></div>
+                                <div>На парк</div>
+                                <div class="next"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_head__center--rr">
+                        <div class="main_head__center--floor corp">
+                            <div class="main_head__center--titr">Корпус</div>
+                            <div class="main_head__center--sl">
+                                <div class="prev"></div>
+                                <div>Manhatten</div>
+                                <div class="next"></div>
+                            </div>
+                        </div>
+                        <div class="main_head__center--sort">
+                            <div class="main_head__center--sort1 sort-js active">
+                                <svg class="desc" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="35.3553" y="0.707107" width="24" height="49" transform="rotate(45 35.3553 0.707107)" stroke="white"/>
+                                </svg>
+                                <svg class="mob" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="14.4785" y="0.707107" width="8.91506" height="18.8301" transform="rotate(45 14.4785 0.707107)" stroke="white"/>
+                                </svg>
+                            </div>
+                            <div class="main_head__center--sort2 sort-js">
+                                <svg class="desc" width="26" height="50" viewBox="0 0 26 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.532959" y="0.5" width="24" height="49" fill="none" stroke="white"/>
+                                </svg>
+                                <svg class="mob" width="11" height="21" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.904297" y="0.69043" width="8.91506" height="18.8301" fill="none" stroke="white"/>
+                                </svg>
+                            </div>
+                            <div class="main_head__center--sort3 sort-js">
+                                <svg class="desc" width="26" height="50" viewBox="0 0 26 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.532959" y="0.5" width="24" height="49" stroke="white"/>
+                                </svg>
+                                <svg class="mob" width="11" height="21" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.734375" y="0.69043" width="8.91506" height="18.8301" stroke="white"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floor_center--item">
+                    <div class="floor_center around1 active">
+                        <div class="floor_center__svg">
+                            <img src="./img/ss22.png" alt="">
+                            <div class="apart_popup n1-2-120 act_vis" style="top:80.66339450091503%;left:55.29872193243938%;"><div class="value">36.85<span>м<sup>2</sup></span></div></div>
+                            <div class="apart_popup n1-2-90 act_vis2" style="top:32.70817936703698%;left:90.30551198180243%;"><div class="value">77.75<span>м<sup>2</sup></span></div></div>
+                            <div class="apart_popup n1-2-30 act_vis3" style="top:69.87010456203767%;left:9.582386706257976%;"><div class="value">64.5<span>м<sup>2</sup></span></div></div>
+                            <svg id="SvgjsSvg1164" class="main_floor" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 1463.61426 485.72314">
+                                <defs id="SvgjsDefs1165"></defs>
+                                <g id="SvgjsG1167">
+                                <path id="SvgjsPath1169" class="active act_vis" d="M745.65 289.232v165.21h-4.068v5.695H665.18v23.308h222.144V289.232z" opacity="0" cursor="pointer" fill="#ffffff"></path>
+                                <path id="SvgjsPath1171" d="M889.302 289.232h144.7v194.213h-144.7z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1173" d="M1110.862 304.236v-15.403h-74.985v194.612h144.885v-179.21z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1175" d="M1325.493 282.65v.753h-96.922v5.667h-21.01v-4.42h-24.138v199.934h277.913V282.65z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1177" class="active act_vis2" d="M1173.695 45.642v193.344h57.359v39.75h94.439v-.47h99.123v3.293h36.72V45.642z" opacity="0" cursor="pointer" fill="#ffffff"></path>
+                                <path id="SvgjsPath1179" d="M1172.034 45.642H954.798v192.594h43.586v.38h.193v.17h96.477v.83h76.98z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1181" d="m769.39 46.78-27.808 9.424h-5.276v183.118h74.42v-.734h95.904v.317h45.505l.086-192.124z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1183" d="M731.412 196.484V59.46l37.933-15.526V2.278H514.8v193.935h46.845v.109h95.905v.162z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1185" d="M468.452 196.322v.162h44.483V2.278H295.7v182.125h76.847v11.919z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1187" d="M2.009 2.278v232.326h127.464v-1.201h97.537V196.07h65.826V2.278z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1189" class="active act_vis3" d="M238.349 243.07v-4.881H129.567v-1H2.277v203.105h277.169V243.07z" opacity="0" cursor="pointer" fill="#ffffff"></path>
+                                <path id="SvgjsPath1191" d="M281.31 243.373h146.702v196.423H281.309z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1193" d="M576.43 459.95V245.2H430.67v195.004H541.04v43.241h124.14V459.95z" opacity="0" cursor="default" fill="#ffffff"></path>
+                            </g>
+                            </svg>
+                        </div>
+                        <div class="hover_bl">
+                            <div class="hover_bl__block">
+                                <div class="hover_bl__block--title">Номер <br>
+                                    апартамента</div>
+                                <div class="hover_bl__block--text">312</div>
+                            </div>
+                            <div class="hover_bl__block">
+                                <div class="hover_bl__block--title">Комнат</div>
+                                <div class="hover_bl__block--text">3</div>
+                            </div>
+                            <div class="hover_bl__block">
+                                <div class="hover_bl__block--title">Площадь, м<sup>2</sup></div>
+                                <div class="hover_bl__block--text">77.89</div>
+                            </div>
+                            <div class="hover_bl__block">
+                                <div class="hover_bl__block--title">Цена 
+                                    без отделки, руб</div>
+                                <div class="hover_bl__block--text">25 122 900</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floor_center around2">
+                        <div class="floor_center__svg">
+                            <img src="./img/ss22.png" alt="">
+                            <div class="apart_popup n1-2-120 act_vis" style="top:80.66339450091503%;left:55.29872193243938%;"><div class="value">36.85<span>м<sup>2</sup></span></div></div>
+                            <div class="apart_popup n1-2-90 act_vis2" style="top:32.70817936703698%;left:90.30551198180243%;"><div class="value">77.75<span>м<sup>2</sup></span></div></div>
+                            <div class="apart_popup n1-2-30 act_vis3" style="top:69.87010456203767%;left:9.582386706257976%;"><div class="value">64.5<span>м<sup>2</sup></span></div></div>
+                            <svg id="SvgjsSvg1164" class="main_floor" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 1463.61426 485.72314">
+                                <defs id="SvgjsDefs1165"></defs>
+                                <g id="SvgjsG1167">
+                                <path id="SvgjsPath1169" class="active act_vis" d="M745.65 289.232v165.21h-4.068v5.695H665.18v23.308h222.144V289.232z" opacity="0" cursor="pointer" fill="#ffffff"></path>
+                                <path id="SvgjsPath1171" d="M889.302 289.232h144.7v194.213h-144.7z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1173" d="M1110.862 304.236v-15.403h-74.985v194.612h144.885v-179.21z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1175" d="M1325.493 282.65v.753h-96.922v5.667h-21.01v-4.42h-24.138v199.934h277.913V282.65z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1177" class="active act_vis2" d="M1173.695 45.642v193.344h57.359v39.75h94.439v-.47h99.123v3.293h36.72V45.642z" opacity="0" cursor="pointer" fill="#ffffff"></path>
+                                <path id="SvgjsPath1179" d="M1172.034 45.642H954.798v192.594h43.586v.38h.193v.17h96.477v.83h76.98z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1181" d="m769.39 46.78-27.808 9.424h-5.276v183.118h74.42v-.734h95.904v.317h45.505l.086-192.124z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1183" d="M731.412 196.484V59.46l37.933-15.526V2.278H514.8v193.935h46.845v.109h95.905v.162z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1185" d="M468.452 196.322v.162h44.483V2.278H295.7v182.125h76.847v11.919z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1187" d="M2.009 2.278v232.326h127.464v-1.201h97.537V196.07h65.826V2.278z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1189" class="active act_vis3" d="M238.349 243.07v-4.881H129.567v-1H2.277v203.105h277.169V243.07z" opacity="0" cursor="pointer" fill="#ffffff"></path>
+                                <path id="SvgjsPath1191" d="M281.31 243.373h146.702v196.423H281.309z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1193" d="M576.43 459.95V245.2H430.67v195.004H541.04v43.241h124.14V459.95z" opacity="0" cursor="default" fill="#ffffff"></path>
+                            </g>
+                            </svg>
+                        </div>
+                        <div class="hover_bl">
+                            <div class="hover_bl__block">
+                                <div class="hover_bl__block--title">Номер <br>
+                                    апартамента</div>
+                                <div class="hover_bl__block--text">312</div>
+                            </div>
+                            <div class="hover_bl__block">
+                                <div class="hover_bl__block--title">Комнат</div>
+                                <div class="hover_bl__block--text">3</div>
+                            </div>
+                            <div class="hover_bl__block">
+                                <div class="hover_bl__block--title">Площадь, м<sup>2</sup></div>
+                                <div class="hover_bl__block--text">77.89</div>
+                            </div>
+                            <div class="hover_bl__block">
+                                <div class="hover_bl__block--title">Цена 
+                                    без отделки, руб</div>
+                                <div class="hover_bl__block--text">25 122 900</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floor_center around3">
+                        <div class="floor_center__svg">
+                            <img src="./img/ss22.png" alt="">
+                            <div class="apart_popup n1-2-120 act_vis" style="top:80.66339450091503%;left:55.29872193243938%;"><div class="value">36.85<span>м<sup>2</sup></span></div></div>
+                            <div class="apart_popup n1-2-90 act_vis2" style="top:32.70817936703698%;left:90.30551198180243%;"><div class="value">77.75<span>м<sup>2</sup></span></div></div>
+                            <div class="apart_popup n1-2-30 act_vis3" style="top:69.87010456203767%;left:9.582386706257976%;"><div class="value">64.5<span>м<sup>2</sup></span></div></div>
+                            <svg id="SvgjsSvg1164" class="main_floor" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 1463.61426 485.72314">
+                                <defs id="SvgjsDefs1165"></defs>
+                                <g id="SvgjsG1167">
+                                <path id="SvgjsPath1169" class="active act_vis" d="M745.65 289.232v165.21h-4.068v5.695H665.18v23.308h222.144V289.232z" opacity="0" cursor="pointer" fill="#ffffff"></path>
+                                <path id="SvgjsPath1171" d="M889.302 289.232h144.7v194.213h-144.7z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1173" d="M1110.862 304.236v-15.403h-74.985v194.612h144.885v-179.21z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1175" d="M1325.493 282.65v.753h-96.922v5.667h-21.01v-4.42h-24.138v199.934h277.913V282.65z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1177" class="active act_vis2" d="M1173.695 45.642v193.344h57.359v39.75h94.439v-.47h99.123v3.293h36.72V45.642z" opacity="0" cursor="pointer" fill="#ffffff"></path>
+                                <path id="SvgjsPath1179" d="M1172.034 45.642H954.798v192.594h43.586v.38h.193v.17h96.477v.83h76.98z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1181" d="m769.39 46.78-27.808 9.424h-5.276v183.118h74.42v-.734h95.904v.317h45.505l.086-192.124z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1183" d="M731.412 196.484V59.46l37.933-15.526V2.278H514.8v193.935h46.845v.109h95.905v.162z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1185" d="M468.452 196.322v.162h44.483V2.278H295.7v182.125h76.847v11.919z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1187" d="M2.009 2.278v232.326h127.464v-1.201h97.537V196.07h65.826V2.278z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1189" class="active act_vis3" d="M238.349 243.07v-4.881H129.567v-1H2.277v203.105h277.169V243.07z" opacity="0" cursor="pointer" fill="#ffffff"></path>
+                                <path id="SvgjsPath1191" d="M281.31 243.373h146.702v196.423H281.309z" opacity="0" cursor="default" fill="#ffffff"></path>
+                                <path id="SvgjsPath1193" d="M576.43 459.95V245.2H430.67v195.004H541.04v43.241h124.14V459.95z" opacity="0" cursor="default" fill="#ffffff"></path>
+                            </g>
+                            </svg>
+                        </div>
+                        <div class="hover_bl">
+                            <div class="hover_bl__block">
+                                <div class="hover_bl__block--title">Номер <br>
+                                    апартамента</div>
+                                <div class="hover_bl__block--text">312</div>
+                            </div>
+                            <div class="hover_bl__block">
+                                <div class="hover_bl__block--title">Комнат</div>
+                                <div class="hover_bl__block--text">3</div>
+                            </div>
+                            <div class="hover_bl__block">
+                                <div class="hover_bl__block--title">Площадь, м<sup>2</sup></div>
+                                <div class="hover_bl__block--text">77.89</div>
+                            </div>
+                            <div class="hover_bl__block">
+                                <div class="hover_bl__block--title">Цена 
+                                    без отделки, руб</div>
+                                <div class="hover_bl__block--text">25 122 900</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block_kompas" style="transform: rotate(-133deg);">
+                    <svg width="186" height="204" viewBox="0 0 186 204" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="92" cy="102" r="57.5" stroke="white" stroke-width="5"/>
+                        <path d="M92.6409 20.312C90.1289 20.312 88.0169 19.496 86.3049 17.864C84.6249 16.216 83.7849 14.128 83.7849 11.6C83.7849 9.072 84.6249 6.992 86.3049 5.36C87.9689 3.712 90.0809 2.888 92.6409 2.888C94.3529 2.888 95.8729 3.264 97.2009 4.016V6.68C95.8409 5.8 94.3289 5.36 92.6649 5.36C90.9049 5.36 89.4329 5.952 88.2489 7.136C87.0809 8.304 86.4969 9.792 86.4969 11.6C86.4969 13.408 87.0889 14.904 88.2729 16.088C89.4569 17.256 90.9529 17.84 92.7609 17.84C94.6809 17.84 96.2809 17.328 97.5609 16.304V18.968C96.1529 19.864 94.5129 20.312 92.6409 20.312Z" fill="white"/>
+                        <path d="M178.696 109H170.44V92.2H178.072C179.592 92.2 180.792 92.568 181.672 93.304C182.568 94.04 183.016 95.048 183.016 96.328C183.016 97.16 182.808 97.88 182.392 98.488C181.976 99.096 181.44 99.528 180.784 99.784C181.84 99.976 182.696 100.472 183.352 101.272C184.024 102.072 184.36 103.072 184.36 104.272C184.36 105.696 183.848 106.84 182.824 107.704C181.816 108.568 180.44 109 178.696 109ZM173.08 101.296V106.576H178.216C179.24 106.576 180.04 106.344 180.616 105.88C181.208 105.4 181.504 104.736 181.504 103.888C181.504 103.056 181.216 102.416 180.64 101.968C180.064 101.52 179.256 101.296 178.216 101.296H173.08ZM173.08 94.624V98.968H177.616C178.496 98.968 179.176 98.784 179.656 98.416C180.152 98.032 180.4 97.488 180.4 96.784C180.4 96.08 180.152 95.544 179.656 95.176C179.176 94.808 178.496 94.624 177.616 94.624H173.08Z" fill="white"/>
+                        <path d="M7.30484 109.312C4.95284 109.312 2.99284 108.832 1.42484 107.872V105.28C2.16084 105.744 3.02484 106.12 4.01684 106.408C5.02484 106.696 5.99284 106.84 6.92084 106.84C8.34484 106.84 9.46484 106.576 10.2808 106.048C11.1128 105.504 11.5288 104.784 11.5288 103.888C11.5288 103.104 11.1528 102.472 10.4008 101.992C9.64884 101.512 8.65684 101.272 7.42484 101.272H5.33684V98.848H7.73684C8.76084 98.848 9.55284 98.648 10.1128 98.248C10.6728 97.848 10.9528 97.296 10.9528 96.592C10.9528 95.888 10.6248 95.344 9.96884 94.96C9.32884 94.56 8.44884 94.36 7.32884 94.36C5.53684 94.36 3.80884 94.768 2.14484 95.584V93.16C3.79284 92.312 5.56884 91.888 7.47284 91.888C9.29684 91.888 10.7688 92.304 11.8888 93.136C13.0088 93.968 13.5688 95.072 13.5688 96.448C13.5688 97.36 13.2968 98.112 12.7528 98.704C12.2088 99.296 11.6088 99.704 10.9528 99.928C11.8328 100.184 12.6008 100.68 13.2568 101.416C13.9128 102.12 14.2408 103.016 14.2408 104.104C14.2408 105.608 13.6168 106.856 12.3688 107.848C11.1368 108.824 9.44884 109.312 7.30484 109.312Z" fill="white"/>
+                        <path d="M93.0732 180.888C95.3612 180.888 97.2652 181.728 98.7852 183.408C100.305 185.104 101.065 187.168 101.065 189.6C101.065 192.032 100.305 194.096 98.7852 195.792C97.2652 197.472 95.3612 198.312 93.0732 198.312C90.9452 198.312 89.1452 197.6 87.6732 196.176C86.2012 194.72 85.3452 192.896 85.1052 190.704H82.1772V198H79.5372V181.2H82.1772V188.28H85.1292C85.3852 186.152 86.2572 184.384 87.7452 182.976C89.2012 181.584 90.9772 180.888 93.0732 180.888ZM93.0732 195.84C94.5932 195.84 95.8492 195.272 96.8412 194.136C97.8492 192.984 98.3532 191.472 98.3532 189.6C98.3532 187.712 97.8492 186.208 96.8412 185.088C95.8652 183.936 94.6092 183.36 93.0732 183.36C91.5372 183.36 90.2652 183.936 89.2572 185.088C88.2652 186.224 87.7692 187.728 87.7692 189.6C87.7692 191.456 88.2652 192.968 89.2572 194.136C90.2652 195.272 91.5372 195.84 93.0732 195.84Z" fill="white"/>
+                        <path d="M91 62L101 102H81L91 62Z" fill="#957B61"/>
+                        <path d="M91 142L81 102L101 102L91 142Z" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="main_func__l">
+                <div class="main_func__l--tit">выбор апартаментов</div>
+                <a href="/floor.html" class="main_func__l--btn"><span>подобрать по параметрам</span></a>
+            </div>
+            <div class="room_blocks__sl slk1">
+                <div class="room_blocks__block">
+                    <a href="#" class="room_blocks__block--img"><img src="./img/img25.png" alt="однокомнатные апартаменты"></a>
+                    <a href="#" class="room_blocks__block--title">однокомнатные апартаменты</a>
+                    <div class="room_blocks__block--opts">
+                        <div class="room_blocks__block--opt">
+                            <span>Корпус:</span><span>Manhattan</span>
+                        </div>
+                        <div class="room_blocks__block--opt">
+                            <span>Вид:</span><span>На парк</span>
+                        </div>
+                        <div class="room_blocks__block--opt">
+                            <span>Площадь:</span><span>64.3 м<sup>2</sup></span>
+                        </div>
+                        <div class="room_blocks__block--opt">
+                            <span>Этаж:</span><span>19</span>
+                        </div>
+                        <div class="room_blocks__block--opt">
+                            <span>Цена:</span><span>24 990 156 ₽</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="room_blocks__block">
+                    <a href="#" class="room_blocks__block--img"><img src="./img/img25.png" alt="однокомнатные апартаменты"></a>
+                    <a href="#" class="room_blocks__block--title">однокомнатные апартаменты</a>
+                    <div class="room_blocks__block--opts">
+                        <div class="room_blocks__block--opt">
+                            <span>Корпус:</span><span>Manhattan</span>
+                        </div>
+                        <div class="room_blocks__block--opt">
+                            <span>Вид:</span><span>На парк</span>
+                        </div>
+                        <div class="room_blocks__block--opt">
+                            <span>Площадь:</span><span>64.3 м<sup>2</sup></span>
+                        </div>
+                        <div class="room_blocks__block--opt">
+                            <span>Этаж:</span><span>19</span>
+                        </div>
+                        <div class="room_blocks__block--opt">
+                            <span>Цена:</span><span>24 990 156 ₽</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="room_blocks__block">
+                    <a href="#" class="room_blocks__block--img"><img src="./img/img25.png" alt="однокомнатные апартаменты"></a>
+                    <a href="#" class="room_blocks__block--title">однокомнатные апартаменты</a>
+                    <div class="room_blocks__block--opts">
+                        <div class="room_blocks__block--opt">
+                            <span>Корпус:</span><span>Manhattan</span>
+                        </div>
+                        <div class="room_blocks__block--opt">
+                            <span>Вид:</span><span>На парк</span>
+                        </div>
+                        <div class="room_blocks__block--opt">
+                            <span>Площадь:</span><span>64.3 м<sup>2</sup></span>
+                        </div>
+                        <div class="room_blocks__block--opt">
+                            <span>Этаж:</span><span>19</span>
+                        </div>
+                        <div class="room_blocks__block--opt">
+                            <span>Цена:</span><span>24 990 156 ₽</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="room_blocks__block">
+                    <a href="#" class="room_blocks__block--img"><img src="./img/img25.png" alt="однокомнатные апартаменты"></a>
+                    <a href="#" class="room_blocks__block--title">однокомнатные апартаменты</a>
+                    <div class="room_blocks__block--opts">
+                        <div class="room_blocks__block--opt">
+                            <span>Корпус:</span><span>Manhattan</span>
+                        </div>
+                        <div class="room_blocks__block--opt">
+                            <span>Вид:</span><span>На парк</span>
+                        </div>
+                        <div class="room_blocks__block--opt">
+                            <span>Площадь:</span><span>64.3 м<sup>2</sup></span>
+                        </div>
+                        <div class="room_blocks__block--opt">
+                            <span>Этаж:</span><span>19</span>
+                        </div>
+                        <div class="room_blocks__block--opt">
+                            <span>Цена:</span><span>24 990 156 ₽</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="room_blocks__block">
+                    <a href="#" class="room_blocks__block--img"><img src="./img/img25.png" alt="однокомнатные апартаменты"></a>
+                    <a href="#" class="room_blocks__block--title">однокомнатные апартаменты</a>
+                    <div class="room_blocks__block--opts">
+                        <div class="room_blocks__block--opt">
+                            <span>Корпус:</span><span>Manhattan</span>
+                        </div>
+                        <div class="room_blocks__block--opt">
+                            <span>Вид:</span><span>На парк</span>
+                        </div>
+                        <div class="room_blocks__block--opt">
+                            <span>Площадь:</span><span>64.3 м2</span>
+                        </div>
+                        <div class="room_blocks__block--opt">
+                            <span>Этаж:</span><span>19</span>
+                        </div>
+                        <div class="room_blocks__block--opt">
+                            <span>Цена:</span><span>24 990 156 ₽</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="room_blocks__link">Смотреть апартаменты</a>
+        </div>
+    </div>
+</div>
+
+        <footer class="footer">
+    <div class="footer__in">
+        <a href="tel:74951724589" class="footer__tel">+7 (495) 172-45-89</a>  
+        <div class="footer__btn">Заказать звонок</div> 
+        <nav class="footer__menu">
+            <ul>
+                <li><a href="#">Ход строительства</a></li>
+                <li><a href="#">Медиацентр</a></li>
+                <li><a href="#">Документы</a></li>
+                <li><a href="#">Условия покупки</a></li>
+                <li><a href="#">Застройщик и команда</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+        <script src="js/main.js"></script>
+        <script src="js/vendor.js"></script>
+    </body>
+</html>
