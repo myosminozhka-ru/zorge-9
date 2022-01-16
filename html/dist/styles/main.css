@@ -7060,6 +7060,11 @@ input:checked + .slider:before {
   height: 100%;
 }
 
+.new_form iframe {
+  width: 100%;
+  height: 100%;
+}
+
 .gal_blocks__list {
   display: flex;
   flex-wrap: wrap;
