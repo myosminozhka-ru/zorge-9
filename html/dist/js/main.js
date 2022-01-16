@@ -760,9 +760,11 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
         columns.height(tallestcolumn);
       }
 
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-        setEqualHeight(jquery__WEBPACK_IMPORTED_MODULE_0___default()(".box__block--title"));
-      });
+      setTimeout(function () {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+          setEqualHeight(jquery__WEBPACK_IMPORTED_MODULE_0___default()(".box__block--title"));
+        });
+      }, 2000);
     });
   } // Array.max = function(array) {
   //     return Math.max.apply(Math,array);

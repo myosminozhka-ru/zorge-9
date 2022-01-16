@@ -19,9 +19,11 @@ $(function() {
             );
                 columns.height(tallestcolumn);
             }
+            setTimeout(function(){
             $(document).ready(function() {
                 setEqualHeight($(".box__block--title"));
             });
+            }, 2000);
         })
     }
 	// Array.max = function(array) {
