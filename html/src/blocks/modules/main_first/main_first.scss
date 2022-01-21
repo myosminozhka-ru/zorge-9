@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     @media all and (max-width: 1024px) {
-        min-height: 0;
+        min-height: unset;
         padding: 80px 23px;
     }
     &__title {

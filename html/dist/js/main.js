@@ -837,6 +837,16 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       }
     }]
   });
+
+  if (document.querySelector('.din_page')) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.din_tabs ul.tabs').delegate('li:not(.current)', 'click', function () {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('current').siblings().removeClass('current').parents('div.din_tabs').find('div.box').hide().eq(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).index()).animate({
+        height: 'auto',
+        width: 'auto',
+        opacity: 'show'
+      }, 'slow');
+    });
+  }
 });
 
 /***/ }),

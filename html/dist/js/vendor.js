@@ -429,11 +429,6 @@ function Panzoom(elem, options) {
             parent.style.touchAction = opts.touchAction;
             elem.style.touchAction = opts.touchAction;
         }
-        if (opts.hasOwnProperty('minScale') ||
-            opts.hasOwnProperty('maxScale') ||
-            opts.hasOwnProperty('contain')) {
-            setMinMax();
-        }
     }
     var x = 0;
     var y = 0;
@@ -444,7 +439,6 @@ function Panzoom(elem, options) {
     // for accurate dimensions
     // to constrain initial values
     setTimeout(function () {
-        setMinMax();
         pan(options.startX, options.startY, { animate: false, force: true });
     });
     function trigger(eventName, detail, opts) {
@@ -470,23 +464,6 @@ function Panzoom(elem, options) {
             trigger('panzoomchange', value, opts);
         });
         return value;
-    }
-    function setMinMax() {
-        if (options.contain) {
-            var dims = getDimensions(elem);
-            var parentWidth = dims.parent.width - dims.parent.border.left - dims.parent.border.right;
-            var parentHeight = dims.parent.height - dims.parent.border.top - dims.parent.border.bottom;
-            var elemWidth = dims.elem.width / scale;
-            var elemHeight = dims.elem.height / scale;
-            var elemScaledWidth = parentWidth / elemWidth;
-            var elemScaledHeight = parentHeight / elemHeight;
-            if (options.contain === 'inside') {
-                options.maxScale = Math.min(elemScaledWidth, elemScaledHeight);
-            }
-            else if (options.contain === 'outside') {
-                options.minScale = Math.max(elemScaledWidth, elemScaledHeight);
-            }
-        }
     }
     function constrainXY(toX, toY, toScale, panOptions) {
         var opts = __assign(__assign({}, options), panOptions);
@@ -551,6 +528,10 @@ function Panzoom(elem, options) {
                 result.y = Math.max(Math.min(result.y, maxY), minY);
             }
         }
+        if (opts.roundPixels) {
+            result.x = Math.round(result.x);
+            result.y = Math.round(result.y);
+        }
         return result;
     }
     function constrainScale(toScale, zoomOptions) {
@@ -559,7 +540,26 @@ function Panzoom(elem, options) {
         if (!opts.force && opts.disableZoom) {
             return result;
         }
-        result.scale = Math.min(Math.max(toScale, opts.minScale), opts.maxScale);
+        var minScale = options.minScale;
+        var maxScale = options.maxScale;
+        if (opts.contain) {
+            var dims = getDimensions(elem);
+            var elemWidth = dims.elem.width / scale;
+            var elemHeight = dims.elem.height / scale;
+            if (elemWidth > 1 && elemHeight > 1) {
+                var parentWidth = dims.parent.width - dims.parent.border.left - dims.parent.border.right;
+                var parentHeight = dims.parent.height - dims.parent.border.top - dims.parent.border.bottom;
+                var elemScaledWidth = parentWidth / elemWidth;
+                var elemScaledHeight = parentHeight / elemHeight;
+                if (options.contain === 'inside') {
+                    maxScale = Math.min(maxScale, elemScaledWidth, elemScaledHeight);
+                }
+                else if (options.contain === 'outside') {
+                    minScale = Math.max(minScale, elemScaledWidth, elemScaledHeight);
+                }
+            }
+        }
+        result.scale = Math.min(Math.max(toScale, minScale), maxScale);
         return result;
     }
     function pan(toX, toY, panOptions, originalEvent) {
