@@ -4265,6 +4265,10 @@ input:focus {
   background: #fff;
 }
 
+.parking_white .hover_bl__block--link {
+  cursor: pointer;
+}
+
 .parking_white__in {
   display: flex;
   justify-content: space-between;

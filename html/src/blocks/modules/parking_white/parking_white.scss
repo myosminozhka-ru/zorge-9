@@ -1,4 +1,7 @@
 .parking_white {
+    .hover_bl__block--link {
+        cursor: pointer;
+    }
     padding: 120px 80px;
     background: #fff;
     @media all and (max-width: 1320px) {
