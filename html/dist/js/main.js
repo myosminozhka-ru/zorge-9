@@ -1683,6 +1683,7 @@ __webpack_require__.r(__webpack_exports__);
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc1').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form').addClass('active');
 
     if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc1').hasClass('active')) {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc1').removeClass('active');
@@ -1693,8 +1694,12 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dld1').addClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
   });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dld1').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form').addClass('active');
+  });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc2').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form2').addClass('active');
 
     if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc2').hasClass('active')) {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc2').removeClass('active');
@@ -1705,8 +1710,12 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dld2').addClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
   });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dld2').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form2').addClass('active');
+  });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc3').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form3').addClass('active');
 
     if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc3').hasClass('active')) {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc3').removeClass('active');
@@ -1717,8 +1726,12 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dld3').addClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
   });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dld3').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form3').addClass('active');
+  });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc4').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form4').addClass('active');
 
     if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc4').hasClass('active')) {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc4').removeClass('active');
@@ -1729,8 +1742,12 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dld4').addClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
   });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dld4').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form4').addClass('active');
+  });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc5').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form5').addClass('active');
 
     if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc5').hasClass('active')) {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc5').removeClass('active');
@@ -1741,8 +1758,12 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dld5').addClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
   });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dld5').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form5').addClass('active');
+  });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc6').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form6').addClass('active');
 
     if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc6').hasClass('active')) {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc6').removeClass('active');
@@ -1753,8 +1774,12 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dld6').addClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
   });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dld6').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form6').addClass('active');
+  });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc7').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form7').addClass('active');
 
     if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc7').hasClass('active')) {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc7').removeClass('active');
@@ -1764,6 +1789,9 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dld7').addClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dld7').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form7').addClass('active');
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', function (e) {
     if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.bbc').length) return;
@@ -1781,6 +1809,15 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc6').removeClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dld7').removeClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc7').removeClass('active');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_head__center--backr').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form').removeClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form2').removeClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form3').removeClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form4').removeClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form5').removeClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form6').removeClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form7').removeClass('active');
   });
 });
 

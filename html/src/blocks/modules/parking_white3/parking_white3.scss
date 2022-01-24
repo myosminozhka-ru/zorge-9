@@ -54,3 +54,35 @@
         }
     }
 }
+.kladovie_page {
+    overflow-x: hidden;
+}
+.park_wrapper {
+    position: relative;
+}
+.park_form, .park_form2, .park_form3, .park_form4, .park_form5, .park_form6, .park_form7 {
+    position: absolute;
+    transition: all .3s ease-out;
+    top: 0;
+    transform: translateX(100%);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 90;
+    height: 100%;
+    &.active {
+        transform: translateX(0%);
+    }
+}
+.main_head__center--backr {
+    cursor: pointer;
+}
+.main_head__top.fixed {
+    z-index: 100;
+}
+.komc_in_white  {
+    .hover_bl__block--link {
+        max-width: 275px;
+    }
+}
