@@ -1560,19 +1560,19 @@ __webpack_require__.r(__webpack_exports__);
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.place1').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('active');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc1').toggleClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parents('.parking_white__in').find('.plc1').toggleClass('active');
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.place2').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('active');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc2').toggleClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parents('.parking_white__in').find('.plc2').toggleClass('active');
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.place3').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('active');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc3').toggleClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parents('.parking_white__in').find('.plc3').toggleClass('active');
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.place4').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('active');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc4').toggleClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parents('.parking_white__in').find('.plc4').toggleClass('active');
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc2').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hover_bl').addClass('active');
