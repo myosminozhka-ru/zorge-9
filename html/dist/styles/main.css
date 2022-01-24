@@ -4373,6 +4373,11 @@ input:focus {
   pointer-events: all;
 }
 
+.plc1.dis {
+  fill: #c4c4c4 !important;
+  pointer-events: none !important;
+}
+
 .plc1:hover {
   fill: #E6E6E6;
 }
@@ -4387,6 +4392,11 @@ input:focus {
 .plc2.active {
   fill: #AC966D;
   pointer-events: all;
+}
+
+.plc2.dis {
+  fill: #c4c4c4 !important;
+  pointer-events: none !important;
 }
 
 .plc2.more {
@@ -4409,6 +4419,11 @@ input:focus {
   pointer-events: all;
 }
 
+.plc3.dis {
+  fill: #c4c4c4 !important;
+  pointer-events: none !important;
+}
+
 .plc3:hover {
   fill: #F9E4E4;
 }
@@ -4423,6 +4438,11 @@ input:focus {
 .plc4.active {
   fill: #FFDBA1;
   pointer-events: all;
+}
+
+.plc4.dis {
+  fill: #c4c4c4 !important;
+  pointer-events: none !important;
 }
 
 .plc4.more {
