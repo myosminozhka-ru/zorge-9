@@ -1,4 +1,5 @@
 import $ from "jquery";
+import Panzoom from '@panzoom/panzoom';
 $(function() {
     $('.place1').on('click', function() {
         $(this).toggleClass('active');
@@ -59,7 +60,7 @@ $(function() {
         $(this).addClass('more')
     })
     $(document).on('click', function(e){
-        if( $(e.target).closest('.hover_bl').length || $(e.target).closest('.plc2.active').length || $(e.target).closest('.plc4.active').length || $(e.target).closest('.plc1.active').length)
+        if( $(e.target).closest('.hover_bl').length || $(e.target).closest('.plc2.active').length || $(e.target).closest('.form-wrapper').length || $(e.target).closest('.plc4.active').length || $(e.target).closest('.plc1.active').length)
         return
         
         $('.hover_bl').removeClass('active');
@@ -68,7 +69,6 @@ $(function() {
         $('.plc4').removeClass('more')
     });
 })
-import Panzoom from '@panzoom/panzoom'
 if (document.querySelector('#panzoom-element')) {
     if (window.matchMedia("(max-width: 1023px)").matches) {
     const elem = document.getElementById('panzoom-element')
@@ -86,4 +86,40 @@ if (document.querySelector('#panzoom-element')) {
     var buttonOut = document.getElementById('zoomOutButton');
     buttonIn.addEventListener('click', panzoom.zoomIn)
     buttonOut.addEventListener('click', panzoom.zoomOut)    }
-}
+};
+$(document).on("click", ".block_park", function(e) {
+    e.preventDefault();
+    var id  = $(this).attr('href');
+    var top = $(id).offset().top; // получаем координаты блока
+    $('body, html').animate({scrollTop: top}, 800); // плавно переходим к блоку
+});
+// $.ajax({
+// 	url: '/item.json',         /* Куда пойдет запрос */
+// 	method: 'get',             /* Метод передачи (post или get) */
+// 	dataType: 'json',          /* Тип данных в ответе (xml, json, script, html). */
+// 	success: function(data){   /* функция которая будет выполнена после успешного запроса.  */
+//         data.forEach(item => {
+//             if(item.isUnavailable && $(`[data-item-id="${item.id}"]`).length) {
+//                 $(`[data-item-id="${item.id}"]`).addClass('dis');
+//             }
+//         })
+// 	}
+// });
+$("#form_park").submit(function(e) {
+    console.log(1);
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+
+    var form = $(this);
+    var actionUrl = form.attr('action');
+    
+    $.ajax({
+        type: "POST",
+        url: actionUrl,
+        data: form.serialize(), // serializes the form's elements.
+        success: function(data)
+        {
+          console.log(data); // show response from the php script.
+        }
+    });
+    
+});

@@ -57,7 +57,7 @@
             <div class="main_head__center">
                 <div class="main_head__center__subtit">старт продаж</div>
                 <div class="main_head__center--tit">Подземный паркинг</div>
-                <a href="#" class="main_head__center--btn feedback">выбрать место</a>
+                <a href="#block_park" class="main_head__center--btn block_park">выбрать место</a>
             </div>
         </div>
     </div>
@@ -67,36 +67,16 @@
         <div class="icon-close">&nbsp;</div>
         <div class="form-wrapper__title">Забронировать паркинг</div>
         <div class="form-wrapper__subtitle">Для уточнения вопросов бронирования паркинга с Вами в ближайшее время свяжется наш сотрудник</div>
-        <form action="" class="form-wrapper__form">
+        <form action="http://zorge-9.01sh.ru/ajax/form.php" class="form-wrapper__form" id="form_park">
             <label for="">
                 <div>Как нам к вам обращаться?</div>
-                <input type="text" placeholder="Иван иванов">
+                <input type="text" name="name_first" placeholder="Иван иванов">
             </label>
             <label for="">
                 <div>Контактный телефон</div>
-                <input type="tel" placeholder="+7 (123) 123-45-67">
+                <input type="tel" name="phone_numb" placeholder="+7 (123) 123-45-67">
             </label>
-            <div class="form-wrapper__btns">
-                <input type="submit" class="buttons_btn" value="Отправить">
-                <div class="icon-close btn buttons_btn">закрыть</div>
-            </div>
-        </form>
-    </div>
-</div>  
-<div class="form-wrapper fd2">
-    <div class="form-wrapper-inner">
-        <div class="icon-close">&nbsp;</div>
-        <div class="form-wrapper__title">Купить паркинг</div>
-        <div class="form-wrapper__subtitle">Для уточнения вопросов бронирования паркинга с Вами в ближайшее время свяжется наш сотрудник</div>
-        <form action="" class="form-wrapper__form">
-            <label for="">
-                <div>Как нам к вам обращаться?</div>
-                <input type="text" placeholder="Иван иванов">
-            </label>
-            <label for="">
-                <div>Контактный телефон</div>
-                <input type="tel" placeholder="+7 (123) 123-45-67">
-            </label>
+            <input type="hidden" id="parking-place" name="form_text_4">
             <div class="form-wrapper__btns">
                 <input type="submit" class="buttons_btn" value="Отправить">
                 <div class="icon-close btn buttons_btn">закрыть</div>

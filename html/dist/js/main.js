@@ -1557,6 +1557,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _panzoom_panzoom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @panzoom/panzoom */ "./node_modules/@panzoom/panzoom/dist/panzoom.es.js");
 
+
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.place1').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('active');
@@ -1625,14 +1626,13 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('more');
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', function (e) {
-    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.hover_bl').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.plc2.active').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.plc4.active').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.plc1.active').length) return;
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.hover_bl').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.plc2.active').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.form-wrapper').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.plc4.active').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.plc1.active').length) return;
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hover_bl').removeClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc1').removeClass('more');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc2').removeClass('more');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc4').removeClass('more');
   });
 });
-
 
 if (document.querySelector('#panzoom-element')) {
   if (window.matchMedia("(max-width: 1023px)").matches) {
@@ -1654,6 +1654,45 @@ if (document.querySelector('#panzoom-element')) {
     buttonOut.addEventListener('click', panzoom.zoomOut);
   }
 }
+
+;
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".block_park", function (e) {
+  e.preventDefault();
+  var id = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href');
+  var top = jquery__WEBPACK_IMPORTED_MODULE_0___default()(id).offset().top; // получаем координаты блока
+
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body, html').animate({
+    scrollTop: top
+  }, 800); // плавно переходим к блоку
+}); // $.ajax({
+// 	url: '/item.json',         /* Куда пойдет запрос */
+// 	method: 'get',             /* Метод передачи (post или get) */
+// 	dataType: 'json',          /* Тип данных в ответе (xml, json, script, html). */
+// 	success: function(data){   /* функция которая будет выполнена после успешного запроса.  */
+//         data.forEach(item => {
+//             if(item.isUnavailable && $(`[data-item-id="${item.id}"]`).length) {
+//                 $(`[data-item-id="${item.id}"]`).addClass('dis');
+//             }
+//         })
+// 	}
+// });
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()("#form_park").submit(function (e) {
+  console.log(1);
+  e.preventDefault(); // avoid to execute the actual submit of the form.
+
+  var form = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this);
+  var actionUrl = form.attr('action');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
+    type: "POST",
+    url: actionUrl,
+    data: form.serialize(),
+    // serializes the form's elements.
+    success: function success(data) {
+      console.log(data); // show response from the php script.
+    }
+  });
+});
 
 /***/ }),
 

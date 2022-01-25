@@ -122,6 +122,12 @@
         }
     }
 }
+.svg__item {
+    path.active.dis {
+        fill: #c4c4c4 !important;
+        pointer-events: none !important;
+    }
+}
 .plc1 {
     transition: all .3s ease-out;
     fill: #fff;
@@ -130,10 +136,10 @@
     &.active {
         fill: #E6E6E6;
         pointer-events: all;
-    }
-    &.dis {
-        fill: #c4c4c4 !important;
-        pointer-events: none !important;
+        &.dis {
+            fill: #c4c4c4 !important;
+            pointer-events: none !important;
+        }
     }
     &:hover {
         fill: #E6E6E6;
@@ -147,10 +153,10 @@
     &.active {
         fill: #AC966D;
         pointer-events: all;
-    }
-    &.dis {
-        fill: #c4c4c4 !important;
-        pointer-events: none !important;
+        &.dis {
+            fill: #c4c4c4 !important;
+            pointer-events: none !important;
+        }
     }
     &.more {
         fill: #744F3C;
@@ -167,10 +173,10 @@
     &.active {
         fill: #F9E4E4;
         pointer-events: all;
-    }
-    &.dis {
-        fill: #c4c4c4 !important;
-        pointer-events: none !important;
+        &.dis {
+            fill: #c4c4c4 !important;
+            pointer-events: none !important;
+        }
     }
     &:hover {
         fill: #F9E4E4;
@@ -184,10 +190,10 @@
     &.active {
         fill: #FFDBA1;
         pointer-events: all;
-    }
-    &.dis {
-        fill: #c4c4c4 !important;
-        pointer-events: none !important;
+        &.dis {
+            fill: #c4c4c4 !important;
+            pointer-events: none !important;
+        }
     }
     &.more {
         fill: #ffbf57;

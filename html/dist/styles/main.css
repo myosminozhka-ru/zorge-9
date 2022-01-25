@@ -4361,6 +4361,11 @@ input:focus {
   height: auto;
 }
 
+.svg__item path.active.dis {
+  fill: #c4c4c4 !important;
+  pointer-events: none !important;
+}
+
 .plc1 {
   transition: all .3s ease-out;
   fill: #fff;
@@ -4373,7 +4378,7 @@ input:focus {
   pointer-events: all;
 }
 
-.plc1.dis {
+.plc1.active.dis {
   fill: #c4c4c4 !important;
   pointer-events: none !important;
 }
@@ -4394,7 +4399,7 @@ input:focus {
   pointer-events: all;
 }
 
-.plc2.dis {
+.plc2.active.dis {
   fill: #c4c4c4 !important;
   pointer-events: none !important;
 }
@@ -4419,7 +4424,7 @@ input:focus {
   pointer-events: all;
 }
 
-.plc3.dis {
+.plc3.active.dis {
   fill: #c4c4c4 !important;
   pointer-events: none !important;
 }
@@ -4440,7 +4445,7 @@ input:focus {
   pointer-events: all;
 }
 
-.plc4.dis {
+.plc4.active.dis {
   fill: #c4c4c4 !important;
   pointer-events: none !important;
 }
@@ -7886,6 +7891,44 @@ input:checked + .slider:before {
   display: none;
 }
 
+.park_wrapper .hover_bl {
+  max-width: 1750px !important;
+}
+
+.park_wrapper .hover_bl__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.park_wrapper .hover_bl__block .room_center__rl--li {
+  display: flex;
+  text-align: left;
+  text-decoration: none;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: 'gm', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-top: 20px;
+}
+
+.park_wrapper .hover_bl__block .room_center__rl--img {
+  margin-right: 30px;
+}
+
+.park_wrapper .hover_bl__block .room_center__rl--title {
+  text-transform: uppercase;
+  font-family: 'gm', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
 .parking_white3 .parking_white__l--list {
   padding: 0;
   margin: 0;
@@ -8007,6 +8050,7 @@ input:checked + .slider:before {
 
 .komc_in_white .hover_bl__block--link {
   max-width: 275px;
+  font-size: 1.25vw;
 }
 
 .komc_in_white .plc1.active {
@@ -9601,6 +9645,16 @@ input:checked + .slider:before {
   .parking_white3 .parking_white__l--list li {
     font-size: 14px;
     margin-left: 10px;
+  }
+
+  .park_wrapper .hover_bl__block .room_center__rl--title {
+    font-size: 14px;
+  }
+
+  .park_wrapper .hover_bl__block .room_center__rl--img {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
   }
 
   .svg {
