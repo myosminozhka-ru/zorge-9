@@ -1555,7 +1555,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       return obj;
     }, {});
     var actionUrl = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('action');
-    BX.ajax({
+    jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
       url: actionUrl,
       data: data,
       method: 'POST',
@@ -1568,7 +1568,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       emulateOnload: true,
       start: true,
       cache: false,
-      onsuccess: function onsuccess(result) {
+      success: function success(result) {
         if (result) {
           jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park').find('label').fadeOut();
           jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park').find('.form-wrapper__btns').fadeOut();

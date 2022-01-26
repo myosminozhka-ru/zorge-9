@@ -11,7 +11,7 @@ $(function() {
         }, {});
         var actionUrl = $(this).attr('action');
         
-        BX.ajax({
+        $.ajax({
            url: actionUrl,
            data: data,
            method: 'POST',
@@ -24,7 +24,7 @@ $(function() {
            emulateOnload: true,
            start: true,
            cache: false,
-           onsuccess: function (result) {
+           success: function (result) {
                if(result)
                {
                 $('#form_park').find('label').fadeOut();
