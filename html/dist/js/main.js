@@ -1537,10 +1537,47 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 /*!***********************************************************!*\
   !*** ./src/blocks/modules/parking_first/parking_first.js ***!
   \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park').on('submit', function (event) {
+    console.log('form submitted');
+    event.preventDefault(); // avoid to execute the actual submit of the form.
+
+    var data = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).serializeArray().reduce(function (obj, item) {
+      obj[item.name] = item.value;
+      return obj;
+    }, {});
+    var actionUrl = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('action');
+    BX.ajax({
+      url: actionUrl,
+      data: data,
+      method: 'POST',
+      dataType: 'json',
+      timeout: 30,
+      async: true,
+      enctype: "multipart/form-data",
+      processData: true,
+      scriptsRunFirst: true,
+      emulateOnload: true,
+      start: true,
+      cache: false,
+      onsuccess: function onsuccess(result) {
+        if (result) {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park').find('label').fadeOut();
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park').find('.form-wrapper__btns').fadeOut();
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park').find('.form-wrapper__subtitle').text(result.SUCCESS);
+        }
+      }
+    });
+  });
+});
 
 /***/ }),
 
@@ -2005,7 +2042,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_kladovie_sl_kladovie_sl__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! %modules%/kladovie_sl/kladovie_sl */ "./src/blocks/modules/kladovie_sl/kladovie_sl.js");
 /* harmony import */ var _modules_kladovie_blocks_kladovie_blocks__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! %modules%/kladovie_blocks/kladovie_blocks */ "./src/blocks/modules/kladovie_blocks/kladovie_blocks.js");
 /* harmony import */ var _modules_parking_first_parking_first__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! %modules%/parking_first/parking_first */ "./src/blocks/modules/parking_first/parking_first.js");
-/* harmony import */ var _modules_parking_first_parking_first__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_modules_parking_first_parking_first__WEBPACK_IMPORTED_MODULE_20__);
 /* harmony import */ var _modules_parking_blocks_parking_blocks__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! %modules%/parking_blocks/parking_blocks */ "./src/blocks/modules/parking_blocks/parking_blocks.js");
 /* harmony import */ var _modules_parking_white_parking_white__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! %modules%/parking_white/parking_white */ "./src/blocks/modules/parking_white/parking_white.js");
 /* harmony import */ var _modules_act_page_content_act_page_content__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! %modules%/act_page_content/act_page_content */ "./src/blocks/modules/act_page_content/act_page_content.js");
