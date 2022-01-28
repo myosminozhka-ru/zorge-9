@@ -1546,7 +1546,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park').on('submit', function (event) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park form').on('submit', function (event) {
     console.log('form submitted');
     event.preventDefault(); // avoid to execute the actual submit of the form.
 
@@ -1570,9 +1570,9 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       cache: false,
       success: function success(result) {
         if (result) {
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park').find('label').fadeOut();
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park').find('.form-wrapper__btns').fadeOut();
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park').find('.form-wrapper__subtitle').text(result.SUCCESS);
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park form').find('label').fadeOut();
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park form').find('.form-wrapper__btns').fadeOut();
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park form').find('.form-wrapper__subtitle').text(result.SUCCESS);
         }
       }
     });

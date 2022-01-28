@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 $(function() {
-    $('#form_park').on('submit', function(event) {
+    $('#form_park form').on('submit', function(event) {
         console.log('form submitted')
         event.preventDefault(); // avoid to execute the actual submit of the form.
 
@@ -27,9 +27,9 @@ $(function() {
            success: function (result) {
                if(result)
                {
-                $('#form_park').find('label').fadeOut();
-                $('#form_park').find('.form-wrapper__btns').fadeOut();
-                $('#form_park').find('.form-wrapper__subtitle').text(result.SUCCESS);
+                $('#form_park form').find('label').fadeOut();
+                $('#form_park form').find('.form-wrapper__btns').fadeOut();
+                $('#form_park form').find('.form-wrapper__subtitle').text(result.SUCCESS);
                }
            }
        });
