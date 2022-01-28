@@ -5,10 +5,11 @@ $(function() {
         console.log('form submitted')
         event.preventDefault(); // avoid to execute the actual submit of the form.
 
-        var data = $(this).serializeArray().reduce(function(obj, item) {
+        var fields = $(this).serializeArray().reduce(function(obj, item) {
             obj[item.name] = item.value;
             return obj;
         }, {});
+        var data = {...fields, web_form_submit: 'Отправить'};
         var actionUrl = $(this).attr('action');
         
         $.ajax({
@@ -25,7 +26,7 @@ $(function() {
            start: true,
            cache: false,
            success: function (result) {
-               if(result)
+               if (result)
                {
                 $('#form_park form').find('label').fadeOut();
                 $('#form_park form').find('.form-wrapper__btns').fadeOut();
