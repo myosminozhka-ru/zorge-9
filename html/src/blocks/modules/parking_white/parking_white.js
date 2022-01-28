@@ -105,21 +105,21 @@ $(document).on("click", ".block_park", function(e) {
 //         })
 // 	}
 // });
-$("#form_park").submit(function(e) {
-    console.log(1);
-    e.preventDefault(); // avoid to execute the actual submit of the form.
+// $("#form_park").submit(function(e) {
+//     console.log(1);
+//     e.preventDefault(); // avoid to execute the actual submit of the form.
 
-    var form = $(this);
-    var actionUrl = form.attr('action');
+//     var form = $(this);
+//     var actionUrl = form.attr('action');
     
-    $.ajax({
-        type: "POST",
-        url: actionUrl,
-        data: form.serialize(), // serializes the form's elements.
-        success: function(data)
-        {
-          console.log(data); // show response from the php script.
-        }
-    });
+//     $.ajax({
+//         type: "POST",
+//         url: actionUrl,
+//         data: form.serialize(), // serializes the form's elements.
+//         success: function(data)
+//         {
+//           console.log(data); // show response from the php script.
+//         }
+//     });
     
-});
+// });

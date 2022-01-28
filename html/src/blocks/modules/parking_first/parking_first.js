@@ -1,16 +1,13 @@
 import $ from 'jquery';
 
 $(function() {
-    $('#form_park form').on('submit', function(event) {
-        console.log('form submitted')
-        event.preventDefault(); // avoid to execute the actual submit of the form.
-
-        var fields = $(this).serializeArray().reduce(function(obj, item) {
+    window.form_submit = function() {
+        var fields = $('#form_park form').serializeArray().reduce(function(obj, item) {
             obj[item.name] = item.value;
             return obj;
         }, {});
         var data = {...fields, web_form_submit: 'Отправить'};
-        var actionUrl = $(this).attr('action');
+        var actionUrl = $('#form_park form').attr('action');
         
         $.ajax({
            url: actionUrl,
@@ -34,5 +31,9 @@ $(function() {
                }
            }
        });
+    }
+    $('#form_park form').submit(function(event) {
+        event.preventDefault();
+        form_submit();
     });
 })

@@ -1552,11 +1552,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park form').on('submit', function (event) {
-    console.log('form submitted');
-    event.preventDefault(); // avoid to execute the actual submit of the form.
-
-    var fields = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).serializeArray().reduce(function (obj, item) {
+  window.form_submit = function () {
+    var fields = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park form').serializeArray().reduce(function (obj, item) {
       obj[item.name] = item.value;
       return obj;
     }, {});
@@ -1565,7 +1562,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       web_form_submit: 'Отправить'
     });
 
-    var actionUrl = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('action');
+    var actionUrl = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park form').attr('action');
     jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
       url: actionUrl,
       data: data,
@@ -1587,6 +1584,11 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
         }
       }
     });
+  };
+
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park form').submit(function (event) {
+    event.preventDefault();
+    form_submit();
   });
 });
 
@@ -1724,23 +1726,21 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".block_park
 //         })
 // 	}
 // });
-
-jquery__WEBPACK_IMPORTED_MODULE_0___default()("#form_park").submit(function (e) {
-  console.log(1);
-  e.preventDefault(); // avoid to execute the actual submit of the form.
-
-  var form = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this);
-  var actionUrl = form.attr('action');
-  jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
-    type: "POST",
-    url: actionUrl,
-    data: form.serialize(),
-    // serializes the form's elements.
-    success: function success(data) {
-      console.log(data); // show response from the php script.
-    }
-  });
-});
+// $("#form_park").submit(function(e) {
+//     console.log(1);
+//     e.preventDefault(); // avoid to execute the actual submit of the form.
+//     var form = $(this);
+//     var actionUrl = form.attr('action');
+//     $.ajax({
+//         type: "POST",
+//         url: actionUrl,
+//         data: form.serialize(), // serializes the form's elements.
+//         success: function(data)
+//         {
+//           console.log(data); // show response from the php script.
+//         }
+//     });
+// });
 
 /***/ }),
 
