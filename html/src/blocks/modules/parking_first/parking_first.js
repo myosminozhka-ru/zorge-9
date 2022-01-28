@@ -2,14 +2,14 @@ import $ from 'jquery';
 
 $(function() {
     window.form_submit = function() {
-        var fields = $('#form_park form').serializeArray().reduce(function(obj, item) {
+        var fields = $('[name="SIMPLE_FORM_1"]').serializeArray().reduce(function(obj, item) {
             obj[item.name] = item.value;
             return obj;
         }, {});
         var data = {...fields, web_form_submit: 'Отправить'};
-        var actionUrl = $('#form_park form').attr('action');
-        
-        $.ajax({
+        var actionUrl = $('[name="SIMPLE_FORM_1"]').attr('action');
+        console.log('requested');
+        BX.ajax({
            url: actionUrl,
            data: data,
            method: 'POST',
@@ -22,17 +22,18 @@ $(function() {
            emulateOnload: true,
            start: true,
            cache: false,
-           success: function (result) {
-               if (result)
+           onsuccess: function (result) {
+               if (result.SUCCESS)
                {
-                $('#form_park form').find('label').fadeOut();
-                $('#form_park form').find('.form-wrapper__btns').fadeOut();
-                $('#form_park form').find('.form-wrapper__subtitle').text(result.SUCCESS);
+                $('[name="SIMPLE_FORM_1"]').find('label').fadeOut();
+                $('[name="SIMPLE_FORM_1"]').find('.form-wrapper__btns').fadeOut();
+                $('[name="SIMPLE_FORM_1"]').closest('.form-wrapper-inner').find('.form-wrapper__subtitle').fadeOut();
+                $('[name="SIMPLE_FORM_1"]').closest('.form-wrapper-inner').find('.form-wrapper__title').html(result.SUCCESS);
                }
            }
        });
     }
-    $('#form_park form').submit(function(event) {
+    $('[name="SIMPLE_FORM_1"]').submit(function(event) {
         event.preventDefault();
         form_submit();
     });

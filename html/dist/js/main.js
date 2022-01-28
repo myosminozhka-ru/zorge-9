@@ -1553,7 +1553,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   window.form_submit = function () {
-    var fields = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park form').serializeArray().reduce(function (obj, item) {
+    var fields = jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_1"]').serializeArray().reduce(function (obj, item) {
       obj[item.name] = item.value;
       return obj;
     }, {});
@@ -1562,8 +1562,9 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       web_form_submit: 'Отправить'
     });
 
-    var actionUrl = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park form').attr('action');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
+    var actionUrl = jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_1"]').attr('action');
+    console.log('requested');
+    BX.ajax({
       url: actionUrl,
       data: data,
       method: 'POST',
@@ -1576,17 +1577,18 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       emulateOnload: true,
       start: true,
       cache: false,
-      success: function success(result) {
-        if (result) {
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park form').find('label').fadeOut();
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park form').find('.form-wrapper__btns').fadeOut();
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park form').find('.form-wrapper__subtitle').text(result.SUCCESS);
+      onsuccess: function onsuccess(result) {
+        if (result.SUCCESS) {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_1"]').find('label').fadeOut();
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_1"]').find('.form-wrapper__btns').fadeOut();
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_1"]').closest('.form-wrapper-inner').find('.form-wrapper__subtitle').fadeOut();
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_1"]').closest('.form-wrapper-inner').find('.form-wrapper__title').html(result.SUCCESS);
         }
       }
     });
   };
 
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_park form').submit(function (event) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_1"]').submit(function (event) {
     event.preventDefault();
     form_submit();
   });
