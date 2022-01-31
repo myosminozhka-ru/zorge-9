@@ -1,25 +1,47 @@
 import $ from "jquery";
+
 $(function() {
-    $('.main_dop path.active').on('mouseenter', function() {
-        $('.hover_bl').addClass('active')
-    })
-    $('.main_dop path.active').on('mouseleave', function() {
-        $('.hover_bl').removeClass('active')
-    })
-});
-$(function() {
-  
-    $('.main_head__center--sort').on('click', '.sort-js', function() {
-      $(this).addClass('active').siblings().removeClass('active');
-      $(this).closest('.main_head__center').find('.floor_center').removeClass('active').eq($(this).index()).addClass('active');
+    class Apartments {
+        constructor({apartmentsLink}) {
+            this.apartmentsLink = apartmentsLink;
+            this.apartments = null;
+        }
+        getApartments() {
+            return new Promise((resolve, reject) => {
+                $.ajax({
+                    url: this.apartmentsLink,
+                    success: function(data) {
+                        resolve(data);
+                    },
+                    error: function(err) {
+                        reject(err);
+                    }
+                });
+            })
+        }
+        addAttributes() {
+            this.apartments.forEach(item => {
+                switch (item.corpus) {
+                    case 'Madison':
+                        console.log(item.corpus, item.floor, item.position)
+                        console.log($(`[data-corpse="1"][data-floor*="-${item.floor}-"] [data-position="${item.position}"]`))
+                        break;
+                }
+            })
+        }
+        init() {
+            this.getApartments()
+                .then(result => {
+                    this.apartments = result.apartments;
+                    this.addAttributes();
+                })
+                .catch(error => {
+                    alert(error)
+                });
+        }
+    }
+    let apartments = new Apartments({
+        apartmentsLink: 'static/apartments.json',
     });
-    $('.main_head__center--sort').on('click', '.sort-js:nth-child(1)', function() {
-        $(this).parents().find('.block_kompas').css('transform','rotate(-133deg)');
-    });
-    $('.main_head__center--sort').on('click', '.sort-js:nth-child(2)', function() {
-        $(this).parents().find('.block_kompas').css('transform','rotate(-103deg)');
-    });
-    $('.main_head__center--sort').on('click', '.sort-js:nth-child(3)', function() {
-        $(this).parents().find('.block_kompas').css('transform','rotate(-73deg)');
-    });
+    apartments.init();
 });

@@ -26,6 +26,7 @@ import "%modules%/buy_tabs/buy_tabs";
 import "%modules%/dinamic_main/dinamic_main";
 import "%modules%/main_func/main_func";
 import "%modules%/floor_first/floor_first";
+import "%modules%/floors/floors";
 import "%modules%/room_first/room_first";
 import "%modules%/room_blocks/room_blocks";
 import "%modules%/din_in_page/din_in_page";
