@@ -295,7 +295,43 @@
          "area":"65.02",
          "number":"022"
       },
-      
+      {
+         "id":"1978",
+         "floor":"2",
+         "rooms":"3",
+         "position":"3",
+         "corpus":"Madison",
+         "price":"26 186 500",
+         "window-view":[
+            "двор"
+         ],
+         "area":"64.50",
+         "number":"003"
+      },
+      {
+         "id":"1979",
+         "floor":"2",
+         "rooms":"3",
+         "position":"9",
+         "corpus":"Madison",
+         "price":"31 323 700",
+         "window-view":false,
+         "area":"77.75",
+         "number":"009"
+      },
+      {
+         "id":"2022",
+         "floor":"2",
+         "rooms":"1",
+         "position":"13",
+         "corpus":"Madison",
+         "price":"17 825 600",
+         "window-view":[
+            "двор"
+         ],
+         "area":"36.85",
+         "number":"012"
+      },
       {
          "id":"2023",
          "floor":"8",

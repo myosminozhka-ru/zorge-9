@@ -19,6 +19,10 @@ $(function() {
     })
     $('.plc2').on('click', function() {
         $('.hover_bl').addClass('active');
+        console.log($(this).attr('id'));
+        if ($('#parking-place') && $(this).attr('id')) {
+            $('#parking-place').attr('value', $(this).attr('id'));
+        }
         if($('.plc2').hasClass('more')){
             $('.plc2').removeClass('more')
         } else {
@@ -30,6 +34,9 @@ $(function() {
         $('.hover_bl').addClass('active');
         $('.komc_in_white .plc2').removeClass('more')
         $('.komc_in_white .plc1').removeClass('more')
+        if ($('#parking-place') && $(this).attr('id')) {
+            $('#parking-place').attr('value', $(this).attr('id'));
+        }
         if($('.plc4').hasClass('more')){
             $('.plc4').removeClass('more')
         } else {
