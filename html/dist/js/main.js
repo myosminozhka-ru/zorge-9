@@ -972,8 +972,15 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
         this.apartments.forEach(function (item) {
           switch (item.corpus) {
             case 'Madison':
-              console.log(item.corpus, item.floor, item.position);
-              console.log(jquery__WEBPACK_IMPORTED_MODULE_0___default()("[data-corpse=\"1\"][data-floor*=\"-".concat(item.floor, "-\"] [data-position=\"").concat(item.position, "\"]")));
+              jquery__WEBPACK_IMPORTED_MODULE_0___default()("[data-corpse=\"1\"][data-floor*=\"-".concat(item.floor, "-\"] [data-position=\"").concat(item.position, "\"]")).attr('data-area', item.area).attr('data-rooms', item.rooms).attr('data-price', item.price).attr('data-number', item.number).attr('fill', 'red');
+              break;
+
+            case 'Manhattan':
+              jquery__WEBPACK_IMPORTED_MODULE_0___default()("[data-corpse=\"2\"][data-floor*=\"-".concat(item.floor, "-\"] [data-position=\"").concat(item.position, "\"]")).attr('data-area', item.area).attr('data-rooms', item.rooms).attr('data-price', item.price).attr('data-number', item.number).attr('fill', 'red');
+              break;
+
+            case 'Soho':
+              jquery__WEBPACK_IMPORTED_MODULE_0___default()("[data-corpse=\"3\"][data-floor*=\"-".concat(item.floor, "-\"] [data-position=\"").concat(item.position, "\"]")).attr('data-area', item.area).attr('data-rooms', item.rooms).attr('data-price', item.price).attr('data-number', item.number).attr('fill', 'red');
               break;
           }
         });
@@ -988,7 +995,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
           _this2.addAttributes();
         })["catch"](function (error) {
-          alert(error);
+          console.log(error);
         });
       }
     }]);

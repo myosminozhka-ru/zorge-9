@@ -23,8 +23,28 @@ $(function() {
             this.apartments.forEach(item => {
                 switch (item.corpus) {
                     case 'Madison':
-                        console.log(item.corpus, item.floor, item.position)
-                        console.log($(`[data-corpse="1"][data-floor*="-${item.floor}-"] [data-position="${item.position}"]`))
+                        $(`[data-corpse="1"][data-floor*="-${item.floor}-"] [data-position="${item.position}"]`)
+                            .attr('data-area', item.area)
+                            .attr('data-rooms', item.rooms)
+                            .attr('data-price', item.price)
+                            .attr('data-number', item.number)
+                            .attr('fill', 'red')
+                        break;
+                    case 'Manhattan':
+                        $(`[data-corpse="2"][data-floor*="-${item.floor}-"] [data-position="${item.position}"]`)
+                            .attr('data-area', item.area)
+                            .attr('data-rooms', item.rooms)
+                            .attr('data-price', item.price)
+                            .attr('data-number', item.number)
+                            .attr('fill', 'red')
+                        break;
+                    case 'Soho':
+                        $(`[data-corpse="3"][data-floor*="-${item.floor}-"] [data-position="${item.position}"]`)
+                            .attr('data-area', item.area)
+                            .attr('data-rooms', item.rooms)
+                            .attr('data-price', item.price)
+                            .attr('data-number', item.number)
+                            .attr('fill', 'red')
                         break;
                 }
             })
@@ -36,7 +56,7 @@ $(function() {
                     this.addAttributes();
                 })
                 .catch(error => {
-                    alert(error)
+                    console.log(error)
                 });
         }
     }

@@ -7,7 +7,7 @@
          "position":"1",
          "corpus":"Madison",
          "price":"17 602 100",
-         "window-view":[
+         "window_view":[
             "двор",
             "окна"
          ],
@@ -21,7 +21,7 @@
          "position":"5",
          "corpus":"Madison",
          "price":"24 983 300",
-         "window-view":false,
+         "window_view":false,
          "area":"55.05",
          "number":"197"
       },
@@ -32,7 +32,7 @@
          "position":"8",
          "corpus":"Madison",
          "price":"25 001 800",
-         "window-view":false,
+         "window_view":false,
          "area":"54.59",
          "number":"200"
       },
@@ -43,7 +43,7 @@
          "position":"3",
          "corpus":"Madison",
          "price":"27 397 400",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"65.34",
@@ -56,7 +56,7 @@
          "position":"1",
          "corpus":"Madison",
          "price":"17 568 000",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"37.71",
@@ -69,7 +69,7 @@
          "position":"3",
          "corpus":"Madison",
          "price":"27 187 800",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"65.34",
@@ -82,7 +82,7 @@
          "position":"2",
          "corpus":"Madison",
          "price":"17 616 200",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"37.74",
@@ -95,7 +95,7 @@
          "position":"3",
          "corpus":"Madison",
          "price":"26 174 800",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"65.34",
@@ -108,7 +108,7 @@
          "position":"7",
          "corpus":"Madison",
          "price":"23 801 300",
-         "window-view":false,
+         "window_view":false,
          "area":"55.80",
          "number":"139"
       },
@@ -119,7 +119,7 @@
          "position":"10",
          "corpus":"Madison",
          "price":"25 641 400",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"65.85",
@@ -132,7 +132,7 @@
          "position":"10",
          "corpus":"Madison",
          "price":"25 437 300",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"65.85",
@@ -145,7 +145,7 @@
          "position":"10",
          "corpus":"Madison",
          "price":"25 231 300",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"65.85",
@@ -158,7 +158,7 @@
          "position":"3",
          "corpus":"Madison",
          "price":"25 208 200",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"65.34",
@@ -171,7 +171,7 @@
          "position":"10",
          "corpus":"Madison",
          "price":"25 529 900",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"65.85",
@@ -184,7 +184,7 @@
          "position":"3",
          "corpus":"Madison",
          "price":"24 611 600",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"64.50",
@@ -197,7 +197,7 @@
          "position":"4",
          "corpus":"Madison",
          "price":"30 624 500",
-         "window-view":false,
+         "window_view":false,
          "area":"78.38",
          "number":"040"
       },
@@ -208,7 +208,7 @@
          "position":"9",
          "corpus":"Madison",
          "price":"30 166 300",
-         "window-view":false,
+         "window_view":false,
          "area":"77.75",
          "number":"045"
       },
@@ -219,7 +219,7 @@
          "position":"10",
          "corpus":"Madison",
          "price":"25 058 700",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"65.02",
@@ -232,7 +232,7 @@
          "position":"3",
          "corpus":"Madison",
          "price":"24 538 200",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"64.50",
@@ -245,7 +245,7 @@
          "position":"9",
          "corpus":"Madison",
          "price":"29 902 500",
-         "window-view":false,
+         "window_view":false,
          "area":"77.75",
          "number":"033"
       },
@@ -256,7 +256,7 @@
          "position":"4",
          "corpus":"Madison",
          "price":"30 057 600",
-         "window-view":false,
+         "window_view":false,
          "area":"78.38",
          "number":"016"
       },
@@ -267,7 +267,7 @@
          "position":"6",
          "corpus":"Madison",
          "price":"23 047 600",
-         "window-view":false,
+         "window_view":false,
          "area":"55.60",
          "number":"018"
       },
@@ -278,7 +278,7 @@
          "position":"9",
          "corpus":"Madison",
          "price":"29 177 500",
-         "window-view":false,
+         "window_view":false,
          "area":"77.75",
          "number":"021"
       },
@@ -289,7 +289,7 @@
          "position":"10",
          "corpus":"Madison",
          "price":"24 782 200",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"65.02",
@@ -302,7 +302,7 @@
          "position":"3",
          "corpus":"Madison",
          "price":"26 186 500",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"64.50",
@@ -315,7 +315,7 @@
          "position":"9",
          "corpus":"Madison",
          "price":"31 323 700",
-         "window-view":false,
+         "window_view":false,
          "area":"77.75",
          "number":"009"
       },
@@ -326,7 +326,7 @@
          "position":"13",
          "corpus":"Madison",
          "price":"17 825 600",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"36.85",
@@ -339,7 +339,7 @@
          "position":"13",
          "corpus":"Madison",
          "price":"17 097 100",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"36.85",
@@ -352,7 +352,7 @@
          "position":"13",
          "corpus":"Madison",
          "price":"17 346 600",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"37.13",
@@ -365,7 +365,7 @@
          "position":"11",
          "corpus":"Madison",
          "price":"17 384 200",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"36.56",
@@ -378,7 +378,7 @@
          "position":"11",
          "corpus":"Madison",
          "price":"17 503 400",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"36.56",
@@ -391,7 +391,7 @@
          "position":"13",
          "corpus":"Madison",
          "price":"17 568 700",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"37.13",
@@ -404,7 +404,7 @@
          "position":"3",
          "corpus":"Madison",
          "price":"25 433 400",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"64.88",
@@ -417,7 +417,7 @@
          "position":"12",
          "corpus":"Madison",
          "price":"17 630 200",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"37.77",
@@ -430,7 +430,7 @@
          "position":"12",
          "corpus":"Madison",
          "price":"17 698 900",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"37.77",
@@ -443,7 +443,7 @@
          "position":"2",
          "corpus":"Soho",
          "price":"12 105 300",
-         "window-view":false,
+         "window_view":false,
          "area":"28.62",
          "number":"203"
       },
@@ -454,7 +454,7 @@
          "position":"3",
          "corpus":"Soho",
          "price":"12 003 800",
-         "window-view":false,
+         "window_view":false,
          "area":"28.38",
          "number":"204"
       },
@@ -465,7 +465,7 @@
          "position":"3",
          "corpus":"Soho",
          "price":"11 992 100",
-         "window-view":false,
+         "window_view":false,
          "area":"28.38",
          "number":"189"
       },
@@ -476,7 +476,7 @@
          "position":"12",
          "corpus":"Soho",
          "price":"17 213 800",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"39.29",
@@ -489,7 +489,7 @@
          "position":"5",
          "corpus":"Soho",
          "price":"24 370 500",
-         "window-view":false,
+         "window_view":false,
          "area":"65.81",
          "number":"176"
       },
@@ -500,7 +500,7 @@
          "position":"11",
          "corpus":"Soho",
          "price":"23 386 200",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"58.28",
@@ -513,7 +513,7 @@
          "position":"12",
          "corpus":"Soho",
          "price":"17 180 400",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"39.29",
@@ -526,7 +526,7 @@
          "position":"2",
          "corpus":"Soho",
          "price":"12 070 100",
-         "window-view":false,
+         "window_view":false,
          "area":"28.62",
          "number":"158"
       },
@@ -537,7 +537,7 @@
          "position":"6",
          "corpus":"Soho",
          "price":"28 214 100",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"76.97",
@@ -550,7 +550,7 @@
          "position":"14",
          "corpus":"Soho",
          "price":"27 092 200",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"77.12",
@@ -563,7 +563,7 @@
          "position":"5",
          "corpus":"Soho",
          "price":"24 063 800",
-         "window-view":false,
+         "window_view":false,
          "area":"65.81",
          "number":"146"
       },
@@ -574,7 +574,7 @@
          "position":"15",
          "corpus":"Soho",
          "price":"24 920 700",
-         "window-view":false,
+         "window_view":false,
          "area":"68.49",
          "number":"154"
       },
@@ -585,7 +585,7 @@
          "position":"14",
          "corpus":"Soho",
          "price":"26 910 500",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"77.12",
@@ -598,7 +598,7 @@
          "position":"15",
          "corpus":"Soho",
          "price":"24 620 800",
-         "window-view":false,
+         "window_view":false,
          "area":"68.49",
          "number":"096м"
       },
@@ -609,7 +609,7 @@
          "position":"17",
          "corpus":"Soho",
          "price":"16 147 700",
-         "window-view":false,
+         "window_view":false,
          "area":"37.48",
          "number":"098м"
       },
@@ -620,7 +620,7 @@
          "position":"15",
          "corpus":"Soho",
          "price":"24 548 000",
-         "window-view":false,
+         "window_view":false,
          "area":"68.49",
          "number":"082м"
       },
@@ -631,7 +631,7 @@
          "position":"14",
          "corpus":"Soho",
          "price":"25 800 900",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"76.13",
@@ -644,7 +644,7 @@
          "position":"15",
          "corpus":"Soho",
          "price":"24 165 700",
-         "window-view":false,
+         "window_view":false,
          "area":"67.63",
          "number":"068м"
       },
@@ -655,7 +655,7 @@
          "position":"14",
          "corpus":"Soho",
          "price":"25 724 200",
-         "window-view":[
+         "window_view":[
             "двор",
             "улица"
          ],
@@ -669,7 +669,7 @@
          "position":"6",
          "corpus":"Soho",
          "price":"26 625 100",
-         "window-view":[
+         "window_view":[
             "двор",
             "роща"
          ],
@@ -683,7 +683,7 @@
          "position":"14",
          "corpus":"Soho",
          "price":"25 516 000",
-         "window-view":[
+         "window_view":[
             "двор",
             "улица"
          ],
@@ -697,7 +697,7 @@
          "position":"11",
          "corpus":"Soho",
          "price":"22 977 400",
-         "window-view":[
+         "window_view":[
             "двор",
             "улица"
          ],
@@ -711,7 +711,7 @@
          "position":"7",
          "corpus":"Soho",
          "price":"15 799 300",
-         "window-view":[
+         "window_view":[
             "двор",
             "улица"
          ],
@@ -725,7 +725,7 @@
          "position":"7",
          "corpus":"Soho",
          "price":"15 908 300",
-         "window-view":[
+         "window_view":[
             "двор",
             "роща"
          ],
@@ -739,7 +739,7 @@
          "position":"9",
          "corpus":"Soho",
          "price":"11 707 700",
-         "window-view":[
+         "window_view":[
             "двор",
             "роща"
          ],
@@ -753,7 +753,7 @@
          "position":"7",
          "corpus":"Soho",
          "price":"16 271 100",
-         "window-view":[
+         "window_view":[
             "двор",
             "улица"
          ],
@@ -767,7 +767,7 @@
          "position":"9",
          "corpus":"Soho",
          "price":"11 927 300",
-         "window-view":[
+         "window_view":[
             "двор",
             "роща"
          ],
@@ -781,7 +781,7 @@
          "position":"9",
          "corpus":"Soho",
          "price":"11 950 600",
-         "window-view":[
+         "window_view":[
             "двор",
             "улица"
          ],
@@ -795,7 +795,7 @@
          "position":"7",
          "corpus":"Soho",
          "price":"16 318 700",
-         "window-view":[
+         "window_view":[
             "двор",
             "роща"
          ],
@@ -809,7 +809,7 @@
          "position":"7",
          "corpus":"Soho",
          "price":"16 366 300",
-         "window-view":[
+         "window_view":[
             "двор",
             "улица"
          ],
@@ -823,7 +823,7 @@
          "position":"8",
          "corpus":"Soho",
          "price":"11 914 000",
-         "window-view":[
+         "window_view":[
             "двор",
             "роща"
          ],
@@ -837,7 +837,7 @@
          "position":"10",
          "corpus":"Soho",
          "price":"11 703 100",
-         "window-view":[
+         "window_view":[
             "двор",
             "улица"
          ],
@@ -851,7 +851,7 @@
          "position":"8",
          "corpus":"Soho",
          "price":"11 948 800",
-         "window-view":[
+         "window_view":[
             "двор",
             "роща"
          ],
@@ -865,7 +865,7 @@
          "position":"8",
          "corpus":"Soho",
          "price":"11 983 700",
-         "window-view":[
+         "window_view":[
             "двор",
             "улица"
          ],
@@ -879,7 +879,7 @@
          "position":"2",
          "corpus":"Soho",
          "price":"12 117 100",
-         "window-view":false,
+         "window_view":false,
          "area":"28.62",
          "number":"218"
       },
@@ -890,7 +890,7 @@
          "position":"6",
          "corpus":"Soho",
          "price":"28 818 600",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"76.97",
@@ -903,7 +903,7 @@
          "position":"10",
          "corpus":"Soho",
          "price":"11 771 800",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"26.65",
@@ -916,7 +916,7 @@
          "position":"12",
          "corpus":"Soho",
          "price":"17 264 000",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"39.29",
@@ -929,7 +929,7 @@
          "position":"15",
          "corpus":"Soho",
          "price":"25 589 600",
-         "window-view":false,
+         "window_view":false,
          "area":"68.49",
          "number":"229"
       },
@@ -940,7 +940,7 @@
          "position":"16",
          "corpus":"Soho",
          "price":"16 537 300",
-         "window-view":false,
+         "window_view":false,
          "area":"39.14",
          "number":"230"
       },
@@ -951,7 +951,7 @@
          "position":"17",
          "corpus":"Soho",
          "price":"16 528 200",
-         "window-view":false,
+         "window_view":false,
          "area":"37.48",
          "number":"231"
       },
@@ -962,7 +962,7 @@
          "position":"1",
          "corpus":"Soho",
          "price":"16 158 200",
-         "window-view":false,
+         "window_view":false,
          "area":"37.13",
          "number":"232"
       },
@@ -973,7 +973,7 @@
          "position":"2",
          "corpus":"Soho",
          "price":"12 128 800",
-         "window-view":false,
+         "window_view":false,
          "area":"28.62",
          "number":"233"
       },
@@ -984,7 +984,7 @@
          "position":"7",
          "corpus":"Soho",
          "price":"16 414 000",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"35.58",
@@ -997,7 +997,7 @@
          "position":"8",
          "corpus":"Soho",
          "price":"12 018 600",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"26.84",
@@ -1010,7 +1010,7 @@
          "position":"10",
          "corpus":"Soho",
          "price":"11 783 200",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"26.65",
@@ -1023,7 +1023,7 @@
          "position":"11",
          "corpus":"Soho",
          "price":"23 815 200",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"58.28",
@@ -1036,7 +1036,7 @@
          "position":"13",
          "corpus":"Soho",
          "price":"16 972 300",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"37.75",
@@ -1049,7 +1049,7 @@
          "position":"1",
          "corpus":"Manhattan",
          "price":"16 591 300",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"38.07",
@@ -1062,7 +1062,7 @@
          "position":"2",
          "corpus":"Manhattan",
          "price":"17 012 600",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"37.68",
@@ -1075,7 +1075,7 @@
          "position":"7",
          "corpus":"Manhattan",
          "price":"22 323 200",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"56.29",
@@ -1088,7 +1088,7 @@
          "position":"11",
          "corpus":"Manhattan",
          "price":"29 318 800",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"77.81",
@@ -1101,7 +1101,7 @@
          "position":"3",
          "corpus":"Manhattan",
          "price":"25 090 800",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"64.73",
@@ -1114,7 +1114,7 @@
          "position":"12",
          "corpus":"Manhattan",
          "price":"25 171 100",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"65.24",
@@ -1127,7 +1127,7 @@
          "position":"7",
          "corpus":"Manhattan",
          "price":"21 976 700",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"56.29",
@@ -1140,7 +1140,7 @@
          "position":"12",
          "corpus":"Manhattan",
          "price":"25 098 200",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"65.24",
@@ -1153,7 +1153,7 @@
          "position":"12",
          "corpus":"Manhattan",
          "price":"24 710 200",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"65.24",
@@ -1166,7 +1166,7 @@
          "position":"2",
          "corpus":"Manhattan",
          "price":"16 930 000",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"37.68",
@@ -1179,7 +1179,7 @@
          "position":"12",
          "corpus":"Manhattan",
          "price":"24 565 800",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"65.24",
@@ -1192,7 +1192,7 @@
          "position":"3",
          "corpus":"Manhattan",
          "price":"23 805 900",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"64.73",
@@ -1205,7 +1205,7 @@
          "position":"8",
          "corpus":"Manhattan",
          "price":"16 612 700",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"36.84",
@@ -1218,7 +1218,7 @@
          "position":"9",
          "corpus":"Manhattan",
          "price":"16 771 900",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"36.57",
@@ -1231,7 +1231,7 @@
          "position":"10",
          "corpus":"Manhattan",
          "price":"16 571 900",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"35.27",
@@ -1244,7 +1244,7 @@
          "position":"5",
          "corpus":"Manhattan",
          "price":"11 184 000",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"26.70",
@@ -1257,7 +1257,7 @@
          "position":"6",
          "corpus":"Manhattan",
          "price":"11 529 500",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"28.11",
@@ -1270,7 +1270,7 @@
          "position":"9",
          "corpus":"Manhattan",
          "price":"16 012 600",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"36.57",
@@ -1283,7 +1283,7 @@
          "position":"10",
          "corpus":"Manhattan",
          "price":"15 866 800",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"35.27",
@@ -1296,7 +1296,7 @@
          "position":"13",
          "corpus":"Manhattan",
          "price":"11 562 600",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"27.34",
@@ -1309,7 +1309,7 @@
          "position":"16",
          "corpus":"Manhattan",
          "price":"11 845 100",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"28.12",
@@ -1322,7 +1322,7 @@
          "position":"6",
          "corpus":"Manhattan",
          "price":"11 828 800",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"28.33",
@@ -1335,7 +1335,7 @@
          "position":"9",
          "corpus":"Manhattan",
          "price":"16 483 800",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"36.86",
@@ -1348,7 +1348,7 @@
          "position":"10",
          "corpus":"Manhattan",
          "price":"16 354 400",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"35.56",
@@ -1361,7 +1361,7 @@
          "position":"16",
          "corpus":"Manhattan",
          "price":"11 868 300",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"28.12",
@@ -1374,7 +1374,7 @@
          "position":"8",
          "corpus":"Manhattan",
          "price":"16 547 100",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"37.14",
@@ -1387,7 +1387,7 @@
          "position":"9",
          "corpus":"Manhattan",
          "price":"16 548 200",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"36.86",
@@ -1400,7 +1400,7 @@
          "position":"6",
          "corpus":"Manhattan",
          "price":"11 981 200",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"28.33",
@@ -1413,7 +1413,7 @@
          "position":"16",
          "corpus":"Manhattan",
          "price":"11 985 700",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"28.12",
@@ -1426,7 +1426,7 @@
          "position":"8",
          "corpus":"Manhattan",
          "price":"16 579 300",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"37.14",
@@ -1439,7 +1439,7 @@
          "position":"10",
          "corpus":"Manhattan",
          "price":"16 434 100",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"35.56",
@@ -1452,7 +1452,7 @@
          "position":"14",
          "corpus":"Manhattan",
          "price":"12 009 200",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"28.12",
@@ -1465,7 +1465,7 @@
          "position":"14",
          "corpus":"Manhattan",
          "price":"12 044 400",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"28.12",
@@ -1478,7 +1478,7 @@
          "position":"16",
          "corpus":"Manhattan",
          "price":"12 044 400",
-         "window-view":[
+         "window_view":[
             "двор"
          ],
          "area":"28.12",
