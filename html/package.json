@@ -28,10 +28,13 @@
     },
     "devDependencies": {
         "@babel/core": "^7.4.3",
+        "@babel/plugin-transform-runtime": "^7.16.10",
         "@babel/preset-env": "^7.4.3",
         "@babel/register": "^7.4.0",
         "babel-eslint": "^10.0.1",
         "babel-loader": "^8.0.5",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-stage-0": "^6.24.1",
         "bem-tools-core": "bem-tools/bem-tools-core",
         "bem-tools-create": "bem-tools/bem-tools-create",
         "browser-sync": "^2.23.6",

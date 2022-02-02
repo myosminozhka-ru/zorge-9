@@ -102,6 +102,10 @@
 .floor_center {
     margin-top: 120px;
     position: relative;
+
+    &--item_wrap {
+        display: none;
+    }
     // display: none;
     @media all and (max-width: 1023px) {
         display: none;
@@ -118,6 +122,8 @@
     }
     .apart_popup {
         position: absolute;
+        z-index: 3;
+        pointer-events: none;
     }
     &__svg {
         max-width: 1460px;
@@ -128,17 +134,22 @@
         margin-top: 18em;
         margin-bottom: 18em;
         svg {
-            g path.active {
+            *.active {
                 transition: all .3s ease-out;
+                cursor: pointer;
                 &:hover {
                     fill: #fff !important;
                     opacity: .5 !important;
                 }
             }
+            *:not(.active):not(.image) {
+                fill: none;
+            }
         }
     }
     &.around1 {
         .floor_center__svg:before {
+            pointer-events: none;
             content: '';
             position: absolute;
             top: -18em;
@@ -151,6 +162,7 @@
     }
     &.around2 {
         .floor_center__svg:before {
+            pointer-events: none;
             content: '';
             position: absolute;
             top: -18em;
@@ -163,6 +175,7 @@
     }
     &.around3 {
         .floor_center__svg:before {
+            pointer-events: none;
             content: '';
             position: absolute;
             top: -18em;

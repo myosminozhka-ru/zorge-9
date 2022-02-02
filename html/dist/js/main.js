@@ -175,23 +175,25 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
-/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var ion_rangeslider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ion-rangeslider */ "./node_modules/ion-rangeslider/js/ion.rangeSlider.js");
-/* harmony import */ var ion_rangeslider__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(ion_rangeslider__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var ion_rangeslider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ion-rangeslider */ "./node_modules/ion-rangeslider/js/ion.rangeSlider.js");
+/* harmony import */ var ion_rangeslider__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(ion_rangeslider__WEBPACK_IMPORTED_MODULE_3__);
+
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 
 
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slrs25').slick({
+jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_1___default()('.slrs25').slick({
     dots: true,
     arrows: true,
     infinite: true,
@@ -199,35 +201,35 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     fade: true
   });
 
-  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.rg1').length && ionopt) {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.rg1').ionRangeSlider(_objectSpread(_objectSpread({}, ionopt), {}, {
+  if (jquery__WEBPACK_IMPORTED_MODULE_1___default()('.rg1').length && ionopt) {
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()('.rg1').ionRangeSlider(_objectSpread(_objectSpread({}, ionopt), {}, {
       onStart: function onStart(data) {
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nb1").html(data.from.toLocaleString());
+        jquery__WEBPACK_IMPORTED_MODULE_1___default()(".nb1").html(data.from.toLocaleString());
       },
       onChange: function onChange(data) {
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nb1").html(data.from.toLocaleString());
+        jquery__WEBPACK_IMPORTED_MODULE_1___default()(".nb1").html(data.from.toLocaleString());
       }
     }));
   }
 
-  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.rg2').length && ionopt2) {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.rg2').ionRangeSlider(_objectSpread(_objectSpread({}, ionopt2), {}, {
+  if (jquery__WEBPACK_IMPORTED_MODULE_1___default()('.rg2').length && ionopt2) {
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()('.rg2').ionRangeSlider(_objectSpread(_objectSpread({}, ionopt2), {}, {
       onStart: function onStart(data) {
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nb2").html(data.from);
+        jquery__WEBPACK_IMPORTED_MODULE_1___default()(".nb2").html(data.from);
       },
       onChange: function onChange(data) {
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nb2").html(data.from);
+        jquery__WEBPACK_IMPORTED_MODULE_1___default()(".nb2").html(data.from);
       }
     }));
   }
 
-  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.rg3').length && ionopt3) {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.rg3').ionRangeSlider(_objectSpread(_objectSpread({}, ionopt3), {}, {
+  if (jquery__WEBPACK_IMPORTED_MODULE_1___default()('.rg3').length && ionopt3) {
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()('.rg3').ionRangeSlider(_objectSpread(_objectSpread({}, ionopt3), {}, {
       onStart: function onStart(data) {
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nb3").html(data.from);
+        jquery__WEBPACK_IMPORTED_MODULE_1___default()(".nb3").html(data.from);
       },
       onChange: function onChange(data) {
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nb3").html(data.from);
+        jquery__WEBPACK_IMPORTED_MODULE_1___default()(".nb3").html(data.from);
       }
     }));
   }
@@ -244,15 +246,16 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(module, jQuery) {/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+/* WEBPACK VAR INJECTION */(function(module, jQuery) {/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "./node_modules/@babel/runtime/helpers/typeof.js");
+/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);
 
 
 /* jQuery Form Styler v2.0.2 | (c) Dimox | https://github.com/Dimox/jQueryFormStyler */
 
 !function (e) {
-  "function" == typeof define && __webpack_require__(/*! !webpack amd options */ "./node_modules/webpack/buildin/amd-options.js") ? define(["jquery"], e) : "object" == (typeof exports === "undefined" ? "undefined" : _typeof(exports)) ? module.exports = e(jquery__WEBPACK_IMPORTED_MODULE_0___default.a || __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")) : e(jQuery);
+  "function" == typeof define && __webpack_require__(/*! !webpack amd options */ "./node_modules/webpack/buildin/amd-options.js") ? define(["jquery"], e) : "object" == (typeof exports === "undefined" ? "undefined" : _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0___default()(exports)) ? module.exports = e(jquery__WEBPACK_IMPORTED_MODULE_1___default.a || __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")) : e(jQuery);
 }(function (e) {
   "use strict";
 
@@ -723,7 +726,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     }
   }, e.fn[i] = function (s) {
     var l = arguments;
-    if (void 0 === s || "object" == _typeof(s)) return this.each(function () {
+    if (void 0 === s || "object" == _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0___default()(s)) return this.each(function () {
       e.data(this, "_" + i) || e.data(this, "_" + i, new t(this, s));
     }).promise().done(function () {
       var t = e(this[0]).data("_" + i);
@@ -739,10 +742,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     }
   }, s.registered = !1;
 });
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
   if (document.querySelector('.page_act')) {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.buy_tabs ul.tabs').delegate('li:not(.current)', 'click', function () {
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('current').siblings().removeClass('current').parents('div.section').find('div.box').hide().eq(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).index()).animate({
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()('.buy_tabs ul.tabs').delegate('li:not(.current)', 'click', function () {
+      jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).addClass('current').siblings().removeClass('current').parents('div.section').find('div.box').hide().eq(jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).index()).animate({
         height: 'auto',
         width: 'auto',
         opacity: 'show'
@@ -751,7 +754,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       function setEqualHeight(columns) {
         var tallestcolumn = 0;
         columns.each(function () {
-          var currentHeight = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).height();
+          var currentHeight = jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).height();
 
           if (currentHeight > tallestcolumn) {
             tallestcolumn = currentHeight;
@@ -761,8 +764,8 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       }
 
       setTimeout(function () {
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-          setEqualHeight(jquery__WEBPACK_IMPORTED_MODULE_0___default()(".box__block--title"));
+        jquery__WEBPACK_IMPORTED_MODULE_1___default()(document).ready(function () {
+          setEqualHeight(jquery__WEBPACK_IMPORTED_MODULE_1___default()(".box__block--title"));
         });
       }, 2000);
     });
@@ -775,7 +778,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   // $(".box-wrap").height(Array.max(heights));
 
 
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('input[type="number"]').styler();
+  jquery__WEBPACK_IMPORTED_MODULE_1___default()('input[type="number"]').styler();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
@@ -929,36 +932,68 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_4__);
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+
+
+jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
   var Apartments = /*#__PURE__*/function () {
     function Apartments(_ref) {
-      var apartmentsLink = _ref.apartmentsLink;
+      var apartmentsLink = _ref.apartmentsLink,
+          filtersLink = _ref.filtersLink;
 
-      _classCallCheck(this, Apartments);
+      _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, Apartments);
 
       this.apartmentsLink = apartmentsLink;
+      this.filtersLink = filtersLink;
       this.apartments = null;
+      this.filters = null;
+      this.url = window.location.pathname;
+      this.urlObject = null;
+      this.floor = 2;
+      this.corpse = 0;
+      this.rooms = 1;
+      this.view = 0;
     }
 
-    _createClass(Apartments, [{
+    _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(Apartments, [{
       key: "getApartments",
       value: function getApartments() {
         var _this = this;
 
         return new Promise(function (resolve, reject) {
-          jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
+          jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
             url: _this.apartmentsLink,
             success: function success(data) {
-              resolve(data);
+              resolve(data.apartments);
+            },
+            error: function error(err) {
+              reject(err);
+            }
+          });
+        });
+      }
+    }, {
+      key: "getFilters",
+      value: function getFilters() {
+        var _this2 = this;
+
+        return new Promise(function (resolve, reject) {
+          jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
+            url: _this2.filtersLink,
+            success: function success(data) {
+              resolve(data.filter);
             },
             error: function error(err) {
               reject(err);
@@ -972,41 +1007,346 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
         this.apartments.forEach(function (item) {
           switch (item.corpus) {
             case 'Madison':
-              jquery__WEBPACK_IMPORTED_MODULE_0___default()("[data-corpse=\"1\"][data-floor*=\"-".concat(item.floor, "-\"] [data-position=\"").concat(item.position, "\"]")).attr('data-area', item.area).attr('data-rooms', item.rooms).attr('data-price', item.price).attr('data-number', item.number).attr('fill', 'red');
+              var rect = document.querySelector("[data-corpse=\"1\"][data-floor*=\"-".concat(item.floor, "-\"] [data-position=\"").concat(item.position, "\"]"));
               break;
 
             case 'Manhattan':
-              jquery__WEBPACK_IMPORTED_MODULE_0___default()("[data-corpse=\"2\"][data-floor*=\"-".concat(item.floor, "-\"] [data-position=\"").concat(item.position, "\"]")).attr('data-area', item.area).attr('data-rooms', item.rooms).attr('data-price', item.price).attr('data-number', item.number).attr('fill', 'red');
+              var rect = document.querySelector("[data-corpse=\"2\"][data-floor*=\"-".concat(item.floor, "-\"] [data-position=\"").concat(item.position, "\"]"));
               break;
 
             case 'Soho':
-              jquery__WEBPACK_IMPORTED_MODULE_0___default()("[data-corpse=\"3\"][data-floor*=\"-".concat(item.floor, "-\"] [data-position=\"").concat(item.position, "\"]")).attr('data-area', item.area).attr('data-rooms', item.rooms).attr('data-price', item.price).attr('data-number', item.number).attr('fill', 'red');
+              var rect = document.querySelector("[data-corpse=\"3\"][data-floor*=\"-".concat(item.floor, "-\"] [data-position=\"").concat(item.position, "\"]"));
               break;
+          }
+
+          if (!jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect).hasClass('active')) {
+            jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect).attr('data-area', item.area).attr('data-rooms', item.rooms).attr('data-price', item.price).attr('data-number', item.number).attr('data-link', item.link).addClass('active').closest('.floor_center__svg').prepend("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top:".concat(rect.getBoundingClientRect().top + rect.getBoundingClientRect().height / 2 - rect.closest('.floor_center__svg').getBoundingClientRect().top, "px;left:").concat(rect.getBoundingClientRect().left + rect.getBoundingClientRect().width / 2 - rect.closest('.floor_center__svg').getBoundingClientRect().left, "px;\"><div class=\"value\">").concat(item.area, "<span>\u043C<sup>2</sup></span></div></div>"));
           }
         });
       }
     }, {
-      key: "init",
-      value: function init() {
-        var _this2 = this;
-
-        this.getApartments().then(function (result) {
-          _this2.apartments = result.apartments;
-
-          _this2.addAttributes();
-        })["catch"](function (error) {
-          console.log(error);
+      key: "getUrl",
+      value: function getUrl() {
+        return new Promise(function (resolve, reject) {
+          resolve(window.location.pathname);
         });
       }
+    }, {
+      key: "setUrl",
+      value: function setUrl(_ref2) {
+        var state = _ref2.state,
+            title = _ref2.title,
+            url = _ref2.url;
+        window.history.pushState(state, title, window.location.origin + '/' + url);
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap').fadeOut('fast');
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()("[data-corpse=\"".concat(this.corpse + 1, "\"][data-floor*=\"-").concat(this.floor, "-\"]")).closest('.floor_center--item_wrap').fadeIn('fast');
+      }
+    }, {
+      key: "parseUrl",
+      value: function () {
+        var _parseUrl = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee$(_context) {
+            while (1) {
+              switch (_context.prev = _context.next) {
+                case 0:
+                  _context.next = 2;
+                  return this.getUrl();
+
+                case 2:
+                  this.url = _context.sent;
+                  this.urlObject = this.url.split('/');
+                  this.setUrl({
+                    state: "Apartments",
+                    title: this.filters.section[this.corpse].NAME,
+                    url: "apartments/".concat(this.filters.section[this.corpse].NAME.toLowerCase(), "/").concat(this.floor)
+                  });
+
+                case 5:
+                case "end":
+                  return _context.stop();
+              }
+            }
+          }, _callee, this);
+        }));
+
+        function parseUrl() {
+          return _parseUrl.apply(this, arguments);
+        }
+
+        return parseUrl;
+      }()
+    }, {
+      key: "setFloor",
+      value: function setFloor(floor) {
+        if (floor > 20 || floor < 2) return;
+        this.floor = floor;
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_changer .value').text(this.floor);
+        this.parseUrl();
+      }
+    }, {
+      key: "addFloorChanger",
+      value: function addFloorChanger() {
+        var _this3 = this;
+
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
+          var curFloor;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee2$(_context2) {
+            while (1) {
+              switch (_context2.prev = _context2.next) {
+                case 0:
+                  curFloor = _this3.floor;
+                  console.log(curFloor);
+
+                  _this3.setFloor(++curFloor);
+
+                case 3:
+                case "end":
+                  return _context2.stop();
+              }
+            }
+          }, _callee2);
+        })));
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
+          var curFloor;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee3$(_context3) {
+            while (1) {
+              switch (_context3.prev = _context3.next) {
+                case 0:
+                  curFloor = _this3.floor;
+                  console.log(curFloor);
+
+                  _this3.setFloor(--curFloor);
+
+                case 3:
+                case "end":
+                  return _context3.stop();
+              }
+            }
+          }, _callee3);
+        })));
+      }
+    }, {
+      key: "setRooms",
+      value: function setRooms(rooms) {
+        if (rooms < +this.filters.minRooms || rooms > +this.filters.maxRooms) return;
+        this.rooms = rooms;
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.rooms_changer .value').text(this.rooms);
+        this.parseUrl();
+      }
+    }, {
+      key: "addRoomsChanger",
+      value: function addRoomsChanger() {
+        var _this4 = this;
+
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.rooms_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee4() {
+          var curRooms;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee4$(_context4) {
+            while (1) {
+              switch (_context4.prev = _context4.next) {
+                case 0:
+                  curRooms = _this4.rooms;
+                  console.log(curRooms);
+
+                  _this4.setRooms(++curRooms);
+
+                case 3:
+                case "end":
+                  return _context4.stop();
+              }
+            }
+          }, _callee4);
+        })));
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.rooms_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee5() {
+          var curRooms;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee5$(_context5) {
+            while (1) {
+              switch (_context5.prev = _context5.next) {
+                case 0:
+                  curRooms = _this4.rooms;
+                  console.log(curRooms);
+
+                  _this4.setRooms(--curRooms);
+
+                case 3:
+                case "end":
+                  return _context5.stop();
+              }
+            }
+          }, _callee5);
+        })));
+      }
+    }, {
+      key: "setView",
+      value: function setView(viewId) {
+        console.log(this.filters.windowsView);
+        if (viewId < 0 || viewId > +this.filters.windowsView.length) return;
+        this.view = viewId;
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.views_changer .value').text(this.filters.windowsView[this.view]);
+        this.parseUrl();
+      }
+    }, {
+      key: "addViewsChanger",
+      value: function addViewsChanger() {
+        var _this5 = this;
+
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.views_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee6() {
+          var curView;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee6$(_context6) {
+            while (1) {
+              switch (_context6.prev = _context6.next) {
+                case 0:
+                  curView = _this5.view;
+                  console.log(curView);
+
+                  _this5.setView(++curView);
+
+                case 3:
+                case "end":
+                  return _context6.stop();
+              }
+            }
+          }, _callee6);
+        })));
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.views_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee7() {
+          var curView;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee7$(_context7) {
+            while (1) {
+              switch (_context7.prev = _context7.next) {
+                case 0:
+                  curView = _this5.view;
+                  console.log(curView);
+
+                  _this5.setView(--curView);
+
+                case 3:
+                case "end":
+                  return _context7.stop();
+              }
+            }
+          }, _callee7);
+        })));
+      }
+    }, {
+      key: "setCorpse",
+      value: function setCorpse(corpse) {
+        console.log(this.filters.section.length);
+        if (corpse < 0 || corpse > this.filters.section.length - 1) return;
+        this.corpse = corpse;
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.corpse_changer .value').text(this.filters.section[this.corpse].NAME);
+        this.parseUrl();
+      }
+    }, {
+      key: "addCorpseChanger",
+      value: function addCorpseChanger() {
+        var _this6 = this;
+
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.corpse_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee8() {
+          var curCorpse;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee8$(_context8) {
+            while (1) {
+              switch (_context8.prev = _context8.next) {
+                case 0:
+                  curCorpse = _this6.corpse;
+                  console.log(curCorpse);
+
+                  _this6.setCorpse(++curCorpse);
+
+                case 3:
+                case "end":
+                  return _context8.stop();
+              }
+            }
+          }, _callee8);
+        })));
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.corpse_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee9() {
+          var curCorpse;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee9$(_context9) {
+            while (1) {
+              switch (_context9.prev = _context9.next) {
+                case 0:
+                  curCorpse = _this6.corpse;
+                  console.log(curCorpse);
+
+                  _this6.setCorpse(--curCorpse);
+
+                case 3:
+                case "end":
+                  return _context9.stop();
+              }
+            }
+          }, _callee9);
+        })));
+      }
+    }, {
+      key: "init",
+      value: function () {
+        var _init = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee10() {
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee10$(_context10) {
+            while (1) {
+              switch (_context10.prev = _context10.next) {
+                case 0:
+                  _context10.next = 2;
+                  return this.getApartments();
+
+                case 2:
+                  this.apartments = _context10.sent;
+                  _context10.next = 5;
+                  return this.getFilters();
+
+                case 5:
+                  this.filters = _context10.sent;
+                  console.log(this.filters); // this.setUrl({
+                  //     state: "Apartments",
+                  //     title: "Апартаменты",
+                  //     url: "apartments/madison/2"
+                  // })
+                  // this.parseUrl();
+
+                  this.addAttributes(); // this.getUrl();
+
+                  console.log(this.filters.section[this.corpse].NAME);
+                  this.setUrl({
+                    state: "Apartments",
+                    title: this.filters.section[this.corpse].NAME,
+                    url: "apartments/".concat(this.filters.section[this.corpse].NAME.toLowerCase(), "/").concat(this.floor)
+                  });
+                  this.addFloorChanger();
+                  this.addRoomsChanger();
+                  this.addViewsChanger();
+                  this.addCorpseChanger();
+                  this.setRooms(this.rooms);
+                  this.setFloor(this.floor);
+                  this.setView(this.view);
+                  this.setCorpse(this.corpse);
+
+                case 18:
+                case "end":
+                  return _context10.stop();
+              }
+            }
+          }, _callee10, this);
+        }));
+
+        function init() {
+          return _init.apply(this, arguments);
+        }
+
+        return init;
+      }()
     }]);
 
     return Apartments;
   }();
 
-  var apartments = new Apartments({
-    apartmentsLink: 'static/apartments.json'
+  window.apartments = new Apartments({
+    apartmentsLink: 'static/apartments.json',
+    filtersLink: 'static/filter.json'
   });
   apartments.init();
+
+  window.onpopstate = function (event) {
+    alert("location: ".concat(document.location, ", state: ").concat(JSON.stringify(event.state)));
+  };
 });
 
 /***/ }),
@@ -1053,19 +1393,20 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
-/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_1__);
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
   var _$slickElement$slick;
 
-  var $status = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.pagingInfo');
-  var $slickElement = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.kladovie_blocks-js');
+  var $status = jquery__WEBPACK_IMPORTED_MODULE_1___default()('.pagingInfo');
+  var $slickElement = jquery__WEBPACK_IMPORTED_MODULE_1___default()('.kladovie_blocks-js');
   $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
     var i = '0' + ((currentSlide ? currentSlide : 0) + 1);
     $status.html(i + '<span>' + '0' + slick.slideCount + '</span>');
@@ -1075,7 +1416,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     autoplay: true,
     dots: true,
     infinite: false
-  }, _defineProperty(_$slickElement$slick, "autoplay", true), _defineProperty(_$slickElement$slick, "autoplaySpeed", 2500), _defineProperty(_$slickElement$slick, "slidesToShow", 3), _defineProperty(_$slickElement$slick, "responsive", [{
+  }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_$slickElement$slick, "autoplay", true), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_$slickElement$slick, "autoplaySpeed", 2500), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_$slickElement$slick, "slidesToShow", 3), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_$slickElement$slick, "responsive", [{
     breakpoint: 1231,
     settings: {
       slidesToShow: 2
@@ -2261,12 +2602,14 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _import_modules__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./import/modules */ "./src/js/import/modules.js");
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _import_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./import/modules */ "./src/js/import/modules.js");
+
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 
 

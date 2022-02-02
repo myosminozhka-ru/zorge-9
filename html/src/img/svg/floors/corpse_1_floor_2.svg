@@ -17,6 +17,9 @@
         <rect data-position="13" x="59" y="358" width="356" height="245" fill="#878585" fill-opacity="0.7" />
     </g>
     <defs>
+        <script>
+            console.log(document.querySelector('[data-child-floor="2"][data-child-corpse="1"]'));
+        </script>
         <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
             <use xlink:href="#image0_18_2" transform="scale(0.000403063 0.000570125)" />
         </pattern>

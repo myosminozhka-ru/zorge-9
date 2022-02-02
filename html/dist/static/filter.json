@@ -1,0 +1,35 @@
+{
+    "filter": {
+        "section": [
+            {
+                "NAME": "Madison",
+                "ID": "5"
+            },
+            {
+                "NAME": "Manhattan",
+                "ID": "7"
+            },
+            {
+                "NAME": "Soho",
+                "ID": "6"
+            }
+        ],
+        "windowsView": [
+            "двор",
+            "окна",
+            "школу",
+            "березовую рощу",
+            "город",
+            "стену другого дома"
+        ],
+        "minPrice": 11.25,
+        "maxPrice": 30.25,
+        "minRooms": "1",
+        "maxRooms": "3",
+        "minArea": "26.65",
+        "maxArea": "78.38",
+        "minFloor": "5",
+        "maxFloor": "19"
+    }
+}
+  

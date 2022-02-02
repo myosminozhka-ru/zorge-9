@@ -5599,6 +5599,10 @@ input:checked + .slider:before {
   position: relative;
 }
 
+.floor_center--item_wrap {
+  display: none;
+}
+
 .floor_center.active {
   display: block;
 }
@@ -5612,6 +5616,8 @@ input:checked + .slider:before {
 
 .floor_center .apart_popup {
   position: absolute;
+  z-index: 3;
+  pointer-events: none;
 }
 
 .floor_center__svg {
@@ -5624,16 +5630,22 @@ input:checked + .slider:before {
   margin-bottom: 18em;
 }
 
-.floor_center__svg svg g path.active {
+.floor_center__svg svg *.active {
   transition: all 0.3s ease-out;
+  cursor: pointer;
 }
 
-.floor_center__svg svg g path.active:hover {
+.floor_center__svg svg *.active:hover {
   fill: #fff !important;
   opacity: 0.5 !important;
 }
 
+.floor_center__svg svg *:not(.active):not(.image) {
+  fill: none;
+}
+
 .floor_center.around1 .floor_center__svg:before {
+  pointer-events: none;
   content: "";
   position: absolute;
   top: -18em;
@@ -5645,6 +5657,7 @@ input:checked + .slider:before {
 }
 
 .floor_center.around2 .floor_center__svg:before {
+  pointer-events: none;
   content: "";
   position: absolute;
   top: -18em;
@@ -5656,6 +5669,7 @@ input:checked + .slider:before {
 }
 
 .floor_center.around3 .floor_center__svg:before {
+  pointer-events: none;
   content: "";
   position: absolute;
   top: -18em;
