@@ -28,7 +28,7 @@ $(function() {
                     start: true,
                     cache: false,
                     onsuccess: function(result) {
-                        resolve(data.apartments);
+                        resolve(result.apartments);
                     }
                 });
             })
@@ -47,7 +47,7 @@ $(function() {
                     start: true,
                     cache: false,
                     onsuccess: function(result) {
-                        resolve(data.apartments);
+                        resolve(result.apartments);
                     }
                 });
             })
