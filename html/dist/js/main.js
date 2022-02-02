@@ -975,7 +975,6 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         return new Promise(function (resolve, reject) {
           BX.ajax({
             url: _this.apartmentsLink,
-            data: data,
             method: 'GET',
             dataType: 'json',
             timeout: 30,
@@ -999,7 +998,6 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         return new Promise(function (resolve, reject) {
           BX.ajax({
             url: _this2.filters,
-            data: data,
             method: 'GET',
             dataType: 'json',
             timeout: 30,
@@ -1361,6 +1359,8 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
   window.onpopstate = function (event) {
     alert("location: ".concat(document.location, ", state: ").concat(JSON.stringify(event.state)));
   };
+
+  var BX = jquery__WEBPACK_IMPORTED_MODULE_4___default.a;
 });
 
 /***/ }),

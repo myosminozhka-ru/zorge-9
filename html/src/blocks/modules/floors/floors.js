@@ -18,7 +18,6 @@ $(function() {
             return new Promise((resolve, reject) => {
                 BX.ajax({
                     url: this.apartmentsLink,
-                    data: data,
                     method: 'GET',
                     dataType: 'json',
                     timeout: 30,
@@ -38,7 +37,6 @@ $(function() {
             return new Promise((resolve, reject) => {
                 BX.ajax({
                     url: this.filters,
-                    data: data,
                     method: 'GET',
                     dataType: 'json',
                     timeout: 30,
@@ -209,5 +207,6 @@ $(function() {
     window.onpopstate = function(event) {
         alert(`location: ${document.location}, state: ${JSON.stringify(event.state)}`)
     }
+    let BX = $;
 });
 
