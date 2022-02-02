@@ -973,13 +973,20 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         var _this = this;
 
         return new Promise(function (resolve, reject) {
-          jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
+          BX.ajax({
             url: _this.apartmentsLink,
-            success: function success(data) {
+            data: data,
+            method: 'GET',
+            dataType: 'json',
+            timeout: 30,
+            async: true,
+            processData: true,
+            scriptsRunFirst: true,
+            emulateOnload: true,
+            start: true,
+            cache: false,
+            onsuccess: function onsuccess(result) {
               resolve(data.apartments);
-            },
-            error: function error(err) {
-              reject(err);
             }
           });
         });
@@ -990,13 +997,20 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         var _this2 = this;
 
         return new Promise(function (resolve, reject) {
-          jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
-            url: _this2.filtersLink,
-            success: function success(data) {
-              resolve(data.filter);
-            },
-            error: function error(err) {
-              reject(err);
+          BX.ajax({
+            url: _this2.filters,
+            data: data,
+            method: 'GET',
+            dataType: 'json',
+            timeout: 30,
+            async: true,
+            processData: true,
+            scriptsRunFirst: true,
+            emulateOnload: true,
+            start: true,
+            cache: false,
+            onsuccess: function onsuccess(result) {
+              resolve(data.apartments);
             }
           });
         });
@@ -1339,7 +1353,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
   }();
 
   window.apartments = new Apartments({
-    apartmentsLink: 'static/apartments.json',
+    apartmentsLink: 'ajax/floor.php',
     filtersLink: 'static/filter.json'
   });
   apartments.init();

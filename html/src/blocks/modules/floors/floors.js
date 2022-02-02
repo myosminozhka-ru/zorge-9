@@ -16,26 +16,40 @@ $(function() {
         }
         getApartments() {
             return new Promise((resolve, reject) => {
-                $.ajax({
+                BX.ajax({
                     url: this.apartmentsLink,
-                    success: function(data) {
+                    data: data,
+                    method: 'GET',
+                    dataType: 'json',
+                    timeout: 30,
+                    async: true,
+                    processData: true,
+                    scriptsRunFirst: true,
+                    emulateOnload: true,
+                    start: true,
+                    cache: false,
+                    onsuccess: function(result) {
                         resolve(data.apartments);
-                    },
-                    error: function(err) {
-                        reject(err);
                     }
                 });
             })
         }
         getFilters() {
             return new Promise((resolve, reject) => {
-                $.ajax({
-                    url: this.filtersLink,
-                    success: function(data) {
-                        resolve(data.filter);
-                    },
-                    error: function(err) {
-                        reject(err);
+                BX.ajax({
+                    url: this.filters,
+                    data: data,
+                    method: 'GET',
+                    dataType: 'json',
+                    timeout: 30,
+                    async: true,
+                    processData: true,
+                    scriptsRunFirst: true,
+                    emulateOnload: true,
+                    start: true,
+                    cache: false,
+                    onsuccess: function(result) {
+                        resolve(data.apartments);
                     }
                 });
             })
@@ -187,7 +201,7 @@ $(function() {
         }
     }
     window.apartments = new Apartments({
-        apartmentsLink: 'static/apartments.json',
+        apartmentsLink: 'ajax/floor.php',
         filtersLink: 'static/filter.json'
     });
     apartments.init();
