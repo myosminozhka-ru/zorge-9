@@ -56,7 +56,7 @@ $(function() {
                         break;
                 }
                 
-                if ($(rect) && !$(rect).hasClass('active')) {
+                if ($(rect).length && !$(rect).hasClass('active')) {
                     this.addClickHandler(rect);
                     $(rect).on('mouseenter', () => {
                         this.showInfo(rect, item);

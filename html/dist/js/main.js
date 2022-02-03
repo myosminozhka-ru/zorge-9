@@ -1030,7 +1030,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
               break;
           }
 
-          if (jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect) && !jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect).hasClass('active')) {
+          if (jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect).length && !jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect).hasClass('active')) {
             _this2.addClickHandler(rect);
 
             jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect).on('mouseenter', function () {
@@ -1331,8 +1331,8 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
   }();
 
   window.apartments = new Apartments({
-    apartmentsLink: 'http://zorge-9.01sh.ru/ajax/floor.php',
-    filtersLink: 'http://zorge-9.01sh.ru/static/filter.json'
+    apartmentsLink: '/ajax/floor.php',
+    filtersLink: '/static/filter.json'
   });
   apartments.init();
 });
