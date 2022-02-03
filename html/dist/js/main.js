@@ -1332,7 +1332,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
   window.apartments = new Apartments({
     apartmentsLink: 'http://zorge-9.01sh.ru/ajax/floor.php',
-    filtersLink: 'static/filter.json'
+    filtersLink: '/static/filter.json'
   });
   apartments.init();
 });
