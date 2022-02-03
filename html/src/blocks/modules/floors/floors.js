@@ -208,7 +208,7 @@ $(function() {
         }
     }
     window.apartments = new Apartments({
-        apartmentsLink: 'static/apartments.json',
+        apartmentsLink: 'ajax/floor.php',
         filtersLink: 'static/filter.json'
     });
     apartments.init();
