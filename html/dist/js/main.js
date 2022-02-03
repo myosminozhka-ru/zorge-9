@@ -779,6 +779,11 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
 
 
   jquery__WEBPACK_IMPORTED_MODULE_1___default()('input[type="number"]').styler();
+
+  if (document.querySelector('.box-wrap [data-number] path').classList) {
+    document.querySelector('.box-wrap [data-number] path').classList.remove('active');
+    document.querySelector(".box-wrap [data-number] path:nth-child(".concat(jquery__WEBPACK_IMPORTED_MODULE_1___default()('.box-wrap [data-number]').data('number'), ")")).classList.add('active');
+  }
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
