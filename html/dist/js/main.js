@@ -976,7 +976,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
           url: this.apartmentsLink,
           success: function success(data) {
-            _this.apartments = data.apartments;
+            _this.apartments = JSON.parse(data).apartments;
             jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
               url: _this.filtersLink,
               success: function success(result) {

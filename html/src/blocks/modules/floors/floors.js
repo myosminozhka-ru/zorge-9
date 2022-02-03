@@ -18,7 +18,7 @@ $(function() {
             $.ajax({
                 url: this.apartmentsLink,
                 success: (data) => {
-                    this.apartments = data.apartments;
+                    this.apartments = JSON.parse(data).apartments;
                     $.ajax({
                         url: this.filtersLink,
                         success: (result) => {
