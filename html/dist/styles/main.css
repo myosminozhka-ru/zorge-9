@@ -7497,6 +7497,17 @@ input:checked + .slider:before {
   height: 870px;
 }
 
+.table__info--no_result {
+  font-size: 14px;
+  text-align: center;
+  font-family: "gm", serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 48px;
+  color: #FFFFFF;
+  padding: 20px;
+}
+
 .table__info--img {
   position: absolute;
   max-width: 400px;
@@ -7892,6 +7903,10 @@ input:checked + .slider:before {
 
 .park_wrapper .hover_bl {
   max-width: 1750px !important;
+}
+
+.park_wrapper .hover_bl.hidden {
+  display: none;
 }
 
 .park_wrapper .hover_bl__block {

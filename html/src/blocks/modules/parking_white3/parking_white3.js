@@ -1,5 +1,6 @@
 import $ from "jquery";
 $(function() {
+    let corpse = 'madison';
     $('.dlc1').on('click', function() {
         $(this).addClass('active');
         $('.park_form').addClass('active');
@@ -10,6 +11,74 @@ $(function() {
         }
         $('.dld1').addClass('active')
         $(this).addClass('active');
+    })
+    $('.building_id').click(function() {
+        corpse = $(this).data('corpse-id');
+    })
+    $('.plc1[data-flat-id]').click(function() {
+        $.ajax({
+            url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
+            method: "POST",
+            data: {
+                type: 'detail',
+                corpus: corpse,
+                name: $(this).data('flat-id')
+            },
+            success: (result) => {
+                let data = JSON.parse(result);
+                console.log(data);
+
+
+                $(this).closest('.parking_white__in').find('.hover_bl').replaceWith(`
+                    <div class="hover_bl">
+                        <div class="hover_bl__block">
+                            <div class="hover_bl__block--title">Номер <br> помещения и корпус</div>
+                            <div class="hover_bl__block--text">${data.name}</div>
+                        </div>
+                        <div class="hover_bl__block">
+                            <div class="hover_bl__block--title">Площадь <br> помещения</div>
+                            <div class="hover_bl__block--text">${data.area}</div>
+                        </div>
+                        <div class="hover_bl__block">
+                            <div class="hover_bl__block--title">Цена</div>
+                            <div class="hover_bl__block--text">${data.price}</div>
+                        </div>
+                        <div class="hover_bl__block">
+                            <div class="hover_bl__block--link feedback">Оставить заявку</div>
+                            <a href="#" class="room_center__rl--li">
+                                <div class="room_center__rl--img"><img src="./img/sc4.png" alt=""></div>
+                                <div class="room_center__rl--title">Скачать pdf</div>
+                            </a>
+                        </div>
+                    </div>
+                `)
+                // result.forEach(item => {
+                //     console.log(item);
+                // })
+            }
+        });
+    })
+    $('.load_data').click(() => {
+        $.ajax({
+            url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
+            method: "POST",
+            data: {
+                type: 'info',
+                corpus: corpse
+            },
+            success: (result) => {
+                let data = JSON.parse(result);
+                $('.plc1').removeClass('active');
+                for (let i = 0; i < data.length; i++) {
+                    if ($(`[data-flat-id="${data[i]}"]`).length) {
+                        $(`[data-flat-id="${data[i]}"]`).addClass('active');
+                    }
+                }
+                // result.forEach(item => {
+                //     console.log(item);
+                // })
+            }
+        });
     })
     $('.dld1').on('click', function() {
         $('.park_form').addClass('active');

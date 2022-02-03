@@ -2243,6 +2243,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+  var corpse = 'madison';
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc1').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form').addClass('active');
@@ -2255,6 +2256,52 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dld1').addClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.building_id').click(function () {
+    corpse = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data('corpse-id');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc1[data-flat-id]').click(function () {
+    var _this = this;
+
+    jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
+      url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
+      method: "POST",
+      data: {
+        type: 'detail',
+        corpus: corpse,
+        name: jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data('flat-id')
+      },
+      success: function success(result) {
+        var data = JSON.parse(result);
+        console.log(data);
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(_this).closest('.parking_white__in').find('.hover_bl').replaceWith("\n                    <div class=\"hover_bl\">\n                        <div class=\"hover_bl__block\">\n                            <div class=\"hover_bl__block--title\">\u041D\u043E\u043C\u0435\u0440 <br> \u043F\u043E\u043C\u0435\u0449\u0435\u043D\u0438\u044F \u0438 \u043A\u043E\u0440\u043F\u0443\u0441</div>\n                            <div class=\"hover_bl__block--text\">".concat(data.name, "</div>\n                        </div>\n                        <div class=\"hover_bl__block\">\n                            <div class=\"hover_bl__block--title\">\u041F\u043B\u043E\u0449\u0430\u0434\u044C <br> \u043F\u043E\u043C\u0435\u0449\u0435\u043D\u0438\u044F</div>\n                            <div class=\"hover_bl__block--text\">").concat(data.area, "</div>\n                        </div>\n                        <div class=\"hover_bl__block\">\n                            <div class=\"hover_bl__block--title\">\u0426\u0435\u043D\u0430</div>\n                            <div class=\"hover_bl__block--text\">").concat(data.price, "</div>\n                        </div>\n                        <div class=\"hover_bl__block\">\n                            <div class=\"hover_bl__block--link feedback\">\u041E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u0437\u0430\u044F\u0432\u043A\u0443</div>\n                            <a href=\"#\" class=\"room_center__rl--li\">\n                                <div class=\"room_center__rl--img\"><img src=\"./img/sc4.png\" alt=\"\"></div>\n                                <div class=\"room_center__rl--title\">\u0421\u043A\u0430\u0447\u0430\u0442\u044C pdf</div>\n                            </a>\n                        </div>\n                    </div>\n                ")); // result.forEach(item => {
+        //     console.log(item);
+        // })
+      }
+    });
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.load_data').click(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
+      url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
+      method: "POST",
+      data: {
+        type: 'info',
+        corpus: corpse
+      },
+      success: function success(result) {
+        var data = JSON.parse(result);
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc1').removeClass('active');
+
+        for (var i = 0; i < data.length; i++) {
+          if (jquery__WEBPACK_IMPORTED_MODULE_0___default()("[data-flat-id=\"".concat(data[i], "\"]")).length) {
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()("[data-flat-id=\"".concat(data[i], "\"]")).addClass('active');
+          }
+        } // result.forEach(item => {
+        //     console.log(item);
+        // })
+
+      }
+    });
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dld1').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form').addClass('active');
@@ -2652,7 +2699,36 @@ window.form_submit = function (selector, callback) {
       callback(result);
     }
   });
-};
+}; // appartment.changeForm = function (data)
+// {
+//     let dataToSend = $(data).serializeArray();
+//     BX.ajax({
+//         url: '/local/templates/.default/components/bitrix/news.list/apartment/ajax.php',
+//         data: dataToSend,
+//         method: 'POST',
+//         dataType: 'json',
+//         timeout: 30,
+//         async: true,
+//         processData: true,
+//         scriptsRunFirst: true,
+//         emulateOnload: true,
+//         start: true,
+//         cache: false,
+//         onsuccess: function (data) {
+//             if(data.num > 0)
+//             {
+//                 $('.table__info').html(data.data);
+//                 $('#num').html(data.num);
+//                 console.log('hasdata')
+//             } else {
+//                 console.log('nodata')
+//                 $('.table__info').html('<div class="table__info--no_result">Нет результатов</div>');
+//             }
+//         },
+//         onfailure: function () {
+//         }
+//     });
+// }
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ })

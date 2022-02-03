@@ -366,6 +366,16 @@
             overflow: unset;
             height: auto;
         }
+        &--no_result {
+            font-size: 14px;
+            text-align: center;
+            font-family: 'gm', serif;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 48px;
+            color: #FFFFFF;
+            padding: 20px;
+        }
         &--img {
             position: absolute;
             max-width: 400px;
