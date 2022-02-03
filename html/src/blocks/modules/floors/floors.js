@@ -15,31 +15,32 @@ $(function() {
             this.view = 0;
         }
         getApartments() {
-            return new Promise((resolve, reject) => {
-                $.ajax({
-                    url: this.apartmentsLink,
-                    success: function(data) {
-                        // console.log(JSON.parse(data).apartments);
-                        resolve(data.apartments);
-                    },
-                    error: function(err) {
-                        reject(err);
-                    }
-                });
-            })
-        }
-        getFilters() {
-            return new Promise((resolve, reject) => {
-                $.ajax({
-                    url: this.filtersLink,
-                    success: function(data) {
-                        resolve(data.filter);
-                    },
-                    error: function(err) {
-                        reject(err);
-                    }
-                });
-            })
+            $.ajax({
+                url: this.apartmentsLink,
+                success: (data) => {
+                    this.apartments = data.apartments;
+                    $.ajax({
+                        url: this.filtersLink,
+                        success: (result) => {
+                            this.filters = result.filter;
+                            this.addAttributes();
+                            this.setUrl({
+                                state: "Apartments",
+                                title: this.filters.section[this.corpse].NAME,
+                                url: `apartments/${(this.filters.section[this.corpse].NAME).toLowerCase()}/${this.floor}`
+                            })
+                            this.addFloorChanger();
+                            this.addRoomsChanger();
+                            this.addViewsChanger();
+                            this.addCorpseChanger();
+                            this.setRooms(this.rooms);
+                            this.setFloor(this.floor);
+                            this.setView(this.view);
+                            this.setCorpse(this.corpse);
+                        }
+                    });
+                }
+            });
         }
         addAttributes() {
             this.apartments.forEach(item => {
@@ -201,33 +202,9 @@ $(function() {
                 // console.log($(item).attr('data-link'));
             })
         }
-        async init() {
+        init() {
             if (!$('.floor_center--item_wrap').length) return;
-            this.apartments = await this.getApartments();
-            this.filters = await this.getFilters();
-            console.log(this.filters);
-            // this.setUrl({
-            //     state: "Apartments",
-            //     title: "Апартаменты",
-            //     url: "apartments/madison/2"
-            // })
-            // this.parseUrl();
-            this.addAttributes();
-            // this.getUrl();
-            console.log(this.filters.section[this.corpse].NAME);
-            this.setUrl({
-                state: "Apartments",
-                title: this.filters.section[this.corpse].NAME,
-                url: `apartments/${(this.filters.section[this.corpse].NAME).toLowerCase()}/${this.floor}`
-            })
-            this.addFloorChanger();
-            this.addRoomsChanger();
-            this.addViewsChanger();
-            this.addCorpseChanger();
-            this.setRooms(this.rooms);
-            this.setFloor(this.floor);
-            this.setView(this.view);
-            this.setCorpse(this.corpse);
+            this.getApartments();
         }
     }
     window.apartments = new Apartments({
