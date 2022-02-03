@@ -16,38 +16,27 @@ $(function() {
         }
         getApartments() {
             return new Promise((resolve, reject) => {
-                BX.ajax({
+                $.ajax({
                     url: this.apartmentsLink,
-                    method: 'GET',
-                    dataType: 'json',
-                    timeout: 30,
-                    async: true,
-                    processData: true,
-                    scriptsRunFirst: true,
-                    emulateOnload: true,
-                    start: true,
-                    cache: false,
-                    onsuccess: function(result) {
-                        resolve(result.apartments);
+                    success: function(data) {
+                        // console.log(JSON.parse(data).apartments);
+                        resolve(data.apartments);
+                    },
+                    error: function(err) {
+                        reject(err);
                     }
                 });
             })
         }
         getFilters() {
             return new Promise((resolve, reject) => {
-                BX.ajax({
-                    url: this.filters,
-                    method: 'GET',
-                    dataType: 'json',
-                    timeout: 30,
-                    async: true,
-                    processData: true,
-                    scriptsRunFirst: true,
-                    emulateOnload: true,
-                    start: true,
-                    cache: false,
-                    onsuccess: function(result) {
-                        resolve(result.apartments);
+                $.ajax({
+                    url: this.filtersLink,
+                    success: function(data) {
+                        resolve(data.filter);
+                    },
+                    error: function(err) {
+                        reject(err);
                     }
                 });
             })
@@ -65,7 +54,15 @@ $(function() {
                         var rect = document.querySelector(`[data-corpse="3"][data-floor*="-${item.floor}-"] [data-position="${item.position}"]`);
                         break;
                 }
+                
                 if (!$(rect).hasClass('active')) {
+                    this.addClickHandler(rect);
+                    $(rect).on('mouseenter', () => {
+                        this.showInfo(rect, item);
+                    });
+                    $(rect).on('mouseleave', () => {
+                        this.hideInfo(rect);
+                    });
                     $(rect).attr('data-area', item.area)
                         .attr('data-rooms', item.rooms)
                         .attr('data-price', item.price)
@@ -84,8 +81,9 @@ $(function() {
         }
         setUrl({state, title, url}) {
             window.history.pushState(state, title, window.location.origin + '/' + url);
-            $('.floor_center--item_wrap').fadeOut('fast');
-            $(`[data-corpse="${this.corpse+1}"][data-floor*="-${this.floor}-"]`).closest('.floor_center--item_wrap').fadeIn('fast');
+            // if ((this.filters.section[this.corpse].NAME).toLowerCase() !== this.urlObject[2].toLowe)
+            $(`svg:not([data-corpse="${this.corpse+1}"][data-floor*="-${this.floor}-"])`).closest('.floor_center--item_wrap').css({display: 'none'});
+            $(`[data-corpse="${this.corpse+1}"][data-floor*="-${this.floor}-"]`).closest('.floor_center--item_wrap').css({display: 'block'});
         }
         async parseUrl() {
             this.url = await this.getUrl();
@@ -120,6 +118,33 @@ $(function() {
             $('.rooms_changer .value').text(this.rooms);
             this.parseUrl();
         }
+        showInfo(item, attributes) {
+            console.log($(item));
+
+            $(item).closest('.floor_center').append(`<div class="hover_bl">
+            <div class="hover_bl__block">
+                <div class="hover_bl__block--title">Номер <br>
+                    апартамента</div>
+                <div class="hover_bl__block--text">${attributes.number}</div>
+            </div>
+            <div class="hover_bl__block">
+                <div class="hover_bl__block--title">Комнат</div>
+                <div class="hover_bl__block--text">${attributes.rooms}</div>
+            </div>
+            <div class="hover_bl__block">
+                <div class="hover_bl__block--title">Площадь, м<sup>2</sup></div>
+                <div class="hover_bl__block--text">${attributes.area}</div>
+            </div>
+            <div class="hover_bl__block">
+                <div class="hover_bl__block--title">Цена 
+                    без отделки, руб</div>
+                <div class="hover_bl__block--text">${attributes.price}</div>
+            </div>
+        </div>`)
+        }
+        hideInfo(item) {
+            $(item).closest('.floor_center').find('.hover_bl').remove();
+        }
         addRoomsChanger() {
             $('.rooms_changer').on('click', '.next', async () => {
                 let curRooms = this.rooms;
@@ -133,7 +158,6 @@ $(function() {
             });
         }
         setView(viewId) {
-            console.log(this.filters.windowsView);
             if (viewId < 0 || viewId > +this.filters.windowsView.length) return;
             this.view = viewId;
             $('.views_changer .value').text(this.filters.windowsView[this.view]);
@@ -152,9 +176,10 @@ $(function() {
             });
         }
         setCorpse(corpse) {
-            console.log(this.filters.section.length);
             if (corpse < 0 || corpse > this.filters.section.length - 1) return;
             this.corpse = corpse;
+            $('.sort-js').removeClass('active');
+            $(`.sort-js[data-corpse="${this.corpse}"]`).addClass('active');
             $('.corpse_changer .value').text(this.filters.section[this.corpse].NAME);
             this.parseUrl();
         }
@@ -170,7 +195,14 @@ $(function() {
                 this.setCorpse(--curCorpse);
             });
         }
+        addClickHandler(item) {
+            $(item).click(() => {
+                window.location.href = $(item).attr('data-link');
+                // console.log($(item).attr('data-link'));
+            })
+        }
         async init() {
+            if (!$('.floor_center--item_wrap').length) return;
             this.apartments = await this.getApartments();
             this.filters = await this.getFilters();
             console.log(this.filters);
@@ -199,14 +231,9 @@ $(function() {
         }
     }
     window.apartments = new Apartments({
-        apartmentsLink: 'ajax/floor.php',
+        apartmentsLink: 'static/apartments.json',
         filtersLink: 'static/filter.json'
     });
     apartments.init();
-
-    window.onpopstate = function(event) {
-        alert(`location: ${document.location}, state: ${JSON.stringify(event.state)}`)
-    }
-    let BX = $;
 });
 

@@ -5599,10 +5599,6 @@ input:checked + .slider:before {
   position: relative;
 }
 
-.floor_center--item_wrap {
-  display: none;
-}
-
 .floor_center.active {
   display: block;
 }
@@ -5729,8 +5725,6 @@ input:checked + .slider:before {
   z-index: 10;
   bottom: -7em;
   position: absolute;
-  opacity: 0;
-  visibility: hidden;
   pointer-events: none;
   transition: all 0.3s ease-out;
 }

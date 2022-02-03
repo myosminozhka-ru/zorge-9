@@ -104,7 +104,7 @@
     position: relative;
 
     &--item_wrap {
-        display: none;
+        // display: none;
     }
     // display: none;
     @media all and (max-width: 1023px) {
@@ -233,8 +233,8 @@
     z-index: 10;
     bottom: -7em;
     position: absolute;
-    opacity: 0;
-    visibility: hidden;
+    // opacity: 0;
+    // visibility: hidden;
     pointer-events: none;
     transition: all .3s ease-out;
     sup {

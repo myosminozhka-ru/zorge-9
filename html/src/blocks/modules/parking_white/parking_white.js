@@ -3,11 +3,33 @@ import Panzoom from '@panzoom/panzoom';
 $(function() {
     $('.place1').on('click', function() {
         $(this).toggleClass('active');
-        $(this).parents('.parking_white__in').find('.plc1').toggleClass('active')
+        $(this).parents('.parking_white__in').find('.plc1').toggleClass('active');
+        if ($(this).hasClass('komc_js')) {
+            
+            $.ajax({
+                url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
+                data: {
+                    type: 'info'
+                },
+                method: 'POST',
+                dataType: 'json',
+                timeout: 30,
+                async: true,
+                enctype: "multipart/form-data",
+                processData: true,
+                scriptsRunFirst: true,
+                emulateOnload: true,
+                start: true,
+                cache: false,
+                success: function(result) {
+                    callback(result);
+                }
+            });
+        }
     })
     $('.place2').on('click', function() {
         $(this).toggleClass('active');
-        $(this).parents('.parking_white__in').find('.plc2').toggleClass('active')
+        $(this).parents('.parking_white__in').find('.plc2').toggleClass('active');
     })
     $('.place3').on('click', function() {
         $(this).toggleClass('active');
