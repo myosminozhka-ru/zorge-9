@@ -1337,7 +1337,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
   window.apartments = new Apartments({
     apartmentsLink: '/ajax/floor.php',
-    filtersLink: '/static/filter.json'
+    filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
   });
   apartments.init();
 });

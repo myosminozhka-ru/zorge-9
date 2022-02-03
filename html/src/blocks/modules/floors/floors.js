@@ -209,7 +209,7 @@ $(function() {
     }
     window.apartments = new Apartments({
         apartmentsLink: '/ajax/floor.php',
-        filtersLink: '/static/filter.json'
+        filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
     });
     apartments.init();
 });
