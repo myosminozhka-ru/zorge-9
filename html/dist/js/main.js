@@ -1030,7 +1030,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
               break;
           }
 
-          if (!jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect).hasClass('active')) {
+          if (jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect) && !jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect).hasClass('active')) {
             _this2.addClickHandler(rect);
 
             jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect).on('mouseenter', function () {

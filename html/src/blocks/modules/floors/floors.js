@@ -56,7 +56,7 @@ $(function() {
                         break;
                 }
                 
-                if (!$(rect).hasClass('active')) {
+                if ($(rect) && !$(rect).hasClass('active')) {
                     this.addClickHandler(rect);
                     $(rect).on('mouseenter', () => {
                         this.showInfo(rect, item);
@@ -208,8 +208,8 @@ $(function() {
         }
     }
     window.apartments = new Apartments({
-        apartmentsLink: 'http://zorge-9.01sh.ru/ajax/floor.php',
-        filtersLink: 'http://zorge-9.01sh.ru/static/filter.json'
+        apartmentsLink: '/ajax/floor.php',
+        filtersLink: '/static/filter.json'
     });
     apartments.init();
 });
