@@ -1797,28 +1797,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   });
 });
 
-indexTowers.redirect = function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('path').off('click');
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('path').on('click', function () {
-    var el = this;
-    var corpse = 0;
-
-    if (el.classList.contains('active')) {
-      corpse = el.classList[0].match(/(\d+)/)[0];
-
-      if (corpse == 1) {
-        corpse = "/floors/madison/".concat(el.classList[1].match(/(\d+)/)[0]);
-      } else if (corpse == 2) {
-        corpse = "/floors/manhatten/".concat(el.classList[1].match(/(\d+)/)[0]);
-      } else {
-        corpse = "/floors/soho/".concat(el.classList[1].match(/(\d+)/)[0]);
-      }
-
-      console.log(corpse);
-    }
-  });
-};
-
 /***/ }),
 
 /***/ "./src/blocks/modules/main_head/main_head.js":
