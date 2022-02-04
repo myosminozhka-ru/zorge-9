@@ -246,7 +246,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
         params.contribution = data.from.toLocaleString();
         jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
           data: params,
-          url: "/static/banks.json",
+          url: "/ajax/banks.json",
           // method: "POST",
           success: function success(result) {
             recalculateBanks(result);
@@ -258,7 +258,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
         params.contribution = data.from.toLocaleString();
         jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
           data: params,
-          url: "/static/banks.json",
+          url: "/ajax/banks.json",
           // method: "POST",
           success: function success(result) {
             recalculateBanks(result);
@@ -275,7 +275,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
         params.years = data.from;
         jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
           data: params,
-          url: "/static/banks.json",
+          url: "/ajax/banks.json",
           // method: "POST",
           success: function success(result) {
             recalculateBanks(result);
@@ -287,7 +287,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
         params.years = data.from;
         jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
           data: params,
-          url: "/static/banks.json",
+          url: "/ajax/banks.json",
           // method: "POST",
           success: function success(result) {
             recalculateBanks(result);
@@ -304,7 +304,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
         params.percent = data.from;
         jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
           data: params,
-          url: "/static/banks.json",
+          url: "/ajax/banks.json",
           // method: "POST",
           success: function success(result) {
             recalculateBanks(result);
@@ -316,7 +316,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
         params.percent = data.from;
         jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
           data: params,
-          url: "/static/banks.json",
+          url: "/ajax/banks.json",
           // method: "POST",
           success: function success(result) {
             recalculateBanks(result);

@@ -72,7 +72,7 @@ $(function() {
                 params.contribution = data.from.toLocaleString();
                 $.ajax({
                     data: params,
-                    url: "/static/banks.json",
+                    url: "/ajax/banks.json",
                     // method: "POST",
                     success: function(result) {
                         recalculateBanks(result)
@@ -84,7 +84,7 @@ $(function() {
                 params.contribution = data.from.toLocaleString();
                 $.ajax({
                     data: params,
-                    url: "/static/banks.json",
+                    url: "/ajax/banks.json",
                     // method: "POST",
                     success: function(result) {
                         recalculateBanks(result)
@@ -101,7 +101,7 @@ $(function() {
                 params.years = data.from;
                 $.ajax({
                     data: params,
-                    url: "/static/banks.json",
+                    url: "/ajax/banks.json",
                     // method: "POST",
                     success: function(result) {
                         recalculateBanks(result)
@@ -113,7 +113,7 @@ $(function() {
                 params.years = data.from;
                 $.ajax({
                     data: params,
-                    url: "/static/banks.json",
+                    url: "/ajax/banks.json",
                     // method: "POST",
                     success: function(result) {
                         recalculateBanks(result)
@@ -130,7 +130,7 @@ $(function() {
                 params.percent = data.from;
                 $.ajax({
                     data: params,
-                    url: "/static/banks.json",
+                    url: "/ajax/banks.json",
                     // method: "POST",
                     success: function(result) {
                         recalculateBanks(result)
@@ -142,7 +142,7 @@ $(function() {
                 params.percent = data.from;
                 $.ajax({
                     data: params,
-                    url: "/static/banks.json",
+                    url: "/ajax/banks.json",
                     // method: "POST",
                     success: function(result) {
                         recalculateBanks(result)
