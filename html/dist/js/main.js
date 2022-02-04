@@ -272,9 +272,27 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_1___default()('.rg2').ionRangeSlider(_objectSpread(_objectSpread({}, ionopt2), {}, {
       onStart: function onStart(data) {
         jquery__WEBPACK_IMPORTED_MODULE_1___default()(".nb2").html(data.from);
+        params.years = data.from;
+        jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
+          data: params,
+          url: "/static/banks.json",
+          // method: "POST",
+          success: function success(result) {
+            recalculateBanks(result);
+          }
+        });
       },
       onChange: function onChange(data) {
         jquery__WEBPACK_IMPORTED_MODULE_1___default()(".nb2").html(data.from);
+        params.years = data.from;
+        jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
+          data: params,
+          url: "/static/banks.json",
+          // method: "POST",
+          success: function success(result) {
+            recalculateBanks(result);
+          }
+        });
       }
     }));
   }
@@ -283,9 +301,27 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_1___default()('.rg3').ionRangeSlider(_objectSpread(_objectSpread({}, ionopt3), {}, {
       onStart: function onStart(data) {
         jquery__WEBPACK_IMPORTED_MODULE_1___default()(".nb3").html(data.from);
+        params.percent = data.from;
+        jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
+          data: params,
+          url: "/static/banks.json",
+          // method: "POST",
+          success: function success(result) {
+            recalculateBanks(result);
+          }
+        });
       },
       onChange: function onChange(data) {
         jquery__WEBPACK_IMPORTED_MODULE_1___default()(".nb3").html(data.from);
+        params.percent = data.from;
+        jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
+          data: params,
+          url: "/static/banks.json",
+          // method: "POST",
+          success: function success(result) {
+            recalculateBanks(result);
+          }
+        });
       }
     }));
   }

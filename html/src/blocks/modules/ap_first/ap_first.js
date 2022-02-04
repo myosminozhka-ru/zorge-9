@@ -98,9 +98,27 @@ $(function() {
             ...ionopt2,
             onStart: function(data) {
                 $(".nb2").html(data.from);
+                params.years = data.from;
+                $.ajax({
+                    data: params,
+                    url: "/static/banks.json",
+                    // method: "POST",
+                    success: function(result) {
+                        recalculateBanks(result)
+                    }
+                })
             },
             onChange: function(data) {
                 $(".nb2").html(data.from);
+                params.years = data.from;
+                $.ajax({
+                    data: params,
+                    url: "/static/banks.json",
+                    // method: "POST",
+                    success: function(result) {
+                        recalculateBanks(result)
+                    }
+                })
             }
         });
     }
@@ -109,9 +127,27 @@ $(function() {
             ...ionopt3,
             onStart: function(data) {
                 $(".nb3").html(data.from);
+                params.percent = data.from;
+                $.ajax({
+                    data: params,
+                    url: "/static/banks.json",
+                    // method: "POST",
+                    success: function(result) {
+                        recalculateBanks(result)
+                    }
+                })
             },
             onChange: function(data) {
                 $(".nb3").html(data.from);
+                params.percent = data.from;
+                $.ajax({
+                    data: params,
+                    url: "/static/banks.json",
+                    // method: "POST",
+                    success: function(result) {
+                        recalculateBanks(result)
+                    }
+                })
             }
         });
     }
