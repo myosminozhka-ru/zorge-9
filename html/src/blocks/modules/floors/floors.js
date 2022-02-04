@@ -27,7 +27,7 @@ $(function() {
                             this.setUrl({
                                 state: "Apartments",
                                 title: this.filters.section[this.corpse].NAME,
-                                url: `apartments/${(this.filters.section[this.corpse].NAME).toLowerCase()}/${this.floor}`
+                                url: `floors/${(this.filters.section[this.corpse].NAME).toLowerCase()}/${this.floor}`
                             })
                             this.addFloorChanger();
                             this.addRoomsChanger();
@@ -92,7 +92,7 @@ $(function() {
             this.setUrl({
                 state: "Apartments",
                 title: this.filters.section[this.corpse].NAME,
-                url: `apartments/${(this.filters.section[this.corpse].NAME).toLowerCase()}/${this.floor}`
+                url: `floors/${(this.filters.section[this.corpse].NAME).toLowerCase()}/${this.floor}`
             });
         }
         setFloor(floor) {

@@ -1084,7 +1084,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
                 _this.setUrl({
                   state: "Apartments",
                   title: _this.filters.section[_this.corpse].NAME,
-                  url: "apartments/".concat(_this.filters.section[_this.corpse].NAME.toLowerCase(), "/").concat(_this.floor)
+                  url: "floors/".concat(_this.filters.section[_this.corpse].NAME.toLowerCase(), "/").concat(_this.floor)
                 });
 
                 _this.addFloorChanger();
@@ -1179,7 +1179,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
                   this.setUrl({
                     state: "Apartments",
                     title: this.filters.section[this.corpse].NAME,
-                    url: "apartments/".concat(this.filters.section[this.corpse].NAME.toLowerCase(), "/").concat(this.floor)
+                    url: "floors/".concat(this.filters.section[this.corpse].NAME.toLowerCase(), "/").concat(this.floor)
                   });
 
                 case 5:
@@ -1796,6 +1796,28 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     });
   });
 });
+
+indexTowers.redirect = function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('path').off('click');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('path').on('click', function () {
+    var el = this;
+    var corpse = 0;
+
+    if (el.classList.contains('active')) {
+      corpse = el.classList[0].match(/(\d+)/)[0];
+
+      if (corpse == 1) {
+        corpse = "/floors/madison/".concat(el.classList[1].match(/(\d+)/)[0]);
+      } else if (corpse == 2) {
+        corpse = "/floors/manhatten/".concat(el.classList[1].match(/(\d+)/)[0]);
+      } else {
+        corpse = "/floors/soho/".concat(el.classList[1].match(/(\d+)/)[0]);
+      }
+
+      console.log(corpse);
+    }
+  });
+};
 
 /***/ }),
 

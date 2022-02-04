@@ -44,3 +44,25 @@ $(function() {
         });
     })
 })
+
+
+
+indexTowers.redirect = function () {
+    $('path').off('click')
+    $('path').on('click', function (){
+        let el = this;
+        let corpse = 0;
+        if(el.classList.contains('active'))
+        {
+            corpse = el.classList[0].match(/(\d+)/)[0];
+            if (corpse == 1) {
+                corpse=`/floors/madison/${el.classList[1].match(/(\d+)/)[0]}`;
+            } else if (corpse == 2) {
+                corpse=`/floors/manhatten/${el.classList[1].match(/(\d+)/)[0]}`;
+            } else {
+                corpse=`/floors/soho/${el.classList[1].match(/(\d+)/)[0]}`;
+            }
+            console.log(corpse);
+        }
+    })
+}
