@@ -193,6 +193,44 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
+  var params = {
+    contribution: 0,
+    sum: 0,
+    years: 0,
+    percent: 0
+  };
+  var bankFormatted;
+
+  function recalculateBanks(result) {
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()('.ap_tabs').html('').prepend("\n            <div class=\"ap_tabs__titles\">\n                <div class=\"ap_tabs__titles--block\">\u0411\u0430\u043D\u043A</div>\n                <div class=\"ap_tabs__titles--block\">\u0421\u0442\u0430\u0432\u043A\u0430</div>\n                <div class=\"ap_tabs__titles--block\">\u0421\u0440\u043E\u043A</div>\n                <div class=\"ap_tabs__titles--block\">\u0415\u0436\u0435\u043C\u0435\u0441\u044F\u0447\u043D\u044B\u0439 \u043F\u043B\u0430\u0442\u0435\u0436</div>\n                <div class=\"ap_tabs__titles--block\">\u041C\u0438\u043D\u0438\u043C\u0430\u043B\u044C\u043D\u044B\u0439 \u0432\u0437\u043D\u043E\u0441, %</div>\n            </div>\n        ");
+    result.banks.map(function (item) {
+      jquery__WEBPACK_IMPORTED_MODULE_1___default()('.ap_tabs').append("\n                <div class=\"ap_tabs__blocks\">\n                    <div class=\"ap_tabs__blocks--block\">\n                        <div class=\"ap_tabs__blocks--img\"><img src=\"./img/i5.png\" alt=\"\"></div>\n                        <div class=\"ap_tabs__blocks--title\">\u0412\u0422\u0411</div>\n                    </div>\n                    <div class=\"ap_tabs__blocks--block\"><span class=\"ap_tabs__blocks--span\">\u0421\u0442\u0430\u0432\u043A\u0430</span>\u043E\u0442 8.1</div>\n                    <div class=\"ap_tabs__blocks--block\"><span class=\"ap_tabs__blocks--span\">\u0421\u0440\u043E\u043A</span>\u0434\u043E 30 \u043B\u0435\u0442</div>\n                    <div class=\"ap_tabs__blocks--block\"><span class=\"ap_tabs__blocks--span\">\u0415\u0436\u0435\u043C\u0435\u0441\u044F\u0447\u043D\u044B\u0439 \u043F\u043B\u0430\u0442\u0435\u0436</span>102 216 \u0440.</div>\n                    <div class=\"ap_tabs__blocks--block\"><span class=\"ap_tabs__blocks--span\">\u041C\u0438\u043D\u0438\u043C\u0430\u043B\u044C\u043D\u044B\u0439 \u0432\u0437\u043D\u043E\u0441, %</span>10%</div>\n                </div>\n            ");
+    });
+    bankFormatted = result.banksFormatted;
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()('#bank_formatted').attr('value', bankFormatted);
+    console.log(bankFormatted);
+  }
+
+  if (jquery__WEBPACK_IMPORTED_MODULE_1___default()('.request_form form').length) {
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()('.request_form form').submit(function (event) {
+      event.preventDefault();
+      form_submit('.request_form form', function (result) {
+        console.log(result);
+
+        if (result.SUCCESS) {
+          jquery__WEBPACK_IMPORTED_MODULE_1___default()('.request_form form').find('label').fadeOut();
+          jquery__WEBPACK_IMPORTED_MODULE_1___default()('.request_form form').find('.form-wrapper__btns').fadeOut();
+          jquery__WEBPACK_IMPORTED_MODULE_1___default()('.request_form form').closest('.form-wrapper-inner').find('.form-wrapper__subtitle').fadeOut();
+          jquery__WEBPACK_IMPORTED_MODULE_1___default()('.request_form form').closest('.form-wrapper-inner').find('.form-wrapper__title').html(result.SUCCESS);
+        }
+      });
+    });
+  }
+
+  jquery__WEBPACK_IMPORTED_MODULE_1___default()('.ap_tabs__button').click(function (event) {
+    event.preventDefault();
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()('.request_form').addClass('opened');
+  });
   jquery__WEBPACK_IMPORTED_MODULE_1___default()('.slrs25').slick({
     dots: true,
     arrows: true,
@@ -205,9 +243,27 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_1___default()('.rg1').ionRangeSlider(_objectSpread(_objectSpread({}, ionopt), {}, {
       onStart: function onStart(data) {
         jquery__WEBPACK_IMPORTED_MODULE_1___default()(".nb1").html(data.from.toLocaleString());
+        params.contribution = data.from.toLocaleString();
+        jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
+          data: params,
+          url: "/static/banks.json",
+          // method: "POST",
+          success: function success(result) {
+            recalculateBanks(result);
+          }
+        });
       },
       onChange: function onChange(data) {
         jquery__WEBPACK_IMPORTED_MODULE_1___default()(".nb1").html(data.from.toLocaleString());
+        params.contribution = data.from.toLocaleString();
+        jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
+          data: params,
+          url: "/static/banks.json",
+          // method: "POST",
+          success: function success(result) {
+            recalculateBanks(result);
+          }
+        });
       }
     }));
   }
@@ -780,7 +836,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
 
   jquery__WEBPACK_IMPORTED_MODULE_1___default()('input[type="number"]').styler();
 
-  if (document.querySelector('.box-wrap [data-number] path').classList) {
+  if (document.querySelector('.box-wrap [data-number] path')) {
     document.querySelector('.box-wrap [data-number] path').classList.remove('active');
     document.querySelector(".box-wrap [data-number] path:nth-child(".concat(jquery__WEBPACK_IMPORTED_MODULE_1___default()('.box-wrap [data-number]').data('number'), ")")).classList.add('active');
   }

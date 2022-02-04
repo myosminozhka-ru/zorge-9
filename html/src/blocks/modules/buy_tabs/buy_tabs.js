@@ -35,7 +35,7 @@ $(function() {
 	// $(".box-wrap").height(Array.max(heights));
     $('input[type="number"]').styler();
 
-    if (document.querySelector('.box-wrap [data-number] path').classList) {
+    if (document.querySelector('.box-wrap [data-number] path')) {
         document.querySelector('.box-wrap [data-number] path').classList.remove('active');
         document.querySelector(`.box-wrap [data-number] path:nth-child(${$('.box-wrap [data-number]').data('number')})`).classList.add('active');
     }
