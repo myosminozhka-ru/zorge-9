@@ -112,7 +112,7 @@ $(function() {
                 console.log(curFloor);
                 this.setFloor(--curFloor);
             });
-        }
+        } 
         setRooms(rooms) {
             if (rooms < +this.filters.minRooms || rooms > +this.filters.maxRooms) return;
             this.rooms = rooms;
