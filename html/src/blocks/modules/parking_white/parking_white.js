@@ -22,7 +22,7 @@ $(function() {
                 start: true,
                 cache: false,
                 success: function(result) {
-                    console.log(result);
+                    callback(result);
                 }
             });
         }
@@ -30,80 +30,14 @@ $(function() {
     $('.place2').on('click', function() {
         $(this).toggleClass('active');
         $(this).parents('.parking_white__in').find('.plc2').toggleClass('active');
-        if ($(this).hasClass('komc_js')) {
-            
-            $.ajax({
-                url: '/ajax/commercial.php',
-                data: {
-                    type: 'info'
-                },
-                method: 'POST',
-                dataType: 'json',
-                timeout: 30,
-                async: true,
-                enctype: "multipart/form-data",
-                processData: true,
-                scriptsRunFirst: true,
-                emulateOnload: true,
-                start: true,
-                cache: false,
-                success: function(result) {
-                    console.log(result);
-                }
-            });
-        }
     })
     $('.place3').on('click', function() {
         $(this).toggleClass('active');
         $(this).parents('.parking_white__in').find('.plc3').toggleClass('active')
-        if ($(this).hasClass('komc_js')) {
-            
-            $.ajax({
-                url: '/ajax/commercial.php',
-                data: {
-                    type: 'info'
-                },
-                method: 'POST',
-                dataType: 'json',
-                timeout: 30,
-                async: true,
-                enctype: "multipart/form-data",
-                processData: true,
-                scriptsRunFirst: true,
-                emulateOnload: true,
-                start: true,
-                cache: false,
-                success: function(result) {
-                    console.log(result);
-                }
-            });
-        }
     })
     $('.place4').on('click', function() {
         $(this).toggleClass('active');
         $(this).parents('.parking_white__in').find('.plc4').toggleClass('active')
-        if ($(this).hasClass('komc_js')) {
-            
-            $.ajax({
-                url: '/ajax/commercial.php',
-                data: {
-                    type: 'info'
-                },
-                method: 'POST',
-                dataType: 'json',
-                timeout: 30,
-                async: true,
-                enctype: "multipart/form-data",
-                processData: true,
-                scriptsRunFirst: true,
-                emulateOnload: true,
-                start: true,
-                cache: false,
-                success: function(result) {
-                    console.log(result);
-                }
-            });
-        }
     })
     $('.plc2').on('click', function() {
         $('.hover_bl').addClass('active');

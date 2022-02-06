@@ -127,7 +127,7 @@ img {
       color: #000000;
       margin-bottom: 40px;
   }
-  &__form {
+  form {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -348,7 +348,7 @@ img {
     font-size: 14px;
     line-height: 22px;
   }
-  .form-wrapper__form label {
+  .form-wrapper form label {
     width: 100%;
     margin-bottom: 20px;
   }

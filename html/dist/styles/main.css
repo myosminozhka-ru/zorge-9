@@ -2519,17 +2519,17 @@ img {
   margin-bottom: 40px;
 }
 
-.form-wrapper__form {
+.form-wrapper form {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.form-wrapper__form label {
+.form-wrapper form label {
   width: calc(50% - 20px);
 }
 
-.form-wrapper__form label div {
+.form-wrapper form label div {
   font-family: "gm", serif;
   font-style: normal;
   font-weight: normal;
@@ -2538,8 +2538,8 @@ img {
   margin-bottom: 8px;
 }
 
-.form-wrapper__form label input[type=text],
-.form-wrapper__form label input[type=tel] {
+.form-wrapper form label input[type=text],
+.form-wrapper form label input[type=tel] {
   padding: 14px 20px;
   border: 1px solid #000000;
   font-family: "gml", serif;
@@ -2554,8 +2554,8 @@ img {
   width: 100%;
 }
 
-.form-wrapper__form label input[type=text]::placeholder,
-.form-wrapper__form label input[type=tel]::placeholder {
+.form-wrapper form label input[type=text]::placeholder,
+.form-wrapper form label input[type=tel]::placeholder {
   opacity: 0.5;
 }
 
@@ -9408,7 +9408,7 @@ input:checked + .slider:before {
     line-height: 22px;
   }
 
-  .form-wrapper__form label {
+  .form-wrapper form label {
     width: 100%;
     margin-bottom: 20px;
   }
