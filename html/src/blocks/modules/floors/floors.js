@@ -20,12 +20,12 @@ $(function() {
                 success: async (data) => {
                     this.apartments = JSON.parse(data).apartments;
                     // this.apartments = data.apartments;
-                    await this.parseUrl();
-                    console.log('url parsed');
                     $.ajax({
                         url: this.filtersLink,
                         success: (result) => {
                             this.filters = result.filter;
+                            await this.parseUrl();
+                            console.log('url parsed');
                             this.addAttributes();
                             console.log('attrs added');
                             this.setUrl({

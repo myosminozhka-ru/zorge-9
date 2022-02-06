@@ -246,7 +246,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
         params.contribution = data.from.toLocaleString();
         jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
           data: params,
-          url: "/ajax/banks.php",
+          url: "/ajax/bank.php",
           // method: "POST",
           success: function success(result) {
             recalculateBanks(result);
@@ -258,7 +258,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
         params.contribution = data.from.toLocaleString();
         jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
           data: params,
-          url: "/ajax/banks.php",
+          url: "/ajax/bank.php",
           // method: "POST",
           success: function success(result) {
             recalculateBanks(result);
@@ -275,7 +275,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
         params.years = data.from;
         jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
           data: params,
-          url: "/ajax/banks.php",
+          url: "/ajax/bank.php",
           // method: "POST",
           success: function success(result) {
             recalculateBanks(result);
@@ -287,7 +287,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
         params.years = data.from;
         jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
           data: params,
-          url: "/ajax/banks.php",
+          url: "/ajax/bank.php",
           // method: "POST",
           success: function success(result) {
             recalculateBanks(result);
@@ -304,7 +304,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
         params.percent = data.from;
         jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
           data: params,
-          url: "/ajax/banks.php",
+          url: "/ajax/bank.php",
           // method: "POST",
           success: function success(result) {
             recalculateBanks(result);
@@ -316,7 +316,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
         params.percent = data.from;
         jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
           data: params,
-          url: "/ajax/banks.php",
+          url: "/ajax/bank.php",
           // method: "POST",
           success: function success(result) {
             recalculateBanks(result);
@@ -1026,450 +1026,9 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   !*** ./src/blocks/modules/floors/floors.js ***!
   \*********************************************/
 /*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_4__);
-
-
-
-
-
-jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
-  var Apartments = /*#__PURE__*/function () {
-    function Apartments(_ref) {
-      var apartmentsLink = _ref.apartmentsLink,
-          filtersLink = _ref.filtersLink;
-
-      _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, Apartments);
-
-      this.apartmentsLink = apartmentsLink;
-      this.filtersLink = filtersLink;
-      this.apartments = null;
-      this.filters = null;
-      this.url = window.location.pathname;
-      this.urlObject = null;
-      this.floor = 2;
-      this.corpse = 0;
-      this.rooms = 1;
-      this.view = 0;
-    }
-
-    _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(Apartments, [{
-      key: "getApartments",
-      value: function getApartments() {
-        var _this = this;
-
-        jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
-          url: this.apartmentsLink,
-          success: function () {
-            var _success = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee(data) {
-              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee$(_context) {
-                while (1) {
-                  switch (_context.prev = _context.next) {
-                    case 0:
-                      _this.apartments = JSON.parse(data).apartments; // this.apartments = data.apartments;
-
-                      _context.next = 3;
-                      return _this.parseUrl();
-
-                    case 3:
-                      console.log('url parsed');
-                      jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
-                        url: _this.filtersLink,
-                        success: function success(result) {
-                          _this.filters = result.filter;
-
-                          _this.addAttributes();
-
-                          console.log('attrs added');
-
-                          _this.setUrl({
-                            state: "Floors",
-                            title: _this.filters.section[_this.corpse].NAME,
-                            url: "floor/".concat(_this.filters.section[_this.corpse].NAME.toLowerCase(), "/").concat(_this.floor)
-                          });
-
-                          console.log('url setted');
-
-                          _this.addFloorChanger();
-
-                          _this.addRoomsChanger();
-
-                          _this.addViewsChanger();
-
-                          _this.addCorpseChanger();
-
-                          _this.setRooms(_this.rooms);
-
-                          _this.setFloor(_this.floor);
-
-                          _this.setView(_this.view);
-
-                          _this.setCorpse(_this.corpse);
-                        }
-                      });
-
-                    case 5:
-                    case "end":
-                      return _context.stop();
-                  }
-                }
-              }, _callee);
-            }));
-
-            function success(_x) {
-              return _success.apply(this, arguments);
-            }
-
-            return success;
-          }()
-        });
-      }
-    }, {
-      key: "addAttributes",
-      value: function addAttributes() {
-        var _this2 = this;
-
-        this.apartments.forEach(function (item) {
-          switch (item.corpus) {
-            case 'Madison':
-              var rect = document.querySelector("[data-corpse=\"1\"][data-floor*=\"-".concat(item.floor, "-\"] [data-position=\"").concat(item.position, "\"]"));
-              break;
-
-            case 'Manhattan':
-              var rect = document.querySelector("[data-corpse=\"2\"][data-floor*=\"-".concat(item.floor, "-\"] [data-position=\"").concat(item.position, "\"]"));
-              break;
-
-            case 'Soho':
-              var rect = document.querySelector("[data-corpse=\"3\"][data-floor*=\"-".concat(item.floor, "-\"] [data-position=\"").concat(item.position, "\"]"));
-              break;
-          }
-
-          if (jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect).length && !jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect).hasClass('active')) {
-            _this2.addClickHandler(rect);
-
-            jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect).on('mouseenter', function () {
-              _this2.showInfo(rect, item);
-            });
-            jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect).on('mouseleave', function () {
-              _this2.hideInfo(rect);
-            });
-            jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect).attr('data-area', item.area).attr('data-rooms', item.rooms).attr('data-price', item.price).attr('data-number', item.number).attr('data-link', item.link).addClass('active').closest('.floor_center__svg').prepend("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top:".concat(rect.getBoundingClientRect().top + rect.getBoundingClientRect().height / 2 - rect.closest('.floor_center__svg').getBoundingClientRect().top, "px;left:").concat(rect.getBoundingClientRect().left + rect.getBoundingClientRect().width / 2 - rect.closest('.floor_center__svg').getBoundingClientRect().left, "px;\"><div class=\"value\">").concat(item.area, "<span>\u043C<sup>2</sup></span></div></div>"));
-          }
-        });
-      }
-    }, {
-      key: "getUrl",
-      value: function getUrl() {
-        return new Promise(function (resolve, reject) {
-          resolve(window.location.pathname);
-        });
-      }
-    }, {
-      key: "setUrl",
-      value: function setUrl(_ref2) {
-        var state = _ref2.state,
-            title = _ref2.title,
-            url = _ref2.url;
-        window.history.pushState(state, title, window.location.origin + '/' + url); // if ((this.filters.section[this.corpse].NAME).toLowerCase() !== this.urlObject[2].toLowe)
-
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()("svg:not([data-corpse=\"".concat(this.corpse + 1, "\"][data-floor*=\"-").concat(this.floor, "-\"])")).closest('.floor_center--item_wrap').css({
-          display: 'none'
-        });
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()("[data-corpse=\"".concat(this.corpse + 1, "\"][data-floor*=\"-").concat(this.floor, "-\"]")).closest('.floor_center--item_wrap').css({
-          display: 'block'
-        });
-      }
-    }, {
-      key: "parseUrl",
-      value: function () {
-        var _parseUrl = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee2$(_context2) {
-            while (1) {
-              switch (_context2.prev = _context2.next) {
-                case 0:
-                  _context2.next = 2;
-                  return this.getUrl();
-
-                case 2:
-                  this.url = _context2.sent;
-
-                  if (this.url.split('/')[1] && this.url.split('/')[2]) {
-                    this.urlObject = this.url.split('/');
-                    console.log('url splitted');
-                    this.setUrl({
-                      state: "Apartments",
-                      title: this.filters.section[this.corpse].NAME,
-                      url: "floor/".concat(this.filters.section[this.corpse].NAME.toLowerCase(), "/").concat(this.floor)
-                    });
-                  }
-
-                case 4:
-                case "end":
-                  return _context2.stop();
-              }
-            }
-          }, _callee2, this);
-        }));
-
-        function parseUrl() {
-          return _parseUrl.apply(this, arguments);
-        }
-
-        return parseUrl;
-      }()
-    }, {
-      key: "setFloor",
-      value: function setFloor(floor) {
-        if (floor > 20 || floor < 2) return;
-        this.floor = floor;
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_changer .value').text(this.floor);
-        this.parseUrl();
-      }
-    }, {
-      key: "addFloorChanger",
-      value: function addFloorChanger() {
-        var _this3 = this;
-
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
-          var curFloor;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee3$(_context3) {
-            while (1) {
-              switch (_context3.prev = _context3.next) {
-                case 0:
-                  curFloor = _this3.floor;
-                  console.log(curFloor);
-
-                  _this3.setFloor(++curFloor);
-
-                case 3:
-                case "end":
-                  return _context3.stop();
-              }
-            }
-          }, _callee3);
-        })));
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee4() {
-          var curFloor;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee4$(_context4) {
-            while (1) {
-              switch (_context4.prev = _context4.next) {
-                case 0:
-                  curFloor = _this3.floor;
-                  console.log(curFloor);
-
-                  _this3.setFloor(--curFloor);
-
-                case 3:
-                case "end":
-                  return _context4.stop();
-              }
-            }
-          }, _callee4);
-        })));
-      }
-    }, {
-      key: "setRooms",
-      value: function setRooms(rooms) {
-        if (rooms < +this.filters.minRooms || rooms > +this.filters.maxRooms) return;
-        this.rooms = rooms;
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.rooms_changer .value').text(this.rooms);
-        this.parseUrl();
-      }
-    }, {
-      key: "showInfo",
-      value: function showInfo(item, attributes) {
-        console.log(jquery__WEBPACK_IMPORTED_MODULE_4___default()(item));
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()(item).closest('.floor_center').append("<div class=\"hover_bl\">\n            <div class=\"hover_bl__block\">\n                <div class=\"hover_bl__block--title\">\u041D\u043E\u043C\u0435\u0440 <br>\n                    \u0430\u043F\u0430\u0440\u0442\u0430\u043C\u0435\u043D\u0442\u0430</div>\n                <div class=\"hover_bl__block--text\">".concat(attributes.number, "</div>\n            </div>\n            <div class=\"hover_bl__block\">\n                <div class=\"hover_bl__block--title\">\u041A\u043E\u043C\u043D\u0430\u0442</div>\n                <div class=\"hover_bl__block--text\">").concat(attributes.rooms, "</div>\n            </div>\n            <div class=\"hover_bl__block\">\n                <div class=\"hover_bl__block--title\">\u041F\u043B\u043E\u0449\u0430\u0434\u044C, \u043C<sup>2</sup></div>\n                <div class=\"hover_bl__block--text\">").concat(attributes.area, "</div>\n            </div>\n            <div class=\"hover_bl__block\">\n                <div class=\"hover_bl__block--title\">\u0426\u0435\u043D\u0430 \n                    \u0431\u0435\u0437 \u043E\u0442\u0434\u0435\u043B\u043A\u0438, \u0440\u0443\u0431</div>\n                <div class=\"hover_bl__block--text\">").concat(attributes.price, "</div>\n            </div>\n        </div>"));
-      }
-    }, {
-      key: "hideInfo",
-      value: function hideInfo(item) {
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()(item).closest('.floor_center').find('.hover_bl').remove();
-      }
-    }, {
-      key: "addRoomsChanger",
-      value: function addRoomsChanger() {
-        var _this4 = this;
-
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.rooms_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee5() {
-          var curRooms;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee5$(_context5) {
-            while (1) {
-              switch (_context5.prev = _context5.next) {
-                case 0:
-                  curRooms = _this4.rooms;
-                  console.log(curRooms);
-
-                  _this4.setRooms(++curRooms);
-
-                case 3:
-                case "end":
-                  return _context5.stop();
-              }
-            }
-          }, _callee5);
-        })));
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.rooms_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee6() {
-          var curRooms;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee6$(_context6) {
-            while (1) {
-              switch (_context6.prev = _context6.next) {
-                case 0:
-                  curRooms = _this4.rooms;
-                  console.log(curRooms);
-
-                  _this4.setRooms(--curRooms);
-
-                case 3:
-                case "end":
-                  return _context6.stop();
-              }
-            }
-          }, _callee6);
-        })));
-      }
-    }, {
-      key: "setView",
-      value: function setView(viewId) {
-        if (viewId < 0 || viewId > +this.filters.windowsView.length) return;
-        this.view = viewId;
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.views_changer .value').text(this.filters.windowsView[this.view]);
-        this.parseUrl();
-      }
-    }, {
-      key: "addViewsChanger",
-      value: function addViewsChanger() {
-        var _this5 = this;
-
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.views_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee7() {
-          var curView;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee7$(_context7) {
-            while (1) {
-              switch (_context7.prev = _context7.next) {
-                case 0:
-                  curView = _this5.view;
-                  console.log(curView);
-
-                  _this5.setView(++curView);
-
-                case 3:
-                case "end":
-                  return _context7.stop();
-              }
-            }
-          }, _callee7);
-        })));
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.views_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee8() {
-          var curView;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee8$(_context8) {
-            while (1) {
-              switch (_context8.prev = _context8.next) {
-                case 0:
-                  curView = _this5.view;
-                  console.log(curView);
-
-                  _this5.setView(--curView);
-
-                case 3:
-                case "end":
-                  return _context8.stop();
-              }
-            }
-          }, _callee8);
-        })));
-      }
-    }, {
-      key: "setCorpse",
-      value: function setCorpse(corpse) {
-        if (corpse < 0 || corpse > this.filters.section.length - 1) return;
-        this.corpse = corpse;
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.sort-js').removeClass('active');
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".sort-js[data-corpse=\"".concat(this.corpse, "\"]")).addClass('active');
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.corpse_changer .value').text(this.filters.section[this.corpse].NAME);
-        this.parseUrl();
-      }
-    }, {
-      key: "addCorpseChanger",
-      value: function addCorpseChanger() {
-        var _this6 = this;
-
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.corpse_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee9() {
-          var curCorpse;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee9$(_context9) {
-            while (1) {
-              switch (_context9.prev = _context9.next) {
-                case 0:
-                  curCorpse = _this6.corpse;
-                  console.log(curCorpse);
-
-                  _this6.setCorpse(++curCorpse);
-
-                case 3:
-                case "end":
-                  return _context9.stop();
-              }
-            }
-          }, _callee9);
-        })));
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.corpse_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee10() {
-          var curCorpse;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee10$(_context10) {
-            while (1) {
-              switch (_context10.prev = _context10.next) {
-                case 0:
-                  curCorpse = _this6.corpse;
-                  console.log(curCorpse);
-
-                  _this6.setCorpse(--curCorpse);
-
-                case 3:
-                case "end":
-                  return _context10.stop();
-              }
-            }
-          }, _callee10);
-        })));
-      }
-    }, {
-      key: "addClickHandler",
-      value: function addClickHandler(item) {
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()(item).click(function () {
-          window.location.href = jquery__WEBPACK_IMPORTED_MODULE_4___default()(item).attr('data-link'); // console.log($(item).attr('data-link'));
-        });
-      }
-    }, {
-      key: "init",
-      value: function init() {
-        if (!jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap').length) return;
-        this.getApartments();
-      }
-    }]);
-
-    return Apartments;
-  }();
-
-  window.apartments = new Apartments({
-    apartmentsLink: '/ajax/floor.php',
-    filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
-  }); // window.apartments = new Apartments({
-  //     apartmentsLink: '/static/apartments.json',
-  //     filtersLink: '/static/filter.json'
-  // });
-
-  apartments.init();
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: D:\\osm\\zorge-9\\html\\src\\blocks\\modules\\floors\\floors.js: Unexpected reserved word 'await'. (27:28)\n\n\u001b[0m \u001b[90m 25 |\u001b[39m                         success\u001b[33m:\u001b[39m (result) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m                             \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mfilters \u001b[33m=\u001b[39m result\u001b[33m.\u001b[39mfilter\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m                             \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mparseUrl()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 28 |\u001b[39m                             console\u001b[33m.\u001b[39mlog(\u001b[32m'url parsed'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 29 |\u001b[39m                             \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maddAttributes()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 30 |\u001b[39m                             console\u001b[33m.\u001b[39mlog(\u001b[32m'attrs added'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n    at Parser._raise (D:\\osm\\zorge-9\\html\\node_modules\\@babel\\parser\\src\\parser\\error.js:151:45)\n    at Parser.raiseWithData (D:\\osm\\zorge-9\\html\\node_modules\\@babel\\parser\\src\\parser\\error.js:146:17)\n    at Parser.raise (D:\\osm\\zorge-9\\html\\node_modules\\@babel\\parser\\src\\parser\\error.js:89:17)\n    at Parser.checkReservedWord (D:\\osm\\zorge-9\\html\\node_modules\\@babel\\parser\\src\\parser\\expression.js:2702:12)\n    at Parser.parseIdentifierName (D:\\osm\\zorge-9\\html\\node_modules\\@babel\\parser\\src\\parser\\expression.js:2637:12)\n    at Parser.parseIdentifier (D:\\osm\\zorge-9\\html\\node_modules\\@babel\\parser\\src\\parser\\expression.js:2605:23)\n    at Parser.parseExprAtom (D:\\osm\\zorge-9\\html\\node_modules\\@babel\\parser\\src\\parser\\expression.js:1246:27)\n    at Parser.parseExprSubscripts (D:\\osm\\zorge-9\\html\\node_modules\\@babel\\parser\\src\\parser\\expression.js:680:23)\n    at Parser.parseUpdate (D:\\osm\\zorge-9\\html\\node_modules\\@babel\\parser\\src\\parser\\expression.js:660:21)\n    at Parser.parseMaybeUnary (D:\\osm\\zorge-9\\html\\node_modules\\@babel\\parser\\src\\parser\\expression.js:631:23)");
 
 /***/ }),
 
