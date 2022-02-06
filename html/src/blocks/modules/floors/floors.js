@@ -22,10 +22,10 @@ $(function() {
                     // this.apartments = data.apartments;
                     $.ajax({
                         url: this.filtersLink,
-                        success: async (result) => {
+                        success: (result) => {
                             this.filters = result.filter;
                             this.addAttributes();
-                            await this.parseUrl();
+                            this.parseUrl();
                             this.addFloorChanger();
                             this.addRoomsChanger();
                             this.addViewsChanger();

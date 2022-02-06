@@ -1082,50 +1082,29 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
             jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
               url: _this.filtersLink,
-              success: function () {
-                var _success = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee(result) {
-                  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee$(_context) {
-                    while (1) {
-                      switch (_context.prev = _context.next) {
-                        case 0:
-                          _this.filters = result.filter;
+              success: function success(result) {
+                _this.filters = result.filter;
 
-                          _this.addAttributes();
+                _this.addAttributes();
 
-                          _context.next = 4;
-                          return _this.parseUrl();
+                _this.parseUrl();
 
-                        case 4:
-                          _this.addFloorChanger();
+                _this.addFloorChanger();
 
-                          _this.addRoomsChanger();
+                _this.addRoomsChanger();
 
-                          _this.addViewsChanger();
+                _this.addViewsChanger();
 
-                          _this.addCorpseChanger();
+                _this.addCorpseChanger();
 
-                          _this.setRooms(_this.rooms);
+                _this.setRooms(_this.rooms);
 
-                          _this.setFloor(_this.floor);
+                _this.setFloor(_this.floor);
 
-                          _this.setView(_this.view);
+                _this.setView(_this.view);
 
-                          _this.setCorpse(_this.corpse);
-
-                        case 12:
-                        case "end":
-                          return _context.stop();
-                      }
-                    }
-                  }, _callee);
-                }));
-
-                function success(_x) {
-                  return _success.apply(this, arguments);
-                }
-
-                return success;
-              }()
+                _this.setCorpse(_this.corpse);
+              }
             });
           }
         });
@@ -1188,16 +1167,16 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
     }, {
       key: "parseUrl",
       value: function () {
-        var _parseUrl = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee2$(_context2) {
+        var _parseUrl = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee$(_context) {
             while (1) {
-              switch (_context2.prev = _context2.next) {
+              switch (_context.prev = _context.next) {
                 case 0:
-                  _context2.next = 2;
+                  _context.next = 2;
                   return this.getUrl();
 
                 case 2:
-                  this.url = _context2.sent;
+                  this.url = _context.sent;
                   console.log(this.url.split('/'));
 
                   if (this.url.split('/')[2] && this.url.split('/')[3]) {
@@ -1223,10 +1202,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
                 case 5:
                 case "end":
-                  return _context2.stop();
+                  return _context.stop();
               }
             }
-          }, _callee2, this);
+          }, _callee, this);
         }));
 
         function parseUrl() {
@@ -1248,11 +1227,11 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
       value: function addFloorChanger() {
         var _this3 = this;
 
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
           var curFloor;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee3$(_context3) {
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee2$(_context2) {
             while (1) {
-              switch (_context3.prev = _context3.next) {
+              switch (_context2.prev = _context2.next) {
                 case 0:
                   curFloor = _this3.floor;
                   console.log(curFloor);
@@ -1261,16 +1240,16 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
                 case 3:
                 case "end":
-                  return _context3.stop();
+                  return _context2.stop();
               }
             }
-          }, _callee3);
+          }, _callee2);
         })));
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee4() {
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
           var curFloor;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee4$(_context4) {
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee3$(_context3) {
             while (1) {
-              switch (_context4.prev = _context4.next) {
+              switch (_context3.prev = _context3.next) {
                 case 0:
                   curFloor = _this3.floor;
                   console.log(curFloor);
@@ -1279,10 +1258,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
                 case 3:
                 case "end":
-                  return _context4.stop();
+                  return _context3.stop();
               }
             }
-          }, _callee4);
+          }, _callee3);
         })));
       }
     }, {
@@ -1309,11 +1288,11 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
       value: function addRoomsChanger() {
         var _this4 = this;
 
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.rooms_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee5() {
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.rooms_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee4() {
           var curRooms;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee5$(_context5) {
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee4$(_context4) {
             while (1) {
-              switch (_context5.prev = _context5.next) {
+              switch (_context4.prev = _context4.next) {
                 case 0:
                   curRooms = _this4.rooms;
                   console.log(curRooms);
@@ -1322,16 +1301,16 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
                 case 3:
                 case "end":
-                  return _context5.stop();
+                  return _context4.stop();
               }
             }
-          }, _callee5);
+          }, _callee4);
         })));
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.rooms_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee6() {
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.rooms_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee5() {
           var curRooms;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee6$(_context6) {
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee5$(_context5) {
             while (1) {
-              switch (_context6.prev = _context6.next) {
+              switch (_context5.prev = _context5.next) {
                 case 0:
                   curRooms = _this4.rooms;
                   console.log(curRooms);
@@ -1340,10 +1319,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
                 case 3:
                 case "end":
-                  return _context6.stop();
+                  return _context5.stop();
               }
             }
-          }, _callee6);
+          }, _callee5);
         })));
       }
     }, {
@@ -1359,11 +1338,11 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
       value: function addViewsChanger() {
         var _this5 = this;
 
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.views_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee7() {
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.views_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee6() {
           var curView;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee7$(_context7) {
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee6$(_context6) {
             while (1) {
-              switch (_context7.prev = _context7.next) {
+              switch (_context6.prev = _context6.next) {
                 case 0:
                   curView = _this5.view;
                   console.log(curView);
@@ -1372,16 +1351,16 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
                 case 3:
                 case "end":
-                  return _context7.stop();
+                  return _context6.stop();
               }
             }
-          }, _callee7);
+          }, _callee6);
         })));
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.views_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee8() {
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.views_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee7() {
           var curView;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee8$(_context8) {
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee7$(_context7) {
             while (1) {
-              switch (_context8.prev = _context8.next) {
+              switch (_context7.prev = _context7.next) {
                 case 0:
                   curView = _this5.view;
                   console.log(curView);
@@ -1390,10 +1369,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
                 case 3:
                 case "end":
-                  return _context8.stop();
+                  return _context7.stop();
               }
             }
-          }, _callee8);
+          }, _callee7);
         })));
       }
     }, {
@@ -1411,11 +1390,11 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
       value: function addCorpseChanger() {
         var _this6 = this;
 
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.corpse_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee9() {
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.corpse_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee8() {
           var curCorpse;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee9$(_context9) {
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee8$(_context8) {
             while (1) {
-              switch (_context9.prev = _context9.next) {
+              switch (_context8.prev = _context8.next) {
                 case 0:
                   curCorpse = _this6.corpse;
                   console.log(curCorpse);
@@ -1424,16 +1403,16 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
                 case 3:
                 case "end":
-                  return _context9.stop();
+                  return _context8.stop();
               }
             }
-          }, _callee9);
+          }, _callee8);
         })));
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.corpse_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee10() {
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.corpse_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee9() {
           var curCorpse;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee10$(_context10) {
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee9$(_context9) {
             while (1) {
-              switch (_context10.prev = _context10.next) {
+              switch (_context9.prev = _context9.next) {
                 case 0:
                   curCorpse = _this6.corpse;
                   console.log(curCorpse);
@@ -1442,10 +1421,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
                 case 3:
                 case "end":
-                  return _context10.stop();
+                  return _context9.stop();
               }
             }
-          }, _callee10);
+          }, _callee9);
         })));
       }
     }, {
