@@ -93,13 +93,15 @@ $(function() {
         }
         async parseUrl() {
             this.url = await this.getUrl();
-            this.urlObject = this.url.split('/');
-            console.log('url splitted');
-            this.setUrl({
-                state: "Apartments",
-                title: this.filters.section[this.corpse].NAME,
-                url: `floor/${(this.filters.section[this.corpse].NAME).toLowerCase()}/${this.floor}`
-            });
+            if (this.url.split('/')[1] && this.url.split('/')[2]) {
+                this.urlObject = this.url.split('/');
+                console.log('url splitted');
+                this.setUrl({
+                    state: "Apartments",
+                    title: this.filters.section[this.corpse].NAME,
+                    url: `floor/${(this.filters.section[this.corpse].NAME).toLowerCase()}/${this.floor}`
+                });
+            }
         }
         setFloor(floor) {
             if (floor > 20 || floor < 2) return;

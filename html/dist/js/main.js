@@ -1204,15 +1204,18 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
                 case 2:
                   this.url = _context2.sent;
-                  this.urlObject = this.url.split('/');
-                  console.log('url splitted');
-                  this.setUrl({
-                    state: "Apartments",
-                    title: this.filters.section[this.corpse].NAME,
-                    url: "floor/".concat(this.filters.section[this.corpse].NAME.toLowerCase(), "/").concat(this.floor)
-                  });
 
-                case 6:
+                  if (this.url.split('/')[1] && this.url.split('/')[2]) {
+                    this.urlObject = this.url.split('/');
+                    console.log('url splitted');
+                    this.setUrl({
+                      state: "Apartments",
+                      title: this.filters.section[this.corpse].NAME,
+                      url: "floor/".concat(this.filters.section[this.corpse].NAME.toLowerCase(), "/").concat(this.floor)
+                    });
+                  }
+
+                case 4:
                 case "end":
                   return _context2.stop();
               }
