@@ -19,6 +19,7 @@ $(function() {
                 <div class="ap_tabs__titles--block">Минимальный взнос, %</div>
             </div>
         `);
+        console.log(result.banks);
         if (result.banks) {
             result.banks.map(item => {
                 $('.ap_tabs').append(`

@@ -203,6 +203,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
 
   function recalculateBanks(result) {
     jquery__WEBPACK_IMPORTED_MODULE_1___default()('.ap_tabs').html('').prepend("\n            <div class=\"ap_tabs__titles\">\n                <div class=\"ap_tabs__titles--block\">\u0411\u0430\u043D\u043A</div>\n                <div class=\"ap_tabs__titles--block\">\u0421\u0442\u0430\u0432\u043A\u0430</div>\n                <div class=\"ap_tabs__titles--block\">\u0421\u0440\u043E\u043A</div>\n                <div class=\"ap_tabs__titles--block\">\u0415\u0436\u0435\u043C\u0435\u0441\u044F\u0447\u043D\u044B\u0439 \u043F\u043B\u0430\u0442\u0435\u0436</div>\n                <div class=\"ap_tabs__titles--block\">\u041C\u0438\u043D\u0438\u043C\u0430\u043B\u044C\u043D\u044B\u0439 \u0432\u0437\u043D\u043E\u0441, %</div>\n            </div>\n        ");
+    console.log(result.banks);
 
     if (result.banks) {
       result.banks.map(function (item) {
