@@ -19,7 +19,7 @@ $(function() {
                 <div class="ap_tabs__titles--block">Минимальный взнос, %</div>
             </div>
         `);
-        console.log(result.banks);
+        console.log(result);
         if (result.banks) {
             result.banks.map(item => {
                 $('.ap_tabs').append(`
@@ -35,10 +35,11 @@ $(function() {
                     </div>
                 `);
             });
+            bankFormatted = result.banksFormatted;
+            $('#bank_formatted').attr('value', bankFormatted);
+            $('#apart_url').attr('value', window.location.href);
+            console.log(bankFormatted);
         }
-        bankFormatted = result.banksFormatted;
-        $('#bank_formatted').attr('value', bankFormatted);
-        console.log(bankFormatted);
     }
     if ($('.request_form form').length) {
         $('.request_form form').submit(function(event) {
