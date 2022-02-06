@@ -2177,7 +2177,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
     if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass('komc_js')) {
       jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
-        url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
+        url: '/ajax/commercial.php',
         data: {
           type: 'info'
         },
@@ -2192,7 +2192,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
         start: true,
         cache: false,
         success: function success(result) {
-          callback(result);
+          console.log(result);
         }
       });
     }
@@ -2200,14 +2200,80 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.place2').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parents('.parking_white__in').find('.plc2').toggleClass('active');
+
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass('komc_js')) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
+        url: '/ajax/commercial.php',
+        data: {
+          type: 'info'
+        },
+        method: 'POST',
+        dataType: 'json',
+        timeout: 30,
+        async: true,
+        enctype: "multipart/form-data",
+        processData: true,
+        scriptsRunFirst: true,
+        emulateOnload: true,
+        start: true,
+        cache: false,
+        success: function success(result) {
+          console.log(result);
+        }
+      });
+    }
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.place3').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parents('.parking_white__in').find('.plc3').toggleClass('active');
+
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass('komc_js')) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
+        url: '/ajax/commercial.php',
+        data: {
+          type: 'info'
+        },
+        method: 'POST',
+        dataType: 'json',
+        timeout: 30,
+        async: true,
+        enctype: "multipart/form-data",
+        processData: true,
+        scriptsRunFirst: true,
+        emulateOnload: true,
+        start: true,
+        cache: false,
+        success: function success(result) {
+          console.log(result);
+        }
+      });
+    }
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.place4').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parents('.parking_white__in').find('.plc4').toggleClass('active');
+
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass('komc_js')) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
+        url: '/ajax/commercial.php',
+        data: {
+          type: 'info'
+        },
+        method: 'POST',
+        dataType: 'json',
+        timeout: 30,
+        async: true,
+        enctype: "multipart/form-data",
+        processData: true,
+        scriptsRunFirst: true,
+        emulateOnload: true,
+        start: true,
+        cache: false,
+        success: function success(result) {
+          console.log(result);
+        }
+      });
+    }
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc2').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hover_bl').addClass('active');
