@@ -1434,7 +1434,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
             this.corpse = 2;
           }
 
-          this.floor = this.urlObject[3];
+          this.floor = this.url.split('/')[3];
         }
 
         this.getApartments();
