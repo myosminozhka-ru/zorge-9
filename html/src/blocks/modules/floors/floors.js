@@ -24,16 +24,8 @@ $(function() {
                         url: this.filtersLink,
                         success: async (result) => {
                             this.filters = result.filter;
-                            await this.parseUrl();
-                            console.log('url parsed');
                             this.addAttributes();
-                            console.log('attrs added');
-                            this.setUrl({
-                                state: "Floors",
-                                title: this.filters.section[this.corpse].NAME,
-                                url: `floor/${(this.filters.section[this.corpse].NAME).toLowerCase()}/${this.floor}`
-                            });
-                            console.log('url setted');
+                            await this.parseUrl();
                             this.addFloorChanger();
                             this.addRoomsChanger();
                             this.addViewsChanger();

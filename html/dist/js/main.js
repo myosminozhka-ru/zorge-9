@@ -1089,24 +1089,13 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
                       switch (_context.prev = _context.next) {
                         case 0:
                           _this.filters = result.filter;
-                          _context.next = 3;
-                          return _this.parseUrl();
-
-                        case 3:
-                          console.log('url parsed');
 
                           _this.addAttributes();
 
-                          console.log('attrs added');
+                          _context.next = 4;
+                          return _this.parseUrl();
 
-                          _this.setUrl({
-                            state: "Floors",
-                            title: _this.filters.section[_this.corpse].NAME,
-                            url: "floor/".concat(_this.filters.section[_this.corpse].NAME.toLowerCase(), "/").concat(_this.floor)
-                          });
-
-                          console.log('url setted');
-
+                        case 4:
                           _this.addFloorChanger();
 
                           _this.addRoomsChanger();
@@ -1123,7 +1112,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
                           _this.setCorpse(_this.corpse);
 
-                        case 16:
+                        case 12:
                         case "end":
                           return _context.stop();
                       }
