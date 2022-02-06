@@ -86,7 +86,7 @@ $(function() {
             })
         }
         setUrl({state, title, url}) {
-            window.history.pushState(state, title, window.location.origin + '/' + url);
+            window.history.pushState(state, title, window.location.origin + '/' + url + '/');
             // if ((this.filters.section[this.corpse].NAME).toLowerCase() !== this.urlObject[2].toLowe)
             $(`svg:not([data-corpse="${this.corpse+1}"][data-floor*="-${this.floor}-"])`).closest('.floor_center--item_wrap').css({display: 'none'});
             $(`[data-corpse="${this.corpse+1}"][data-floor*="-${this.floor}-"]`).closest('.floor_center--item_wrap').css({display: 'block'});
