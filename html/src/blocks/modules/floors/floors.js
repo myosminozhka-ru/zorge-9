@@ -94,6 +94,7 @@ $(function() {
         async parseUrl() {
             this.url = await this.getUrl();
             if (this.url.split('/')[1] && this.url.split('/')[2]) {
+                console.log(this.url.split('/')[1], this.url.split('/')[2]);
                 this.urlObject = this.url.split('/');
                 console.log('url splitted');
                 this.setUrl({

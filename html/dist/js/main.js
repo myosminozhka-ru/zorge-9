@@ -1206,6 +1206,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
                   this.url = _context2.sent;
 
                   if (this.url.split('/')[1] && this.url.split('/')[2]) {
+                    console.log(this.url.split('/')[1], this.url.split('/')[2]);
                     this.urlObject = this.url.split('/');
                     console.log('url splitted');
                     this.setUrl({
