@@ -1428,7 +1428,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
           if (this.url.split('/')[2] == 'madison') {
             this.corpse = 0;
-          } else if (this.url.split('/')[2] == 'manhattan') {
+          } else if (this.url.split('/')[2] == 'manhattan' || this.url.split('/')[2] == 'manhatten') {
             this.corpse = 1;
           } else {
             this.corpse = 2;

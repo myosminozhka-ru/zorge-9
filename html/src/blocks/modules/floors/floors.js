@@ -206,7 +206,7 @@ $(function() {
                 console.log(this.url.split('/'));
                 if (this.url.split('/')[2] == 'madison') {
                     this.corpse = 0;
-                } else if (this.url.split('/')[2] == 'manhattan') {
+                } else if (this.url.split('/')[2] == 'manhattan' || this.url.split('/')[2] == 'manhatten') {
                     this.corpse = 1;
                 } else {
                     this.corpse = 2;
