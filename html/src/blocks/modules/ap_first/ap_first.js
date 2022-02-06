@@ -19,9 +19,9 @@ $(function() {
                 <div class="ap_tabs__titles--block">Минимальный взнос, %</div>
             </div>
         `);
-        console.log(result);
-        if (result.banks) {
-            result.banks.map(item => {
+        console.log(JSON.parse(result));
+        if (JSON.parse(result).banks) {
+            JSON.parse(result).banks.map(item => {
                 $('.ap_tabs').append(`
                     <div class="ap_tabs__blocks">
                         <div class="ap_tabs__blocks--block">
@@ -35,7 +35,7 @@ $(function() {
                     </div>
                 `);
             });
-            bankFormatted = result.banksFormatted;
+            bankFormatted = JSON.parse(result).banksFormatted;
             $('#bank_formatted').attr('value', bankFormatted);
             $('#apart_url').attr('value', window.location.href);
             console.log(bankFormatted);
