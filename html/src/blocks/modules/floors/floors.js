@@ -98,11 +98,11 @@ $(function() {
                 }
                 this.floor = this.urlObject[3];
                 console.log('filters', this.filters);
-                // this.setUrl({
-                //     state: "Apartments",
-                //     title: this.filters.section[this.corpse].NAME,
-                //     url: `floor/${(this.filters.section[this.corpse].NAME).toLowerCase()}/${this.floor}`
-                // });
+                this.setUrl({
+                    state: "Apartments",
+                    title: this.filters.section[this.corpse].NAME,
+                    url: `floor/${(this.filters.section[this.corpse].NAME).toLowerCase()}/${this.floor}`
+                });
             }
         }
         setFloor(floor) {
@@ -191,7 +191,7 @@ $(function() {
             this.corpse = corpse;
             $('.sort-js').removeClass('active');
             $(`.sort-js[data-corpse="${this.corpse}"]`).addClass('active');
-            // $('.corpse_changer .value').text(this.filters.section[this.corpse].NAME);
+            $('.corpse_changer .value').text(this.filters.section[this.corpse].NAME);
             this.parseUrl();
         }
         addCorpseChanger() {

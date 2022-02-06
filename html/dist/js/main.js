@@ -1192,11 +1192,12 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
                     }
 
                     this.floor = this.urlObject[3];
-                    console.log('filters', this.filters); // this.setUrl({
-                    //     state: "Apartments",
-                    //     title: this.filters.section[this.corpse].NAME,
-                    //     url: `floor/${(this.filters.section[this.corpse].NAME).toLowerCase()}/${this.floor}`
-                    // });
+                    console.log('filters', this.filters);
+                    this.setUrl({
+                      state: "Apartments",
+                      title: this.filters.section[this.corpse].NAME,
+                      url: "floor/".concat(this.filters.section[this.corpse].NAME.toLowerCase(), "/").concat(this.floor)
+                    });
                   }
 
                 case 5:
@@ -1380,8 +1381,8 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         if (corpse < 0 || corpse > this.filters.section.length - 1) return;
         this.corpse = corpse;
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.sort-js').removeClass('active');
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".sort-js[data-corpse=\"".concat(this.corpse, "\"]")).addClass('active'); // $('.corpse_changer .value').text(this.filters.section[this.corpse].NAME);
-
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".sort-js[data-corpse=\"".concat(this.corpse, "\"]")).addClass('active');
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.corpse_changer .value').text(this.filters.section[this.corpse].NAME);
         this.parseUrl();
       }
     }, {
