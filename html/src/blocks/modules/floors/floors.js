@@ -191,7 +191,7 @@ $(function() {
             this.corpse = corpse;
             $('.sort-js').removeClass('active');
             $(`.sort-js[data-corpse="${this.corpse}"]`).addClass('active');
-            $('.corpse_changer .value').text(this.filters.section[this.corpse].NAME);
+            // $('.corpse_changer .value').text(this.filters.section[this.corpse].NAME);
             this.parseUrl();
         }
         addCorpseChanger() {
