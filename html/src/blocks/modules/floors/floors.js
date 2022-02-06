@@ -18,8 +18,8 @@ $(function() {
             $.ajax({
                 url: this.apartmentsLink,
                 success: (data) => {
-                    this.apartments = JSON.parse(data).apartments;
-                    // this.apartments = data.apartments;
+                    // this.apartments = JSON.parse(data).apartments;
+                    this.apartments = data.apartments;
                     $.ajax({
                         url: this.filtersLink,
                         success: async (result) => {
@@ -93,10 +93,18 @@ $(function() {
         }
         async parseUrl() {
             this.url = await this.getUrl();
-            if (this.url.split('/')[1] && this.url.split('/')[2]) {
-                console.log(this.url.split('/')[1], this.url.split('/')[2]);
+            console.log(this.url.split('/'));
+            if (this.url.split('/')[2] && this.url.split('/')[3]) {
+                console.log(this.url.split('/'));
                 this.urlObject = this.url.split('/');
-                console.log('url splitted');
+                if (this.urlObject[2] == 'madison') {
+                    this.corpse = 0;
+                } else if (this.urlObject[2] == 'manhatten') {
+                    this.corpse = 1;
+                } else {
+                    this.corpse = 3;
+                }
+                this.floor = this.urlObject[3]
                 this.setUrl({
                     state: "Apartments",
                     title: this.filters.section[this.corpse].NAME,
@@ -216,15 +224,15 @@ $(function() {
             this.getApartments();
         }
     }
-    window.apartments = new Apartments({
-        apartmentsLink: '/ajax/floor.php',
-        filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
-    });
-
     // window.apartments = new Apartments({
-    //     apartmentsLink: '/static/apartments.json',
-    //     filtersLink: '/static/filter.json'
+    //     apartmentsLink: '/ajax/floor.php',
+    //     filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
     // });
+
+    window.apartments = new Apartments({
+        apartmentsLink: '/static/apartments.json',
+        filtersLink: '/static/filter.json'
+    });
     apartments.init();
 });
 

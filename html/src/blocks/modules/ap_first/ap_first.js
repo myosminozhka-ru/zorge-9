@@ -20,7 +20,7 @@ $(function() {
             </div>
         `);
 
-        result.banks.map(item => {
+        JSON.parse(result).banks.map(item => {
             $('.ap_tabs').append(`
                 <div class="ap_tabs__blocks">
                     <div class="ap_tabs__blocks--block">
