@@ -96,7 +96,8 @@ $(function() {
                 } else {
                     this.corpse = 3;
                 }
-                this.floor = this.urlObject[3]
+                this.floor = this.urlObject[3];
+                console.log('filters', this.filters);
                 this.setUrl({
                     state: "Apartments",
                     title: this.filters.section[this.corpse].NAME,

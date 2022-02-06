@@ -1213,6 +1213,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
                     }
 
                     this.floor = this.urlObject[3];
+                    console.log('filters', this.filters);
                     this.setUrl({
                       state: "Apartments",
                       title: this.filters.section[this.corpse].NAME,
