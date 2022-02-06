@@ -17,12 +17,12 @@ $(function() {
         getApartments() {
             $.ajax({
                 url: this.apartmentsLink,
-                success: async (data) => {
+                success: (data) => {
                     this.apartments = JSON.parse(data).apartments;
                     // this.apartments = data.apartments;
                     $.ajax({
                         url: this.filtersLink,
-                        success: (result) => {
+                        success: async (result) => {
                             this.filters = result.filter;
                             await this.parseUrl();
                             console.log('url parsed');
