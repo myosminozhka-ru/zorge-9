@@ -19,21 +19,22 @@ $(function() {
                 <div class="ap_tabs__titles--block">Минимальный взнос, %</div>
             </div>
         `);
-
-        result.banks.map(item => {
-            $('.ap_tabs').append(`
-                <div class="ap_tabs__blocks">
-                    <div class="ap_tabs__blocks--block">
-                        <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
-                        <div class="ap_tabs__blocks--title">ВТБ</div>
+        if (result.banks) {
+            result.banks.map(item => {
+                $('.ap_tabs').append(`
+                    <div class="ap_tabs__blocks">
+                        <div class="ap_tabs__blocks--block">
+                            <div class="ap_tabs__blocks--img"><img src="./img/i5.png" alt=""></div>
+                            <div class="ap_tabs__blocks--title">ВТБ</div>
+                        </div>
+                        <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
+                        <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
+                        <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+                        <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
                     </div>
-                    <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
-                    <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
-                    <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
-                    <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
-                </div>
-            `);
-        });
+                `);
+            });
+        }
         bankFormatted = result.banksFormatted;
         $('#bank_formatted').attr('value', bankFormatted);
         console.log(bankFormatted);
