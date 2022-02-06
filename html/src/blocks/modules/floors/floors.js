@@ -85,25 +85,13 @@ $(function() {
         }
         async parseUrl() {
             this.url = await this.getUrl();
-            console.log(this.url.split('/'));
-            if (this.url.split('/')[2] && this.url.split('/')[3]) {
-                console.log(this.url.split('/'));
-                this.urlObject = this.url.split('/');
-                if (this.urlObject[2] == 'madison') {
-                    this.corpse = 0;
-                } else if (this.urlObject[2] == 'manhatten') {
-                    this.corpse = 1;
-                } else {
-                    this.corpse = 3;
-                }
-                this.floor = this.urlObject[3];
-                console.log('filters', this.filters);
-                this.setUrl({
-                    state: "Apartments",
-                    title: this.filters.section[this.corpse].NAME,
-                    url: `floor/${(this.filters.section[this.corpse].NAME).toLowerCase()}/${this.floor}`
-                });
-            }
+            this.urlObject = this.url.split('/');
+            
+            this.setUrl({
+                state: "Apartments",
+                title: this.filters.section[this.corpse].NAME,
+                url: `floor/${(this.filters.section[this.corpse].NAME).toLowerCase()}/${this.floor}`
+            });
         }
         setFloor(floor) {
             if (floor > 20 || floor < 2) return;
@@ -214,7 +202,19 @@ $(function() {
         }
         init() {
             if (!$('.floor_center--item_wrap').length) return;
+            if (this.url.split('/')[2] && this.url.split('/')[3]) {
+                console.log(this.url.split('/'));
+                if (this.url.split('/')[2] == 'madison') {
+                    this.corpse = 0;
+                } else if (this.url.split('/')[2] == 'manhatten') {
+                    this.corpse = 1;
+                } else {
+                    this.corpse = 2;
+                }
+                this.floor = this.urlObject[3];
+            }
             this.getApartments();
+
         }
     }
     window.apartments = new Apartments({
