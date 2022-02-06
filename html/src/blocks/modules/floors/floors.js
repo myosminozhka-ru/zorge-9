@@ -17,18 +17,23 @@ $(function() {
         getApartments() {
             $.ajax({
                 url: this.apartmentsLink,
-                success: (data) => {
+                success: async (data) => {
                     this.apartments = JSON.parse(data).apartments;
+                    // this.apartments = data.apartments;
+                    await this.parseUrl();
+                    console.log('url parsed');
                     $.ajax({
                         url: this.filtersLink,
                         success: (result) => {
                             this.filters = result.filter;
                             this.addAttributes();
+                            console.log('attrs added');
                             this.setUrl({
-                                state: "Apartments",
+                                state: "Floors",
                                 title: this.filters.section[this.corpse].NAME,
                                 url: `floor/${(this.filters.section[this.corpse].NAME).toLowerCase()}/${this.floor}`
-                            })
+                            });
+                            console.log('url setted');
                             this.addFloorChanger();
                             this.addRoomsChanger();
                             this.addViewsChanger();
@@ -89,6 +94,7 @@ $(function() {
         async parseUrl() {
             this.url = await this.getUrl();
             this.urlObject = this.url.split('/');
+            console.log('url splitted');
             this.setUrl({
                 state: "Apartments",
                 title: this.filters.section[this.corpse].NAME,
@@ -211,6 +217,11 @@ $(function() {
         apartmentsLink: '/ajax/floor.php',
         filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
     });
+
+    // window.apartments = new Apartments({
+    //     apartmentsLink: '/static/apartments.json',
+    //     filtersLink: '/static/filter.json'
+    // });
     apartments.init();
 });
 

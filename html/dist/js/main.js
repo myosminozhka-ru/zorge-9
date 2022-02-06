@@ -1072,39 +1072,68 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
         jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
           url: this.apartmentsLink,
-          success: function success(data) {
-            _this.apartments = JSON.parse(data).apartments;
-            jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
-              url: _this.filtersLink,
-              success: function success(result) {
-                _this.filters = result.filter;
+          success: function () {
+            var _success = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee(data) {
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee$(_context) {
+                while (1) {
+                  switch (_context.prev = _context.next) {
+                    case 0:
+                      _this.apartments = JSON.parse(data).apartments; // this.apartments = data.apartments;
 
-                _this.addAttributes();
+                      _context.next = 3;
+                      return _this.parseUrl();
 
-                _this.setUrl({
-                  state: "Apartments",
-                  title: _this.filters.section[_this.corpse].NAME,
-                  url: "floors/".concat(_this.filters.section[_this.corpse].NAME.toLowerCase(), "/").concat(_this.floor)
-                });
+                    case 3:
+                      console.log('url parsed');
+                      jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
+                        url: _this.filtersLink,
+                        success: function success(result) {
+                          _this.filters = result.filter;
 
-                _this.addFloorChanger();
+                          _this.addAttributes();
 
-                _this.addRoomsChanger();
+                          console.log('attrs added');
 
-                _this.addViewsChanger();
+                          _this.setUrl({
+                            state: "Floors",
+                            title: _this.filters.section[_this.corpse].NAME,
+                            url: "floor/".concat(_this.filters.section[_this.corpse].NAME.toLowerCase(), "/").concat(_this.floor)
+                          });
 
-                _this.addCorpseChanger();
+                          console.log('url setted');
 
-                _this.setRooms(_this.rooms);
+                          _this.addFloorChanger();
 
-                _this.setFloor(_this.floor);
+                          _this.addRoomsChanger();
 
-                _this.setView(_this.view);
+                          _this.addViewsChanger();
 
-                _this.setCorpse(_this.corpse);
-              }
-            });
-          }
+                          _this.addCorpseChanger();
+
+                          _this.setRooms(_this.rooms);
+
+                          _this.setFloor(_this.floor);
+
+                          _this.setView(_this.view);
+
+                          _this.setCorpse(_this.corpse);
+                        }
+                      });
+
+                    case 5:
+                    case "end":
+                      return _context.stop();
+                  }
+                }
+              }, _callee);
+            }));
+
+            function success(_x) {
+              return _success.apply(this, arguments);
+            }
+
+            return success;
+          }()
         });
       }
     }, {
@@ -1165,29 +1194,30 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
     }, {
       key: "parseUrl",
       value: function () {
-        var _parseUrl = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee() {
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee$(_context) {
+        var _parseUrl = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee2$(_context2) {
             while (1) {
-              switch (_context.prev = _context.next) {
+              switch (_context2.prev = _context2.next) {
                 case 0:
-                  _context.next = 2;
+                  _context2.next = 2;
                   return this.getUrl();
 
                 case 2:
-                  this.url = _context.sent;
+                  this.url = _context2.sent;
                   this.urlObject = this.url.split('/');
+                  console.log('url splitted');
                   this.setUrl({
                     state: "Apartments",
                     title: this.filters.section[this.corpse].NAME,
-                    url: "floors/".concat(this.filters.section[this.corpse].NAME.toLowerCase(), "/").concat(this.floor)
+                    url: "floor/".concat(this.filters.section[this.corpse].NAME.toLowerCase(), "/").concat(this.floor)
                   });
 
-                case 5:
+                case 6:
                 case "end":
-                  return _context.stop();
+                  return _context2.stop();
               }
             }
-          }, _callee, this);
+          }, _callee2, this);
         }));
 
         function parseUrl() {
@@ -1209,25 +1239,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
       value: function addFloorChanger() {
         var _this3 = this;
 
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
-          var curFloor;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee2$(_context2) {
-            while (1) {
-              switch (_context2.prev = _context2.next) {
-                case 0:
-                  curFloor = _this3.floor;
-                  console.log(curFloor);
-
-                  _this3.setFloor(++curFloor);
-
-                case 3:
-                case "end":
-                  return _context2.stop();
-              }
-            }
-          }, _callee2);
-        })));
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee3() {
           var curFloor;
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee3$(_context3) {
             while (1) {
@@ -1236,7 +1248,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
                   curFloor = _this3.floor;
                   console.log(curFloor);
 
-                  _this3.setFloor(--curFloor);
+                  _this3.setFloor(++curFloor);
 
                 case 3:
                 case "end":
@@ -1244,6 +1256,24 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
               }
             }
           }, _callee3);
+        })));
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee4() {
+          var curFloor;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee4$(_context4) {
+            while (1) {
+              switch (_context4.prev = _context4.next) {
+                case 0:
+                  curFloor = _this3.floor;
+                  console.log(curFloor);
+
+                  _this3.setFloor(--curFloor);
+
+                case 3:
+                case "end":
+                  return _context4.stop();
+              }
+            }
+          }, _callee4);
         })));
       }
     }, {
@@ -1270,25 +1300,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
       value: function addRoomsChanger() {
         var _this4 = this;
 
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.rooms_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee4() {
-          var curRooms;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee4$(_context4) {
-            while (1) {
-              switch (_context4.prev = _context4.next) {
-                case 0:
-                  curRooms = _this4.rooms;
-                  console.log(curRooms);
-
-                  _this4.setRooms(++curRooms);
-
-                case 3:
-                case "end":
-                  return _context4.stop();
-              }
-            }
-          }, _callee4);
-        })));
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.rooms_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee5() {
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.rooms_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee5() {
           var curRooms;
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee5$(_context5) {
             while (1) {
@@ -1297,7 +1309,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
                   curRooms = _this4.rooms;
                   console.log(curRooms);
 
-                  _this4.setRooms(--curRooms);
+                  _this4.setRooms(++curRooms);
 
                 case 3:
                 case "end":
@@ -1305,6 +1317,24 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
               }
             }
           }, _callee5);
+        })));
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.rooms_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee6() {
+          var curRooms;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee6$(_context6) {
+            while (1) {
+              switch (_context6.prev = _context6.next) {
+                case 0:
+                  curRooms = _this4.rooms;
+                  console.log(curRooms);
+
+                  _this4.setRooms(--curRooms);
+
+                case 3:
+                case "end":
+                  return _context6.stop();
+              }
+            }
+          }, _callee6);
         })));
       }
     }, {
@@ -1320,25 +1350,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
       value: function addViewsChanger() {
         var _this5 = this;
 
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.views_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee6() {
-          var curView;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee6$(_context6) {
-            while (1) {
-              switch (_context6.prev = _context6.next) {
-                case 0:
-                  curView = _this5.view;
-                  console.log(curView);
-
-                  _this5.setView(++curView);
-
-                case 3:
-                case "end":
-                  return _context6.stop();
-              }
-            }
-          }, _callee6);
-        })));
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.views_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee7() {
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.views_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee7() {
           var curView;
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee7$(_context7) {
             while (1) {
@@ -1347,7 +1359,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
                   curView = _this5.view;
                   console.log(curView);
 
-                  _this5.setView(--curView);
+                  _this5.setView(++curView);
 
                 case 3:
                 case "end":
@@ -1355,6 +1367,24 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
               }
             }
           }, _callee7);
+        })));
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.views_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee8() {
+          var curView;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee8$(_context8) {
+            while (1) {
+              switch (_context8.prev = _context8.next) {
+                case 0:
+                  curView = _this5.view;
+                  console.log(curView);
+
+                  _this5.setView(--curView);
+
+                case 3:
+                case "end":
+                  return _context8.stop();
+              }
+            }
+          }, _callee8);
         })));
       }
     }, {
@@ -1372,25 +1402,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
       value: function addCorpseChanger() {
         var _this6 = this;
 
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.corpse_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee8() {
-          var curCorpse;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee8$(_context8) {
-            while (1) {
-              switch (_context8.prev = _context8.next) {
-                case 0:
-                  curCorpse = _this6.corpse;
-                  console.log(curCorpse);
-
-                  _this6.setCorpse(++curCorpse);
-
-                case 3:
-                case "end":
-                  return _context8.stop();
-              }
-            }
-          }, _callee8);
-        })));
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.corpse_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee9() {
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.corpse_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee9() {
           var curCorpse;
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee9$(_context9) {
             while (1) {
@@ -1399,7 +1411,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
                   curCorpse = _this6.corpse;
                   console.log(curCorpse);
 
-                  _this6.setCorpse(--curCorpse);
+                  _this6.setCorpse(++curCorpse);
 
                 case 3:
                 case "end":
@@ -1407,6 +1419,24 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
               }
             }
           }, _callee9);
+        })));
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.corpse_changer').on('click', '.prev', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee10() {
+          var curCorpse;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.wrap(function _callee10$(_context10) {
+            while (1) {
+              switch (_context10.prev = _context10.next) {
+                case 0:
+                  curCorpse = _this6.corpse;
+                  console.log(curCorpse);
+
+                  _this6.setCorpse(--curCorpse);
+
+                case 3:
+                case "end":
+                  return _context10.stop();
+              }
+            }
+          }, _callee10);
         })));
       }
     }, {
@@ -1430,7 +1460,11 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
   window.apartments = new Apartments({
     apartmentsLink: '/ajax/floor.php',
     filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
-  });
+  }); // window.apartments = new Apartments({
+  //     apartmentsLink: '/static/apartments.json',
+  //     filtersLink: '/static/filter.json'
+  // });
+
   apartments.init();
 });
 
