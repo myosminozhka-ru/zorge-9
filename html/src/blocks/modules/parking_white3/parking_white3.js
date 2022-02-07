@@ -1,6 +1,12 @@
 import $ from "jquery";
 $(function() {
     let corpse = 'madison';
+    let flat = 0;
+    console.log(corpse);
+    $('#block_park').on('click', '.feedback', function() {
+        console.log('tyartatat');
+        $('.form-wrapper.fd1').addClass('opened');
+    })
     $('.dlc1').on('click', function() {
         $(this).addClass('active');
         $('.park_form').addClass('active');
@@ -16,6 +22,7 @@ $(function() {
         corpse = $(this).data('corpse-id');
     })
     $('.plc1[data-flat-id], .plc2[data-flat-id]').click(function() {
+        flat = $(this).data('flat-id');
         $.ajax({
             url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
             method: "POST",
@@ -80,6 +87,20 @@ $(function() {
             }
         });
     })
+    if ($('[name="SIMPLE_FORM_5"]').length) {
+        $('[name="SIMPLE_FORM_5"]').submit(function(event) {
+            event.preventDefault();
+            form_submit('[name="SIMPLE_FORM_5"]', function (result) {
+                if (result.SUCCESS)
+                {
+                $('[name="SIMPLE_FORM_5"]').find('label').fadeOut();
+                $('[name="SIMPLE_FORM_5"]').find('.form-wrapper__btns').fadeOut();
+                $('[name="SIMPLE_FORM_5"]').closest('.form-wrapper-inner').find('.form-wrapper__subtitle').fadeOut();
+                $('[name="SIMPLE_FORM_5"]').closest('.form-wrapper-inner').find('.form-wrapper__title').html(result.SUCCESS);
+                }
+            });
+        });
+    }
     $('.dld1').on('click', function() {
         $('.park_form').addClass('active');
     })
@@ -195,13 +216,6 @@ $(function() {
         $('.park_form6').removeClass('active')
         $('.park_form7').removeClass('active')
     })
-
-
-
-
-
-
-
 
 
 

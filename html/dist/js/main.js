@@ -2392,6 +2392,12 @@ __webpack_require__.r(__webpack_exports__);
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   var corpse = 'madison';
+  var flat = 0;
+  console.log(corpse);
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('#block_park').on('click', '.feedback', function () {
+    console.log('tyartatat');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form-wrapper.fd1').addClass('opened');
+  });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc1').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form').addClass('active');
@@ -2411,6 +2417,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc1[data-flat-id], .plc2[data-flat-id]').click(function () {
     var _this = this;
 
+    flat = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data('flat-id');
     jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
       url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
       method: "POST",
@@ -2451,6 +2458,21 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       }
     });
   });
+
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_5"]').length) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_5"]').submit(function (event) {
+      event.preventDefault();
+      form_submit('[name="SIMPLE_FORM_5"]', function (result) {
+        if (result.SUCCESS) {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_5"]').find('label').fadeOut();
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_5"]').find('.form-wrapper__btns').fadeOut();
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_5"]').closest('.form-wrapper-inner').find('.form-wrapper__subtitle').fadeOut();
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_5"]').closest('.form-wrapper-inner').find('.form-wrapper__title').html(result.SUCCESS);
+        }
+      });
+    });
+  }
+
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dld1').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.park_form').addClass('active');
   });
