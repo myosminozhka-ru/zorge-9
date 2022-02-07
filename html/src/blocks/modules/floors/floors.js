@@ -24,6 +24,7 @@ $(function() {
                         url: this.filtersLink,
                         success: (result) => {
                             this.filters = result.filter;
+                            console.log(this.filters);
                             this.addAttributes();
                             this.parseUrl();
                             this.addFloorChanger();

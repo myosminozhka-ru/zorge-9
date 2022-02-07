@@ -1088,6 +1088,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
               url: _this.filtersLink,
               success: function success(result) {
                 _this.filters = result.filter;
+                console.log(_this.filters);
 
                 _this.addAttributes();
 
