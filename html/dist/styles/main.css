@@ -5512,6 +5512,10 @@ input:checked + .slider:before {
   fill: #B69B80;
 }
 
+.fl_tit {
+  display: none;
+}
+
 .floor_page .footer {
   padding-top: 0;
 }
@@ -6633,7 +6637,7 @@ input:checked + .slider:before {
 }
 
 .ap_page .room_blocks__block--img {
-  max-height: 220px;
+  height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8236,6 +8240,15 @@ input:checked + .slider:before {
 
   .main_blocks__block--btns a {
     font-size: 18px;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .views_changer .value {
+    max-width: 320px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 }
 

@@ -1,3 +1,14 @@
+.views_changer .value {
+    @media all and (min-width: 1025px) {
+        max-width: 320px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+.fl_tit {
+    display: none;
+}
 .floor_page {
     .footer {
         padding-top: 0;

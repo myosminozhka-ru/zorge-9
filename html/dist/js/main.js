@@ -193,9 +193,13 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
+  if (!price) {
+    var price = 0;
+  }
+
   var params = {
     contribution: 0,
-    sum: 0,
+    sum: price,
     years: 0,
     percent: 0
   };
@@ -207,7 +211,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
 
     if (JSON.parse(result).banks) {
       JSON.parse(result).banks.map(function (item) {
-        jquery__WEBPACK_IMPORTED_MODULE_1___default()('.ap_tabs').append("\n                    <div class=\"ap_tabs__blocks\">\n                        <div class=\"ap_tabs__blocks--block\">\n                            <div class=\"ap_tabs__blocks--img\"><img src=\"/local/templates/main/assets/html/dist/img/i5.png\" alt=\"\"></div>\n                            <div class=\"ap_tabs__blocks--title\">\u0412\u0422\u0411</div>\n                        </div>\n                        <div class=\"ap_tabs__blocks--block\"><span class=\"ap_tabs__blocks--span\">\u0421\u0442\u0430\u0432\u043A\u0430</span>\u043E\u0442 8.1</div>\n                        <div class=\"ap_tabs__blocks--block\"><span class=\"ap_tabs__blocks--span\">\u0421\u0440\u043E\u043A</span>\u0434\u043E 30 \u043B\u0435\u0442</div>\n                        <div class=\"ap_tabs__blocks--block\"><span class=\"ap_tabs__blocks--span\">\u0415\u0436\u0435\u043C\u0435\u0441\u044F\u0447\u043D\u044B\u0439 \u043F\u043B\u0430\u0442\u0435\u0436</span>102 216 \u0440.</div>\n                        <div class=\"ap_tabs__blocks--block\"><span class=\"ap_tabs__blocks--span\">\u041C\u0438\u043D\u0438\u043C\u0430\u043B\u044C\u043D\u044B\u0439 \u0432\u0437\u043D\u043E\u0441, %</span>10%</div>\n                    </div>\n                ");
+        jquery__WEBPACK_IMPORTED_MODULE_1___default()('.ap_tabs').append("\n                    <div class=\"ap_tabs__blocks\">\n                        <div class=\"ap_tabs__blocks--block\">\n                            <div class=\"ap_tabs__blocks--img\"><img src=\"/local/templates/main/assets/html/dist/img/i5.png\" alt=\"\"></div>\n                            <div class=\"ap_tabs__blocks--title\">\u0412\u0422\u0411</div>\n                        </div>\n                        <div class=\"ap_tabs__blocks--block\"><span class=\"ap_tabs__blocks--span\">\u0421\u0442\u0430\u0432\u043A\u0430</span>".concat(item.bid, "</div>\n                        <div class=\"ap_tabs__blocks--block\"><span class=\"ap_tabs__blocks--span\">\u0421\u0440\u043E\u043A</span>").concat(item.contribution, "</div>\n                        <div class=\"ap_tabs__blocks--block\"><span class=\"ap_tabs__blocks--span\">\u0415\u0436\u0435\u043C\u0435\u0441\u044F\u0447\u043D\u044B\u0439 \u043F\u043B\u0430\u0442\u0435\u0436</span>").concat(item.month_pay, "</div>\n                        <div class=\"ap_tabs__blocks--block\"><span class=\"ap_tabs__blocks--span\">\u041C\u0438\u043D\u0438\u043C\u0430\u043B\u044C\u043D\u044B\u0439 \u0432\u0437\u043D\u043E\u0441, %</span>10%</div>\n                    </div>\n                "));
       });
       bankFormatted = JSON.parse(result).banksFormatted;
       jquery__WEBPACK_IMPORTED_MODULE_1___default()('#bank_formatted').attr('value', bankFormatted);
@@ -1078,8 +1082,8 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
           url: this.apartmentsLink,
           success: function success(data) {
-            _this.apartments = JSON.parse(data).apartments; // this.apartments = data.apartments;
-
+            // this.apartments = JSON.parse(data).apartments;
+            _this.apartments = data.apartments;
             jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
               url: _this.filtersLink,
               success: function success(result) {
@@ -1097,13 +1101,15 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
                 _this.addCorpseChanger();
 
-                _this.setRooms(_this.rooms);
+                setTimeout(function () {
+                  _this.setRooms(_this.rooms);
 
-                _this.setFloor(_this.floor);
+                  _this.setView(_this.view);
 
-                _this.setView(_this.view);
+                  _this.setFloor(_this.floor);
 
-                _this.setCorpse(_this.corpse);
+                  _this.setCorpse(_this.corpse);
+                }, 500);
               }
             });
           }
@@ -1115,6 +1121,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         var _this2 = this;
 
         this.apartments.forEach(function (item) {
+          // console.log(item);
           switch (item.corpus) {
             case 'Madison':
               var rect = document.querySelector("[data-corpse=\"1\"][data-floor*=\"-".concat(item.floor, "-\"] [data-position=\"").concat(item.position, "\"]"));
@@ -1138,7 +1145,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
             jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect).on('mouseleave', function () {
               _this2.hideInfo(rect);
             });
-            jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect).attr('data-area', item.area).attr('data-rooms', item.rooms).attr('data-price', item.price).attr('data-number', item.number).attr('data-link', item.link).addClass('active').closest('.floor_center__svg').prepend("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top:".concat(rect.getBoundingClientRect().top + rect.getBoundingClientRect().height / 2 - rect.closest('.floor_center__svg').getBoundingClientRect().top, "px;left:").concat(rect.getBoundingClientRect().left + rect.getBoundingClientRect().width / 2 - rect.closest('.floor_center__svg').getBoundingClientRect().left, "px;\"><div class=\"value\">").concat(item.area, "<span>\u043C<sup>2</sup></span></div></div>"));
+            jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect).attr('data-area', item.area).attr('data-rooms', item.rooms).attr('data-price', item.price).attr('data-number', item.number).attr('data-link', item.link).attr('data-window_view', item.window_view).addClass('active').closest('.floor_center__svg').prepend("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top:".concat(rect.getBoundingClientRect().top + rect.getBoundingClientRect().height / 2 - rect.closest('.floor_center__svg').getBoundingClientRect().top, "px;left:").concat(rect.getBoundingClientRect().left + rect.getBoundingClientRect().width / 2 - rect.closest('.floor_center__svg').getBoundingClientRect().left, "px;\"><div class=\"value\">").concat(item.area, "<span>\u043C<sup>2</sup></span></div></div>"));
           }
         });
       }
@@ -1205,6 +1212,8 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         this.floor = floor;
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_changer .value').text(this.floor);
         this.parseUrl();
+        this.setRooms(this.rooms);
+        this.setView(this.view);
       }
     }, {
       key: "addFloorChanger",
@@ -1251,10 +1260,19 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
     }, {
       key: "setRooms",
       value: function setRooms(rooms) {
+        console.log('rooms');
         if (rooms < +this.filters.minRooms || rooms > +this.filters.maxRooms) return;
         this.rooms = rooms;
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.rooms_changer .value').text(this.rooms);
         this.parseUrl();
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('[data-position]').removeClass('active');
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('.apart_popup').remove();
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"][data-window_view*=\"").concat(this.filters.windowsView[this.view], "\"]")).addClass('active');
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"].active")).each(function () {
+          console.log(jquery__WEBPACK_IMPORTED_MODULE_4___default()(this));
+          var self = jquery__WEBPACK_IMPORTED_MODULE_4___default()(this);
+          jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').prepend("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top: ".concat(self.offset().top - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').offset().top + self.innerHeight() / 3, "px; left: ").concat(self.offset().left - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').offset().left + self.innerWidth() / 3, "px\"><div class=\"value\">").concat(self.data('area'), "<span>\u043C<sup>2</sup></span></div></div>"));
+        });
       }
     }, {
       key: "showInfo",
@@ -1316,6 +1334,14 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         this.view = viewId;
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.views_changer .value').text(this.filters.windowsView[this.view]);
         this.parseUrl();
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('[data-position]').removeClass('active');
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('.apart_popup').remove();
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"][data-window_view*=\"").concat(this.filters.windowsView[this.view], "\"]")).addClass('active');
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"].active")).each(function () {
+          console.log(jquery__WEBPACK_IMPORTED_MODULE_4___default()(this));
+          var self = jquery__WEBPACK_IMPORTED_MODULE_4___default()(this);
+          jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').prepend("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top: ".concat(self.offset().top - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').offset().top + self.innerHeight() / 3, "px; left: ").concat(self.offset().left - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').offset().left + self.innerWidth() / 3, "px\"><div class=\"value\">").concat(self.data('area'), "<span>\u043C<sup>2</sup></span></div></div>"));
+        });
       }
     }, {
       key: "addViewsChanger",
@@ -1368,6 +1394,9 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".sort-js[data-corpse=\"".concat(this.corpse, "\"]")).addClass('active');
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.corpse_changer .value').text(this.filters.section[this.corpse].NAME);
         this.parseUrl();
+        this.setRooms(this.rooms);
+        this.setView(this.view);
+        console.log(this.rooms);
       }
     }, {
       key: "addCorpseChanger",
@@ -1442,16 +1471,16 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
     }]);
 
     return Apartments;
-  }();
-
-  window.apartments = new Apartments({
-    apartmentsLink: '/ajax/floor.php',
-    filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
-  }); // window.apartments = new Apartments({
-  //     apartmentsLink: '/static/apartments.json',
-  //     filtersLink: '/static/filter.json'
+  }(); // window.apartments = new Apartments({
+  //     apartmentsLink: '/ajax/floor.php',
+  //     filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
   // });
 
+
+  window.apartments = new Apartments({
+    apartmentsLink: '/static/apartments.json',
+    filtersLink: '/static/filter.json'
+  });
   apartments.init();
 });
 

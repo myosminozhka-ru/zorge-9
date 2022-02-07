@@ -2,9 +2,12 @@ import $ from "jquery";
 import 'slick-carousel';
 import ionRangeSlider from 'ion-rangeslider';
 $(function() {
+    if (!price) {
+        var price = 0;
+    }
     let params = {
         contribution: 0,
-        sum: 0,
+        sum: price,
         years: 0,
         percent: 0,
     }
@@ -28,9 +31,9 @@ $(function() {
                             <div class="ap_tabs__blocks--img"><img src="/local/templates/main/assets/html/dist/img/i5.png" alt=""></div>
                             <div class="ap_tabs__blocks--title">ВТБ</div>
                         </div>
-                        <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>от 8.1</div>
-                        <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>до 30 лет</div>
-                        <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>102 216 р.</div>
+                        <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>${item.bid}</div>
+                        <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>${item.contribution}</div>
+                        <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ежемесячный платеж</span>${item.month_pay}</div>
                         <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Минимальный взнос, %</span>10%</div>
                     </div>
                 `);
