@@ -2,7 +2,7 @@ import $ from "jquery";
 import 'slick-carousel';
 import ionRangeSlider from 'ion-rangeslider';
 $(function() {
-    if (!price) {
+    if (!price && document.querySelector('.room_page .hover_bl .hover_bl__block--text.price')) {
         var price = document.querySelector('.room_page .hover_bl .hover_bl__block--text.price').innerHTML.split(' ').join('');
     }
     let params = {
@@ -75,7 +75,7 @@ $(function() {
             ...ionopt,
             onStart: function(data) {
                 $(".nb1").html(data.from.toLocaleString());
-                params.contribution = data.from.toLocaleString();
+                params.contribution = data.from;
                 $.ajax({
                     data: params,
                     url: "/ajax/bank.php",
@@ -87,7 +87,7 @@ $(function() {
             },
             onChange: function(data) {
                 $(".nb1").html(data.from.toLocaleString());
-                params.contribution = data.from.toLocaleString();
+                params.contribution = data.from;
                 $.ajax({
                     data: params,
                     url: "/ajax/bank.php",

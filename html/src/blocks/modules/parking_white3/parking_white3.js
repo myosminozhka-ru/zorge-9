@@ -60,7 +60,7 @@ $(function() {
     })
     $('.load_data').click(() => {
         $.ajax({
-            url: '/ajax/commercial.php',
+            url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
             method: "POST",
             data: {
                 type: 'info',

@@ -193,7 +193,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
-  if (!price) {
+  if (!price && document.querySelector('.room_page .hover_bl .hover_bl__block--text.price')) {
     var price = document.querySelector('.room_page .hover_bl .hover_bl__block--text.price').innerHTML.split(' ').join('');
   }
 
@@ -252,7 +252,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_1___default()('.rg1').ionRangeSlider(_objectSpread(_objectSpread({}, ionopt), {}, {
       onStart: function onStart(data) {
         jquery__WEBPACK_IMPORTED_MODULE_1___default()(".nb1").html(data.from.toLocaleString());
-        params.contribution = data.from.toLocaleString();
+        params.contribution = data.from;
         jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
           data: params,
           url: "/ajax/bank.php",
@@ -264,7 +264,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
       },
       onChange: function onChange(data) {
         jquery__WEBPACK_IMPORTED_MODULE_1___default()(".nb1").html(data.from.toLocaleString());
-        params.contribution = data.from.toLocaleString();
+        params.contribution = data.from;
         jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
           data: params,
           url: "/ajax/bank.php",
@@ -2430,7 +2430,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.load_data').click(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
-      url: '/ajax/commercial.php',
+      url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
       method: "POST",
       data: {
         type: 'info',
