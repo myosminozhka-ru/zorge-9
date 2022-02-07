@@ -67,7 +67,7 @@ $(function() {
             }
         });
     })
-    $('.load_data').click(() => {
+    $('.place1.load_data').click(() => {
         $.ajax({
             url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
             method: "POST",
@@ -77,7 +77,29 @@ $(function() {
             },
             success: (result) => {
                 let data = JSON.parse(result);
-                $('.plc1, .plc2').removeClass('active');
+                $('.plc1').removeClass('active');
+                for (let i = 0; i < data.length; i++) {
+                    if ($(`[data-flat-id="${data[i]}"]`).length) {
+                        $(`[data-flat-id="${data[i]}"]`).addClass('active');
+                    }
+                }
+                // result.forEach(item => {
+                //     console.log(item);
+                // })
+            }
+        });
+    })
+    $('.place2.load_data').click(() => {
+        $.ajax({
+            url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
+            method: "POST",
+            data: {
+                type: 'info',
+                corpus: corpse
+            },
+            success: (result) => {
+                let data = JSON.parse(result);
+                $('.plc2').removeClass('active');
                 for (let i = 0; i < data.length; i++) {
                     if ($(`[data-flat-id="${data[i]}"]`).length) {
                         $(`[data-flat-id="${data[i]}"]`).addClass('active');

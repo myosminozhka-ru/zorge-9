@@ -2442,7 +2442,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       }
     });
   });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.load_data').click(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.place1.load_data').click(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
       url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
       method: "POST",
@@ -2452,7 +2452,30 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       },
       success: function success(result) {
         var data = JSON.parse(result);
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc1, .plc2').removeClass('active');
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc1').removeClass('active');
+
+        for (var i = 0; i < data.length; i++) {
+          if (jquery__WEBPACK_IMPORTED_MODULE_0___default()("[data-flat-id=\"".concat(data[i], "\"]")).length) {
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()("[data-flat-id=\"".concat(data[i], "\"]")).addClass('active');
+          }
+        } // result.forEach(item => {
+        //     console.log(item);
+        // })
+
+      }
+    });
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.place2.load_data').click(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
+      url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
+      method: "POST",
+      data: {
+        type: 'info',
+        corpus: corpse
+      },
+      success: function success(result) {
+        var data = JSON.parse(result);
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc2').removeClass('active');
 
         for (var i = 0; i < data.length; i++) {
           if (jquery__WEBPACK_IMPORTED_MODULE_0___default()("[data-flat-id=\"".concat(data[i], "\"]")).length) {
