@@ -3,7 +3,7 @@ import 'slick-carousel';
 import ionRangeSlider from 'ion-rangeslider';
 $(function() {
     if (!price) {
-        var price = 0;
+        var price = document.querySelector('.room_page .hover_bl .hover_bl__block--text.price').innerHTML.split(' ').join('');
     }
     let params = {
         contribution: 0,

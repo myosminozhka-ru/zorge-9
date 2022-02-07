@@ -194,7 +194,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
   if (!price) {
-    var price = 0;
+    var price = document.querySelector('.room_page .hover_bl .hover_bl__block--text.price').innerHTML.split(' ').join('');
   }
 
   var params = {
