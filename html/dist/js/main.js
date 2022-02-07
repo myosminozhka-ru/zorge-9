@@ -1268,7 +1268,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         this.parseUrl();
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('[data-position]').removeClass('active');
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('.apart_popup').remove();
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"]")).addClass('active');
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"][data-window_view*=\"").concat(this.filters.windowsView[this.view], "\"]")).addClass('active');
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"].active")).each(function () {
           console.log(jquery__WEBPACK_IMPORTED_MODULE_4___default()(this));
           var self = jquery__WEBPACK_IMPORTED_MODULE_4___default()(this);
@@ -1337,7 +1337,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         this.parseUrl();
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('[data-position]').removeClass('active');
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('.apart_popup').remove();
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"]")).addClass('active');
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"][data-window_view*=\"").concat(this.filters.windowsView[this.view], "\"]")).addClass('active');
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"].active")).each(function () {
           console.log(jquery__WEBPACK_IMPORTED_MODULE_4___default()(this));
           var self = jquery__WEBPACK_IMPORTED_MODULE_4___default()(this);

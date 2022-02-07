@@ -127,7 +127,7 @@ $(function() {
             this.parseUrl();
             $('.floor_center--item_wrap[style="display: block;"]').find('[data-position]').removeClass('active');
             $('.floor_center--item_wrap[style="display: block;"]').find('.apart_popup').remove();
-            $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"]`).addClass('active')
+            $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"][data-window_view*="${this.filters.windowsView[this.view]}"]`).addClass('active')
             
             
             $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"].active`).each(function() {
@@ -183,7 +183,7 @@ $(function() {
             this.parseUrl();
             $('.floor_center--item_wrap[style="display: block;"]').find('[data-position]').removeClass('active');
             $('.floor_center--item_wrap[style="display: block;"]').find('.apart_popup').remove();
-            $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"]`).addClass('active')
+            $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"][data-window_view*="${this.filters.windowsView[this.view]}"]`).addClass('active')
             
             
             $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"].active`).each(function() {
