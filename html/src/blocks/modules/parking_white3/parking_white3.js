@@ -54,7 +54,7 @@ $(function() {
                         </div>
                         <div class="hover_bl__block">
                             <div class="hover_bl__block--link feedback">Оставить заявку</div>
-                            <a href="#" class="room_center__rl--li">
+                            <a href="${data.pdf ? data.pdf : ''}" class="room_center__rl--li">
                                 <div class="room_center__rl--img"><img src="./img/sc4.png" alt=""></div>
                                 <div class="room_center__rl--title">Скачать pdf</div>
                             </a>
