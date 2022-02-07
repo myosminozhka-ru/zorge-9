@@ -11,7 +11,7 @@ $(function(){
         return false;
     });
     $(document).click( function(event){
-        if($(e.target).closest('.hover_bl').length || $(event.target).closest('.fd1 .form-wrapper-inner').length ) 
+        if($(event.target).closest('.hover_bl').length || $(event.target).closest('.fd1 .form-wrapper-inner').length ) 
           return;
         $('.fd1').removeClass('opened');
         $('body').removeClass('owf');

@@ -117,10 +117,12 @@ if (document.querySelector('#panzoom-element')) {
     buttonOut.addEventListener('click', panzoom.zoomOut)    }
 };
 $(document).on("click", ".block_park", function(e) {
-    e.preventDefault();
-    var id  = $(this).attr('href');
-    var top = $(id).offset().top; // получаем координаты блока
-    $('body, html').animate({scrollTop: top}, 800); // плавно переходим к блоку
+    if ($('.block_park').length) {
+        e.preventDefault();
+        var id  = $(this).attr('href');
+        var top = $(id).offset().top; // получаем координаты блока
+        $('body, html').animate({scrollTop: top}, 800); // плавно переходим к блоку
+    }
 });
 // $.ajax({
 // 	url: '/item.json',         /* Куда пойдет запрос */

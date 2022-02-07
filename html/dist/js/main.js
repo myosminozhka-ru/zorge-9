@@ -1591,7 +1591,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     return false;
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).click(function (event) {
-    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.hover_bl').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.target).closest('.fd1 .form-wrapper-inner').length) return;
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.target).closest('.hover_bl').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.target).closest('.fd1 .form-wrapper-inner').length) return;
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fd1').removeClass('opened');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('owf');
     event.stopPropagation();
@@ -2330,13 +2330,15 @@ if (document.querySelector('#panzoom-element')) {
 
 ;
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".block_park", function (e) {
-  e.preventDefault();
-  var id = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href');
-  var top = jquery__WEBPACK_IMPORTED_MODULE_0___default()(id).offset().top; // получаем координаты блока
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.block_park').length) {
+    e.preventDefault();
+    var id = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href');
+    var top = jquery__WEBPACK_IMPORTED_MODULE_0___default()(id).offset().top; // получаем координаты блока
 
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body, html').animate({
-    scrollTop: top
-  }, 800); // плавно переходим к блоку
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body, html').animate({
+      scrollTop: top
+    }, 800); // плавно переходим к блоку
+  }
 }); // $.ajax({
 // 	url: '/item.json',         /* Куда пойдет запрос */
 // 	method: 'get',             /* Метод передачи (post или get) */
