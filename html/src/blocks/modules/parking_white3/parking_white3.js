@@ -30,7 +30,7 @@ $(function() {
 
 
                 $(this).closest('.parking_white__in').find('.hover_bl').replaceWith(`
-                    <div class="hover_bl">
+                    <div class="hover_bl active">
                         <div class="hover_bl__block">
                             <div class="hover_bl__block--title">Номер <br> помещения и корпус</div>
                             <div class="hover_bl__block--text">${data.name}</div>
