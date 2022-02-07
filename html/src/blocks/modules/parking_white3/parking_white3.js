@@ -79,8 +79,8 @@ $(function() {
                 let data = JSON.parse(result);
                 $('.plc1').removeClass('active');
                 for (let i = 0; i < data.length; i++) {
-                    if ($(`[data-flat-id="${data[i]}"]`).length) {
-                        $(`[data-flat-id="${data[i]}"]`).addClass('active');
+                    if ($(`.plc1[data-flat-id="${data[i]}"]`).length) {
+                        $(`.plc1[data-flat-id="${data[i]}"]`).addClass('active');
                     }
                 }
                 // result.forEach(item => {
@@ -101,8 +101,8 @@ $(function() {
                 let data = JSON.parse(result);
                 $('.plc2').removeClass('active');
                 for (let i = 0; i < data.length; i++) {
-                    if ($(`[data-flat-id="${data[i]}"]`).length) {
-                        $(`[data-flat-id="${data[i]}"]`).addClass('active');
+                    if ($(`.plc2[data-flat-id="${data[i]}"]`).length) {
+                        $(`.plc2[data-flat-id="${data[i]}"]`).addClass('active');
                     }
                 }
                 // result.forEach(item => {

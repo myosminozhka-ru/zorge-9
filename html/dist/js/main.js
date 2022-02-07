@@ -2455,8 +2455,8 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
         jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc1').removeClass('active');
 
         for (var i = 0; i < data.length; i++) {
-          if (jquery__WEBPACK_IMPORTED_MODULE_0___default()("[data-flat-id=\"".concat(data[i], "\"]")).length) {
-            jquery__WEBPACK_IMPORTED_MODULE_0___default()("[data-flat-id=\"".concat(data[i], "\"]")).addClass('active');
+          if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(".plc1[data-flat-id=\"".concat(data[i], "\"]")).length) {
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()(".plc1[data-flat-id=\"".concat(data[i], "\"]")).addClass('active');
           }
         } // result.forEach(item => {
         //     console.log(item);
@@ -2478,8 +2478,8 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
         jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc2').removeClass('active');
 
         for (var i = 0; i < data.length; i++) {
-          if (jquery__WEBPACK_IMPORTED_MODULE_0___default()("[data-flat-id=\"".concat(data[i], "\"]")).length) {
-            jquery__WEBPACK_IMPORTED_MODULE_0___default()("[data-flat-id=\"".concat(data[i], "\"]")).addClass('active');
+          if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(".plc2[data-flat-id=\"".concat(data[i], "\"]")).length) {
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()(".plc2[data-flat-id=\"".concat(data[i], "\"]")).addClass('active');
           }
         } // result.forEach(item => {
         //     console.log(item);
