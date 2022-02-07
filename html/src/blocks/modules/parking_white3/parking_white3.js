@@ -50,7 +50,7 @@ $(function() {
                         </div>
                         <div class="hover_bl__block">
                             <div class="hover_bl__block--title">Цена</div>
-                            <div class="hover_bl__block--text">${data.price}</div>
+                            <div class="hover_bl__block--text">${data.price > 0 ? data.price : 'По запросу'}</div>
                         </div>
                         <div class="hover_bl__block">
                             <div class="hover_bl__block--link feedback">Оставить заявку</div>
@@ -67,49 +67,61 @@ $(function() {
             }
         });
     })
-    $('.place1.load_data').click(() => {
-        $.ajax({
-            url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
-            method: "POST",
-            data: {
-                type: 'info',
-                corpus: corpse
-            },
-            success: (result) => {
-                let data = JSON.parse(result);
-                $('.plc1').removeClass('active');
-                for (let i = 0; i < data.length; i++) {
-                    if ($(`.plc1[data-flat-id="${data[i]}"]`).length) {
-                        $(`.plc1[data-flat-id="${data[i]}"]`).addClass('active');
+    $('.place1.load_data').click(function() {
+        if ($(this).hasClass('active')) {
+            console.log('load');
+            $.ajax({
+                url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
+                method: "POST",
+                data: {
+                    type: 'info',
+                    corpus: corpse
+                },
+                success: (result) => {
+                    let data = JSON.parse(result);
+                    $('.plc1').removeClass('active');
+                    for (let i = 0; i < data.length; i++) {
+                        if ($(`.plc1[data-flat-id="${data[i]}"]`).length) {
+                            $(`.plc1[data-flat-id="${data[i]}"]`).addClass('active');
+                        }
                     }
+                    // result.forEach(item => {
+                    //     console.log(item);
+                    // })
                 }
-                // result.forEach(item => {
-                //     console.log(item);
-                // })
-            }
-        });
+            });
+        } else {
+            $('.plc1').removeClass('active');
+            $('.hover_bl').removeClass('active').addClass('hidden');
+            console.log('unload');
+        }
     })
-    $('.place2.load_data').click(() => {
-        $.ajax({
-            url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
-            method: "POST",
-            data: {
-                type: 'info',
-                corpus: corpse
-            },
-            success: (result) => {
-                let data = JSON.parse(result);
-                $('.plc2').removeClass('active');
-                for (let i = 0; i < data.length; i++) {
-                    if ($(`.plc2[data-flat-id="${data[i]}"]`).length) {
-                        $(`.plc2[data-flat-id="${data[i]}"]`).addClass('active');
+    $('.place2.load_data').click(function() {
+        if ($(this).hasClass('active')) {
+            $.ajax({
+                url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
+                method: "POST",
+                data: {
+                    type: 'info',
+                    corpus: corpse
+                },
+                success: (result) => {
+                    let data = JSON.parse(result);
+                    $('.plc2').removeClass('active');
+                    for (let i = 0; i < data.length; i++) {
+                        if ($(`.plc2[data-flat-id="${data[i]}"]`).length) {
+                            $(`.plc2[data-flat-id="${data[i]}"]`).addClass('active');
+                        }
                     }
+                    // result.forEach(item => {
+                    //     console.log(item);
+                    // })
                 }
-                // result.forEach(item => {
-                //     console.log(item);
-                // })
-            }
-        });
+            });
+        } else {
+            $('.plc2').removeClass('active');
+            $('.hover_bl').removeClass('active').addClass('hidden');
+        }
     })
     if ($('[name="SIMPLE_FORM_5"]').length) {
         $('[name="SIMPLE_FORM_5"]').submit(function(event) {
