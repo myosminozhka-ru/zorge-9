@@ -5524,7 +5524,7 @@ input:checked + .slider:before {
 }
 
 .table_info--no_result {
-  font-size: #fff;
+  color: #fff;
   padding: 15px;
 }
 
@@ -5751,6 +5751,10 @@ input:checked + .slider:before {
   position: absolute;
   pointer-events: none;
   transition: all 0.3s ease-out;
+}
+
+.hover_bl.hidden:not(.active) {
+  display: none;
 }
 
 .hover_bl sup {
