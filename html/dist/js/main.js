@@ -1591,7 +1591,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     return false;
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).click(function (event) {
-    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.target).closest('.fd1 .form-wrapper-inner').length) return;
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.hover_bl').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.target).closest('.fd1 .form-wrapper-inner').length) return;
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fd1').removeClass('opened');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('owf');
     event.stopPropagation();
