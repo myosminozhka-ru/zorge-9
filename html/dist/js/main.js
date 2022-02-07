@@ -215,8 +215,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
       });
       bankFormatted = JSON.parse(result).banksFormatted;
       jquery__WEBPACK_IMPORTED_MODULE_1___default()('#bank_formatted').attr('value', bankFormatted);
-      jquery__WEBPACK_IMPORTED_MODULE_1___default()('#apart_url').attr('value', window.location.href);
-      console.log(bankFormatted);
+      jquery__WEBPACK_IMPORTED_MODULE_1___default()('#parking_place').attr('value', window.location.href);
     }
   }
 

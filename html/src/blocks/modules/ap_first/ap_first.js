@@ -40,8 +40,7 @@ $(function() {
             });
             bankFormatted = JSON.parse(result).banksFormatted;
             $('#bank_formatted').attr('value', bankFormatted);
-            $('#apart_url').attr('value', window.location.href);
-            console.log(bankFormatted);
+            $('#parking_place').attr('value', window.location.href);
         }
     }
     if ($('.request_form form').length) {
