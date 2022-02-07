@@ -127,7 +127,11 @@ img {
       color: #000000;
       margin-bottom: 40px;
   }
-  form {
+  &__form {
+    width: 100%;
+  }
+  form,
+  &__form {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;

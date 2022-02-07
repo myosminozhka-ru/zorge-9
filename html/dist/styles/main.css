@@ -2519,17 +2519,24 @@ img {
   margin-bottom: 40px;
 }
 
-.form-wrapper form {
+.form-wrapper__form {
+  width: 100%;
+}
+
+.form-wrapper form,
+.form-wrapper__form {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.form-wrapper form label {
+.form-wrapper form label,
+.form-wrapper__form label {
   width: calc(50% - 20px);
 }
 
-.form-wrapper form label div {
+.form-wrapper form label div,
+.form-wrapper__form label div {
   font-family: "gm", serif;
   font-style: normal;
   font-weight: normal;
@@ -2539,7 +2546,9 @@ img {
 }
 
 .form-wrapper form label input[type=text],
-.form-wrapper form label input[type=tel] {
+.form-wrapper form label input[type=tel],
+.form-wrapper__form label input[type=text],
+.form-wrapper__form label input[type=tel] {
   padding: 14px 20px;
   border: 1px solid #000000;
   font-family: "gml", serif;
@@ -2555,7 +2564,9 @@ img {
 }
 
 .form-wrapper form label input[type=text]::placeholder,
-.form-wrapper form label input[type=tel]::placeholder {
+.form-wrapper form label input[type=tel]::placeholder,
+.form-wrapper__form label input[type=text]::placeholder,
+.form-wrapper__form label input[type=tel]::placeholder {
   opacity: 0.5;
 }
 
