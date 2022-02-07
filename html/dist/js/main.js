@@ -1018,13 +1018,13 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     apartments.setCorpse(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data('corpse')); //   $(this).closest('.main_head__center').find('.floor_center').removeClass('active').eq($(this).index()).addClass('active');
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_head__center--sort').on('click', '.sort-js:nth-child(1)', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parents().find('.block_kompas').css('transform', 'rotate(-133deg)');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parents().find('.block_kompas').html('<img src="/local/templates/main/assets/html/dist/img/soho_compass.png" alt="">'); // soho
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_head__center--sort').on('click', '.sort-js:nth-child(2)', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parents().find('.block_kompas').css('transform', 'rotate(-103deg)');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parents().find('.block_kompas').html('<img src="/local/templates/main/assets/html/dist/img/manhattan_compass.png" alt="">'); // manhattan
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_head__center--sort').on('click', '.sort-js:nth-child(3)', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parents().find('.block_kompas').css('transform', 'rotate(-73deg)');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parents().find('.block_kompas').html('<img src="/local/templates/main/assets/html/dist/img/madison_compass.png" alt="">'); // madison
   });
 });
 
