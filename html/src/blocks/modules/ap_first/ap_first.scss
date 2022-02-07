@@ -496,6 +496,9 @@
         padding-bottom: 0;
     }
     .hover_bl {
+        &.hidden:not(.active) {
+            display: none;
+        }
         position: relative;
         opacity: 1;
         visibility: visible;
@@ -614,6 +617,9 @@
         .hover_bl {
             flex-wrap: wrap;
             padding: 0;
+            &.hidden:not(.active) {
+                display: none;
+            }
         }
     }
     @media all and (max-width: 768px) {

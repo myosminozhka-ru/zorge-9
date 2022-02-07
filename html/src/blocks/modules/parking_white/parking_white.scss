@@ -332,6 +332,9 @@
     .hover_bl {
         padding: 50px 60px;
         background: rgba(0,0,0,.9);
+        &.hidden:not(.active) {
+            display: none;
+        }
         @media all and (max-width: 1320px) {
             padding: 20px;
             bottom: -5%;

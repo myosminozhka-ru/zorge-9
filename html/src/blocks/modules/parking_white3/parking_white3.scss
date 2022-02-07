@@ -1,7 +1,7 @@
 .park_wrapper {
     .hover_bl {
         max-width: 1750px !important;
-        &.hidden {
+        &.hidden:not(.active) {
             display: none;
         }
     }
