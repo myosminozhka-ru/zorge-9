@@ -1082,8 +1082,8 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
           url: this.apartmentsLink,
           success: function success(data) {
-            _this.apartments = JSON.parse(data).apartments; // this.apartments = data.apartments;
-
+            // this.apartments = JSON.parse(data).apartments;
+            _this.apartments = data.apartments;
             jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
               url: _this.filtersLink,
               success: function success(result) {
@@ -1268,7 +1268,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         this.parseUrl();
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('[data-position]').removeClass('active');
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('.apart_popup').remove();
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"][data-window_view*=\"").concat(this.filters.windowsView[this.view], "\"]")).addClass('active');
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"][data-window_view*=\"").concat(this.filters.windowsView[this.view].toLowerCase(), "\"]")).addClass('active');
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"].active")).each(function () {
           console.log(jquery__WEBPACK_IMPORTED_MODULE_4___default()(this));
           var self = jquery__WEBPACK_IMPORTED_MODULE_4___default()(this);
@@ -1337,7 +1337,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         this.parseUrl();
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('[data-position]').removeClass('active');
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('.apart_popup').remove();
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"][data-window_view*=\"").concat(this.filters.windowsView[this.view], "\"]")).addClass('active');
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"][data-window_view*=\"").concat(this.filters.windowsView[this.view].toLowerCase(), "\"]")).addClass('active');
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"].active")).each(function () {
           console.log(jquery__WEBPACK_IMPORTED_MODULE_4___default()(this));
           var self = jquery__WEBPACK_IMPORTED_MODULE_4___default()(this);
@@ -1472,16 +1472,16 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
     }]);
 
     return Apartments;
-  }();
-
-  window.apartments = new Apartments({
-    apartmentsLink: '/ajax/floor.php',
-    filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
-  }); // window.apartments = new Apartments({
-  //     apartmentsLink: '/static/apartments.json',
-  //     filtersLink: '/static/filter.json'
+  }(); // window.apartments = new Apartments({
+  //     apartmentsLink: '/ajax/floor.php',
+  //     filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
   // });
 
+
+  window.apartments = new Apartments({
+    apartmentsLink: '/static/apartments.json',
+    filtersLink: '/static/filter.json'
+  });
   apartments.init();
 });
 
