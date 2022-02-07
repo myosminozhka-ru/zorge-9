@@ -34,7 +34,9 @@ $(function() {
             success: (result) => {
                 let data = JSON.parse(result);
                 console.log(data);
-
+                if ($('#parking-place').length) {
+                    $('#parking-place').attr('value', flat);
+                }
 
                 $(this).closest('.parking_white__in').find('.hover_bl').replaceWith(`
                     <div class="hover_bl active">
