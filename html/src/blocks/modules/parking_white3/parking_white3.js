@@ -15,7 +15,7 @@ $(function() {
     $('.building_id').click(function() {
         corpse = $(this).data('corpse-id');
     })
-    $('.plc1[data-flat-id]').click(function() {
+    $('.plc1[data-flat-id], .plc2[data-flat-id]').click(function() {
         $.ajax({
             url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
             method: "POST",
@@ -68,7 +68,7 @@ $(function() {
             },
             success: (result) => {
                 let data = JSON.parse(result);
-                $('.plc1').removeClass('active');
+                $('.plc1, .plc2').removeClass('active');
                 for (let i = 0; i < data.length; i++) {
                     if ($(`[data-flat-id="${data[i]}"]`).length) {
                         $(`[data-flat-id="${data[i]}"]`).addClass('active');

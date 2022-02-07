@@ -2408,7 +2408,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.building_id').click(function () {
     corpse = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data('corpse-id');
   });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc1[data-flat-id]').click(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc1[data-flat-id], .plc2[data-flat-id]').click(function () {
     var _this = this;
 
     jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
@@ -2438,7 +2438,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       },
       success: function success(result) {
         var data = JSON.parse(result);
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc1').removeClass('active');
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc1, .plc2').removeClass('active');
 
         for (var i = 0; i < data.length; i++) {
           if (jquery__WEBPACK_IMPORTED_MODULE_0___default()("[data-flat-id=\"".concat(data[i], "\"]")).length) {
