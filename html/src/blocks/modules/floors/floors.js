@@ -18,8 +18,8 @@ $(function() {
             $.ajax({
                 url: this.apartmentsLink,
                 success: (data) => {
-                    this.apartments = JSON.parse(data).apartments;
-                    // this.apartments = data.apartments;
+                    // this.apartments = JSON.parse(data).apartments;
+                    this.apartments = data.apartments;
                     $.ajax({
                         url: this.filtersLink,
                         success: (result) => {
@@ -127,7 +127,7 @@ $(function() {
             this.parseUrl();
             $('.floor_center--item_wrap[style="display: block;"]').find('[data-position]').removeClass('active');
             $('.floor_center--item_wrap[style="display: block;"]').find('.apart_popup').remove();
-            $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"][data-window_view*="${this.filters.windowsView[this.view].toLowerCase()}"]`).addClass('active')
+            $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"]`).addClass('active')
             
             
             $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"].active`).each(function() {
@@ -183,7 +183,7 @@ $(function() {
             this.parseUrl();
             $('.floor_center--item_wrap[style="display: block;"]').find('[data-position]').removeClass('active');
             $('.floor_center--item_wrap[style="display: block;"]').find('.apart_popup').remove();
-            $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"][data-window_view*="${this.filters.windowsView[this.view].toLowerCase()}"]`).addClass('active')
+            $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"]`).addClass('active')
             
             
             $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"].active`).each(function() {
@@ -251,15 +251,15 @@ $(function() {
 
         }
     }
-    window.apartments = new Apartments({
-        apartmentsLink: '/ajax/floor.php',
-        filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
-    });
-
     // window.apartments = new Apartments({
-    //     apartmentsLink: '/static/apartments.json',
-    //     filtersLink: '/static/filter.json'
+    //     apartmentsLink: '/ajax/floor.php',
+    //     filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
     // });
+
+    window.apartments = new Apartments({
+        apartmentsLink: '/static/apartments.json',
+        filtersLink: '/static/filter.json'
+    });
     apartments.init();
 });
 
