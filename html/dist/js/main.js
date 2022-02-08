@@ -2319,7 +2319,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', function (e) {
     if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.hover_bl').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.plc2.active').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.form-wrapper').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.plc4.active').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('.plc1.active').length) return;
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hover_bl').removeClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hover_bl').removeClass('active').addClass('hidden');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc1').removeClass('more');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc2').removeClass('more');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc4').removeClass('more');

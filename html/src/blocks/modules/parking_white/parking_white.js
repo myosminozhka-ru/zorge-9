@@ -92,7 +92,7 @@ $(function() {
         if( $(e.target).closest('.hover_bl').length || $(e.target).closest('.plc2.active').length || $(e.target).closest('.form-wrapper').length || $(e.target).closest('.plc4.active').length || $(e.target).closest('.plc1.active').length)
         return
         
-        $('.hover_bl').removeClass('active');
+        $('.hover_bl').removeClass('active').addClass('hidden');
         $('.plc1').removeClass('more')
         $('.plc2').removeClass('more')
         $('.plc4').removeClass('more')
