@@ -18,8 +18,8 @@ $(function() {
             $.ajax({
                 url: this.apartmentsLink,
                 success: (data) => {
-                    // this.apartments = JSON.parse(data).apartments;
-                    this.apartments = data.apartments;
+                    this.apartments = JSON.parse(data).apartments;
+                    // this.apartments = data.apartments;
                     $.ajax({
                         url: this.filtersLink,
                         success: (result) => {
@@ -252,15 +252,15 @@ $(function() {
 
         }
     }
-    // window.apartments = new Apartments({
-    //     apartmentsLink: '/ajax/floor.php',
-    //     filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
-    // });
-
     window.apartments = new Apartments({
-        apartmentsLink: '/static/apartments.json',
-        filtersLink: '/static/filter.json'
+        apartmentsLink: '/ajax/floor.php',
+        filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
     });
+
+    // window.apartments = new Apartments({
+    //     apartmentsLink: '/static/apartments.json',
+    //     filtersLink: '/static/filter.json'
+    // });
     apartments.init();
 });
 
