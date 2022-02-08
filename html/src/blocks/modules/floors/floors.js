@@ -18,8 +18,8 @@ $(function() {
             $.ajax({
                 url: this.apartmentsLink,
                 success: (data) => {
-                    this.apartments = JSON.parse(data).apartments;
-                    // this.apartments = data.apartments;
+                    // this.apartments = JSON.parse(data).apartments;
+                    this.apartments = data.apartments;
                     $.ajax({
                         url: this.filtersLink,
                         success: (result) => {
@@ -104,8 +104,10 @@ $(function() {
             this.floor = floor;
             $('.floor_changer .value').text(this.floor);
             this.parseUrl();
-            this.setRooms(this.rooms);
-            this.setView(this.view);
+            setTimeout(() => {
+                this.setRooms(this.rooms);
+                this.setView(this.view);
+            }, 600)
         }
         addFloorChanger() {
             $('.floor_changer').on('click', '.next', async () => {
@@ -129,7 +131,7 @@ $(function() {
             $('.floor_center--item_wrap[style="display: block;"]').find('.apart_popup').remove();
             $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"][data-window_view*="${this.filters.windowsView[this.view]}"]`).addClass('active')
             
-            
+            $(`.floor_center--item_wrap[style="display: block;"] apart_popup`).remove();
             $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"].active`).each(function() {
                 console.log($(this));
                 let self = $(this);
@@ -182,10 +184,10 @@ $(function() {
             $('.views_changer .value').text(this.filters.windowsView[this.view]);
             this.parseUrl();
             $('.floor_center--item_wrap[style="display: block;"]').find('[data-position]').removeClass('active');
-            $('.floor_center--item_wrap[style="display: block;"]').find('.apart_popup').remove();
+            $('.floor_center--item_wrap').find('.apart_popup').remove();
             $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"][data-window_view*="${this.filters.windowsView[this.view]}"]`).addClass('active')
             
-            
+            $(`.floor_center--item_wrap[style="display: block;"] apart_popup`).remove();
             $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"][data-window_view*="${this.filters.windowsView[this.view]}"].active`).each(function() {
                 let self = $(this);
                 console.log('view: ', $(this).closest('.floor_center__svg').offset().top, $(this).closest('.floor_center__svg').offset().left, self.outerHeight(), self.outerWidth());
@@ -252,15 +254,15 @@ $(function() {
 
         }
     }
-    window.apartments = new Apartments({
-        apartmentsLink: '/ajax/floor.php',
-        filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
-    });
-
     // window.apartments = new Apartments({
-    //     apartmentsLink: '/static/apartments.json',
-    //     filtersLink: '/static/filter.json'
+    //     apartmentsLink: '/ajax/floor.php',
+    //     filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
     // });
+
+    window.apartments = new Apartments({
+        apartmentsLink: '/static/apartments.json',
+        filtersLink: '/static/filter.json'
+    });
     apartments.init();
 });
 

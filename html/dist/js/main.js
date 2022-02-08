@@ -1097,8 +1097,8 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
           url: this.apartmentsLink,
           success: function success(data) {
-            _this.apartments = JSON.parse(data).apartments; // this.apartments = data.apartments;
-
+            // this.apartments = JSON.parse(data).apartments;
+            _this.apartments = data.apartments;
             jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
               url: _this.filtersLink,
               success: function success(result) {
@@ -1224,17 +1224,22 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
     }, {
       key: "setFloor",
       value: function setFloor(floor) {
+        var _this3 = this;
+
         if (floor > 20 || floor < 2) return;
         this.floor = floor;
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_changer .value').text(this.floor);
         this.parseUrl();
-        this.setRooms(this.rooms);
-        this.setView(this.view);
+        setTimeout(function () {
+          _this3.setRooms(_this3.rooms);
+
+          _this3.setView(_this3.view);
+        }, 600);
       }
     }, {
       key: "addFloorChanger",
       value: function addFloorChanger() {
-        var _this3 = this;
+        var _this4 = this;
 
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee2() {
           var curFloor;
@@ -1242,10 +1247,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
             while (1) {
               switch (_context2.prev = _context2.next) {
                 case 0:
-                  curFloor = _this3.floor;
+                  curFloor = _this4.floor;
                   console.log(curFloor);
 
-                  _this3.setFloor(++curFloor);
+                  _this4.setFloor(++curFloor);
 
                 case 3:
                 case "end":
@@ -1260,10 +1265,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
             while (1) {
               switch (_context3.prev = _context3.next) {
                 case 0:
-                  curFloor = _this3.floor;
+                  curFloor = _this4.floor;
                   console.log(curFloor);
 
-                  _this3.setFloor(--curFloor);
+                  _this4.setFloor(--curFloor);
 
                 case 3:
                 case "end":
@@ -1284,6 +1289,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('[data-position]').removeClass('active');
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('.apart_popup').remove();
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"][data-window_view*=\"").concat(this.filters.windowsView[this.view], "\"]")).addClass('active');
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] apart_popup").remove();
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"].active")).each(function () {
           console.log(jquery__WEBPACK_IMPORTED_MODULE_4___default()(this));
           var self = jquery__WEBPACK_IMPORTED_MODULE_4___default()(this);
@@ -1304,7 +1310,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
     }, {
       key: "addRoomsChanger",
       value: function addRoomsChanger() {
-        var _this4 = this;
+        var _this5 = this;
 
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.rooms_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee4() {
           var curRooms;
@@ -1312,10 +1318,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
             while (1) {
               switch (_context4.prev = _context4.next) {
                 case 0:
-                  curRooms = _this4.rooms;
+                  curRooms = _this5.rooms;
                   console.log(curRooms);
 
-                  _this4.setRooms(++curRooms);
+                  _this5.setRooms(++curRooms);
 
                 case 3:
                 case "end":
@@ -1330,10 +1336,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
             while (1) {
               switch (_context5.prev = _context5.next) {
                 case 0:
-                  curRooms = _this4.rooms;
+                  curRooms = _this5.rooms;
                   console.log(curRooms);
 
-                  _this4.setRooms(--curRooms);
+                  _this5.setRooms(--curRooms);
 
                 case 3:
                 case "end":
@@ -1351,8 +1357,9 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.views_changer .value').text(this.filters.windowsView[this.view]);
         this.parseUrl();
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('[data-position]').removeClass('active');
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('.apart_popup').remove();
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap').find('.apart_popup').remove();
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"][data-window_view*=\"").concat(this.filters.windowsView[this.view], "\"]")).addClass('active');
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] apart_popup").remove();
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"][data-window_view*=\"").concat(this.filters.windowsView[this.view], "\"].active")).each(function () {
           var self = jquery__WEBPACK_IMPORTED_MODULE_4___default()(this);
           console.log('view: ', jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').offset().top, jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').offset().left, self.outerHeight(), self.outerWidth());
@@ -1362,7 +1369,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
     }, {
       key: "addViewsChanger",
       value: function addViewsChanger() {
-        var _this5 = this;
+        var _this6 = this;
 
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.views_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee6() {
           var curView;
@@ -1370,10 +1377,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
             while (1) {
               switch (_context6.prev = _context6.next) {
                 case 0:
-                  curView = _this5.view;
+                  curView = _this6.view;
                   console.log(curView);
 
-                  _this5.setView(++curView);
+                  _this6.setView(++curView);
 
                 case 3:
                 case "end":
@@ -1388,10 +1395,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
             while (1) {
               switch (_context7.prev = _context7.next) {
                 case 0:
-                  curView = _this5.view;
+                  curView = _this6.view;
                   console.log(curView);
 
-                  _this5.setView(--curView);
+                  _this6.setView(--curView);
 
                 case 3:
                 case "end":
@@ -1404,7 +1411,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
     }, {
       key: "setCorpse",
       value: function setCorpse(corpse) {
-        var _this6 = this;
+        var _this7 = this;
 
         if (corpse < 0 || corpse > this.filters.section.length - 1) return;
         this.corpse = corpse;
@@ -1413,15 +1420,15 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.corpse_changer .value').text(this.filters.section[this.corpse].NAME);
         this.parseUrl();
         setTimeout(function () {
-          _this6.setRooms(_this6.rooms);
+          _this7.setRooms(_this7.rooms);
 
-          _this6.setView(_this6.view);
+          _this7.setView(_this7.view);
         }, 600);
       }
     }, {
       key: "addCorpseChanger",
       value: function addCorpseChanger() {
-        var _this7 = this;
+        var _this8 = this;
 
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.corpse_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee8() {
           var curCorpse;
@@ -1429,10 +1436,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
             while (1) {
               switch (_context8.prev = _context8.next) {
                 case 0:
-                  curCorpse = _this7.corpse;
+                  curCorpse = _this8.corpse;
                   console.log(curCorpse);
 
-                  _this7.setCorpse(++curCorpse);
+                  _this8.setCorpse(++curCorpse);
 
                 case 3:
                 case "end":
@@ -1447,10 +1454,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
             while (1) {
               switch (_context9.prev = _context9.next) {
                 case 0:
-                  curCorpse = _this7.corpse;
+                  curCorpse = _this8.corpse;
                   console.log(curCorpse);
 
-                  _this7.setCorpse(--curCorpse);
+                  _this8.setCorpse(--curCorpse);
 
                 case 3:
                 case "end":
@@ -1491,16 +1498,16 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
     }]);
 
     return Apartments;
-  }();
-
-  window.apartments = new Apartments({
-    apartmentsLink: '/ajax/floor.php',
-    filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
-  }); // window.apartments = new Apartments({
-  //     apartmentsLink: '/static/apartments.json',
-  //     filtersLink: '/static/filter.json'
+  }(); // window.apartments = new Apartments({
+  //     apartmentsLink: '/ajax/floor.php',
+  //     filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
   // });
 
+
+  window.apartments = new Apartments({
+    apartmentsLink: '/static/apartments.json',
+    filtersLink: '/static/filter.json'
+  });
   apartments.init();
 });
 
