@@ -18,8 +18,8 @@ $(function() {
             $.ajax({
                 url: this.apartmentsLink,
                 success: (data) => {
-                    this.apartments = JSON.parse(data).apartments;
-                    // this.apartments = data.apartments;
+                    // this.apartments = JSON.parse(data).apartments;
+                    this.apartments = data.apartments;
                     $.ajax({
                         url: this.filtersLink,
                         success: (result) => {
@@ -186,9 +186,9 @@ $(function() {
             $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"][data-window_view*="${this.filters.windowsView[this.view]}"]`).addClass('active')
             
             
-            $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"].active`).each(function() {
-                console.log($(this));
+            $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"][data-window_view*="${this.filters.windowsView[this.view]}"].active`).each(function() {
                 let self = $(this);
+                console.log('view: ', $(this).closest('.floor_center__svg').offset().top, $(this).closest('.floor_center__svg').offset().left, self.outerHeight(), self.outerWidth());
                 $(this).closest('.floor_center__svg')
                 .prepend(`<div class="apart_popup n2-19-2050 act_vis3" style="top: ${self.offset().top - $(this).closest('.floor_center__svg').offset().top + self.innerHeight() / 3}px; left: ${self.offset().left - $(this).closest('.floor_center__svg').offset().left + self.innerWidth() / 3}px"><div class="value">${self.data('area')}<span>м<sup>2</sup></span></div></div>`);
             });
@@ -212,9 +212,10 @@ $(function() {
             $(`.sort-js[data-corpse="${this.corpse}"]`).addClass('active');
             $('.corpse_changer .value').text(this.filters.section[this.corpse].NAME);
             this.parseUrl();
-            this.setRooms(this.rooms);
-            this.setView(this.view);
-            console.log(this.rooms);
+            setTimeout(() => {
+                this.setRooms(this.rooms);
+                this.setView(this.view);
+            }, 600)
         }
         addCorpseChanger() {
             $('.corpse_changer').on('click', '.next', async () => {
@@ -251,15 +252,15 @@ $(function() {
 
         }
     }
-    window.apartments = new Apartments({
-        apartmentsLink: '/ajax/floor.php',
-        filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
-    });
-
     // window.apartments = new Apartments({
-    //     apartmentsLink: '/static/apartments.json',
-    //     filtersLink: '/static/filter.json'
+    //     apartmentsLink: '/ajax/floor.php',
+    //     filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
     // });
+
+    window.apartments = new Apartments({
+        apartmentsLink: '/static/apartments.json',
+        filtersLink: '/static/filter.json'
+    });
     apartments.init();
 });
 

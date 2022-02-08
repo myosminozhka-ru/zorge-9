@@ -1097,8 +1097,8 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
           url: this.apartmentsLink,
           success: function success(data) {
-            _this.apartments = JSON.parse(data).apartments; // this.apartments = data.apartments;
-
+            // this.apartments = JSON.parse(data).apartments;
+            _this.apartments = data.apartments;
             jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
               url: _this.filtersLink,
               success: function success(result) {
@@ -1353,9 +1353,9 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('[data-position]').removeClass('active');
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('.apart_popup').remove();
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"][data-window_view*=\"").concat(this.filters.windowsView[this.view], "\"]")).addClass('active');
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"].active")).each(function () {
-          console.log(jquery__WEBPACK_IMPORTED_MODULE_4___default()(this));
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"][data-window_view*=\"").concat(this.filters.windowsView[this.view], "\"].active")).each(function () {
           var self = jquery__WEBPACK_IMPORTED_MODULE_4___default()(this);
+          console.log('view: ', jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').offset().top, jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').offset().left, self.outerHeight(), self.outerWidth());
           jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').prepend("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top: ".concat(self.offset().top - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').offset().top + self.innerHeight() / 3, "px; left: ").concat(self.offset().left - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').offset().left + self.innerWidth() / 3, "px\"><div class=\"value\">").concat(self.data('area'), "<span>\u043C<sup>2</sup></span></div></div>"));
         });
       }
@@ -1404,20 +1404,24 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
     }, {
       key: "setCorpse",
       value: function setCorpse(corpse) {
+        var _this6 = this;
+
         if (corpse < 0 || corpse > this.filters.section.length - 1) return;
         this.corpse = corpse;
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.sort-js').removeClass('active');
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".sort-js[data-corpse=\"".concat(this.corpse, "\"]")).addClass('active');
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.corpse_changer .value').text(this.filters.section[this.corpse].NAME);
         this.parseUrl();
-        this.setRooms(this.rooms);
-        this.setView(this.view);
-        console.log(this.rooms);
+        setTimeout(function () {
+          _this6.setRooms(_this6.rooms);
+
+          _this6.setView(_this6.view);
+        }, 600);
       }
     }, {
       key: "addCorpseChanger",
       value: function addCorpseChanger() {
-        var _this6 = this;
+        var _this7 = this;
 
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.corpse_changer').on('click', '.next', /*#__PURE__*/_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_3___default.a.mark(function _callee8() {
           var curCorpse;
@@ -1425,10 +1429,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
             while (1) {
               switch (_context8.prev = _context8.next) {
                 case 0:
-                  curCorpse = _this6.corpse;
+                  curCorpse = _this7.corpse;
                   console.log(curCorpse);
 
-                  _this6.setCorpse(++curCorpse);
+                  _this7.setCorpse(++curCorpse);
 
                 case 3:
                 case "end":
@@ -1443,10 +1447,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
             while (1) {
               switch (_context9.prev = _context9.next) {
                 case 0:
-                  curCorpse = _this6.corpse;
+                  curCorpse = _this7.corpse;
                   console.log(curCorpse);
 
-                  _this6.setCorpse(--curCorpse);
+                  _this7.setCorpse(--curCorpse);
 
                 case 3:
                 case "end":
@@ -1487,16 +1491,16 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
     }]);
 
     return Apartments;
-  }();
-
-  window.apartments = new Apartments({
-    apartmentsLink: '/ajax/floor.php',
-    filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
-  }); // window.apartments = new Apartments({
-  //     apartmentsLink: '/static/apartments.json',
-  //     filtersLink: '/static/filter.json'
+  }(); // window.apartments = new Apartments({
+  //     apartmentsLink: '/ajax/floor.php',
+  //     filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
   // });
 
+
+  window.apartments = new Apartments({
+    apartmentsLink: '/static/apartments.json',
+    filtersLink: '/static/filter.json'
+  });
   apartments.init();
 });
 
