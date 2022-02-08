@@ -235,6 +235,22 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
     });
   }
 
+  if (jquery__WEBPACK_IMPORTED_MODULE_1___default()('[name="SIMPLE_FORM_7"]').length) {
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()('[name="SIMPLE_FORM_7"]').submit(function (event) {
+      event.preventDefault();
+      form_submit('[name="SIMPLE_FORM_7"]', function (result) {
+        console.log(result);
+
+        if (result.SUCCESS) {
+          jquery__WEBPACK_IMPORTED_MODULE_1___default()('[name="SIMPLE_FORM_7"]').find('label').fadeOut();
+          jquery__WEBPACK_IMPORTED_MODULE_1___default()('[name="SIMPLE_FORM_7"]').find('.form-wrapper__btns').fadeOut();
+          jquery__WEBPACK_IMPORTED_MODULE_1___default()('[name="SIMPLE_FORM_7"]').closest('.form-wrapper-inner').find('.form-wrapper__subtitle').fadeOut();
+          jquery__WEBPACK_IMPORTED_MODULE_1___default()('[name="SIMPLE_FORM_7"]').closest('.form-wrapper-inner').find('.form-wrapper__title').html(result.SUCCESS);
+        }
+      });
+    });
+  }
+
   jquery__WEBPACK_IMPORTED_MODULE_1___default()('.ap_tabs__button').click(function (event) {
     event.preventDefault();
     jquery__WEBPACK_IMPORTED_MODULE_1___default()('.request_form').addClass('opened');
