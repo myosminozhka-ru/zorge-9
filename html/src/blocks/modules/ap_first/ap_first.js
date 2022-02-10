@@ -77,13 +77,25 @@ $(function() {
         event.preventDefault();
         $('.request_form').addClass('opened');
     })
-    $('.slrs25').slick({
-        dots: true,
-        arrows: true,
-        infinite: true,
-        autoplaySpeed: 2500,
-        fade: true
+        // $('.slrs25 img:nth-child(n+4)').remove();
+    $('.slrs25 img').each(function(index, value) {
+        if (index > 2) {
+            $(this).remove();
+            console.log($(this), index, value);
+        }
+        
     });
+    setTimeout(function() {
+        $('.slrs25').slick({
+            dots: true,
+            arrows: true,
+            infinite: true,
+            autoplaySpeed: 2500,
+            fade: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+    }, 500);
     if($('.rg1').length && ionopt) {
         $('.rg1').ionRangeSlider({
             ...ionopt,

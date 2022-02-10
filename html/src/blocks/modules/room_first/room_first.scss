@@ -18,6 +18,7 @@
         &--tr {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             width: 100%;
             @media all and (max-width: 1220px) {
                 flex-direction: column-reverse;
@@ -30,7 +31,7 @@
             padding-right: 80px;
             border-right: 1px solid #fff;
             margin-right: 80px;
-            width: 49.4%;
+            width: 30%;
             @media all and (max-width: 1580px) {
                 padding-right: 20px;
                 margin-right: 20px;
@@ -44,7 +45,7 @@
         }
         &--rr {
             display: flex;
-            width: 38%;
+            width: 30%;
             align-items: center;
             justify-content: space-between;
             .corp {
@@ -200,6 +201,16 @@
         margin-right: auto; 
         justify-content: space-between;
         margin-top: 120px;
+        & + .hover_bl {
+            display: flex !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        @media all and (min-width: 1366px) {
+            &__r img {
+                max-width: 433px;
+            }
+        }
         @media all and (max-width: 1024px) {
             flex-direction: column-reverse;
         }
