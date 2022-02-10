@@ -13,7 +13,7 @@ $(function() {
         // slide: '.room_blocks__block',
         dots: false,
         arrows: true,
-        infinite: false,
+        infinite: true,
         speed: 300,
         autoplay: true,
         autoplaySpeed: 2500,
