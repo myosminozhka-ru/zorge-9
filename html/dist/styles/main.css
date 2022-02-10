@@ -6513,6 +6513,10 @@ input:checked + .slider:before {
   background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.45469 0L0.000155474 1.45454L6.54551 7.99992L0 14.5455L1.45453 16L8.00004 9.45446L14.5455 15.9999L16 14.5454L9.45457 7.99992L15.9998 1.45462L14.5453 7.85148e-05L8.00004 6.54538L1.45469 0Z' fill='white'/%3E%3C/svg%3E%0A") 50% no-repeat;
 }
 
+.din_page .dinamic_main__bottom--img img {
+  width: 100%;
+}
+
 .din__item {
   margin-top: 120px;
 }
@@ -6653,6 +6657,9 @@ input:checked + .slider:before {
 
 .din__gal {
   font-size: 0;
+  max-height: 500px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .din_tabs .tabs li:not(:last-child) {
