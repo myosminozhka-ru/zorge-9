@@ -7,6 +7,9 @@
             width: 100%;
         }
     }
+    .block_photo, .block_video {
+        cursor: pointer;
+    }
 }
 .din {
     &__item {
@@ -135,6 +138,9 @@
             top: 50%;
             margin-top: -20px;
             z-index: 10;
+            @media all and (max-width: 768px) {
+                left: 20px;
+            }
         }
         .slick-next {
             width: 20px;
@@ -147,6 +153,9 @@
             top: 50%;
             margin-top: -20px;
             z-index: 10;
+            @media all and (max-width: 768px) {
+                right: 80px;
+            }
         }
         .slick-dots {
             display: flex;
