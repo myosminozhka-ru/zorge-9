@@ -26,10 +26,12 @@
     }
     .main_func__l--block {
         color: #fff;
-        margin-right: 40px;
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
     }
     .main_func__l--blocks {
-        justify-content: flex-start;
+        justify-content: center;
     }
     @media all and (max-width: 1320px) {
         margin-bottom: -20px;
@@ -66,7 +68,7 @@
     }
     .main_func__l--title {
         color: #fff;
-        text-align: left;
+        // text-align: left;
     }
     .slider:before {
         left: 2px;

@@ -2446,7 +2446,7 @@ img {
 /* width */
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 15px;
 }
 
 /* Track */
@@ -2829,7 +2829,7 @@ input:focus {
   content: "";
   bottom: 80px;
   left: 50%;
-  width: 16px;
+  width: 30px;
   height: 26px;
   z-index: 3;
   margin-left: -8px;
@@ -7242,11 +7242,14 @@ input:checked + .slider:before {
 
 .params_blocks .main_func__l--block {
   color: #fff;
+}
+
+.params_blocks .main_func__l--block:not(:last-child) {
   margin-right: 40px;
 }
 
 .params_blocks .main_func__l--blocks {
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .params_blocks .main_func__l--finds,
@@ -7274,7 +7277,6 @@ input:checked + .slider:before {
 
 .params_blocks .main_func__l--title {
   color: #fff;
-  text-align: left;
 }
 
 .params_blocks .slider:before {

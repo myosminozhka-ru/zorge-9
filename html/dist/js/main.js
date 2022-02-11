@@ -1002,6 +1002,12 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.switch').change(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dinamic_main__bottom').toggleClass('active');
   });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.block_photo').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dinamic_main__bottom').removeClass('active');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.block_video').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dinamic_main__bottom').addClass('active');
+  });
 });
 
 /***/ }),
