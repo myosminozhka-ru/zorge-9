@@ -13,6 +13,7 @@
         flex-direction: column-reverse;
     }
     &__l {
+        height: 100%;
         &--tit {
             display: none;
             @media all and (max-width: 1023px) {
@@ -174,7 +175,7 @@
             text-transform: uppercase;
             color: #957B61;
             text-align: center;
-            margin-top: 70px;
+            margin-top: 7px;
             span {
                 display: inline-block;
                 background-image: linear-gradient(currentColor, currentColor);

@@ -181,7 +181,7 @@
     padding: 0 80px;
     margin-top: 120px;
     @media all and (max-width: 960px) {
-        padding: 0 24px;
+        padding: 0px;
         margin-top: 40px;
     }
     .irs--flat .irs-line {
@@ -318,7 +318,7 @@
     padding: 0 80px;
     margin-bottom: 80px;
     @media all and (max-width: 960px) {
-        padding: 0 24px;
+        padding: 0 0px;
         margin-bottom: 40px;
     }
     &__button {
@@ -626,6 +626,9 @@
         .main_head__center--sort {
             width: 66px;
         }
+        .buy_tabs .tabs li {
+            font-size: 12px;
+        }
     }
     @media all and (max-width: 460px) {
         .hover_bl__block {
@@ -655,5 +658,10 @@
     iframe {
         width: 100%;
         height: 100%;
+    }
+}
+@media all and (max-width: 768px) {
+    .room_page.ap_page.page_act .main_head__center--sort svg {
+        height: auto;
     }
 }

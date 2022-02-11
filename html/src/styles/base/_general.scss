@@ -397,3 +397,8 @@ img {
 input:focus {
   border: 1px solid #957B61 !important;
 }
+@media all and (max-width: 680px) {
+  .main_page .site-panel-wrap {
+    margin-top: -10px;
+  }
+}
