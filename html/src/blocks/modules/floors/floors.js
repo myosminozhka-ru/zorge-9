@@ -234,7 +234,7 @@ $(function() {
             $(item).click(() => {
                 // window.location.href = $(item).attr('data-link');
                 // console.log(item, $(this).closest('svg'));
-                console.log('rect top: ' + document.querySelector(item).getBoundingClientRect().top );
+                console.log('rect top: ' + $(item).getBBox() );
             })
         }
         init() {
