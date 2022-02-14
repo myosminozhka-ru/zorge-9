@@ -1116,8 +1116,8 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
           url: this.apartmentsLink,
           success: function success(data) {
-            _this.apartments = JSON.parse(data).apartments; // this.apartments = data.apartments;
-
+            // this.apartments = JSON.parse(data).apartments;
+            _this.apartments = data.apartments;
             jquery__WEBPACK_IMPORTED_MODULE_4___default.a.ajax({
               url: _this.filtersLink,
               success: function success(result) {
@@ -1518,16 +1518,16 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
     }]);
 
     return Apartments;
-  }();
-
-  window.apartments = new Apartments({
-    apartmentsLink: '/ajax/floor.php',
-    filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
-  }); // window.apartments = new Apartments({
-  //     apartmentsLink: '/static/apartments.json',
-  //     filtersLink: '/static/filter.json'
+  }(); // window.apartments = new Apartments({
+  //     apartmentsLink: '/ajax/floor.php',
+  //     filtersLink: '/local/templates/main/assets/html/dist/static/filter.json'
   // });
 
+
+  window.apartments = new Apartments({
+    apartmentsLink: '/static/apartments.json',
+    filtersLink: '/static/filter.json'
+  });
   apartments.init();
 });
 
@@ -1922,6 +1922,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_head__center--backr').click(function (event) {
+    if (history.length > 2) {
+      event.preventDefault();
+      history.back();
+    }
+  });
+
   function burg() {
     var burgerWr = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.burger-wrap'),
         burgerBtn = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.burger-btn'),

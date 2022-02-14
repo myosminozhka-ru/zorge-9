@@ -114,6 +114,17 @@ img {
   -moz-transition: all 0.4s ease;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  &__info {
+    font-family: "gm", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #000000;
+    margin-top: 40px;
+    a {
+      color: #957B61;
+    }
+  }
   &__title {
       font-family: 'gml', serif;
       font-style: normal;

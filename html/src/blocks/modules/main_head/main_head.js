@@ -1,5 +1,12 @@
 import $ from "jquery";
 $(function(){
+
+  $('.main_head__center--backr').click(function(event) {
+    if (history.length > 2) {
+      event.preventDefault();
+      history.back();
+    }
+  })
   function burg(){
     var burgerWr = $('.burger-wrap'),
       burgerBtn = $('.burger-btn'),
