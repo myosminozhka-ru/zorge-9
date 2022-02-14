@@ -1253,7 +1253,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
           _this3.setRooms(_this3.rooms);
 
           _this3.setView(_this3.view);
-        }, 600);
+        }, 2600);
       }
     }, {
       key: "addFloorChanger",
@@ -1441,7 +1441,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
           _this7.setRooms(_this7.rooms);
 
           _this7.setView(_this7.view);
-        }, 600);
+        }, 2600);
       }
     }, {
       key: "addCorpseChanger",

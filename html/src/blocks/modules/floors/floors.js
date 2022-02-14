@@ -107,7 +107,7 @@ $(function() {
             setTimeout(() => {
                 this.setRooms(this.rooms);
                 this.setView(this.view);
-            }, 600)
+            }, 2600);
         }
         addFloorChanger() {
             $('.floor_changer').on('click', '.next', async () => {
@@ -216,7 +216,7 @@ $(function() {
             setTimeout(() => {
                 this.setRooms(this.rooms);
                 this.setView(this.view);
-            }, 600)
+            }, 2600)
         }
         addCorpseChanger() {
             $('.corpse_changer').on('click', '.next', async () => {
