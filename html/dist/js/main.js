@@ -1565,8 +1565,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_head__top a[href^="#"]').click(function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.burger-wrap').removeClass('opened');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_head__top a').click(function () {
+    // console.log($(this).attr('href').includes('#'));
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href').includes('#')) {
+      // console.log(123123123123123);
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.burger-wrap').removeClass('opened');
+    }
   });
 });
 
