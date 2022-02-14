@@ -233,7 +233,8 @@ $(function() {
         addClickHandler(item) {
             $(item).click(() => {
                 // window.location.href = $(item).attr('data-link');
-                console.log(item, $(this).closest('svg'));
+                // console.log(item, $(this).closest('svg'));
+                console.log('rect top: ' + document.querySelector(item).getBoundingClientRect().top );
             })
         }
         init() {

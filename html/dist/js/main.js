@@ -1486,11 +1486,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
     }, {
       key: "addClickHandler",
       value: function addClickHandler(item) {
-        var _this9 = this;
-
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(item).click(function () {
           // window.location.href = $(item).attr('data-link');
-          console.log(item, jquery__WEBPACK_IMPORTED_MODULE_4___default()(_this9).closest('svg'));
+          // console.log(item, $(this).closest('svg'));
+          console.log('rect top: ' + document.querySelector(item).getBoundingClientRect().top);
         });
       }
     }, {
