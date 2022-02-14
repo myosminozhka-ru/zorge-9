@@ -1531,19 +1531,17 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
   apartments.init();
 });
 
-if (/webkit.*mobile/i.test(navigator.userAgent)) {
-  (function ($) {
-    $.fn.offsetOld = $.fn.offset;
+(function ($) {
+  $.fn.offsetOld = $.fn.offset;
 
-    $.fn.offset = function () {
-      console.log('offset param returned');
-      var result = this.offsetOld();
-      result.top -= window.scrollY;
-      result.left -= window.scrollX;
-      return result;
-    };
-  })(jQuery);
-}
+  $.fn.offset = function () {
+    console.log('offset param returned');
+    var result = this.offsetOld();
+    result.top -= window.scrollY;
+    result.left -= window.scrollX;
+    return result;
+  };
+})(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
