@@ -1490,7 +1490,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(item).click(function () {
           // window.location.href = $(item).attr('data-link');
-          console.log("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top: ".concat(self.offset().top - jquery__WEBPACK_IMPORTED_MODULE_4___default()(_this9).closest('.floor_center__svg').offset().top + self.innerHeight() / 3, "px; left: ").concat(self.offset().left - jquery__WEBPACK_IMPORTED_MODULE_4___default()(_this9).closest('.floor_center__svg').offset().left + self.innerWidth() / 3, "px\"><div class=\"value\">").concat(self.data('area'), "<span>\u043C<sup>2</sup></span></div></div>"));
+          console.log("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top: ".concat(jquery__WEBPACK_IMPORTED_MODULE_4___default()(item).offset().top - jquery__WEBPACK_IMPORTED_MODULE_4___default()(_this9).closest('.floor_center__svg').offset().top + jquery__WEBPACK_IMPORTED_MODULE_4___default()(item).innerHeight() / 3, "px; left: ").concat(jquery__WEBPACK_IMPORTED_MODULE_4___default()(item).offset().left - jquery__WEBPACK_IMPORTED_MODULE_4___default()(_this9).closest('.floor_center__svg').offset().left + jquery__WEBPACK_IMPORTED_MODULE_4___default()(item).innerWidth() / 3, "px\"><div class=\"value\">").concat(jquery__WEBPACK_IMPORTED_MODULE_4___default()(item).data('area'), "<span>\u043C<sup>2</sup></span></div></div>"));
         });
       }
     }, {
