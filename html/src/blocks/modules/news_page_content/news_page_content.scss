@@ -41,6 +41,9 @@
         font-size: 18px;
         line-height: 26px;
         color: #FFFFFF;
+        a {
+            color: #FFFFFF;
+        }
         @media all and (max-width: 680px) {
             font-size: 14px;
             line-height: 22px;

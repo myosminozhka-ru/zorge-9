@@ -45,7 +45,7 @@
         }
         &--rr {
             display: flex;
-            width: 30%;
+            width: max-content;
             align-items: center;
             justify-content: space-between;
             .corp {
