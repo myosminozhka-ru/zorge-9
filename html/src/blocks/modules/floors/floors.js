@@ -107,7 +107,7 @@ $(function() {
             setTimeout(() => {
                 this.setRooms(this.rooms);
                 this.setView(this.view);
-            }, 2600);
+            }, 600)
         }
         addFloorChanger() {
             $('.floor_changer').on('click', '.next', async () => {
@@ -136,7 +136,7 @@ $(function() {
                 console.log($(this));
                 let self = $(this);
                 $(this).closest('.floor_center__svg')
-                .prepend(`<div class="apart_popup n2-19-2050 act_vis3" style="top: ${self.offset().top - $(this).closest('svg').offset().top + self.outerHeight() / 3}px; left: ${self.offset().left - $(this).closest('svg').offset().left + self.outerWidth() / 3}px"><div class="value">${self.data('area')}<span>м<sup>2</sup></span></div></div>`);
+                .prepend(`<div class="apart_popup n2-19-2050 act_vis3" style="top: ${self.position().top - $(this).closest('svg').position().top + self.outerHeight() / 3}px; left: ${self.position().left - $(this).closest('svg').position().left + self.outerWidth() / 3}px"><div class="value">${self.data('area')}<span>м<sup>2</sup></span></div></div>`);
             });
         }
         showInfo(item, attributes) {
@@ -191,7 +191,7 @@ $(function() {
             $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"][data-window_view*="${this.filters.windowsView[this.view]}"].active`).each(function() {
                 let self = $(this);
                 $(this).closest('.floor_center__svg')
-                .prepend(`<div class="apart_popup n2-19-2050 act_vis3" style="top: ${self.offset().top - $(this).closest('svg').offset().top + self.innerHeight() / 3}px; left: ${self.offset().left - $(this).closest('svg').offset().left + self.innerWidth() / 3}px"><div class="value">${self.data('area')}<span>м<sup>2</sup></span></div></div>`);
+                .prepend(`<div class="apart_popup n2-19-2050 act_vis3" style="top: ${self.position().top - $(this).closest('svg').position().top + self.innerHeight() / 3}px; left: ${self.position().left - $(this).closest('svg').position().left + self.innerWidth() / 3}px"><div class="value">${self.data('area')}<span>м<sup>2</sup></span></div></div>`);
             });
         }
         addViewsChanger() {
@@ -216,7 +216,7 @@ $(function() {
             setTimeout(() => {
                 this.setRooms(this.rooms);
                 this.setView(this.view);
-            }, 2600)
+            }, 600)
         }
         addCorpseChanger() {
             $('.corpse_changer').on('click', '.next', async () => {
@@ -264,18 +264,5 @@ $(function() {
     //     filtersLink: '/static/filter.json'
     // });
     apartments.init();
-
-    
 });
 
-
-(function($) {
-    $.fn.offsetOld = $.fn.offset;
-    $.fn.offset = function() {
-        console.log('offset param returned');
-        var result = this.offsetOld();
-        result.top -= window.scrollY;
-        result.left -= window.scrollX;
-        return result;
-    };
-})(jQuery);

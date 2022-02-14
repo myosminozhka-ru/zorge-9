@@ -1073,7 +1073,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
@@ -1253,7 +1253,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
           _this3.setRooms(_this3.rooms);
 
           _this3.setView(_this3.view);
-        }, 2600);
+        }, 600);
       }
     }, {
       key: "addFloorChanger",
@@ -1312,7 +1312,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"].active")).each(function () {
           console.log(jquery__WEBPACK_IMPORTED_MODULE_4___default()(this));
           var self = jquery__WEBPACK_IMPORTED_MODULE_4___default()(this);
-          jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').prepend("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top: ".concat(self.offset().top - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('svg').offset().top + self.outerHeight() / 3, "px; left: ").concat(self.offset().left - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('svg').offset().left + self.outerWidth() / 3, "px\"><div class=\"value\">").concat(self.data('area'), "<span>\u043C<sup>2</sup></span></div></div>"));
+          jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').prepend("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top: ".concat(self.position().top - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('svg').position().top + self.outerHeight() / 3, "px; left: ").concat(self.position().left - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('svg').position().left + self.outerWidth() / 3, "px\"><div class=\"value\">").concat(self.data('area'), "<span>\u043C<sup>2</sup></span></div></div>"));
         });
       }
     }, {
@@ -1381,7 +1381,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] apart_popup").remove();
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"][data-window_view*=\"").concat(this.filters.windowsView[this.view], "\"].active")).each(function () {
           var self = jquery__WEBPACK_IMPORTED_MODULE_4___default()(this);
-          jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').prepend("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top: ".concat(self.offset().top - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('svg').offset().top + self.innerHeight() / 3, "px; left: ").concat(self.offset().left - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('svg').offset().left + self.innerWidth() / 3, "px\"><div class=\"value\">").concat(self.data('area'), "<span>\u043C<sup>2</sup></span></div></div>"));
+          jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').prepend("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top: ".concat(self.position().top - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('svg').position().top + self.innerHeight() / 3, "px; left: ").concat(self.position().left - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('svg').position().left + self.innerWidth() / 3, "px\"><div class=\"value\">").concat(self.data('area'), "<span>\u043C<sup>2</sup></span></div></div>"));
         });
       }
     }, {
@@ -1441,7 +1441,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
           _this7.setRooms(_this7.rooms);
 
           _this7.setView(_this7.view);
-        }, 2600);
+        }, 600);
       }
     }, {
       key: "addCorpseChanger",
@@ -1530,19 +1530,6 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
   apartments.init();
 });
-
-(function ($) {
-  $.fn.offsetOld = $.fn.offset;
-
-  $.fn.offset = function () {
-    console.log('offset param returned');
-    var result = this.offsetOld();
-    result.top -= window.scrollY;
-    result.left -= window.scrollX;
-    return result;
-  };
-})(jQuery);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 
