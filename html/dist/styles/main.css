@@ -2373,7 +2373,6 @@ ul {
 }
 
 body {
-  overflow-x: hidden;
   box-sizing: border-box;
   background: #000;
   display: flex;
