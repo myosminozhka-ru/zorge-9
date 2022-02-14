@@ -233,7 +233,7 @@ $(function() {
         addClickHandler(item) {
             $(item).click(() => {
                 // window.location.href = $(item).attr('data-link');
-                console.log(`<div class="apart_popup n2-19-2050 act_vis3" style="top: ${$(item).offset().top - $(this).closest('.floor_center__svg').offset().top + $(item).innerHeight() / 3}px; left: ${$(item).offset().left - $(this).closest('.floor_center__svg').offset().left + $(item).innerWidth() / 3}px"><div class="value">${$(item).data('area')}<span>м<sup>2</sup></span></div></div>`);
+                console.log($(this), `<div class="apart_popup n2-19-2050 act_vis3" style="top: ${$(item).offset().top - $(this).closest('.floor_center__svg').offset().top + $(item).innerHeight() / 3}px; left: ${$(item).offset().left - $(this).closest('.floor_center__svg').offset().left + $(item).innerWidth() / 3}px"><div class="value">${$(item).data('area')}<span>м<sup>2</sup></span></div></div>`);
             })
         }
         init() {
