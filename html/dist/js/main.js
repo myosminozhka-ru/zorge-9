@@ -1300,7 +1300,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
     }, {
       key: "setRooms",
       value: function setRooms(rooms) {
-        console.log('rooms');
+        console.log('position');
         if (rooms < +this.filters.minRooms || rooms > +this.filters.maxRooms) return;
         this.rooms = rooms;
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.rooms_changer .value').text(this.rooms);
@@ -1371,6 +1371,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
     }, {
       key: "setView",
       value: function setView(viewId) {
+        console.log('position v');
         if (viewId < 0 || viewId > +this.filters.windowsView.length) return;
         this.view = viewId;
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.views_changer .value').text(this.filters.windowsView[this.view]);

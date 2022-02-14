@@ -122,7 +122,7 @@ $(function() {
             });
         } 
         setRooms(rooms) {
-            console.log('rooms');
+            console.log('position');
             if (rooms < +this.filters.minRooms || rooms > +this.filters.maxRooms) return;
             this.rooms = rooms;
             $('.rooms_changer .value').text(this.rooms);
@@ -179,6 +179,7 @@ $(function() {
             });
         }
         setView(viewId) {
+            console.log('position v')
             if (viewId < 0 || viewId > +this.filters.windowsView.length) return;
             this.view = viewId;
             $('.views_changer .value').text(this.filters.windowsView[this.view]);
