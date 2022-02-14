@@ -264,5 +264,20 @@ $(function() {
     //     filtersLink: '/static/filter.json'
     // });
     apartments.init();
+
+    
 });
 
+
+if ( /webkit.*mobile/i.test(navigator.userAgent)) {
+    (function($) {
+        $.fn.offsetOld = $.fn.offset;
+        $.fn.offset = function() {
+            console.log('offset param returned');
+          var result = this.offsetOld();
+          result.top -= window.scrollY;
+          result.left -= window.scrollX;
+          return result;
+        };
+    })(jQuery);
+}
