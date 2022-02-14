@@ -6181,10 +6181,13 @@ input:checked + .slider:before {
 }
 
 .room_blocks {
-  margin-top: 120px;
+  margin-top: 60px;
+  padding-top: 60px;
+  padding-bottom: 120px;
   padding-left: 40px;
   padding-right: 40px;
   text-align: center;
+  background: #383838;
 }
 
 .room_blocks__title {
@@ -8267,6 +8270,10 @@ input:checked + .slider:before {
   background-size: 100% 1px;
 }
 
+.ap_page .footer {
+  padding-top: 0;
+}
+
 @media all and (min-width: 681px) {
   .main_head:after {
     animation: move 3s ease-out 2s infinite;
@@ -9597,6 +9604,10 @@ input:checked + .slider:before {
 
   .room_page .buy_tabs {
     display: none;
+  }
+
+  .room_blocks {
+    padding-bottom: 0px;
   }
 
   .room_blocks__title {

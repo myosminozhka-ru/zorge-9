@@ -1556,10 +1556,19 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 /*!*********************************************!*\
   !*** ./src/blocks/modules/header/header.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_head__top a[href^="#"]').click(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.burger-wrap').removeClass('opened');
+  });
+});
 
 /***/ }),
 
@@ -2796,7 +2805,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/header/header */ "./src/blocks/modules/header/header.js");
-/* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_header_header__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_main_head_main_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/main_head/main_head */ "./src/blocks/modules/main_head/main_head.js");
 /* harmony import */ var _modules_main_reds_main_reds__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/main_reds/main_reds */ "./src/blocks/modules/main_reds/main_reds.js");
 /* harmony import */ var _modules_main_reds_main_reds__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_main_reds_main_reds__WEBPACK_IMPORTED_MODULE_2__);
