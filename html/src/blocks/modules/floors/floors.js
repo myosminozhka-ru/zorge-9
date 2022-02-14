@@ -72,8 +72,8 @@ $(function() {
                         .attr('data-link', item.link)
                         .attr('data-window_view', item.window_view)
                         .addClass('active')
-                        .closest('.floor_center__svg')
-                        .prepend(`<div class="apart_popup n2-19-2050 act_vis3" style="top:${rect.getBoundingClientRect().top + (rect.getBoundingClientRect().height / 2) - rect.closest('.floor_center__svg').getBoundingClientRect().top}px;left:${rect.getBoundingClientRect().left + (rect.getBoundingClientRect().width / 2) - rect.closest('.floor_center__svg').getBoundingClientRect().left}px;"><div class="value">${item.area}<span>м<sup>2</sup></span></div></div>`);
+                        .closest('svg')
+                        .prepend(`<div class="apart_popup n2-19-2050 act_vis3" style="top:${rect.getBoundingClientRect().top + (rect.getBoundingClientRect().height / 2) - rect.closest('svg').getBoundingClientRect().top}px;left:${rect.getBoundingClientRect().left + (rect.getBoundingClientRect().width / 2) - rect.closest('svg').getBoundingClientRect().left}px;"><div class="value">${item.area}<span>м<sup>2</sup></span></div></div>`);
                 }
             });
             
@@ -135,8 +135,8 @@ $(function() {
             $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"].active`).each(function() {
                 console.log($(this));
                 let self = $(this);
-                $(this).closest('.floor_center__svg')
-                .prepend(`<div class="apart_popup n2-19-2050 act_vis3" style="top: ${self.offset().top - $(this).closest('.floor_center__svg').offset().top + self.outerHeight() / 3}px; left: ${self.offset().left - $(this).closest('.floor_center__svg').offset().left + self.outerWidth() / 3}px"><div class="value">${self.data('area')}<span>м<sup>2</sup></span></div></div>`);
+                $(this).closest('svg')
+                .prepend(`<div class="apart_popup n2-19-2050 act_vis3" style="top: ${self.offset().top - $(this).closest('svg').offset().top + self.outerHeight() / 3}px; left: ${self.offset().left - $(this).closest('svg').offset().left + self.outerWidth() / 3}px"><div class="value">${self.data('area')}<span>м<sup>2</sup></span></div></div>`);
             });
         }
         showInfo(item, attributes) {
@@ -190,8 +190,8 @@ $(function() {
             $(`.floor_center--item_wrap[style="display: block;"] apart_popup`).remove();
             $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"][data-window_view*="${this.filters.windowsView[this.view]}"].active`).each(function() {
                 let self = $(this);
-                $(this).closest('.floor_center__svg')
-                .prepend(`<div class="apart_popup n2-19-2050 act_vis3" style="top: ${self.offset().top - $(this).closest('.floor_center__svg').offset().top + self.innerHeight() / 3}px; left: ${self.offset().left - $(this).closest('.floor_center__svg').offset().left + self.innerWidth() / 3}px"><div class="value">${self.data('area')}<span>м<sup>2</sup></span></div></div>`);
+                $(this).closest('svg')
+                .prepend(`<div class="apart_popup n2-19-2050 act_vis3" style="top: ${self.offset().top - $(this).closest('svg').offset().top + self.innerHeight() / 3}px; left: ${self.offset().left - $(this).closest('svg').offset().left + self.innerWidth() / 3}px"><div class="value">${self.data('area')}<span>м<sup>2</sup></span></div></div>`);
             });
         }
         addViewsChanger() {
@@ -233,7 +233,7 @@ $(function() {
         addClickHandler(item) {
             $(item).click(() => {
                 // window.location.href = $(item).attr('data-link');
-                console.log(item, $(this).closest('.floor_center__svg'));
+                console.log(item, $(this).closest('svg'));
             })
         }
         init() {
