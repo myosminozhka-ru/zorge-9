@@ -233,7 +233,7 @@ $(function() {
         addClickHandler(item) {
             $(item).click(() => {
                 // window.location.href = $(item).attr('data-link');
-                console.log($(this), $(this).closest('.floor_center__svg'));
+                console.log(item, $(this).closest('.floor_center__svg'));
             })
         }
         init() {

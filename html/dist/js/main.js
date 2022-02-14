@@ -1490,7 +1490,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(item).click(function () {
           // window.location.href = $(item).attr('data-link');
-          console.log(jquery__WEBPACK_IMPORTED_MODULE_4___default()(_this9), jquery__WEBPACK_IMPORTED_MODULE_4___default()(_this9).closest('.floor_center__svg'));
+          console.log(item, jquery__WEBPACK_IMPORTED_MODULE_4___default()(_this9).closest('.floor_center__svg'));
         });
       }
     }, {
