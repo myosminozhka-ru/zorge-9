@@ -136,7 +136,7 @@ $(function() {
                 console.log($(this));
                 let self = $(this);
                 $(this).closest('.floor_center__svg')
-                .prepend(`<div class="apart_popup n2-19-2050 act_vis3" style="top: ${self.offset().top - $(this).closest('.floor_center__svg').offset().top + self.innerHeight() / 3}px; left: ${self.offset().left - $(this).closest('.floor_center__svg').offset().left + self.innerWidth() / 3}px"><div class="value">${self.data('area')}<span>м<sup>2</sup></span></div></div>`);
+                .prepend(`<div class="apart_popup n2-19-2050 act_vis3" style="top: ${self.offset().top - $(this).closest('.floor_center__svg').offset().top + self.outerHeight() / 3}px; left: ${self.offset().left - $(this).closest('.floor_center__svg').offset().left + self.outerWidth() / 3}px"><div class="value">${self.data('area')}<span>м<sup>2</sup></span></div></div>`);
             });
         }
         showInfo(item, attributes) {
@@ -190,7 +190,6 @@ $(function() {
             $(`.floor_center--item_wrap[style="display: block;"] apart_popup`).remove();
             $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"][data-window_view*="${this.filters.windowsView[this.view]}"].active`).each(function() {
                 let self = $(this);
-                console.log('view: ', $(this).closest('.floor_center__svg').offset().top, $(this).closest('.floor_center__svg').offset().left, self.outerHeight(), self.outerWidth());
                 $(this).closest('.floor_center__svg')
                 .prepend(`<div class="apart_popup n2-19-2050 act_vis3" style="top: ${self.offset().top - $(this).closest('.floor_center__svg').offset().top + self.innerHeight() / 3}px; left: ${self.offset().left - $(this).closest('.floor_center__svg').offset().left + self.innerWidth() / 3}px"><div class="value">${self.data('area')}<span>м<sup>2</sup></span></div></div>`);
             });
@@ -233,8 +232,8 @@ $(function() {
         }
         addClickHandler(item) {
             $(item).click(() => {
-                window.location.href = $(item).attr('data-link');
-                // console.log($(item).attr('data-link'));
+                // window.location.href = $(item).attr('data-link');
+                console.log(`<div class="apart_popup n2-19-2050 act_vis3" style="top: ${self.offset().top - $(this).closest('.floor_center__svg').offset().top + self.innerHeight() / 3}px; left: ${self.offset().left - $(this).closest('.floor_center__svg').offset().left + self.innerWidth() / 3}px"><div class="value">${self.data('area')}<span>м<sup>2</sup></span></div></div>`);
             })
         }
         init() {

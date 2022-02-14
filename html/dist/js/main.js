@@ -1310,7 +1310,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"].active")).each(function () {
           console.log(jquery__WEBPACK_IMPORTED_MODULE_4___default()(this));
           var self = jquery__WEBPACK_IMPORTED_MODULE_4___default()(this);
-          jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').prepend("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top: ".concat(self.offset().top - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').offset().top + self.innerHeight() / 3, "px; left: ").concat(self.offset().left - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').offset().left + self.innerWidth() / 3, "px\"><div class=\"value\">").concat(self.data('area'), "<span>\u043C<sup>2</sup></span></div></div>"));
+          jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').prepend("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top: ".concat(self.offset().top - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').offset().top + self.outerHeight() / 3, "px; left: ").concat(self.offset().left - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').offset().left + self.outerWidth() / 3, "px\"><div class=\"value\">").concat(self.data('area'), "<span>\u043C<sup>2</sup></span></div></div>"));
         });
       }
     }, {
@@ -1379,7 +1379,6 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] apart_popup").remove();
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"][data-window_view*=\"").concat(this.filters.windowsView[this.view], "\"].active")).each(function () {
           var self = jquery__WEBPACK_IMPORTED_MODULE_4___default()(this);
-          console.log('view: ', jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').offset().top, jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').offset().left, self.outerHeight(), self.outerWidth());
           jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').prepend("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top: ".concat(self.offset().top - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').offset().top + self.innerHeight() / 3, "px; left: ").concat(self.offset().left - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').offset().left + self.innerWidth() / 3, "px\"><div class=\"value\">").concat(self.data('area'), "<span>\u043C<sup>2</sup></span></div></div>"));
         });
       }
@@ -1487,8 +1486,11 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
     }, {
       key: "addClickHandler",
       value: function addClickHandler(item) {
+        var _this9 = this;
+
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(item).click(function () {
-          window.location.href = jquery__WEBPACK_IMPORTED_MODULE_4___default()(item).attr('data-link'); // console.log($(item).attr('data-link'));
+          // window.location.href = $(item).attr('data-link');
+          console.log("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top: ".concat(self.offset().top - jquery__WEBPACK_IMPORTED_MODULE_4___default()(_this9).closest('.floor_center__svg').offset().top + self.innerHeight() / 3, "px; left: ").concat(self.offset().left - jquery__WEBPACK_IMPORTED_MODULE_4___default()(_this9).closest('.floor_center__svg').offset().left + self.innerWidth() / 3, "px\"><div class=\"value\">").concat(self.data('area'), "<span>\u043C<sup>2</sup></span></div></div>"));
         });
       }
     }, {
