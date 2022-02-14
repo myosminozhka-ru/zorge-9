@@ -5997,6 +5997,11 @@ input:checked + .slider:before {
   color: #FFFFFF;
 }
 
+.room_page .main_head__center--floor.wind,
+.floor_page .main_head__center--floor.wind {
+  display: none !important;
+}
+
 .room_page .main_head__center--titr,
 .floor_page .main_head__center--titr {
   font-family: "gm", serif;
