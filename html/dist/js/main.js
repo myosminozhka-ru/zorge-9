@@ -962,6 +962,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       settings: {
         variableWidth: false,
         arrows: false,
+        adaptiveHeight: true,
         dots: true
       }
     }]
