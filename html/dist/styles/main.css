@@ -5567,10 +5567,6 @@ input:checked + .slider:before {
   line-height: 48px;
 }
 
-.floor_center--item_wrap {
-  display: none;
-}
-
 .fl_tit {
   display: none;
 }
