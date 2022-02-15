@@ -20,7 +20,7 @@
             align-items: center;
             justify-content: space-between;
             width: 100%;
-            @media all and (max-width: 1580px) {
+            @media all and (max-width: 1400px) {
                 flex-direction: column-reverse;
             }
         }
@@ -32,7 +32,7 @@
             
             margin-right: 80px;
             width: 30%;
-            @media all and (max-width: 1580px) {
+            @media all and (max-width: 1400px) {
                 width: 100%;
                 padding-right: 0;
                 margin-right: 0;
@@ -52,7 +52,7 @@
             .corp {
                 margin-right: 30px;
             }
-            @media all and (max-width: 1580px) {
+            @media all and (max-width: 1400px) {
                 width: 100%;
                 align-items: flex-end;
                 .corp {
@@ -72,7 +72,7 @@
             cursor: pointer;
             background: url("data:image/svg+xml,%3Csvg width='20' height='48' viewBox='0 0 20 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20 0H16L0 24L16 48H20L4 24L20 0Z' fill='white'/%3E%3C/svg%3E%0A") 50% no-repeat; 
             margin-right: 56px;
-            @media all and (max-width: 1580px) {
+            @media all and (max-width: 1400px) {
                 margin-right: 20px;
             }
             @media all and (max-width: 1220px) {
