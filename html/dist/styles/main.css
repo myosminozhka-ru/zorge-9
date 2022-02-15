@@ -10139,6 +10139,10 @@ input:checked + .slider:before {
     display: none;
   }
 
+  .footer .main_red__info--text {
+    font-size: 8px;
+  }
+
   .main_first__title {
     font-size: 24px;
     line-height: 32px;

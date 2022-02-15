@@ -56,5 +56,8 @@
     .main_red__info--text {
         font-size: 10px;
         line-height: normal;
+        @media all and (max-width: 768px) {
+            font-size: 8px;
+        }
     }
 }
