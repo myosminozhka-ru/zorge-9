@@ -5,7 +5,6 @@ $(function() {
         $('[name="SIMPLE_FORM_1"]').submit(function(event) {
             event.preventDefault();
             form_submit('[name="SIMPLE_FORM_1"]', function (result) {
-                console.log(result);
                 if (result.SUCCESS)
                 {
                 $('[name="SIMPLE_FORM_1"]').find('label').fadeOut();

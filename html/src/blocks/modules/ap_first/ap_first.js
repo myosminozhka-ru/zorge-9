@@ -22,7 +22,6 @@ $(function() {
                 <div class="ap_tabs__titles--block">Минимальный взнос, %</div>
             </div>
         `);
-        console.log(JSON.parse(result));
         if (JSON.parse(result).banks) {
             JSON.parse(result).banks.map(item => {
                 $('.ap_tabs').append(`
@@ -47,7 +46,6 @@ $(function() {
         $('.request_form form').submit(function(event) {
             event.preventDefault();
             form_submit('.request_form form', function (result) {
-                console.log(result);
                 if (result.SUCCESS)
                 {
                 $('.request_form form').find('label').fadeOut();
@@ -62,7 +60,6 @@ $(function() {
         $('[name="SIMPLE_FORM_7"]').submit(function(event) {
             event.preventDefault();
             form_submit('[name="SIMPLE_FORM_7"]', function (result) {
-                console.log(result);
                 if (result.SUCCESS)
                 {
                 $('[name="SIMPLE_FORM_7"]').find('label').fadeOut();
@@ -81,7 +78,6 @@ $(function() {
     $('.slrs25 img').each(function(index, value) {
         if (index > 2) {
             $(this).remove();
-            console.log($(this), index, value);
         }
         
     });

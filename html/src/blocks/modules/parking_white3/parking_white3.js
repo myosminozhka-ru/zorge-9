@@ -2,9 +2,7 @@ import $ from "jquery";
 $(function() {
     let corpse = 'madison';
     let flat = 0;
-    console.log(corpse);
     $('#block_park').on('click', '.feedback', function() {
-        console.log('tyartatat');
         $('.form-wrapper.fd1').addClass('opened');
     })
     $('.dlc1').on('click', function() {
@@ -33,7 +31,6 @@ $(function() {
             },
             success: (result) => {
                 let data = JSON.parse(result);
-                console.log(data);
                 if ($('#parking-place').length) {
                     $('#parking-place').attr('value', flat);
                 }
@@ -69,7 +66,6 @@ $(function() {
     })
     $('.place1.load_data').click(function() {
         if ($(this).hasClass('active')) {
-            console.log('load');
             $.ajax({
                 url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
                 method: "POST",
@@ -93,7 +89,6 @@ $(function() {
         } else {
             $('.plc1').removeClass('active');
             $('.hover_bl').removeClass('active').addClass('hidden');
-            console.log('unload');
         }
     })
     $('.place2.load_data').click(function() {

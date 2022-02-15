@@ -11,7 +11,6 @@ $(function() {
   
     $('.main_head__center--sort').on('click', '.sort-js', function() {
       $(this).addClass('active').siblings().removeClass('active');
-    //   console.log($(this).data('corpse'));
       apartments.setCorpse($(this).data('corpse'));
     //   $(this).closest('.main_head__center').find('.floor_center').removeClass('active').eq($(this).index()).addClass('active');
     });

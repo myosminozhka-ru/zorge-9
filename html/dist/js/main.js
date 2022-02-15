@@ -207,7 +207,6 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
 
   function recalculateBanks(result) {
     jquery__WEBPACK_IMPORTED_MODULE_1___default()('.ap_tabs').html('').prepend("\n            <div class=\"ap_tabs__titles\">\n                <div class=\"ap_tabs__titles--block\">\u0411\u0430\u043D\u043A</div>\n                <div class=\"ap_tabs__titles--block\">\u0421\u0442\u0430\u0432\u043A\u0430</div>\n                <div class=\"ap_tabs__titles--block\">\u0421\u0440\u043E\u043A</div>\n                <div class=\"ap_tabs__titles--block\">\u0415\u0436\u0435\u043C\u0435\u0441\u044F\u0447\u043D\u044B\u0439 \u043F\u043B\u0430\u0442\u0435\u0436</div>\n                <div class=\"ap_tabs__titles--block\">\u041C\u0438\u043D\u0438\u043C\u0430\u043B\u044C\u043D\u044B\u0439 \u0432\u0437\u043D\u043E\u0441, %</div>\n            </div>\n        ");
-    console.log(JSON.parse(result));
 
     if (JSON.parse(result).banks) {
       JSON.parse(result).banks.map(function (item) {
@@ -223,8 +222,6 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_1___default()('.request_form form').submit(function (event) {
       event.preventDefault();
       form_submit('.request_form form', function (result) {
-        console.log(result);
-
         if (result.SUCCESS) {
           jquery__WEBPACK_IMPORTED_MODULE_1___default()('.request_form form').find('label').fadeOut();
           jquery__WEBPACK_IMPORTED_MODULE_1___default()('.request_form form').find('.form-wrapper__btns').fadeOut();
@@ -239,8 +236,6 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_1___default()('[name="SIMPLE_FORM_7"]').submit(function (event) {
       event.preventDefault();
       form_submit('[name="SIMPLE_FORM_7"]', function (result) {
-        console.log(result);
-
         if (result.SUCCESS) {
           jquery__WEBPACK_IMPORTED_MODULE_1___default()('[name="SIMPLE_FORM_7"]').find('label').fadeOut();
           jquery__WEBPACK_IMPORTED_MODULE_1___default()('[name="SIMPLE_FORM_7"]').find('.form-wrapper__btns').fadeOut();
@@ -259,7 +254,6 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_1___default()('.slrs25 img').each(function (index, value) {
     if (index > 2) {
       jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).remove();
-      console.log(jquery__WEBPACK_IMPORTED_MODULE_1___default()(this), index, value);
     }
   });
   setTimeout(function () {
@@ -1047,8 +1041,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 });
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_head__center--sort').on('click', '.sort-js', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active').siblings().removeClass('active'); //   console.log($(this).data('corpse'));
-
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active').siblings().removeClass('active');
     apartments.setCorpse(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data('corpse')); //   $(this).closest('.main_head__center').find('.floor_center').removeClass('active').eq($(this).index()).addClass('active');
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_head__center--sort').on('click', '.sort-js:nth-child(1)', function () {
@@ -1122,7 +1115,6 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
               url: _this.filtersLink,
               success: function success(result) {
                 _this.filters = result.filter;
-                console.log(_this.filters);
 
                 _this.addAttributes();
 
@@ -1156,7 +1148,6 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         var _this2 = this;
 
         this.apartments.forEach(function (item) {
-          // console.log(item);
           switch (item.corpus) {
             case 'Madison':
               var rect = document.querySelector("[data-corpse=\"1\"][data-floor*=\"-".concat(item.floor, "-\"] [data-position=\"").concat(item.position, "\"]"));
@@ -1267,11 +1258,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
               switch (_context2.prev = _context2.next) {
                 case 0:
                   curFloor = _this4.floor;
-                  console.log(curFloor);
 
                   _this4.setFloor(++curFloor);
 
-                case 3:
+                case 2:
                 case "end":
                   return _context2.stop();
               }
@@ -1285,11 +1275,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
               switch (_context3.prev = _context3.next) {
                 case 0:
                   curFloor = _this4.floor;
-                  console.log(curFloor);
 
                   _this4.setFloor(--curFloor);
 
-                case 3:
+                case 2:
                 case "end":
                   return _context3.stop();
               }
@@ -1300,7 +1289,6 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
     }, {
       key: "setRooms",
       value: function setRooms(rooms) {
-        console.log('position');
         if (rooms < +this.filters.minRooms || rooms > +this.filters.maxRooms) return;
         this.rooms = rooms;
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.rooms_changer .value').text(this.rooms);
@@ -1310,7 +1298,6 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"]")).addClass('active');
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] apart_popup").remove();
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"].active")).each(function () {
-          console.log(jquery__WEBPACK_IMPORTED_MODULE_4___default()(this));
           var self = jquery__WEBPACK_IMPORTED_MODULE_4___default()(this);
           jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').prepend("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top: ".concat(self.position().top - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('svg').position().top + self.outerHeight() / 3, "px; left: ").concat(self.position().left - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('svg').position().left + self.outerWidth() / 3, "px\"><div class=\"value\">").concat(self.data('area'), "<span>\u043C<sup>2</sup></span></div></div>"));
         });
@@ -1318,7 +1305,6 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
     }, {
       key: "showInfo",
       value: function showInfo(item, attributes) {
-        console.log(jquery__WEBPACK_IMPORTED_MODULE_4___default()(item));
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(item).closest('.floor_center').append("<div class=\"hover_bl\">\n            <div class=\"hover_bl__block\">\n                <div class=\"hover_bl__block--title\">\u041D\u043E\u043C\u0435\u0440 <br>\n                    \u0430\u043F\u0430\u0440\u0442\u0430\u043C\u0435\u043D\u0442\u0430</div>\n                <div class=\"hover_bl__block--text\">".concat(attributes.number, "</div>\n            </div>\n            <div class=\"hover_bl__block\">\n                <div class=\"hover_bl__block--title\">\u041A\u043E\u043C\u043D\u0430\u0442</div>\n                <div class=\"hover_bl__block--text\">").concat(attributes.rooms, "</div>\n            </div>\n            <div class=\"hover_bl__block\">\n                <div class=\"hover_bl__block--title\">\u041F\u043B\u043E\u0449\u0430\u0434\u044C, \u043C<sup>2</sup></div>\n                <div class=\"hover_bl__block--text\">").concat(attributes.area, "</div>\n            </div>\n            <div class=\"hover_bl__block\">\n                <div class=\"hover_bl__block--title\">\u0426\u0435\u043D\u0430 \n                    \u0431\u0435\u0437 \u043E\u0442\u0434\u0435\u043B\u043A\u0438, \u0440\u0443\u0431</div>\n                <div class=\"hover_bl__block--text\">").concat(attributes.price, "</div>\n            </div>\n        </div>"));
       }
     }, {
@@ -1338,11 +1324,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
               switch (_context4.prev = _context4.next) {
                 case 0:
                   curRooms = _this5.rooms;
-                  console.log(curRooms);
 
                   _this5.setRooms(++curRooms);
 
-                case 3:
+                case 2:
                 case "end":
                   return _context4.stop();
               }
@@ -1356,11 +1341,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
               switch (_context5.prev = _context5.next) {
                 case 0:
                   curRooms = _this5.rooms;
-                  console.log(curRooms);
 
                   _this5.setRooms(--curRooms);
 
-                case 3:
+                case 2:
                 case "end":
                   return _context5.stop();
               }
@@ -1371,7 +1355,6 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
     }, {
       key: "setView",
       value: function setView(viewId) {
-        console.log('position v');
         if (viewId < 0 || viewId > +this.filters.windowsView.length) return;
         this.view = viewId;
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.views_changer .value').text(this.filters.windowsView[this.view]);
@@ -1397,11 +1380,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
               switch (_context6.prev = _context6.next) {
                 case 0:
                   curView = _this6.view;
-                  console.log(curView);
 
                   _this6.setView(++curView);
 
-                case 3:
+                case 2:
                 case "end":
                   return _context6.stop();
               }
@@ -1415,11 +1397,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
               switch (_context7.prev = _context7.next) {
                 case 0:
                   curView = _this6.view;
-                  console.log(curView);
 
                   _this6.setView(--curView);
 
-                case 3:
+                case 2:
                 case "end":
                   return _context7.stop();
               }
@@ -1456,11 +1437,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
               switch (_context8.prev = _context8.next) {
                 case 0:
                   curCorpse = _this8.corpse;
-                  console.log(curCorpse);
 
                   _this8.setCorpse(++curCorpse);
 
-                case 3:
+                case 2:
                 case "end":
                   return _context8.stop();
               }
@@ -1474,11 +1454,10 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
               switch (_context9.prev = _context9.next) {
                 case 0:
                   curCorpse = _this8.corpse;
-                  console.log(curCorpse);
 
                   _this8.setCorpse(--curCorpse);
 
-                case 3:
+                case 2:
                 case "end":
                   return _context9.stop();
               }
@@ -1490,9 +1469,7 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
       key: "addClickHandler",
       value: function addClickHandler(item) {
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(item).click(function () {
-          // window.location.href = $(item).attr('data-link');
-          // console.log(item, $(this).closest('svg'));
-          console.log(jquery__WEBPACK_IMPORTED_MODULE_4___default()(item).closest('svg'));
+          window.location.href = jquery__WEBPACK_IMPORTED_MODULE_4___default()(item).attr('data-link');
         });
       }
     }, {
@@ -1501,8 +1478,6 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
         if (!jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap').length) return;
 
         if (this.url.split('/')[2] && this.url.split('/')[3]) {
-          console.log(this.url.split('/'));
-
           if (this.url.split('/')[2] == 'madison') {
             this.corpse = 0;
           } else if (this.url.split('/')[2] == 'manhattan' || this.url.split('/')[2] == 'manhatten') {
@@ -1570,9 +1545,7 @@ __webpack_require__.r(__webpack_exports__);
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_head__top a').click(function () {
-    // console.log($(this).attr('href').includes('#'));
     if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href').includes('#')) {
-      // console.log(123123123123123);
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.burger-wrap').removeClass('opened');
     }
   });
@@ -1689,8 +1662,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_2"]').submit(function (event) {
       event.preventDefault();
       form_submit('[name="SIMPLE_FORM_2"]', function (result) {
-        console.log(result);
-
         if (result.SUCCESS) {
           jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_2"]').find('label').fadeOut();
           jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_2"]').find('.form-wrapper__btns').fadeOut();
@@ -1805,8 +1776,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_3"]').submit(function (event) {
       event.preventDefault();
       form_submit('[name="SIMPLE_FORM_3"]', function (result) {
-        console.log(result);
-
         if (result.SUCCESS) {
           jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_3"]').find('label').fadeOut();
           jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_3"]').find('.form-wrapper__btns').fadeOut();
@@ -1821,8 +1790,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_4"]').submit(function (event) {
       event.preventDefault();
       form_submit('[name="SIMPLE_FORM_4"]', function (result) {
-        console.log(result);
-
         if (result.SUCCESS) {
           jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_4"]').find('label').fadeOut();
           jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_4"]').find('.form-wrapper__btns').fadeOut();
@@ -2238,8 +2205,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_1"]').submit(function (event) {
       event.preventDefault();
       form_submit('[name="SIMPLE_FORM_1"]', function (result) {
-        console.log(result);
-
         if (result.SUCCESS) {
           jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_1"]').find('label').fadeOut();
           jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name="SIMPLE_FORM_1"]').find('.form-wrapper__btns').fadeOut();
@@ -2308,7 +2273,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc2').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hover_bl').addClass('active');
-    console.log(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('id'));
 
     if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('#parking-place') && jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('id')) {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('#parking-place').attr('value', jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('id'));
@@ -2462,9 +2426,7 @@ __webpack_require__.r(__webpack_exports__);
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   var corpse = 'madison';
   var flat = 0;
-  console.log(corpse);
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('#block_park').on('click', '.feedback', function () {
-    console.log('tyartatat');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form-wrapper.fd1').addClass('opened');
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dlc1').on('click', function () {
@@ -2497,7 +2459,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       },
       success: function success(result) {
         var data = JSON.parse(result);
-        console.log(data);
 
         if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('#parking-place').length) {
           jquery__WEBPACK_IMPORTED_MODULE_0___default()('#parking-place').attr('value', flat);
@@ -2511,7 +2472,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.place1.load_data').click(function () {
     if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass('active')) {
-      console.log('load');
       jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
         url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
         method: "POST",
@@ -2536,7 +2496,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     } else {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc1').removeClass('active');
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hover_bl').removeClass('active').addClass('hidden');
-      console.log('unload');
     }
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.place2.load_data').click(function () {
@@ -2961,7 +2920,6 @@ window.form_submit = function (selector, callback) {
   });
 
   var actionUrl = $(selector).attr('action');
-  console.log('requested');
   BX.ajax({
     url: actionUrl,
     data: data,

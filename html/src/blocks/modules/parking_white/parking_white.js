@@ -41,7 +41,6 @@ $(function() {
     })
     $('.plc2').on('click', function() {
         $('.hover_bl').addClass('active');
-        console.log($(this).attr('id'));
         if ($('#parking-place') && $(this).attr('id')) {
             $('#parking-place').attr('value', $(this).attr('id'));
         }

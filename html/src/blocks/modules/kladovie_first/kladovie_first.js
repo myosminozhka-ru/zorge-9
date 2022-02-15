@@ -50,7 +50,6 @@ $(function(){
         $('[name="SIMPLE_FORM_2"]').submit(function(event) {
             event.preventDefault();
             form_submit('[name="SIMPLE_FORM_2"]', function (result) {
-                console.log(result);
                 if (result.SUCCESS)
                 {
                 $('[name="SIMPLE_FORM_2"]').find('label').fadeOut();

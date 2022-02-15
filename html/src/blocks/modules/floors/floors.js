@@ -24,7 +24,6 @@ $(function() {
                         url: this.filtersLink,
                         success: (result) => {
                             this.filters = result.filter;
-                            console.log(this.filters);
                             this.addAttributes();
                             this.parseUrl();
                             this.addFloorChanger();
@@ -44,7 +43,6 @@ $(function() {
         }
         addAttributes() {
             this.apartments.forEach(item => {
-                // console.log(item);
                 switch (item.corpus) {
                     case 'Madison':
                         var rect = document.querySelector(`[data-corpse="1"][data-floor*="-${item.floor}-"] [data-position="${item.position}"]`);
@@ -112,17 +110,14 @@ $(function() {
         addFloorChanger() {
             $('.floor_changer').on('click', '.next', async () => {
                 let curFloor = this.floor;
-                console.log(curFloor);
                 this.setFloor(++curFloor);
             });
             $('.floor_changer').on('click', '.prev', async () => {
                 let curFloor = this.floor;
-                console.log(curFloor);
                 this.setFloor(--curFloor);
             });
         } 
         setRooms(rooms) {
-            console.log('position');
             if (rooms < +this.filters.minRooms || rooms > +this.filters.maxRooms) return;
             this.rooms = rooms;
             $('.rooms_changer .value').text(this.rooms);
@@ -133,14 +128,12 @@ $(function() {
             
             $(`.floor_center--item_wrap[style="display: block;"] apart_popup`).remove();
             $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"].active`).each(function() {
-                console.log($(this));
                 let self = $(this);
                 $(this).closest('.floor_center__svg')
                 .prepend(`<div class="apart_popup n2-19-2050 act_vis3" style="top: ${self.position().top - $(this).closest('svg').position().top + self.outerHeight() / 3}px; left: ${self.position().left - $(this).closest('svg').position().left + self.outerWidth() / 3}px"><div class="value">${self.data('area')}<span>м<sup>2</sup></span></div></div>`);
             });
         }
         showInfo(item, attributes) {
-            console.log($(item));
 
             $(item).closest('.floor_center').append(`<div class="hover_bl">
             <div class="hover_bl__block">
@@ -169,17 +162,14 @@ $(function() {
         addRoomsChanger() {
             $('.rooms_changer').on('click', '.next', async () => {
                 let curRooms = this.rooms;
-                console.log(curRooms);
                 this.setRooms(++curRooms);
             });
             $('.rooms_changer').on('click', '.prev', async () => {
                 let curRooms = this.rooms;
-                console.log(curRooms);
                 this.setRooms(--curRooms);
             });
         }
         setView(viewId) {
-            console.log('position v')
             if (viewId < 0 || viewId > +this.filters.windowsView.length) return;
             this.view = viewId;
             $('.views_changer .value').text(this.filters.windowsView[this.view]);
@@ -198,12 +188,10 @@ $(function() {
         addViewsChanger() {
             $('.views_changer').on('click', '.next', async () => {
                 let curView = this.view;
-                console.log(curView);
                 this.setView(++curView);
             });
             $('.views_changer').on('click', '.prev', async () => {
                 let curView = this.view;
-                console.log(curView);
                 this.setView(--curView);
             });
         }
@@ -222,26 +210,21 @@ $(function() {
         addCorpseChanger() {
             $('.corpse_changer').on('click', '.next', async () => {
                 let curCorpse = this.corpse;
-                console.log(curCorpse);
                 this.setCorpse(++curCorpse);
             });
             $('.corpse_changer').on('click', '.prev', async () => {
                 let curCorpse = this.corpse;
-                console.log(curCorpse);
                 this.setCorpse(--curCorpse);
             });
         }
         addClickHandler(item) {
             $(item).click(() => {
-                // window.location.href = $(item).attr('data-link');
-                // console.log(item, $(this).closest('svg'));
-                console.log($(item).closest('svg') );
+                window.location.href = $(item).attr('data-link');
             })
         }
         init() {
             if (!$('.floor_center--item_wrap').length) return;
             if (this.url.split('/')[2] && this.url.split('/')[3]) {
-                console.log(this.url.split('/'));
                 if (this.url.split('/')[2] == 'madison') {
                     this.corpse = 0;
                 } else if (this.url.split('/')[2] == 'manhattan' || this.url.split('/')[2] == 'manhatten') {

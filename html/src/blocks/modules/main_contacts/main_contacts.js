@@ -5,7 +5,6 @@ $(function () {
         $('[name="SIMPLE_FORM_3"]').submit(function (event) {
             event.preventDefault();
             form_submit('[name="SIMPLE_FORM_3"]', function (result) {
-                console.log(result);
                 if (result.SUCCESS) {
                     $('[name="SIMPLE_FORM_3"]').find('label').fadeOut();
                     $('[name="SIMPLE_FORM_3"]').find('.form-wrapper__btns').fadeOut();
@@ -19,7 +18,6 @@ $(function () {
         $('[name="SIMPLE_FORM_4"]').submit(function (event) {
             event.preventDefault();
             form_submit('[name="SIMPLE_FORM_4"]', function (result) {
-                console.log(result);
                 if (result.SUCCESS) {
                     $('[name="SIMPLE_FORM_4"]').find('label').fadeOut();
                     $('[name="SIMPLE_FORM_4"]').find('.form-wrapper__btns').fadeOut();
