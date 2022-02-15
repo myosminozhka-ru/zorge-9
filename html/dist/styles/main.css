@@ -5974,9 +5974,14 @@ input:checked + .slider:before {
   align-items: center;
   justify-content: space-between;
   padding-right: 80px;
-  border-right: 1px solid #fff;
   margin-right: 80px;
   width: 30%;
+}
+
+.room_page .main_head__center--cc,
+.floor_page .main_head__center--cc {
+  border-right: 1px solid #fff;
+  align-self: stretch;
 }
 
 .room_page .main_head__center--rr,
@@ -5985,11 +5990,12 @@ input:checked + .slider:before {
   width: max-content;
   align-items: center;
   justify-content: space-between;
+  width: 30%;
 }
 
 .room_page .main_head__center--rr .corp,
 .floor_page .main_head__center--rr .corp {
-  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .room_page .main_head__center--backr,
@@ -8513,10 +8519,33 @@ input:checked + .slider:before {
 }
 
 @media all and (max-width: 1580px) {
+  .room_page .main_head__center--tr,
+  .floor_page .main_head__center--tr {
+    flex-direction: column-reverse;
+  }
+
   .room_page .main_head__center--lr,
   .floor_page .main_head__center--lr {
-    padding-right: 20px;
-    margin-right: 20px;
+    width: 100%;
+    padding-right: 0;
+    margin-right: 0;
+    border: 0;
+  }
+
+  .room_page .main_head__center--rr,
+  .floor_page .main_head__center--rr {
+    width: 100%;
+    align-items: flex-end;
+    width: 100%;
+    margin: 0;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+  }
+
+  .room_page .main_head__center--rr .corp,
+  .floor_page .main_head__center--rr .corp {
+    margin: 0;
   }
 
   .room_page .main_head__center--backr,
@@ -8763,34 +8792,6 @@ input:checked + .slider:before {
 @media all and (max-width: 1220px) {
   .razs__block {
     width: 50%;
-  }
-
-  .room_page .main_head__center--tr,
-  .floor_page .main_head__center--tr {
-    flex-direction: column-reverse;
-  }
-
-  .room_page .main_head__center--lr,
-  .floor_page .main_head__center--lr {
-    width: 100%;
-    padding-right: 0;
-    margin-right: 0;
-    border: 0;
-  }
-
-  .room_page .main_head__center--rr,
-  .floor_page .main_head__center--rr {
-    align-items: flex-end;
-    width: 100%;
-    margin: 0;
-    border-bottom: 1px solid #fff;
-    padding-bottom: 12px;
-    margin-bottom: 12px;
-  }
-
-  .room_page .main_head__center--rr .corp,
-  .floor_page .main_head__center--rr .corp {
-    margin: 0;
   }
 
   .room_page .main_head__center--backr,
