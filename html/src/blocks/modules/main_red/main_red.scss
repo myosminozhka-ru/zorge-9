@@ -26,16 +26,17 @@
             font-family: 'gm';
             font-style: normal;
             font-weight: normal;
-            font-size: 8px;
+            font-size: 18px;
+            line-height: 26px;
             text-align: center;
             color: #FFFFFF;
             a {
                 color: #fff;
             }
-            // @media all and (max-width: 680px) {
-            //     font-size: 14px;
-            //     line-height: 22px;
-            // }
+            @media all and (max-width: 680px) {
+                font-size: 14px;
+                line-height: 22px;
+            }
         }
     }
     &__img {
@@ -49,5 +50,11 @@
             height: 100%;   
             object-fit: cover;
         }
+    }
+}
+.footer {
+    .main_red__info--text {
+        font-size: 10px;
+        line-height: normal;
     }
 }

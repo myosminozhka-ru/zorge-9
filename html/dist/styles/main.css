@@ -3382,7 +3382,8 @@ body {
   font-family: "gm";
   font-style: normal;
   font-weight: normal;
-  font-size: 8px;
+  font-size: 18px;
+  line-height: 26px;
   text-align: center;
   color: #FFFFFF;
 }
@@ -3403,6 +3404,11 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.footer .main_red__info--text {
+  font-size: 10px;
+  line-height: normal;
 }
 
 .main_pref {
@@ -10534,6 +10540,11 @@ input:checked + .slider:before {
     font-size: 24px;
     line-height: 32px;
     margin-bottom: 20px;
+  }
+
+  .main_red__info--text {
+    font-size: 14px;
+    line-height: 22px;
   }
 
   .main_pref {
