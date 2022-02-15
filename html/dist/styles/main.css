@@ -2892,11 +2892,11 @@ body {
   font-family: "gm", serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
   color: #FFFFFF;
-  margin: 0 40px;
-  margin-right: 60px;
+  margin: 0 20px;
+  margin-right: 50px;
   text-decoration: none;
 }
 
@@ -2906,7 +2906,7 @@ body {
   font-family: "gm", serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
