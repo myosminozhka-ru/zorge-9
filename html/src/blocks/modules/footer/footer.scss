@@ -48,12 +48,12 @@
             flex-wrap: wrap;
             list-style: none;
             li {
-                width: 33%;
+                width: 33% !important;
                 @media all and (max-width: 1023px) {
-                    width: 50%;
+                    width: 50% !important;
                 }
                 @media all and (max-width: 680px) {
-                    width: 100%;
+                    width: 100% !important;
                     text-align: center;
                 }
                 a {

@@ -2469,6 +2469,10 @@ img {
   background: #957B61;
 }
 
+.room_page.ap_page.page_act .footer {
+  padding-top: 80px;
+}
+
 .form-wrapper {
   position: fixed;
   left: 0;
@@ -3378,10 +3382,13 @@ body {
   font-family: "gm";
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 8px;
   text-align: center;
   color: #FFFFFF;
+}
+
+.main_red__info--text a {
+  color: #fff;
 }
 
 .main_red__img {
@@ -5407,12 +5414,6 @@ input:checked + .slider:before {
 .main_func__l--block.active span {
   background-image: linear-gradient(#957B61, #957B61);
   color: #957B61;
-  background-size: 100% 1px;
-}
-
-.main_func__l--block:hover span {
-  background-image: linear-gradient(#B69B80, #B69B80);
-  color: #B69B80;
   background-size: 100% 1px;
 }
 
@@ -8283,7 +8284,7 @@ input:checked + .slider:before {
 }
 
 .footer__menu ul li {
-  width: 33%;
+  width: 33% !important;
 }
 
 .footer__menu ul li a {
@@ -8351,6 +8352,12 @@ input:checked + .slider:before {
 
   .main_blocks__block--btns a {
     font-size: 18px;
+  }
+
+  .main_func__l--block:hover span {
+    background-image: linear-gradient(#B69B80, #B69B80);
+    color: #B69B80;
+    background-size: 100% 1px;
   }
 }
 
@@ -9476,7 +9483,7 @@ input:checked + .slider:before {
   }
 
   .footer__menu ul li {
-    width: 50%;
+    width: 50% !important;
   }
 }
 
@@ -10529,11 +10536,6 @@ input:checked + .slider:before {
     margin-bottom: 20px;
   }
 
-  .main_red__info--text {
-    font-size: 14px;
-    line-height: 22px;
-  }
-
   .main_pref {
     padding-top: 80px;
     padding-bottom: 60px;
@@ -11004,7 +11006,7 @@ input:checked + .slider:before {
   }
 
   .footer__menu ul li {
-    width: 100%;
+    width: 100% !important;
     text-align: center;
   }
 
@@ -11044,6 +11046,13 @@ input:checked + .slider:before {
 
   .ap_page .room_center__r .slick-dots li button {
     width: 20px;
+  }
+}
+
+@media all and (max-width: 520px) {
+  .din__gal {
+    height: auto;
+    max-height: unset;
   }
 }
 

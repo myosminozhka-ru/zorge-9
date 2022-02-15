@@ -196,6 +196,10 @@
         max-height: 500px;
         height: 100%;
         object-fit: cover;
+        @media all and (max-width: 520px) {
+            height: auto;
+            max-height: unset;
+        }
     }
 }
 .din_page {

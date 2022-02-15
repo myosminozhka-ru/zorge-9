@@ -26,14 +26,16 @@
             font-family: 'gm';
             font-style: normal;
             font-weight: normal;
-            font-size: 18px;
-            line-height: 26px;
+            font-size: 8px;
             text-align: center;
             color: #FFFFFF;
-            @media all and (max-width: 680px) {
-                font-size: 14px;
-                line-height: 22px;
+            a {
+                color: #fff;
             }
+            // @media all and (max-width: 680px) {
+            //     font-size: 14px;
+            //     line-height: 22px;
+            // }
         }
     }
     &__img {
