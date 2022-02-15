@@ -106,11 +106,13 @@
                     background-size: 100% 1px;
                 }
             }
-            &:hover { 
-                span {
-                    background-image: linear-gradient(#B69B80, #B69B80);
-                    color: #B69B80;
-                    background-size: 100% 1px;
+            @media all and (min-width: 1023px) {
+                &:hover { 
+                    span {
+                        background-image: linear-gradient(#B69B80, #B69B80);
+                        color: #B69B80;
+                        background-size: 100% 1px;
+                    }
                 }
             }
         }

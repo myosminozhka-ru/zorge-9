@@ -81,6 +81,11 @@ img {
 ::-webkit-scrollbar-thumb:hover {
   background: #957B61;
 }
+.room_page.ap_page.page_act {
+  .footer {
+    padding-top: 80px;
+  }
+}
 //form
 .form-wrapper {
   position: fixed;

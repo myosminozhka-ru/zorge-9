@@ -12,6 +12,7 @@ $(function() {
             settings: {
                 variableWidth: false,
                 arrows: false,
+                adaptiveHeight: true,
                 dots: true
             }
           }
