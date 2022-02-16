@@ -123,9 +123,9 @@ img {
     font-family: "gm", serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: vw(18);
     color: #000000;
-    margin-top: 40px;
+    margin-top: vw(40);
     a {
       color: #957B61;
     }
@@ -134,17 +134,17 @@ img {
       font-family: 'gml', serif;
       font-style: normal;
       font-weight: 300;
-      font-size: 48px;
+      font-size: vw(48);
       color: #957B61;
-      margin-bottom: 60px;
+      margin-bottom: vw(60);
   }
   &__subtitle {
       font-family: 'gm', serif;
       font-style: normal;
       font-weight: normal;
-      font-size: 18px;
+      font-size: vw(18);
       color: #000000;
-      margin-bottom: 40px;
+      margin-bottom: vw(40);
   }
   &__form {
     width: 100%;
@@ -184,31 +184,31 @@ img {
       }
   }
   &__btns {
-      max-width: 534px;
+      max-width: vw(534);
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      margin-top: 60px;
+      margin-top: vw(60);
       margin-left: auto;
       margin-right: auto;
       input[type="submit"], .main_btn {
           cursor: pointer;
-          max-width: 248px;
+          max-width: vw(248);
           width: 100%;
-          margin-right: 40px;
+          margin-right: vw(40);
           font-family: 'gmm', serif;
           font-style: normal;
           font-weight: 500;
           border-radius: 0 !important;
-          font-size: 24px;
+          font-size: vw(24);
           text-align: center;
           text-transform: uppercase;
           text-decoration: none;
           color: #FFFFFF;
           background: #957B61;
           text-align: center;
-          padding: 27px 10px;
+          padding: vw(27) vw(10);
           border: 0;
           transition: all .3s ease-out;
           cursor: pointer;
@@ -232,7 +232,7 @@ img {
       width: 100%;
       background: #fff;
       position: relative;
-      padding: 120px 80px;
+      padding: vw(120) vw(80);
   }
 
   .title {
@@ -306,8 +306,8 @@ img {
   
   .icon-close {
       position: absolute;
-      right: 40px;
-      top: 40px;
+      right: vw(40);
+      top: vw(40);
       background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.45469 0L0.000155474 1.45453L6.54551 7.99988L0 14.5454L1.45453 15.9999L8.00004 9.45441L14.5455 15.9998L16 14.5453L9.45457 7.99988L15.9998 1.45461L14.5453 7.85144e-05L8.00004 6.54535L1.45469 0Z' fill='%23957B61'/%3E%3C/svg%3E%0A") 50% no-repeat;
       width: 16px;
       height: 16px;
@@ -319,18 +319,18 @@ img {
           width: auto;
           height: auto;
           cursor: pointer;
-          max-width: 215px;
+          max-width: vw(215);
           width: 100%;
           font-family: 'gmm', serif;
           font-style: normal;
           font-weight: 500;
-          font-size: 24px;
+          font-size: vw(24);
           text-align: center;
           text-transform: uppercase;
           color: #FFFFFF;
           background: #957B61;
           text-align: center;
-          padding: 27px 10px;
+          padding: vw(27) vw(10);
           transition: all .3s ease-out;
           cursor: pointer;
           &:hover {
