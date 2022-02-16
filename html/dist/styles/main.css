@@ -7399,6 +7399,9 @@ input:checked + .slider:before {
   margin-right: 80px;
   width: 100%;
   flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .params_blocks--title {
@@ -8980,6 +8983,7 @@ input:checked + .slider:before {
     max-width: 100%;
     padding-bottom: 60px;
     border-bottom: 1px solid #C4C4C4;
+    display: block;
   }
 
   .table__info--img {

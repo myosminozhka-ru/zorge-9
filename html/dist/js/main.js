@@ -2384,7 +2384,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".block_park
 // 	}
 // });
 // $("#form_park").submit(function(e) {
-//     console.log(1);
 //     e.preventDefault(); // avoid to execute the actual submit of the form.
 //     var form = $(this);
 //     var actionUrl = form.attr('action');
@@ -2394,7 +2393,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".block_park
 //         data: form.serialize(), // serializes the form's elements.
 //         success: function(data)
 //         {
-//           console.log(data); // show response from the php script.
 //         }
 //     });
 // });
@@ -2465,9 +2463,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
           jquery__WEBPACK_IMPORTED_MODULE_0___default()('#parking-place').attr('value', flat);
         }
 
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()(_this).closest('.parking_white__in').find('.hover_bl').replaceWith("\n                    <div class=\"hover_bl active\">\n                        <div class=\"hover_bl__block\">\n                            <div class=\"hover_bl__block--title\">\u041D\u043E\u043C\u0435\u0440 <br> \u043F\u043E\u043C\u0435\u0449\u0435\u043D\u0438\u044F \u0438 \u043A\u043E\u0440\u043F\u0443\u0441</div>\n                            <div class=\"hover_bl__block--text\">".concat(data.name, "</div>\n                        </div>\n                        <div class=\"hover_bl__block\">\n                            <div class=\"hover_bl__block--title\">\u041F\u043B\u043E\u0449\u0430\u0434\u044C <br> \u043F\u043E\u043C\u0435\u0449\u0435\u043D\u0438\u044F</div>\n                            <div class=\"hover_bl__block--text\">").concat(data.area, "</div>\n                        </div>\n                        <div class=\"hover_bl__block\">\n                            <div class=\"hover_bl__block--title\">\u0426\u0435\u043D\u0430</div>\n                            <div class=\"hover_bl__block--text\">").concat(data.price > 0 ? data.price : 'По запросу', "</div>\n                        </div>\n                        <div class=\"hover_bl__block\">\n                            <div class=\"hover_bl__block--link feedback\">\u041E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u0437\u0430\u044F\u0432\u043A\u0443</div>\n                            <a href=\"").concat(data.pdf ? data.pdf : '', "\" class=\"room_center__rl--li\">\n                                <div class=\"room_center__rl--img\"><img src=\"./img/sc4.png\" alt=\"\"></div>\n                                <div class=\"room_center__rl--title\">\u0421\u043A\u0430\u0447\u0430\u0442\u044C pdf</div>\n                            </a>\n                        </div>\n                    </div>\n                ")); // result.forEach(item => {
-        //     console.log(item);
-        // })
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(_this).closest('.parking_white__in').find('.hover_bl').replaceWith("\n                    <div class=\"hover_bl active\">\n                        <div class=\"hover_bl__block\">\n                            <div class=\"hover_bl__block--title\">\u041D\u043E\u043C\u0435\u0440 <br> \u043F\u043E\u043C\u0435\u0449\u0435\u043D\u0438\u044F \u0438 \u043A\u043E\u0440\u043F\u0443\u0441</div>\n                            <div class=\"hover_bl__block--text\">".concat(data.name, "</div>\n                        </div>\n                        <div class=\"hover_bl__block\">\n                            <div class=\"hover_bl__block--title\">\u041F\u043B\u043E\u0449\u0430\u0434\u044C <br> \u043F\u043E\u043C\u0435\u0449\u0435\u043D\u0438\u044F</div>\n                            <div class=\"hover_bl__block--text\">").concat(data.area, "</div>\n                        </div>\n                        <div class=\"hover_bl__block\">\n                            <div class=\"hover_bl__block--title\">\u0426\u0435\u043D\u0430</div>\n                            <div class=\"hover_bl__block--text\">").concat(data.price > 0 ? data.price : 'По запросу', "</div>\n                        </div>\n                        <div class=\"hover_bl__block\">\n                            <div class=\"hover_bl__block--link feedback\">\u041E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u0437\u0430\u044F\u0432\u043A\u0443</div>\n                            <a href=\"").concat(data.pdf ? data.pdf : '', "\" class=\"room_center__rl--li\">\n                                <div class=\"room_center__rl--img\"><img src=\"./img/sc4.png\" alt=\"\"></div>\n                                <div class=\"room_center__rl--title\">\u0421\u043A\u0430\u0447\u0430\u0442\u044C pdf</div>\n                            </a>\n                        </div>\n                    </div>\n                "));
       }
     });
   });
@@ -2488,10 +2484,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
             if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(".plc1[data-flat-id=\"".concat(data[i], "\"]")).length) {
               jquery__WEBPACK_IMPORTED_MODULE_0___default()(".plc1[data-flat-id=\"".concat(data[i], "\"]")).addClass('active');
             }
-          } // result.forEach(item => {
-          //     console.log(item);
-          // })
-
+          }
         }
       });
     } else {
@@ -2516,10 +2509,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
             if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(".plc2[data-flat-id=\"".concat(data[i], "\"]")).length) {
               jquery__WEBPACK_IMPORTED_MODULE_0___default()(".plc2[data-flat-id=\"".concat(data[i], "\"]")).addClass('active');
             }
-          } // result.forEach(item => {
-          //     console.log(item);
-          // })
-
+          }
         }
       });
     } else {
@@ -2910,7 +2900,6 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 $('form').find('input').attr('required', true);
 
 window.form_submit = function (selector, callback) {
-  console.log($(selector).find('input'));
   var fields = $(selector).serializeArray().reduce(function (obj, item) {
     obj[item.name] = item.value;
     return obj;
@@ -2958,9 +2947,7 @@ window.form_submit = function (selector, callback) {
 //             {
 //                 $('.table__info').html(data.data);
 //                 $('#num').html(data.num);
-//                 console.log('hasdata')
 //             } else {
-//                 console.log('nodata')
 //                 $('.table__info').html('<div class="table__info--no_result">Нет результатов</div>');
 //             }
 //         },

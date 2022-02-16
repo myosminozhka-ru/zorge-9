@@ -58,9 +58,6 @@ $(function() {
                         </div>
                     </div>
                 `)
-                // result.forEach(item => {
-                //     console.log(item);
-                // })
             }
         });
     })
@@ -81,9 +78,6 @@ $(function() {
                             $(`.plc1[data-flat-id="${data[i]}"]`).addClass('active');
                         }
                     }
-                    // result.forEach(item => {
-                    //     console.log(item);
-                    // })
                 }
             });
         } else {
@@ -108,9 +102,6 @@ $(function() {
                             $(`.plc2[data-flat-id="${data[i]}"]`).addClass('active');
                         }
                     }
-                    // result.forEach(item => {
-                    //     console.log(item);
-                    // })
                 }
             });
         } else {

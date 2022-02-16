@@ -4,7 +4,6 @@ import "./import/modules";
 
 $('form').find('input').attr('required', true);
 window.form_submit = function(selector, callback) {
-    console.log($(selector).find('input'));
     var fields = $(selector).serializeArray().reduce(function(obj, item) {
         obj[item.name] = item.value;
         return obj;
@@ -51,9 +50,7 @@ window.form_submit = function(selector, callback) {
 //             {
 //                 $('.table__info').html(data.data);
 //                 $('#num').html(data.num);
-//                 console.log('hasdata')
 //             } else {
-//                 console.log('nodata')
 //                 $('.table__info').html('<div class="table__info--no_result">Нет результатов</div>');
 //             }
 //         },

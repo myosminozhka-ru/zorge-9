@@ -136,7 +136,6 @@ $(document).on("click", ".block_park", function(e) {
 // 	}
 // });
 // $("#form_park").submit(function(e) {
-//     console.log(1);
 //     e.preventDefault(); // avoid to execute the actual submit of the form.
 
 //     var form = $(this);
@@ -148,7 +147,6 @@ $(document).on("click", ".block_park", function(e) {
 //         data: form.serialize(), // serializes the form's elements.
 //         success: function(data)
 //         {
-//           console.log(data); // show response from the php script.
 //         }
 //     });
     
