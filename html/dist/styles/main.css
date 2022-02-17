@@ -2641,11 +2641,11 @@ img {
 }
 
 .form-wrapper .form-wrapper-inner {
-  max-width: 960px;
+  max-width: 900px;
   width: 100%;
   background: #fff;
   position: relative;
-  padding: 6.25vw 4.1666666667vw;
+  padding: 3.125vw 3.125vw;
 }
 
 .form-wrapper .title {
