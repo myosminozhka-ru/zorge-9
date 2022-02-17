@@ -2765,6 +2765,11 @@ input:focus {
   border: 1px solid #957B61 !important;
 }
 
+.form-wrapper-inner .kladovie_sl .slick-dots button {
+  background: #957B61;
+  box-shadow: none;
+}
+
 .header {
   position: relative;
   z-index: 20;
@@ -2896,12 +2901,12 @@ body {
   font-family: "gm", serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
   text-transform: uppercase;
   color: #FFFFFF;
   margin: 0 20px;
   margin-right: 50px;
   text-decoration: none;
+  font-size: 16px;
 }
 
 .main_head__top--btn {
@@ -2917,15 +2922,18 @@ body {
   text-decoration: none;
   display: flex;
   align-items: center;
-  background-image: linear-gradient(#957B61, #957B61);
   background-position: 0% 95%;
   background-repeat: no-repeat;
-  background-size: 0% 2px;
   transition: background-size 0.3s;
 }
 
 .main_head__top--btn:hover {
   background-size: 100% 2px;
+}
+
+.main_head__top--logo + .main_head__top--btn {
+  background-image: linear-gradient(#957B61, #957B61);
+  padding: 15px 20px;
 }
 
 .main_head__top.fixed {
@@ -3129,7 +3137,6 @@ body {
 
 .site-panel-wrap .burger-wrap .burger-body__nav ul li .submenu {
   margin-left: 15px;
-  margin-bottom: 30px;
 }
 
 .site-panel-wrap .burger-wrap .burger-body__nav ul li .submenu li a {
@@ -5928,7 +5935,6 @@ input:checked + .slider:before {
   width: 10vw;
   height: 27.1666666667vw;
   position: absolute;
-  right: 9.8958333333vw;
   top: 0;
 }
 
@@ -6069,6 +6075,11 @@ input:checked + .slider:before {
 .floor_page .main_head__center--sort {
   display: flex;
   align-items: center;
+}
+
+.room_page .main_head__center--sort > img,
+.floor_page .main_head__center--sort > img {
+  max-width: 186px;
 }
 
 .room_page .main_head__center--sort > div,
@@ -6937,6 +6948,10 @@ input:checked + .slider:before {
   font-size: 48px;
   color: #FFFFFF;
   margin-bottom: 40px;
+}
+
+.ap_blocks .ap_blocks__title {
+  color: #957B61;
 }
 
 .ap_blocks__text {
@@ -8293,7 +8308,7 @@ input:checked + .slider:before {
 }
 
 .footer__menu ul li {
-  width: 33% !important;
+  width: 20% !important;
 }
 
 .footer__menu ul li a {
@@ -8425,6 +8440,16 @@ input:checked + .slider:before {
   .room_page .room_center__r img,
   .floor_page .room_center__r img {
     max-width: 433px;
+  }
+}
+
+@media all and (min-width: 1600px) {
+  .main_head__top--tel {
+    font-size: 18px;
+  }
+
+  .main_head__top--btn {
+    font-size: 18px;
   }
 }
 

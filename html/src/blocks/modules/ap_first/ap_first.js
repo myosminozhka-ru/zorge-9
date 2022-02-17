@@ -76,7 +76,7 @@ $(function() {
     })
         // $('.slrs25 img:nth-child(n+4)').remove();
     $('.slrs25 img').each(function(index, value) {
-        if (index > 2) {
+        if (index > 4) {
             $(this).remove();
         }
         

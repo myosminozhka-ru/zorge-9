@@ -122,14 +122,17 @@ body {
             font-family: 'gm', serif;
             font-style: normal;
             font-weight: normal;
-            font-size: 16px;
             text-transform: uppercase;
             color: #FFFFFF;
             margin: 0 20px;
             margin-right: 50px;
             text-decoration: none;
+            font-size: 16px;
             @media all and (max-width: 1400px) {
                 display: none;
+            }
+            @media all and (min-width: 1600px) {
+                font-size: 18px;
             }
         }
         &--btn {
@@ -145,10 +148,9 @@ body {
             text-decoration: none;
             display: flex;
             align-items: center;
-            background-image: linear-gradient(#957B61, #957B61);
             background-position: 0% 95%;
             background-repeat: no-repeat;
-            background-size: 0% 2px;
+            // background-size: 0% 2px;
             transition: background-size .3s;
             &:hover {
                 background-size: 100% 2px;
@@ -156,6 +158,13 @@ body {
             @media all and (max-width: 1400px) {
                 display: none;
             }
+            @media all and (min-width: 1600px) {
+                font-size: 18px;
+            }
+        }
+        &--logo + &--btn {
+            background-image: linear-gradient(#957B61, #957B61);
+            padding: 15px 20px;
         }
         &.fixed {
             position: fixed;
@@ -430,7 +439,7 @@ body {
                         }
                         .submenu {
                             margin-left: 15px;
-                            margin-bottom: 30px;
+                            // margin-bottom: 30px;
                             @media all and (max-width: 680px) {
                                 display: none;
                             }

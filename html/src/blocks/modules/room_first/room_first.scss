@@ -133,6 +133,9 @@
         &--sort {
             display: flex;
             align-items: center;
+            & > img {
+                max-width: 186px;
+            }
             > div {
                 margin-left: 25px;
                 cursor: pointer;

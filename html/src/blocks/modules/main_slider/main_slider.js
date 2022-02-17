@@ -5,7 +5,7 @@ $(function() {
         slidesToScroll: 1,
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 2500,
+        autoplaySpeed: 4500,
         fade: true,
         asNavFor: '.slider_nav'
     });
@@ -13,7 +13,7 @@ $(function() {
         slidesToScroll: 1,
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 2500,
+        autoplaySpeed: 4500,
         asNavFor: '.slider_for',
         dots: false
     });

@@ -252,7 +252,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
   }); // $('.slrs25 img:nth-child(n+4)').remove();
 
   jquery__WEBPACK_IMPORTED_MODULE_1___default()('.slrs25 img').each(function (index, value) {
-    if (index > 2) {
+    if (index > 4) {
       jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).remove();
     }
   });
@@ -2046,7 +2046,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 4500,
     fade: true,
     asNavFor: '.slider_nav'
   });
@@ -2054,7 +2054,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 4500,
     asNavFor: '.slider_for',
     dots: false
   });
