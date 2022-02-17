@@ -2514,6 +2514,7 @@ img {
   font-size: 0.9375vw;
   color: #000000;
   margin-top: 2.0833333333vw;
+  width: 100%;
 }
 
 .form-wrapper__info a {
