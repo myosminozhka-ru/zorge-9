@@ -2590,7 +2590,7 @@ img {
 }
 
 .form-wrapper__btns {
-  max-width: 27.8125vw;
+  max-width: 22.6041666667vw;
   width: 100%;
   display: flex;
   align-items: center;
@@ -2617,7 +2617,7 @@ img {
   color: #FFFFFF;
   background: #957B61;
   text-align: center;
-  padding: 1.40625vw 0.5208333333vw;
+  padding: 0.8854166667vw 0.5208333333vw;
   border: 0;
   transition: all 0.3s ease-out;
   cursor: pointer;
@@ -2640,7 +2640,7 @@ img {
 }
 
 .form-wrapper .form-wrapper-inner {
-  max-width: 1160px;
+  max-width: 960px;
   width: 100%;
   background: #fff;
   position: relative;
@@ -2748,7 +2748,7 @@ img {
   color: #FFFFFF;
   background: #957B61;
   text-align: center;
-  padding: 1.40625vw 0.5208333333vw;
+  padding: 0.8854166667vw 0.5208333333vw;
   transition: all 0.3s ease-out;
   cursor: pointer;
 }
