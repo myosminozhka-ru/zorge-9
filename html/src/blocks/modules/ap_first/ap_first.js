@@ -27,8 +27,8 @@ $(function() {
                 $('.ap_tabs').append(`
                     <div class="ap_tabs__blocks">
                         <div class="ap_tabs__blocks--block">
-                            <div class="ap_tabs__blocks--img"><img src="/local/templates/main/assets/html/dist/img/i5.png" alt=""></div>
-                            <div class="ap_tabs__blocks--title">ВТБ</div>
+                            <div class="ap_tabs__blocks--img"><img src="${item.img}" alt=""></div>
+                            <div class="ap_tabs__blocks--title">${item.name}</div>
                         </div>
                         <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Ставка</span>${item.bid}</div>
                         <div class="ap_tabs__blocks--block"><span class="ap_tabs__blocks--span">Срок</span>${item.contribution}</div>
