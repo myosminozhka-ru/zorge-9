@@ -5936,6 +5936,7 @@ input:checked + .slider:before {
   width: 10vw;
   height: 27.1666666667vw;
   position: absolute;
+  right: 0;
   top: 0;
 }
 
@@ -6951,7 +6952,8 @@ input:checked + .slider:before {
   margin-bottom: 40px;
 }
 
-.ap_blocks .ap_blocks__title {
+.ap_blocks .ap_blocks__title,
+.ap_blocks .box__title {
   color: #957B61;
 }
 
