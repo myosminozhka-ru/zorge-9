@@ -1291,16 +1291,16 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
       key: "setRooms",
       value: function setRooms(rooms) {
         if (rooms < +this.filters.minRooms || rooms > +this.filters.maxRooms) return;
-        this.rooms = rooms;
+        this.rooms = rooms; // console.log(321);
+
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.rooms_changer .value').text(this.rooms);
         this.parseUrl();
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('[data-position]').removeClass('active');
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('.apart_popup').remove();
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"]")).addClass('active');
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] apart_popup").remove();
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"].active")).each(function () {
-          var self = jquery__WEBPACK_IMPORTED_MODULE_4___default()(this);
-          jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').prepend("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top: ".concat(self.position().top - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('svg').position().top + self.outerHeight() / 3, "px; left: ").concat(self.position().left - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('svg').position().left + self.outerWidth() / 3, "px\"><div class=\"value\">").concat(self.data('area'), "<span>\u043C<sup>2</sup></span></div></div>"));
+        document.querySelectorAll(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"].active")).forEach(function (rect) {
+          jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect).closest('.floor_center__svg').prepend("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top:".concat(rect.getBoundingClientRect().top + rect.getBoundingClientRect().height / 2 - rect.closest('.floor_center__svg').getBoundingClientRect().top, "px;left:").concat(rect.getBoundingClientRect().left + rect.getBoundingClientRect().width / 2 - rect.closest('.floor_center__svg').getBoundingClientRect().left, "px;\"><div class=\"value\">").concat(rect.dataset.area, "<span>\u043C<sup>2</sup></span></div></div>"));
         });
       }
     }, {
@@ -1357,16 +1357,18 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
       key: "setView",
       value: function setView(viewId) {
         if (viewId < 0 || viewId > +this.filters.windowsView.length) return;
-        this.view = viewId;
+        this.view = viewId; // console.log(123);
+
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.views_changer .value').text(this.filters.windowsView[this.view]);
         this.parseUrl();
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap[style="display: block;"]').find('[data-position]').removeClass('active');
         jquery__WEBPACK_IMPORTED_MODULE_4___default()('.floor_center--item_wrap').find('.apart_popup').remove();
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"]")).addClass('active');
         jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] apart_popup").remove();
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"][data-window_view*=\"").concat(this.filters.windowsView[this.view], "\"].active")).each(function () {
-          var self = jquery__WEBPACK_IMPORTED_MODULE_4___default()(this);
-          jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('.floor_center__svg').prepend("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top: ".concat(self.position().top - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('svg').position().top + self.innerHeight() / 3, "px; left: ").concat(self.position().left - jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).closest('svg').position().left + self.innerWidth() / 3, "px\"><div class=\"value\">").concat(self.data('area'), "<span>\u043C<sup>2</sup></span></div></div>"));
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] apart_popup").remove();
+        jquery__WEBPACK_IMPORTED_MODULE_4___default()(".floor_center--item_wrap[style=\"display: block;\"] apart_popup").remove();
+        document.querySelectorAll(".floor_center--item_wrap[style=\"display: block;\"] [data-rooms=\"".concat(this.rooms, "\"].active")).forEach(function (rect) {
+          jquery__WEBPACK_IMPORTED_MODULE_4___default()(rect).closest('.floor_center__svg').prepend("<div class=\"apart_popup n2-19-2050 act_vis3\" style=\"top:".concat(rect.getBoundingClientRect().top + rect.getBoundingClientRect().height / 2 - rect.closest('.floor_center__svg').getBoundingClientRect().top, "px;left:").concat(rect.getBoundingClientRect().left + rect.getBoundingClientRect().width / 2 - rect.closest('.floor_center__svg').getBoundingClientRect().left, "px;\"><div class=\"value\">").concat(rect.dataset.area, "<span>\u043C<sup>2</sup></span></div></div>"));
         });
       }
     }, {

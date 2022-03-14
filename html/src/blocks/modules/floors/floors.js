@@ -120,6 +120,7 @@ $(function() {
         setRooms(rooms) {
             if (rooms < +this.filters.minRooms || rooms > +this.filters.maxRooms) return;
             this.rooms = rooms;
+            // console.log(321);
             $('.rooms_changer .value').text(this.rooms);
             this.parseUrl();
             $('.floor_center--item_wrap[style="display: block;"]').find('[data-position]').removeClass('active');
@@ -127,10 +128,9 @@ $(function() {
             $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"]`).addClass('active')
             
             $(`.floor_center--item_wrap[style="display: block;"] apart_popup`).remove();
-            $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"].active`).each(function() {
-                let self = $(this);
-                $(this).closest('.floor_center__svg')
-                .prepend(`<div class="apart_popup n2-19-2050 act_vis3" style="top: ${self.position().top - $(this).closest('svg').position().top + self.outerHeight() / 3}px; left: ${self.position().left - $(this).closest('svg').position().left + self.outerWidth() / 3}px"><div class="value">${self.data('area')}<span>м<sup>2</sup></span></div></div>`);
+            document.querySelectorAll(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"].active`).forEach((rect) => {
+                $(rect).closest('.floor_center__svg')
+                .prepend(`<div class="apart_popup n2-19-2050 act_vis3" style="top:${rect.getBoundingClientRect().top + (rect.getBoundingClientRect().height / 2) - rect.closest('.floor_center__svg').getBoundingClientRect().top}px;left:${rect.getBoundingClientRect().left + (rect.getBoundingClientRect().width / 2) - rect.closest('.floor_center__svg').getBoundingClientRect().left}px;"><div class="value">${rect.dataset.area}<span>м<sup>2</sup></span></div></div>`);
             });
         }
         showInfo(item, attributes) {
@@ -172,6 +172,7 @@ $(function() {
         setView(viewId) {
             if (viewId < 0 || viewId > +this.filters.windowsView.length) return;
             this.view = viewId;
+            // console.log(123);
             $('.views_changer .value').text(this.filters.windowsView[this.view]);
             this.parseUrl();
             $('.floor_center--item_wrap[style="display: block;"]').find('[data-position]').removeClass('active');
@@ -179,10 +180,11 @@ $(function() {
             $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"]`).addClass('active')
             
             $(`.floor_center--item_wrap[style="display: block;"] apart_popup`).remove();
-            $(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"][data-window_view*="${this.filters.windowsView[this.view]}"].active`).each(function() {
-                let self = $(this);
-                $(this).closest('.floor_center__svg')
-                .prepend(`<div class="apart_popup n2-19-2050 act_vis3" style="top: ${self.position().top - $(this).closest('svg').position().top + self.innerHeight() / 3}px; left: ${self.position().left - $(this).closest('svg').position().left + self.innerWidth() / 3}px"><div class="value">${self.data('area')}<span>м<sup>2</sup></span></div></div>`);
+            $(`.floor_center--item_wrap[style="display: block;"] apart_popup`).remove();
+            $(`.floor_center--item_wrap[style="display: block;"] apart_popup`).remove();
+            document.querySelectorAll(`.floor_center--item_wrap[style="display: block;"] [data-rooms="${this.rooms}"].active`).forEach((rect) => {
+                $(rect).closest('.floor_center__svg')
+                .prepend(`<div class="apart_popup n2-19-2050 act_vis3" style="top:${rect.getBoundingClientRect().top + (rect.getBoundingClientRect().height / 2) - rect.closest('.floor_center__svg').getBoundingClientRect().top}px;left:${rect.getBoundingClientRect().left + (rect.getBoundingClientRect().width / 2) - rect.closest('.floor_center__svg').getBoundingClientRect().left}px;"><div class="value">${rect.dataset.area}<span>м<sup>2</sup></span></div></div>`);
             });
         }
         addViewsChanger() {

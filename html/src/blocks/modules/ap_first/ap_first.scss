@@ -494,6 +494,9 @@
 .room_page.ap_page.page_act {
     .main_head__center--rr {
         width: 30% !important;
+        @media all and (max-width: 1500px) and (min-width: 1400px) {
+            width: auto !important;
+        }
     }
     .main_head__center {
         padding-bottom: 0;

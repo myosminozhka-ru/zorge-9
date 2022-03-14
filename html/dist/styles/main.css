@@ -5583,10 +5583,6 @@ input:checked + .slider:before {
   line-height: 48px;
 }
 
-.floor_center--item_wrap {
-  display: none;
-}
-
 .fl_tit {
   display: none;
 }
@@ -11222,6 +11218,17 @@ input:checked + .slider:before {
   .din__gals .slick-dots li button {
     margin-left: 1px !important;
     margin-right: 1px !important;
+  }
+}
+
+@media all and (max-width: 1500px) and (min-width: 1400px) {
+  .room_page .main_head__center--rr,
+  .floor_page .main_head__center--rr {
+    width: auto !important;
+  }
+
+  .room_page.ap_page.page_act .main_head__center--rr {
+    width: auto !important;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */

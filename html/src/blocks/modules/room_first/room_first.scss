@@ -49,6 +49,9 @@
             align-items: center;
             justify-content: space-between;
             width: 30%;
+            @media all and (max-width: 1500px) and (min-width: 1400px) {
+                width: auto !important;
+            }
             .corp {
                 margin-right: 30px;
             }
