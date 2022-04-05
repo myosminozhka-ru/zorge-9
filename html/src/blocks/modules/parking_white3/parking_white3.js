@@ -22,7 +22,7 @@ $(function() {
     $('.plc1[data-flat-id], .plc2[data-flat-id]').click(function() {
         flat = $(this).data('flat-id');
         $.ajax({
-            url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
+            url: '/ajax/commercial.php',
             method: "POST",
             data: {
                 type: 'detail',
@@ -31,6 +31,7 @@ $(function() {
             },
             success: (result) => {
                 let data = JSON.parse(result);
+                console.log(data);
                 if ($('#parking-place').length) {
                     $('#parking-place').attr('value', flat);
                 }
@@ -64,7 +65,7 @@ $(function() {
     $('.place1.load_data').click(function() {
         if ($(this).hasClass('active')) {
             $.ajax({
-                url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
+                url: '/ajax/commercial.php',
                 method: "POST",
                 data: {
                     type: 'info',
@@ -72,6 +73,7 @@ $(function() {
                 },
                 success: (result) => {
                     let data = JSON.parse(result);
+                    console.log(data);
                     $('.plc1').removeClass('active');
                     for (let i = 0; i < data.length; i++) {
                         if ($(`.plc1[data-flat-id="${data[i]}"]`).length) {
@@ -88,7 +90,7 @@ $(function() {
     $('.place2.load_data').click(function() {
         if ($(this).hasClass('active')) {
             $.ajax({
-                url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
+                url: '/ajax/commercial.php',
                 method: "POST",
                 data: {
                     type: 'info',
@@ -96,6 +98,7 @@ $(function() {
                 },
                 success: (result) => {
                     let data = JSON.parse(result);
+                    console.log(data);
                     $('.plc2').removeClass('active');
                     for (let i = 0; i < data.length; i++) {
                         if ($(`.plc2[data-flat-id="${data[i]}"]`).length) {

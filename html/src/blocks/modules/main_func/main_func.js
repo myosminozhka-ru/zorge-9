@@ -14,8 +14,8 @@ $(function() {
         $('.js-range-slider4').ionRangeSlider(ionSliderOptions4);
     }
     $('#SvgjsPath1027').on('click', function() {
-        $('.show2').toggleClass('active');
-        $(this).toggleClass('active');
+        $('.show2').addClass('active');
+        $(this).addClass('active');
         $(document).on('click', function(e){
             if( $(e.target).closest('#SvgjsPath1027').length || $(e.target).closest('#SvgjsPath1027 path').length)
             return
@@ -24,8 +24,8 @@ $(function() {
         });
     })
     $('#SvgjsPath1025').on('click', function() {
-        $('.show1').toggleClass('active');
-        $(this).toggleClass('active');
+        $('.show1').addClass('active');
+        $(this).addClass('active');
         $(document).on('click', function(e){
             if( $(e.target).closest('#SvgjsPath1025').length || $(e.target).closest('#SvgjsPath1025 path').length)
             return
@@ -34,8 +34,8 @@ $(function() {
         });
     })
     $('#SvgjsPath1029').on('click', function() {
-        $('.show3').toggleClass('active');
-        $(this).toggleClass('active');
+        $('.show3').addClass('active');
+        $(this).addClass('active');
         $(document).on('click', function(e){
             if( $(e.target).closest('#SvgjsPath1029').length || $(e.target).closest('#SvgjsPath1029 path').length)
             return        

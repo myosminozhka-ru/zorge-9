@@ -4,7 +4,7 @@ $(function(){
   $('.main_head__center--backr').click(function(event) {
     if (history.length > 2) {
       event.preventDefault();
-      history.back();
+      $(this).closest('.parking_white').removeClass('active');
     }
   })
   function burg(){
@@ -37,7 +37,7 @@ $(function(){
   let tfix = $('.fix_block_js'),
     tfixOffset = tfix.offset(),
     hederHeight = $('.fix_block_js').height();
-  $(window).scroll(function(){
+  $(window).on('scroll', function() {
     if (($(window).scrollTop() > tfixOffset.top)) {
       if (($(window).scrollTop() > tfixOffset.top)) {
         $('.main_head').css({

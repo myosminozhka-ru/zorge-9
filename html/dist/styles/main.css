@@ -2398,6 +2398,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -5570,6 +5571,10 @@ input:checked + .slider:before {
 .main_func__r .show2.active:hover,
 .main_func__r .show1.active:hover {
   fill: #B69B80;
+}
+
+.main_page .main_func__l--block[data-id="6"] {
+  order: 3;
 }
 
 .table_info--no_result {

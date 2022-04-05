@@ -22,6 +22,7 @@ $(function() {
                 start: true,
                 cache: false,
                 success: function(result) {
+                    console.log(result);
                     callback(result);
                 }
             });
@@ -115,14 +116,14 @@ if (document.querySelector('#panzoom-element')) {
     buttonIn.addEventListener('click', panzoom.zoomIn)
     buttonOut.addEventListener('click', panzoom.zoomOut)    }
 };
-$(document).on("click", ".block_park", function(e) {
-    if ($('.block_park').length) {
-        e.preventDefault();
-        var id  = $(this).attr('href');
-        var top = $(id).offset().top; // получаем координаты блока
-        $('body, html').animate({scrollTop: top}, 800); // плавно переходим к блоку
-    }
-});
+// $(document).on("click", ".block_park", function(e) {
+//     if ($('.block_park').length) {
+//         e.preventDefault();
+//         var id  = $(this).attr('href');
+//         var top = $(id).offset().top; // получаем координаты блока
+//         $('body, html').animate({scrollTop: top}, 800); // плавно переходим к блоку
+//     }
+// });
 // $.ajax({
 // 	url: '/item.json',         /* Куда пойдет запрос */
 // 	method: 'get',             /* Метод передачи (post или get) */

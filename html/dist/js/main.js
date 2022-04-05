@@ -1850,8 +1850,8 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   }
 
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('#SvgjsPath1027').on('click', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.show2').toggleClass('active');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.show2').addClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', function (e) {
       if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('#SvgjsPath1027').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('#SvgjsPath1027 path').length) return;
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.show2').removeClass('active');
@@ -1859,8 +1859,8 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     });
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('#SvgjsPath1025').on('click', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.show1').toggleClass('active');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.show1').addClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', function (e) {
       if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('#SvgjsPath1025').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('#SvgjsPath1025 path').length) return;
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.show1').removeClass('active');
@@ -1868,8 +1868,8 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     });
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('#SvgjsPath1029').on('click', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.show3').toggleClass('active');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.show3').addClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', function (e) {
       if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('#SvgjsPath1029').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('#SvgjsPath1029 path').length) return;
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.show3').removeClass('active');
@@ -1896,7 +1896,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_head__center--backr').click(function (event) {
     if (history.length > 2) {
       event.preventDefault();
-      history.back();
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.parking_white').removeClass('active');
     }
   });
 
@@ -1924,7 +1924,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   var tfix = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fix_block_js'),
       tfixOffset = tfix.offset(),
       hederHeight = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fix_block_js').height();
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('scroll', function () {
     if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() > tfixOffset.top) {
       if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() > tfixOffset.top) {
         jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_head').css({
@@ -2257,6 +2257,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
         start: true,
         cache: false,
         success: function success(result) {
+          console.log(result);
           callback(result);
         }
       });
@@ -2362,18 +2363,15 @@ if (document.querySelector('#panzoom-element')) {
   }
 }
 
-;
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".block_park", function (e) {
-  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.block_park').length) {
-    e.preventDefault();
-    var id = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href');
-    var top = jquery__WEBPACK_IMPORTED_MODULE_0___default()(id).offset().top; // получаем координаты блока
-
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body, html').animate({
-      scrollTop: top
-    }, 800); // плавно переходим к блоку
-  }
-}); // $.ajax({
+; // $(document).on("click", ".block_park", function(e) {
+//     if ($('.block_park').length) {
+//         e.preventDefault();
+//         var id  = $(this).attr('href');
+//         var top = $(id).offset().top; // получаем координаты блока
+//         $('body, html').animate({scrollTop: top}, 800); // плавно переходим к блоку
+//     }
+// });
+// $.ajax({
 // 	url: '/item.json',         /* Куда пойдет запрос */
 // 	method: 'get',             /* Метод передачи (post или get) */
 // 	dataType: 'json',          /* Тип данных в ответе (xml, json, script, html). */
@@ -2451,7 +2449,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
     flat = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data('flat-id');
     jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
-      url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
+      url: '/ajax/commercial.php',
       method: "POST",
       data: {
         type: 'detail',
@@ -2460,6 +2458,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
       },
       success: function success(result) {
         var data = JSON.parse(result);
+        console.log(data);
 
         if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('#parking-place').length) {
           jquery__WEBPACK_IMPORTED_MODULE_0___default()('#parking-place').attr('value', flat);
@@ -2472,7 +2471,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.place1.load_data').click(function () {
     if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass('active')) {
       jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
-        url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
+        url: '/ajax/commercial.php',
         method: "POST",
         data: {
           type: 'info',
@@ -2480,6 +2479,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
         },
         success: function success(result) {
           var data = JSON.parse(result);
+          console.log(data);
           jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc1').removeClass('active');
 
           for (var i = 0; i < data.length; i++) {
@@ -2497,7 +2497,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.place2.load_data').click(function () {
     if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass('active')) {
       jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
-        url: 'http://zorge-9.01sh.ru/ajax/commercial.php',
+        url: '/ajax/commercial.php',
         method: "POST",
         data: {
           type: 'info',
@@ -2505,6 +2505,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
         },
         success: function success(result) {
           var data = JSON.parse(result);
+          console.log(data);
           jquery__WEBPACK_IMPORTED_MODULE_0___default()('.plc2').removeClass('active');
 
           for (var i = 0; i < data.length; i++) {
