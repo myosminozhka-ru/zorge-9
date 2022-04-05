@@ -207,7 +207,7 @@ $(function() {
             setTimeout(() => {
                 this.setRooms(this.rooms);
                 this.setView(this.view);
-            }, 600)
+            }, 600);
         }
         addCorpseChanger() {
             $('.corpse_changer').on('click', '.next', async () => {
