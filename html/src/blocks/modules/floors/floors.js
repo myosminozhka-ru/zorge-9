@@ -222,7 +222,7 @@ $(function() {
         addClickHandler(item) {
             $(item).click(() => {
                 window.location.href = $(item).attr('data-link');
-            })
+            });
         }
         init() {
             if (!$('.floor_center--item_wrap').length) return;
