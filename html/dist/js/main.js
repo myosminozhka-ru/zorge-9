@@ -1847,35 +1847,45 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
   if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-range-slider4').length && ionSliderOptions4) {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-range-slider4').ionRangeSlider(ionSliderOptions4);
-  }
+  } // $(document).on('click', function(e){
+  //     $('#SvgjsPath1025, #SvgjsPath1027, #SvgjsPath1029').removeClass('active');
+  //     $('.show1, .show2, .show3').removeClass('active');
+  //     $('.main_func__l--block[data-id]').removeClass('active');
+  // });
+
 
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('#SvgjsPath1027').on('click', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.show2').addClass('active');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', function (e) {
-      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('#SvgjsPath1027').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('#SvgjsPath1027 path').length) return;
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.show2').removeClass('active');
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('#SvgjsPath1027').removeClass('active');
-    });
+    // $('.show2').addClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_func__l--block[data-id="7"]').trigger('click'); // console.log('#SvgjsPath1027');
+    // if (!$(this).hasClass('active')) {
+    //     $(this).addClass('active');
+    // }
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('#SvgjsPath1025').on('click', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.show1').addClass('active');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', function (e) {
-      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('#SvgjsPath1025').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('#SvgjsPath1025 path').length) return;
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.show1').removeClass('active');
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('#SvgjsPath1025').removeClass('active');
-    });
-  });
+    // $('.show1').addClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_func__l--block[data-id="5"]').trigger('click'); // console.log('#SvgjsPath1025');
+    // if (!$(this).hasClass('active')) {
+    //     $(this).addClass('active');
+    // }
+  }); // $(document).on('click', function(e){
+  //     if( $(e.target).closest('#SvgjsPath1025').length)
+  //     return
+  //     // $('.show1').removeClass('active');
+  //     $('#SvgjsPath1025').removeClass('active');
+  // });
+
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('#SvgjsPath1029').on('click', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.show3').addClass('active');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', function (e) {
-      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('#SvgjsPath1029').length || jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest('#SvgjsPath1029 path').length) return;
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.show3').removeClass('active');
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('#SvgjsPath1029').removeClass('active');
-    });
-  });
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.main_func__l--block[data-id="6"]').trigger('click'); // console.log('#SvgjsPath1029');
+    // // $('.show3').addClass('active');
+    // if (!$(this).hasClass('active')) {
+    //     $(this).addClass('active');
+    // }
+  }); // $(document).on('click', function(e){
+  //     if( $(e.target).closest('#SvgjsPath1029').length)
+  //     return        
+  //     // $('.show3').removeClass('active');
+  //     $('#SvgjsPath1029').removeClass('active');
+  // });
 });
 
 /***/ }),
